@@ -3,9 +3,9 @@
 $config = array(
     'Settings' => array(
         'WEBSITE' => 'http://localhost/',
-        'SHOP_TITLE' => 'hoffee2',
+        'SHOP_TITLE' => 'hoffee',
         'ADMIN_EMAIL' => 'ntphong1990@gmail.com',
-        'DOMAIN' => '/hoffee2',
+        'DOMAIN' => '/hoffee',
         'ANALYTICS' => '',
         'PAYPAL_API_USERNAME' => '',
         'PAYPAL_API_PASSWORD' => '',

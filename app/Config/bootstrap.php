@@ -183,3 +183,4 @@ CakeLog::config('error', array(
 ));
 
 Configure::load('settings');
+

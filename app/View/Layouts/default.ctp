@@ -29,7 +29,7 @@
     
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	
-		 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
   <!-- Compiled and minified CSS -->
 
@@ -111,7 +111,6 @@
                     
                 </nav>
 <div id="offcanvas" class="uk-offcanvas" aria-hidden="true">
-a
                                 <div class="uk-offcanvas-bar" mode="push">
 
                                     <div class="uk-panel">Lorem ipsum dolor sit amet, <a href="#">consetetur</a> sadipscing elitr.</div>
