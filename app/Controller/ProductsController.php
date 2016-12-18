@@ -18,6 +18,34 @@ class ProductsController extends AppController {
 	public function home(){
 		$this->layout = 'homelayout';
 	}
+
+
+    public function admin_chart(){
+
+        $this->loadModel('OrderItem');
+        $this->Paginator = $this->Components->load('Paginator');
+
+        $this->Paginator->settings = array(
+            'Order' => array(
+                'recursive' => -1,
+                'contain' => array(
+                ),
+                'conditions' => array(
+                ),
+                'order' => array(
+                    'Order.created' => 'DESC'
+                ),
+                'limit' => 20,
+                'paramType' => 'querystring',
+            )
+        );
+        $orders = $this->OrderItem->find('all',array(
+            'fields' => array('name AS Name','sum(quantity) AS `Sum`'),
+            'group' => array('product_id','name')
+        ));
+
+        $this->set('orders',$orders);
+    }
     public function index() {
         $products = $this->Product->find('all', array(
             'recursive' => -1,

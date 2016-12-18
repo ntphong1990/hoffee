@@ -70,7 +70,7 @@ class AppController extends Controller {
                 $this->set('authUser', $this->Auth->user());
                 $loggedin = $this->Session->read('Auth.User');
                 $this->set(compact('loggedin'));
-                $this->layout = 'admin';
+                $this->layout = 'admin2';
             }
         } elseif(isset($this->request->params['customer']) && ($this->request->params['prefix'] == 'customer')) {
             if($this->Session->check('Auth.User')) {

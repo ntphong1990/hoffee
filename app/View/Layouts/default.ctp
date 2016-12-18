@@ -43,6 +43,7 @@
    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.1/js/uikit.min.js"></script>
    <?= $this->Html->css('theme.css') ?>
+    <?= $this->Html->css('main.min.css') ?>
       
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <?= $this->fetch('meta') ?>

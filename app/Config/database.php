@@ -64,7 +64,7 @@ class DATABASE_CONFIG {
 		'persistent' => false,
 		'host' => 'localhost',
 		'login' => 'root',
-		'password' => 'amuba',
+		'password' => '123456',
 		'database' => 'hoffee',
 		'prefix' => '',
 		//'encoding' => 'utf8',
@@ -73,7 +73,7 @@ class DATABASE_CONFIG {
 	public $test = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
-		'host' => 'localhost',
+		'host' => '54.169.201.108',
 		'login' => 'user',
 		'password' => 'password',
 		'database' => 'test_database_name',

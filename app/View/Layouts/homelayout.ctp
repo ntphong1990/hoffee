@@ -29,6 +29,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 		 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <?= $this->Html->css('uikit.css') ?>
     <?= $this->Html->css('theme.css') ?>
+    <?= $this->Html->css('main.min.css') ?>
 	 <?= $this->Html->script('uikit') ?>
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>

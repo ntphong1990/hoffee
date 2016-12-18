@@ -30,7 +30,7 @@
 
         <figure class="uk-overlay uk-overlay-hover uk-border-rounded">
 
-            <img src="<?php echo '/images/large/' . $product['Product']['image'];?>" class="uk-overlay-scale" alt="Aperture News Portal" width="960" height="960">
+            <img src="<?php echo Configure::read('Settings.DOMAIN').'/images/large/' . $product['Product']['image'];?>" class="uk-overlay-scale" alt="Aperture News Portal" width="960" height="960">
             
             
             
