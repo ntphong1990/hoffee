@@ -83,14 +83,29 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 </div>
 
             </nav>
-            <div id="offcanvas" class="uk-offcanvas" aria-hidden="true">
-                a
-                <div class="uk-offcanvas-bar" mode="push">
+            <div id="offcanvas" class="uk-offcanvas">
+                <div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
 
-                    <div class="uk-panel">Lorem ipsum dolor sit amet, <a href="#">consetetur</a> sadipscing elitr.</div>
+
+                    <ul class="uk-nav uk-nav-offcanvas">
+
+                        <li class=" uk-active">
+                            <a href="/pagekit/">Home</a>
+
+                        </li>
+                        <li class="">
+                            <a href="/pagekit/blog">Blog</a>
+
+                        </li>
+                        <li class="">
+                            <a href="/pagekit/hello">Hello</a>
+
+                        </li>
+
+                    </ul>
+
 
                 </div>
-
             </div>
         </div>
     </div></div>
