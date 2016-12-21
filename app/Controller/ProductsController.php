@@ -365,9 +365,9 @@ class ProductsController extends AppController {
             $newName = $this->request->data['Product']['slug'];
 
             $ext = $this->Img->ext($this->request->data['Product']['image']['name']);
-
+           // var_dump($this->request->data['Product']['image']);die();
             $origFile = $newName . '.' . $ext;
-            $dst = $newName . '.jpg';
+            $dst = $this->request->data['Product']['image']['name'];
 
             $targetdir = WWW_ROOT . 'images/original';
 
