@@ -6,7 +6,104 @@ html {
     background: #f9f9fb;
     color: #666
 }
+.product-icon--cart {
+    fill: #1e1e1e;
+    background: #d2c295;
+}
 
+.product-icon {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    position: absolute;
+    right: 4rem;
+    bottom: 0;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    will-change: transform;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-animation: p .2s both ease-in-out;
+    animation: p .2s both ease-in-out;
+}
+
+.product-content {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-flex: 1;
+    flex: 1;
+    flex-direction: column;
+}
+
+.content h6 {
+    font-family: AvenirLTStd-Black;
+    font-size: .75rem;
+    line-height: 1.5;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0 0 1rem;
+}
+
+.product-suptitle {
+    color: #898f4b;
+    width: 100%;
+}
+
+.content h5 {
+    font-size: .875rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.content h4, .content h5 {
+    font-family: AvenirLTStd-Black;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.product-title {
+    color: #1e1e1e;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.content .pill--center {
+    margin: 1rem auto 0;
+}
+
+.content .pill {
+    line-height: 1.875rem;
+    letter-spacing: 3px;
+    /*margin: 1rem 0 0;*/
+    font-weight: 400;
+}
+
+.pill {
+    font-family: AvenirLTStd-Black;
+    font-size: .75rem;
+    line-height: 1.5;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    display: inline-block;
+    background: #1e1e1e;
+    color: #fff;
+    padding: 0 1rem;
+    border-radius: 31.25rem;
+}
 body {
     margin: 0
 }
