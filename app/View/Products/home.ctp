@@ -103,7 +103,7 @@
 
 <div id="tm-hero"
      class="tm-hero uk-block uk-block-large uk-cover-background uk-flex uk-flex-middle uk-height-viewport uk-contrast"
-     style="background-image: url('./img/slide2.jpg');">
+     style="background-image: url('./img/slide3.png');">
     <div class="uk-container uk-container-center">
 
         <section class="uk-grid uk-grid-match" data-uk-grid-margin="">
@@ -112,10 +112,21 @@
                 <div class="uk-panel  uk-text-center ">
 
 
-                    <h1 class="uk-heading-large uk-margin-large-bottom">Hoffee<br class="uk-hidden-small">
-                        Take your unique coffee
-                    </h1>
+                    <h1 class="uk-h1 uk-margin-top-remove uk-margin-top-remove" data-uk-parallax="{viewport: 1,velocity: 0.5}">
 
+                        <a class="uk-link-reset" href="#">QUALITY COFFEE CULTIVATED BY GOOD</a>
+
+                    </h1>
+                    <div data-uk-parallax="{viewport: 1,velocity: 0.5}">
+
+                        <div class=""><p>
+
+                                We believe coffee only tastes good when<br>
+                                it's made ethically, sustainably and with care.</p>
+                        </div>
+
+
+                    </div>
                     <a class="uk-button uk-button-large" href="./products">Shop Now</a>
                 </div>
 

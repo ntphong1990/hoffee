@@ -21,7 +21,7 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 
-	Router::connect('/', array('controller' => 'products', 'action' => 'home'));
+	Router::connect('/', array('controller' => 'products', 'action' => 'home2'));
 	Router::connect('/product/:slug', array('controller' => 'products', 'action' => 'view'), array('pass' => array('slug')));
 
 	Router::connect('/brand/:slug', array('controller' => 'brands', 'action' => 'view'), array('pass' => array('slug')));

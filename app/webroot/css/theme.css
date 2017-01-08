@@ -1,4 +1,13 @@
 /*!   | (c) 2014 Pagekit | MIT License */
+@font-face {
+    font-family: Yummo;
+    src: url(/hoffee4/fonts/Yummo_Regular.ttf);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(/hoffee4/fonts/Montserrat-Regular.ttf);
+}
 html {
     font: normal 14px / 20px "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     -webkit-text-size-adjust: 100%;
@@ -50,7 +59,7 @@ html {
 }
 
 .content h6 {
-    font-family: AvenirLTStd-Black;
+    font-family: Yummo;
     font-size: .75rem;
     line-height: 1.5;
     letter-spacing: 3px;
@@ -70,7 +79,7 @@ html {
 }
 
 .content h4, .content h5 {
-    font-family: AvenirLTStd-Black;
+    font-family: Yummo;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
@@ -223,7 +232,7 @@ p,ul,ol,dl,blockquote,pre,address,fieldset,figure {
 
 h1,h2,h3,h4,h5,h6 {
     margin: 0 0 20px 0;
-    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Montserrat;
     font-weight: 300;
     color: #666;
     text-transform: none

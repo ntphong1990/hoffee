@@ -20,6 +20,10 @@ class ProductsController extends AppController {
 	}
 
 
+    public function home2(){
+
+    }
+
     public function admin_chart(){
 
         $this->loadModel('OrderItem');
