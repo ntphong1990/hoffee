@@ -126,7 +126,7 @@
 
     <nav class="menu">
 
-        <ul id="menu-main-menu" class="menu-ul"><li id="menu-item-3419" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-137 current_page_item menu-ul-li"><a class="menu-ul-li-a" href="https://us.camposcoffee.com/">Home</a></li>
+        <ul id="menu-main-menu" class="menu-ul"><li id="menu-item-3419" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-137 current_page_item menu-ul-li"><a class="menu-ul-li-a" href="/">Home</a></li>
 <!--            <li id="menu-item-3421" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="https://us.camposcoffee.com/find-us/">Find Us</a></li>-->
             <li id="menu-item-3437" class="menu-item menu-item-type-custom menu-item-object-custom menu-ul-li"><a class="menu-ul-li-a" href="<?php echo Configure::read('Settings.DOMAIN'); ?>/products">Shop</a></li>
             <li id="menu-item-3424" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-ul-li"><a class="menu-ul-li-a" href="#">Our Story<icon src="../img/arrow-dropdown.svg" class="menu-ul-li-a-icon" sub-menu=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="6px" viewBox="0 0 10 6" version="1.1" class="injected-svg icon-svg">
