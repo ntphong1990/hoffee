@@ -26,18 +26,18 @@
     <meta name="twitter:title" content="Hoffee - Quality Coffee Cultivated by Good">
     <meta name="twitter:site" content="@camposcoffee">
     <meta name="twitter:creator" content="@camposcoffee">
-    <script async="" src="/hoffee4/theme/fbevents.js"></script><script type="text/javascript" async="" src="/hoffee4/theme/hotjar-302606.js"></script><script type="text/javascript" async="" src="/hoffee4/theme/uwt.js"></script><script type="text/javascript" async="" src="/hoffee4/theme/ec.js"></script><script async="" src="/hoffee4/theme/gtm.js"></script><script async="" src="/hoffee4/theme/analytics.js"></script><script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/us.camposcoffee.com\/","name":"Hoffee USA","potentialAction":{"@type":"SearchAction","target":"https:\/\/us.camposcoffee.com\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+    <script async="" src=".<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/fbevents.js"></script><script type="text/javascript" async="" src=".<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/hotjar-302606.js"></script><script type="text/javascript" async="" src=".<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/uwt.js"></script><script type="text/javascript" async="" src=".<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/ec.js"></script><script async="" src=".<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/gtm.js"></script><script async="" src=".<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/analytics.js"></script><script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/us.camposcoffee.com\/","name":"Hoffee USA","potentialAction":{"@type":"SearchAction","target":"https:\/\/us.camposcoffee.com\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
     <script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"Organization","url":"https:\/\/us.camposcoffee.com\/","sameAs":["https:\/\/www.facebook.com\/CamposCoffee\/","https:\/\/www.instagram.com\/camposcoffee\/","https:\/\/www.linkedin.com\/company\/campos-coffee","https:\/\/www.youtube.com\/camposcoffee","https:\/\/twitter.com\/camposcoffee"],"@id":"#organization","name":"Hoffee","logo":"http:\/\/us.camposcoffee.com\/wp-content\/uploads\/2016\/11\/campos-favicon.png"}</script>
     <!-- / Yoast SEO plugin. -->
 
     <link rel="dns-prefetch" href="https://s.w.org/">
-    <link rel="stylesheet" id="contact-form-7-css" href="/hoffee4/theme/styles.css" media="all">
-    <link rel="stylesheet" id="woocommerce-layout-css" href="/hoffee4/theme/woocommerce-layout.css" media="all">
-    <link rel="stylesheet" id="woocommerce-smallscreen-css" href="/hoffee4/theme/woocommerce-smallscreen.css" media="only screen and (max-width: 768px)">
-    <link rel="stylesheet" id="main-css" href="/hoffee4/theme/main.min.css" media="all">
-    <script type="text/javascript" src="/hoffee4/theme/modernizr.min.js"></script>
-    <script type="text/javascript" src="/hoffee4/theme/jquery.js"></script>
-    <script type="text/javascript" src="/hoffee4/theme/jquery-migrate.min.js"></script>
+    <link rel="stylesheet" id="contact-form-7-css" href=".<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/styles.css" media="all">
+    <link rel="stylesheet" id="woocommerce-layout-css" href=".<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/woocommerce-layout.css" media="all">
+    <link rel="stylesheet" id="woocommerce-smallscreen-css" href=".<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/woocommerce-smallscreen.css" media="only screen and (max-width: 768px)">
+    <link rel="stylesheet" id="main-css" href=".<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/main.min.css" media="all">
+    <script type="text/javascript" src=".<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/modernizr.min.js"></script>
+    <script type="text/javascript" src=".<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/jquery.js"></script>
+    <script type="text/javascript" src=".<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/jquery-migrate.min.js"></script>
     <!-- Start WooCommerce Google Analytics Pro -->
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -66,7 +66,7 @@
     <link rel="alternate" hreflang="x-default" href="https://camposcoffee.com/">
 
 
-    <script id="omapi-script" src="/hoffee4/theme/api.min.js" async=""></script><script src="/hoffee4/theme/modules-ec12ee2ed1767aa1ebc8d90166f1c7c4.js"></script></head>
+    <script id="omapi-script" src=".<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/api.min.js" async=""></script><script src=".<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/modules-ec12ee2ed1767aa1ebc8d90166f1c7c4.js"></script></head>
 
 <!-- Google Tag Manager -->
 <body id="body" class="body body--loaded"><noscript>&lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-M9S5P9"
@@ -113,7 +113,7 @@
 
         <ul id="menu-main-menu" class="menu-ul"><li id="menu-item-3419" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-137 current_page_item menu-ul-li"><a class="menu-ul-li-a" href="https://us.camposcoffee.com/">Home</a></li>
             <li id="menu-item-3421" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="https://us.camposcoffee.com/find-us/">Find Us</a></li>
-            <li id="menu-item-3437" class="menu-item menu-item-type-custom menu-item-object-custom menu-ul-li"><a class="menu-ul-li-a" href="/hoffee4/products">Shop</a></li>
+            <li id="menu-item-3437" class="menu-item menu-item-type-custom menu-item-object-custom menu-ul-li"><a class="menu-ul-li-a" href=".<?php echo Configure::read('Settings.DOMAIN'); ?>/products">Shop</a></li>
             <li id="menu-item-3424" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-ul-li"><a class="menu-ul-li-a" href="https://us.camposcoffee.com/our-story/cultivated-by-good/">Our Story<icon src="../img/arrow-dropdown.svg" class="menu-ul-li-a-icon" sub-menu=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="6px" viewBox="0 0 10 6" version="1.1" class="injected-svg icon-svg">
                             <polyline stroke-width="1" points="8 -4.9736156e-14 4 4 -2.03004718e-15 -4.9736156e-14" fill="none"></polyline>
                         </svg></icon></a>
@@ -173,7 +173,7 @@
 
                         <figure class="newsletter-aside-column newsletter-aside-column--left">
 
-                            <img src="/hoffee4/theme/social-1.jpg" class="newsletter-aside-column-image">
+                            <img src=".<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/social-1.jpg" class="newsletter-aside-column-image">
 
                         </figure>
 
@@ -243,7 +243,7 @@
     <region-toggle class="region_toggle" current="us.camposcoffee.com">
         <div class="region_toggle-inner">
             <div class="region_toggle-inner-active">
-                <img ng-src="https://us.camposcoffee.com/wp-content/themes/campos-wp-theme/assets/images/flags/usa.jpg" src="/hoffee4/theme/usa.jpg">
+                <img ng-src="https://us.camposcoffee.com/wp-content/themes/campos-wp-theme/assets/images/flags/usa.jpg" src=".<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/usa.jpg">
                 <icon src="../img/arrow-dropdown-region.svg" class="region_toggle-active-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="6px" viewBox="0 0 10 6" version="1.1" class="injected-svg icon-svg">
                         <polyline stroke-width="1" points="8 -4.9736156e-14 4 4 -2.03004718e-15 -4.9736156e-14" fill="none" stroke="#dedede"></polyline>
                     </svg></icon>
@@ -251,7 +251,7 @@
             <ul class="region_toggle-inner-list">
                 <!-- ngRepeat: region in regions --><li class="region_toggle-inner-list-item ng-scope" ng-repeat="region in regions">
                     <a class="region_toggle-inner-list-item-link" href="https://us.camposcoffee.com/">
-                        <div class="region_toggle-inner-list-item-link-div ng-binding"><img ng-src="https://us.camposcoffee.com/wp-content/themes/campos-wp-theme/assets/images/flags/usa.jpg" src="/hoffee4/theme/usa.jpg">USA</div>
+                        <div class="region_toggle-inner-list-item-link-div ng-binding"><img ng-src="https://us.camposcoffee.com/wp-content/themes/campos-wp-theme/assets/images/flags/usa.jpg" src=".<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/usa.jpg">USA</div>
                         <icon ng-class="{&#39;region_toggle-inner-list-item-link-icon--active&#39; : region.slug === current}" src="../img/check-region.svg" class="region_toggle-inner-list-item-link-icon region_toggle-inner-list-item-link-icon--active"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12px" height="10px" viewBox="0 0 12 10" version="1.1" class="injected-svg icon-svg">
                                 <g stroke="none" stroke-width="1" fill-rule="evenodd">
                                     <g transform="translate(-196.000000, -500.000000)">
@@ -276,7 +276,7 @@
                     </a>
                 </li><!-- end ngRepeat: region in regions --><li class="region_toggle-inner-list-item ng-scope" ng-repeat="region in regions">
                     <a class="region_toggle-inner-list-item-link" href="https://camposcoffee.com/?view_aus=true">
-                        <div class="region_toggle-inner-list-item-link-div ng-binding"><img ng-src="https://us.camposcoffee.com/wp-content/themes/campos-wp-theme/assets/images/flags/australia.jpg" src="/hoffee4/theme/australia.jpg">Australia</div>
+                        <div class="region_toggle-inner-list-item-link-div ng-binding"><img ng-src="https://us.camposcoffee.com/wp-content/themes/campos-wp-theme/assets/images/flags/australia.jpg" src=".<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/australia.jpg">Australia</div>
                         <icon ng-class="{&#39;region_toggle-inner-list-item-link-icon--active&#39; : region.slug === current}" src="../img/check-region.svg" class="region_toggle-inner-list-item-link-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12px" height="10px" viewBox="0 0 12 10" version="1.1" class="injected-svg icon-svg">
                                 <g stroke="none" stroke-width="1" fill-rule="evenodd">
                                     <g transform="translate(-196.000000, -500.000000)">
@@ -616,7 +616,7 @@
 
         <figure class="footer-information-column footer-information-column--center">
 
-            <img class="footer-information-column-cultivated_image" src="/hoffee4/theme/cultivated_by_good_logo.jpg" alt="Campos | Cultivated By Good">
+            <img class="footer-information-column-cultivated_image" src=".<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/cultivated_by_good_logo.jpg" alt="Campos | Cultivated By Good">
 
         </figure>
 
@@ -639,7 +639,7 @@
 
 
 
-<script src="/hoffee4/theme/createjs-2015.11.26.min.js"></script>
+<script src=".<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/createjs-2015.11.26.min.js"></script>
 
 <script>
 
@@ -1143,21 +1143,21 @@
 
 
 
-<script type="text/javascript" src="/hoffee4/theme/vendor.min.js"></script>
+<script type="text/javascript" src=".<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/vendor.min.js"></script>
 <script type="text/javascript">
     /* <![CDATA[ */
     var wp = {"home_url":"https:\/\/us.camposcoffee.com","template_directory_uri":"https:\/\/us.camposcoffee.com\/wp-content\/themes\/campos-wp-theme","ajax_url":"https:\/\/us.camposcoffee.com\/wp-admin\/admin-ajax.php","aus_site":"https:\/\/camposcoffee.com","us_site":"https:\/\/us.camposcoffee.com"};
     /* ]]> */
 </script>
-<script type="text/javascript" src="/hoffee4/theme/main.min.js"></script>
-<script type="text/javascript" src="/hoffee4/theme/jquery.form.min.js"></script>
+<script type="text/javascript" src=".<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/main.min.js"></script>
+<script type="text/javascript" src=".<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/jquery.form.min.js"></script>
 <script type="text/javascript">
     /* <![CDATA[ */
     var _wpcf7 = {"loaderUrl":"https:\/\/us.camposcoffee.com\/wp-content\/plugins\/contact-form-7-mailchimp-extension\/assets\/images\/fading-squares.gif","recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}},"sending":"Sending ..."};
     /* ]]> */
 </script>
-<script type="text/javascript" src="/hoffee4/theme/scripts.js"></script>
-<script type="text/javascript" src="/hoffee4/theme/wp-embed.min.js"></script>
+<script type="text/javascript" src=".<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/scripts.js"></script>
+<script type="text/javascript" src=".<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/wp-embed.min.js"></script>
 <!-- WooCommerce JavaScript -->
 <script type="text/javascript">
     jQuery(function($) {
@@ -1176,4 +1176,4 @@
 <script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","711430055660246");fbq("track","PageView");</script>
 <noscript>&lt;img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=711430055660246&amp;amp;ev=PageView&amp;amp;noscript=1"&gt;</noscript>
 
-<iframe id="_hjRemoteVarsFrame" src="/hoffee4/theme/rcj-2e6153f931e5c8a79f89c0c503e3c25e.html" style="position: fixed !important; top: -100px !important; left: -100px !important; width: 1px !important; height: 1px !important;"></iframe><script src="/hoffee4/theme/adsct" type="text/javascript"></script><div id="ads"></div></body></html>
+<iframe id="_hjRemoteVarsFrame" src=".<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/rcj-2e6153f931e5c8a79f89c0c503e3c25e.html" style="position: fixed !important; top: -100px !important; left: -100px !important; width: 1px !important; height: 1px !important;"></iframe><script src=".<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/adsct" type="text/javascript"></script><div id="ads"></div></body></html>
