@@ -65,8 +65,17 @@
     <link rel="alternate" hreflang="en-bm" href="https://us.camposcoffee.com/">
     <link rel="alternate" hreflang="x-default" href="https://camposcoffee.com/">
 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
-    <script id="omapi-script" src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/api.min.js" async=""></script><script src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/modules-ec12ee2ed1767aa1ebc8d90166f1c7c4.js"></script></head>
+    <?php if($this->Session->check('Shop')) : ?>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#cartbutton').show();
+            });
+        </script>
+    <?php endif; ?>
+</head>
 
 <!-- Google Tag Manager -->
 <body id="body" class="body body--loaded"><noscript>&lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-M9S5P9"
@@ -100,11 +109,16 @@
     </button>
 
 
-    <div class="header-logo_container" style="margin-top: 20px">
+    <div class="header-logo_container" style="margin-top: 10px">
 
-        <a class="uk-navbar-brand"  href="/<?php echo Configure::read('Settings.SHOP_TITLE');?>/">
-            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 110 30" style="width: 110px; height: 30px;" width="110" height="30"><defs><style>.cls-1{fill:#0a4e9b;}</style></defs><title>Artboard 1</title><path class="cls-1" d="M16.43,25V15.33H7.72V25H5V5H5A2.73,2.73,0,0,1,7.72,7.73V13h8.71V7.73A2.73,2.73,0,0,1,19.15,5h0V25Z"></path><path class="cls-1" d="M24.78,7.53V22.47A2.52,2.52,0,0,0,27.3,25h7.84a2.52,2.52,0,0,0,2.51-2.52V7.53A2.52,2.52,0,0,0,35.14,5H27.3A2.52,2.52,0,0,0,24.78,7.53ZM27.5,21.35V7.46h6a1.47,1.47,0,0,1,1.47,1.47V21.24a1.3,1.3,0,0,1-1.3,1.3H28.69A1.19,1.19,0,0,1,27.5,21.35Z"></path><path class="cls-1" d="M46.06,7.46V13h7a2.32,2.32,0,0,1-2.31,2.32H46.06V25H43.34V5H55.65A2.45,2.45,0,0,1,53.2,7.46Z"></path><path class="cls-1" d="M62,7.46V13h7a2.32,2.32,0,0,1-2.31,2.32H62V25H59.27V5H71.58a2.45,2.45,0,0,1-2.45,2.46Z"></path><path class="cls-1" d="M78.85,7.46V13h6.58a2.32,2.32,0,0,1-2.31,2.32H78.85v7.21h9V25H76.13V5H88a2.45,2.45,0,0,1-2.45,2.46Z"></path><path class="cls-1" d="M95.82,7.46V13h6.58a2.32,2.32,0,0,1-2.31,2.32H95.82v7.21h9V25H93.1V5H105a2.45,2.45,0,0,1-2.45,2.46Z"></path></svg>
 
+
+
+        </a>
+        <a href="<?php echo Configure::read('Settings.DOMAIN');?>" class="header-logo_container-link" title="Campos Coffee">
+            <icon src="./img/campos_logo.svg" class="header-logo_container-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 110 30" style="width: 110px; height: 30px;" width="110" height="30"><defs><style>.cls-1{fill:#0a4e9b;}</style></defs><title>Artboard 1</title><path class="cls-1" d="M16.43,25V15.33H7.72V25H5V5H5A2.73,2.73,0,0,1,7.72,7.73V13h8.71V7.73A2.73,2.73,0,0,1,19.15,5h0V25Z"></path><path class="cls-1" d="M24.78,7.53V22.47A2.52,2.52,0,0,0,27.3,25h7.84a2.52,2.52,0,0,0,2.51-2.52V7.53A2.52,2.52,0,0,0,35.14,5H27.3A2.52,2.52,0,0,0,24.78,7.53ZM27.5,21.35V7.46h6a1.47,1.47,0,0,1,1.47,1.47V21.24a1.3,1.3,0,0,1-1.3,1.3H28.69A1.19,1.19,0,0,1,27.5,21.35Z"></path><path class="cls-1" d="M46.06,7.46V13h7a2.32,2.32,0,0,1-2.31,2.32H46.06V25H43.34V5H55.65A2.45,2.45,0,0,1,53.2,7.46Z"></path><path class="cls-1" d="M62,7.46V13h7a2.32,2.32,0,0,1-2.31,2.32H62V25H59.27V5H71.58a2.45,2.45,0,0,1-2.45,2.46Z"></path><path class="cls-1" d="M78.85,7.46V13h6.58a2.32,2.32,0,0,1-2.31,2.32H78.85v7.21h9V25H76.13V5H88a2.45,2.45,0,0,1-2.45,2.46Z"></path><path class="cls-1" d="M95.82,7.46V13h6.58a2.32,2.32,0,0,1-2.31,2.32H95.82v7.21h9V25H93.1V5H105a2.45,2.45,0,0,1-2.45,2.46Z"></path></svg>
+            </icon>
         </a>
 
     </div>
@@ -113,20 +127,20 @@
     <nav class="menu">
 
         <ul id="menu-main-menu" class="menu-ul"><li id="menu-item-3419" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-137 current_page_item menu-ul-li"><a class="menu-ul-li-a" href="https://us.camposcoffee.com/">Home</a></li>
-            <li id="menu-item-3421" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="https://us.camposcoffee.com/find-us/">Find Us</a></li>
+<!--            <li id="menu-item-3421" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="https://us.camposcoffee.com/find-us/">Find Us</a></li>-->
             <li id="menu-item-3437" class="menu-item menu-item-type-custom menu-item-object-custom menu-ul-li"><a class="menu-ul-li-a" href="<?php echo Configure::read('Settings.DOMAIN'); ?>/products">Shop</a></li>
             <li id="menu-item-3424" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-ul-li"><a class="menu-ul-li-a" href="https://us.camposcoffee.com/our-story/cultivated-by-good/">Our Story<icon src="../img/arrow-dropdown.svg" class="menu-ul-li-a-icon" sub-menu=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="6px" viewBox="0 0 10 6" version="1.1" class="injected-svg icon-svg">
                             <polyline stroke-width="1" points="8 -4.9736156e-14 4 4 -2.03004718e-15 -4.9736156e-14" fill="none"></polyline>
                         </svg></icon></a>
                 <ul class="sub-menu">
-                    <li id="menu-item-3964" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="https://us.camposcoffee.com/our-story/cultivated-by-good/">Cultivated By Good</a></li>
-                    <li id="menu-item-3965" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="https://us.camposcoffee.com/our-story/social-good/">Social Good</a></li>
-                    <li id="menu-item-3966" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="https://us.camposcoffee.com/our-story/our-coffee/">Our Coffee</a></li>
-                    <li id="menu-item-3967" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="https://us.camposcoffee.com/our-story/history/">History</a></li>
+                    <li id="menu-item-3964" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="#">Cultivated By Good</a></li>
+                    <li id="menu-item-3965" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="#">Social Good</a></li>
+                    <li id="menu-item-3966" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="#">Our Coffee</a></li>
+                    <li id="menu-item-3967" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="#">History</a></li>
                 </ul>
             </li>
-            <li id="menu-item-3422" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="https://us.camposcoffee.com/partnership/">Wholesale</a></li>
-            <li id="menu-item-3420" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="https://us.camposcoffee.com/articles/">Articles</a></li>
+<!--            <li id="menu-item-3422" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="https://us.camposcoffee.com/partnership/">Wholesale</a></li>-->
+            <li id="menu-item-3420" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="#">Articles</a></li>
             <li class="menu-ul-li menu-ul-li--footer"><h3 class="menu-ul-li-site_title">Hoffee</h3><span class="menu-ul-li-date">© 2017</span></li></ul>
     </nav>
 
@@ -135,32 +149,32 @@
 
         <ul class="user_controls-ul">
 
-            <li class="user_controls-ul-li user_controls-ul-li--account">
-
-
-
-                <a tooltip="Log In or Register" class="user_controls-ul-li-a tooltip-wrapper" href="https://us.camposcoffee.com/my-account/">
-
-
-                    <icon src="<?php echo Configure::read('Settings.DOMAIN'); ?>/img/login.svg" class="user_controls-ul-li-a-icon"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" viewBox="0 0 17 18" class="injected-svg icon-svg"><path d="M8.237 1.029a3.883 3.883 0 0 0-3.88 3.878c0 2.14 1.741 3.88 3.88 3.88s3.879-1.74 3.879-3.88a3.883 3.883 0 0 0-3.88-3.878m0 8.786A4.913 4.913 0 0 1 3.33 4.907 4.913 4.913 0 0 1 8.237 0a4.913 4.913 0 0 1 4.907 4.907 4.913 4.913 0 0 1-4.907 4.908"></path><path d="M1.047 16.509h14.38c-.265-3.735-3.388-6.694-7.19-6.694-3.802 0-6.925 2.959-7.19 6.694m14.912 1.028H.514A.514.514 0 0 1 0 17.023c0-4.541 3.695-8.237 8.236-8.237 4.543 0 8.238 3.696 8.238 8.237 0 .284-.23.514-.515.514"></path></svg></icon>
-
-                    <span class="tooltip">Log In or Register</span></a>
-
-            </li>
+<!--            <li class="user_controls-ul-li user_controls-ul-li--account">-->
+<!---->
+<!---->
+<!---->
+<!--                <a tooltip="Log In or Register" class="user_controls-ul-li-a tooltip-wrapper" href="https://us.camposcoffee.com/my-account/">-->
+<!---->
+<!---->
+<!--                    <icon src="--><?php //echo Configure::read('Settings.DOMAIN'); ?><!--/img/login.svg" class="user_controls-ul-li-a-icon"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" viewBox="0 0 17 18" class="injected-svg icon-svg"><path d="M8.237 1.029a3.883 3.883 0 0 0-3.88 3.878c0 2.14 1.741 3.88 3.88 3.88s3.879-1.74 3.879-3.88a3.883 3.883 0 0 0-3.88-3.878m0 8.786A4.913 4.913 0 0 1 3.33 4.907 4.913 4.913 0 0 1 8.237 0a4.913 4.913 0 0 1 4.907 4.907 4.913 4.913 0 0 1-4.907 4.908"></path><path d="M1.047 16.509h14.38c-.265-3.735-3.388-6.694-7.19-6.694-3.802 0-6.925 2.959-7.19 6.694m14.912 1.028H.514A.514.514 0 0 1 0 17.023c0-4.541 3.695-8.237 8.236-8.237 4.543 0 8.238 3.696 8.238 8.237 0 .284-.23.514-.515.514"></path></svg></icon>-->
+<!---->
+<!--                    <span class="tooltip">Log In or Register</span></a>-->
+<!---->
+<!--            </li>-->
 
             <li class="user_controls-ul-li user_controls-ul-li--cart">
 
 
-                <a href="https://us.camposcoffee.com/cart/" tooltip="Shopping Cart" class="user_controls-ul-li-a tooltip-wrapper">
+                <a href="<?php echo Configure::read('Settings.DOMAIN'); ?>/shop/cart/" tooltip="Shopping Cart" class="user_controls-ul-li-a tooltip-wrapper">
 
-
-                    <icon src="<?php echo Configure::read('Settings.DOMAIN'); ?>/img/cart.svg" class="user_controls-ul-li-a-icon"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="19" viewBox="0 0 21 19" class="injected-svg icon-svg"><path d="M15.867 15.713a.836.836 0 1 0 .835.835.836.836 0 0 0-.835-.835m0 2.616c-.982 0-1.782-.799-1.782-1.781 0-.983.8-1.783 1.782-1.783.983 0 1.782.8 1.782 1.783 0 .982-.8 1.781-1.782 1.781M17.206 13.44H7.066M7.08 13.914h10.126a.474.474 0 0 0 0-.948H7.428L4.166.825A.473.473 0 0 0 3.71.474H.474a.474.474 0 0 0 0 .947h2.872l3.26 12.133a.473.473 0 0 0 .474.36z"></path><path d="M6.712 10.295h11.113l1.706-6.303H5.016l1.696 6.303zm11.475.947H6.349a.474.474 0 0 1-.458-.35L3.941 3.64a.475.475 0 0 1 .457-.597H20.15a.474.474 0 0 1 .457.597l-1.963 7.251a.474.474 0 0 1-.457.35zM8.998 15.713a.836.836 0 1 0 .835.835.836.836 0 0 0-.835-.835m0 2.616c-.983 0-1.782-.799-1.782-1.781 0-.983.8-1.783 1.782-1.783.983 0 1.782.8 1.782 1.783 0 .982-.8 1.781-1.782 1.781M10.828 10.461L8.68 3.698"></path><path d="M10.828 10.935a.474.474 0 0 1-.451-.33L8.227 3.84a.473.473 0 1 1 .904-.286l2.149 6.763a.474.474 0 0 1-.452.617M16.234 10.461l-2.149-6.763M16.234 10.935a.474.474 0 0 1-.452-.33L13.633 3.84a.473.473 0 1 1 .903-.286l2.15 6.763a.474.474 0 0 1-.452.617"></path></svg></icon>
+                    <span id="cartbutton" style="display: none;" class="user_controls-ul-li-a-cart_count">1</span>
+                    <icon src="<?php echo Configure::read('Settings.DOMAIN'); ?>/img/cart.svg" class="user_controls-ul-li-a-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="19" viewBox="0 0 21 19" class="injected-svg icon-svg"><path d="M15.867 15.713a.836.836 0 1 0 .835.835.836.836 0 0 0-.835-.835m0 2.616c-.982 0-1.782-.799-1.782-1.781 0-.983.8-1.783 1.782-1.783.983 0 1.782.8 1.782 1.783 0 .982-.8 1.781-1.782 1.781M17.206 13.44H7.066M7.08 13.914h10.126a.474.474 0 0 0 0-.948H7.428L4.166.825A.473.473 0 0 0 3.71.474H.474a.474.474 0 0 0 0 .947h2.872l3.26 12.133a.473.473 0 0 0 .474.36z"></path><path d="M6.712 10.295h11.113l1.706-6.303H5.016l1.696 6.303zm11.475.947H6.349a.474.474 0 0 1-.458-.35L3.941 3.64a.475.475 0 0 1 .457-.597H20.15a.474.474 0 0 1 .457.597l-1.963 7.251a.474.474 0 0 1-.457.35zM8.998 15.713a.836.836 0 1 0 .835.835.836.836 0 0 0-.835-.835m0 2.616c-.983 0-1.782-.799-1.782-1.781 0-.983.8-1.783 1.782-1.783.983 0 1.782.8 1.782 1.783 0 .982-.8 1.781-1.782 1.781M10.828 10.461L8.68 3.698"></path><path d="M10.828 10.935a.474.474 0 0 1-.451-.33L8.227 3.84a.473.473 0 1 1 .904-.286l2.149 6.763a.474.474 0 0 1-.452.617M16.234 10.461l-2.149-6.763M16.234 10.935a.474.474 0 0 1-.452-.33L13.633 3.84a.473.473 0 1 1 .903-.286l2.15 6.763a.474.474 0 0 1-.452.617"></path></svg></icon>
 
                     <span class="tooltip">Shopping Cart</span></a>
 
             </li>
-
-            <li class="user_controls-ul-li user_controls-ul-li--newsletter">
+<!--            <li class="user_controls-ul-li user_controls-ul-li--newsletter">
 
                 <newsletter class="newsletter">
 
@@ -216,7 +230,7 @@
                                             <button type="submit" name="submit" class="newsletter-aside-column-form-button">Subscribe</button>
                                         </p></div>
                                     <div class="wpcf7-response-output wpcf7-display-none"></div><p style="display: none !important"><span class="wpcf7-form-control-wrap referer-page"><input type="hidden" name="referer-page" value="direct visit" size="40" class="wpcf7-form-control wpcf7-text referer-page" aria-invalid="false"></span></p>
-                                    <!-- Chimpmail extension by Renzo Johnson --></form></div>
+                                    </form></div>
                             <button class="newsletter-close_panel" type="button" name="button" ng-click="newsletterToggle()">No thanks, i’ll keep browsing</button>
 
                         </div>
@@ -225,7 +239,7 @@
 
                 </newsletter>
 
-            </li>
+            </li>-->
 
         </ul>
 
@@ -241,69 +255,7 @@
 
     </nav>
 
-    <region-toggle class="region_toggle" current="us.camposcoffee.com">
-        <div class="region_toggle-inner">
-            <div class="region_toggle-inner-active">
-                <img ng-src="https://us.camposcoffee.com/wp-content/themes/campos-wp-theme/assets/images/flags/usa.jpg" src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/usa.jpg">
-                <icon src="../img/arrow-dropdown-region.svg" class="region_toggle-active-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="6px" viewBox="0 0 10 6" version="1.1" class="injected-svg icon-svg">
-                        <polyline stroke-width="1" points="8 -4.9736156e-14 4 4 -2.03004718e-15 -4.9736156e-14" fill="none" stroke="#dedede"></polyline>
-                    </svg></icon>
-            </div>
-            <ul class="region_toggle-inner-list">
-                <!-- ngRepeat: region in regions --><li class="region_toggle-inner-list-item ng-scope" ng-repeat="region in regions">
-                    <a class="region_toggle-inner-list-item-link" href="https://us.camposcoffee.com/">
-                        <div class="region_toggle-inner-list-item-link-div ng-binding"><img ng-src="https://us.camposcoffee.com/wp-content/themes/campos-wp-theme/assets/images/flags/usa.jpg" src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/usa.jpg">USA</div>
-                        <icon ng-class="{&#39;region_toggle-inner-list-item-link-icon--active&#39; : region.slug === current}" src="../img/check-region.svg" class="region_toggle-inner-list-item-link-icon region_toggle-inner-list-item-link-icon--active"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12px" height="10px" viewBox="0 0 12 10" version="1.1" class="injected-svg icon-svg">
-                                <g stroke="none" stroke-width="1" fill-rule="evenodd">
-                                    <g transform="translate(-196.000000, -500.000000)">
-                                        <g>
-                                            <g>
-                                                <g>
-                                                    <g>
-                                                        <g transform="translate(64.000000, 52.000000)">
-                                                            <g transform="translate(0.000000, 355.000000)">
-                                                                <g transform="translate(75.000000, 86.000000)">
-                                                                    <polygon points="57 12.9302326 61.0600775 17 68.9864341 9.05426357 66.9321705 7 61.0503876 12.8817829 59.0542636 10.875969"></polygon>
-                                                                </g>
-                                                            </g>
-                                                        </g>
-                                                    </g>
-                                                </g>
-                                            </g>
-                                        </g>
-                                    </g>
-                                </g>
-                            </svg></icon>
-                    </a>
-                </li><!-- end ngRepeat: region in regions --><li class="region_toggle-inner-list-item ng-scope" ng-repeat="region in regions">
-                    <a class="region_toggle-inner-list-item-link" href="https://camposcoffee.com/?view_aus=true">
-                        <div class="region_toggle-inner-list-item-link-div ng-binding"><img ng-src="https://us.camposcoffee.com/wp-content/themes/campos-wp-theme/assets/images/flags/australia.jpg" src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/australia.jpg">Australia</div>
-                        <icon ng-class="{&#39;region_toggle-inner-list-item-link-icon--active&#39; : region.slug === current}" src="../img/check-region.svg" class="region_toggle-inner-list-item-link-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12px" height="10px" viewBox="0 0 12 10" version="1.1" class="injected-svg icon-svg">
-                                <g stroke="none" stroke-width="1" fill-rule="evenodd">
-                                    <g transform="translate(-196.000000, -500.000000)">
-                                        <g>
-                                            <g>
-                                                <g>
-                                                    <g>
-                                                        <g transform="translate(64.000000, 52.000000)">
-                                                            <g transform="translate(0.000000, 355.000000)">
-                                                                <g transform="translate(75.000000, 86.000000)">
-                                                                    <polygon points="57 12.9302326 61.0600775 17 68.9864341 9.05426357 66.9321705 7 61.0503876 12.8817829 59.0542636 10.875969"></polygon>
-                                                                </g>
-                                                            </g>
-                                                        </g>
-                                                    </g>
-                                                </g>
-                                            </g>
-                                        </g>
-                                    </g>
-                                </g>
-                            </svg></icon>
-                    </a>
-                </li><!-- end ngRepeat: region in regions -->
-            </ul>
-        </div>
-    </region-toggle>
+<!--   <div>region</div>-->
 
 </header>
 
@@ -346,7 +298,7 @@
                             </svg></icon>
                     </div>
 
-                    <ul id="menu-social-menu" class="footer_menu-list"><li id="menu-item-3429" class="menu-item menu-item-type-custom menu-item-object-custom footer_menu-list-item"><a class="footer_menu-list-item-link" target="_blank" href="https://www.facebook.com/CamposCoffee/">Facebook</a><icon src="../img/extrasmall-arrow.svg" class="footer_menu-list-item-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px" viewBox="0 0 10 10" version="1.1" class="injected-svg icon-svg">
+                    <ul id="menu-social-menu" class="footer_menu-list"><li id="menu-item-3429" class="menu-item menu-item-type-custom menu-item-object-custom footer_menu-list-item"><a class="footer_menu-list-item-link" target="_blank" href="https://www.facebook.com/hoffee.vn/">Facebook</a><icon src="../img/extrasmall-arrow.svg" class="footer_menu-list-item-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px" viewBox="0 0 10 10" version="1.1" class="injected-svg icon-svg">
                                     <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
                                         <g id="Footer_Grey" transform="translate(-1195.000000, -128.000000)" stroke="#FFFFFF">
                                             <g id="Links-/-Columns">
@@ -368,7 +320,7 @@
                                         </g>
                                     </g>
                                 </svg></icon></li>
-                        <li id="menu-item-3430" class="menu-item menu-item-type-custom menu-item-object-custom footer_menu-list-item"><a class="footer_menu-list-item-link" target="_blank" href="https://www.instagram.com/camposcoffee/">Instagram</a><icon src="../img/extrasmall-arrow.svg" class="footer_menu-list-item-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px" viewBox="0 0 10 10" version="1.1" class="injected-svg icon-svg">
+                        <li id="menu-item-3430" class="menu-item menu-item-type-custom menu-item-object-custom footer_menu-list-item"><a class="footer_menu-list-item-link" target="_blank" href="#">Instagram</a><icon src="../img/extrasmall-arrow.svg" class="footer_menu-list-item-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px" viewBox="0 0 10 10" version="1.1" class="injected-svg icon-svg">
                                     <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
                                         <g id="Footer_Grey" transform="translate(-1195.000000, -128.000000)" stroke="#FFFFFF">
                                             <g id="Links-/-Columns">
@@ -390,7 +342,7 @@
                                         </g>
                                     </g>
                                 </svg></icon></li>
-                        <li id="menu-item-3431" class="menu-item menu-item-type-custom menu-item-object-custom footer_menu-list-item"><a class="footer_menu-list-item-link" target="_blank" href="https://www.youtube.com/camposcoffee">Youtube</a><icon src="../img/extrasmall-arrow.svg" class="footer_menu-list-item-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px" viewBox="0 0 10 10" version="1.1" class="injected-svg icon-svg">
+                        <li id="menu-item-3431" class="menu-item menu-item-type-custom menu-item-object-custom footer_menu-list-item"><a class="footer_menu-list-item-link" target="_blank" href="#">Youtube</a><icon src="../img/extrasmall-arrow.svg" class="footer_menu-list-item-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px" viewBox="0 0 10 10" version="1.1" class="injected-svg icon-svg">
                                     <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
                                         <g id="Footer_Grey" transform="translate(-1195.000000, -128.000000)" stroke="#FFFFFF">
                                             <g id="Links-/-Columns">
@@ -412,7 +364,7 @@
                                         </g>
                                     </g>
                                 </svg></icon></li>
-                        <li id="menu-item-3432" class="menu-item menu-item-type-custom menu-item-object-custom footer_menu-list-item"><a class="footer_menu-list-item-link" target="_blank" href="https://twitter.com/camposcoffee">Twitter</a><icon src="../img/extrasmall-arrow.svg" class="footer_menu-list-item-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px" viewBox="0 0 10 10" version="1.1" class="injected-svg icon-svg">
+                        <li id="menu-item-3432" class="menu-item menu-item-type-custom menu-item-object-custom footer_menu-list-item"><a class="footer_menu-list-item-link" target="_blank" href="#">Twitter</a><icon src="../img/extrasmall-arrow.svg" class="footer_menu-list-item-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px" viewBox="0 0 10 10" version="1.1" class="injected-svg icon-svg">
                                     <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
                                         <g id="Footer_Grey" transform="translate(-1195.000000, -128.000000)" stroke="#FFFFFF">
                                             <g id="Links-/-Columns">
@@ -446,7 +398,7 @@
                             </svg></icon>
                     </div>
 
-                    <ul id="menu-useful-menu" class="footer_menu-list"><li id="menu-item-3435" class="menu-item menu-item-type-post_type menu-item-object-page footer_menu-list-item"><a class="footer_menu-list-item-link" href="https://us.camposcoffee.com/faq/">FAQ</a><icon src="../img/extrasmall-arrow.svg" class="footer_menu-list-item-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px" viewBox="0 0 10 10" version="1.1" class="injected-svg icon-svg">
+                    <ul id="menu-useful-menu" class="footer_menu-list"><li id="menu-item-3435" class="menu-item menu-item-type-post_type menu-item-object-page footer_menu-list-item"><a class="footer_menu-list-item-link" href="#">FAQ</a><icon src="../img/extrasmall-arrow.svg" class="footer_menu-list-item-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px" viewBox="0 0 10 10" version="1.1" class="injected-svg icon-svg">
                                     <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
                                         <g id="Footer_Grey" transform="translate(-1195.000000, -128.000000)" stroke="#FFFFFF">
                                             <g id="Links-/-Columns">
@@ -468,7 +420,7 @@
                                         </g>
                                     </g>
                                 </svg></icon></li>
-                        <li id="menu-item-3436" class="menu-item menu-item-type-post_type menu-item-object-page footer_menu-list-item"><a class="footer_menu-list-item-link" href="https://us.camposcoffee.com/partnership/">Wholesale</a><icon src="../img/extrasmall-arrow.svg" class="footer_menu-list-item-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px" viewBox="0 0 10 10" version="1.1" class="injected-svg icon-svg">
+                        <li id="menu-item-3436" class="menu-item menu-item-type-post_type menu-item-object-page footer_menu-list-item"><a class="footer_menu-list-item-link" href="#">Wholesale</a><icon src="../img/extrasmall-arrow.svg" class="footer_menu-list-item-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px" viewBox="0 0 10 10" version="1.1" class="injected-svg icon-svg">
                                     <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
                                         <g id="Footer_Grey" transform="translate(-1195.000000, -128.000000)" stroke="#FFFFFF">
                                             <g id="Links-/-Columns">
@@ -490,7 +442,7 @@
                                         </g>
                                     </g>
                                 </svg></icon></li>
-                        <li id="menu-item-3433" class="menu-item menu-item-type-post_type menu-item-object-page footer_menu-list-item"><a class="footer_menu-list-item-link" href="https://us.camposcoffee.com/careers/">Careers</a><icon src="../img/extrasmall-arrow.svg" class="footer_menu-list-item-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px" viewBox="0 0 10 10" version="1.1" class="injected-svg icon-svg">
+                        <li id="menu-item-3433" class="menu-item menu-item-type-post_type menu-item-object-page footer_menu-list-item"><a class="footer_menu-list-item-link" href="#">Careers</a><icon src="../img/extrasmall-arrow.svg" class="footer_menu-list-item-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px" viewBox="0 0 10 10" version="1.1" class="injected-svg icon-svg">
                                     <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
                                         <g id="Footer_Grey" transform="translate(-1195.000000, -128.000000)" stroke="#FFFFFF">
                                             <g id="Links-/-Columns">
@@ -512,7 +464,7 @@
                                         </g>
                                     </g>
                                 </svg></icon></li>
-                        <li id="menu-item-3919" class="menu-item menu-item-type-post_type menu-item-object-page footer_menu-list-item"><a class="footer_menu-list-item-link" href="https://us.camposcoffee.com/contact/">Contact</a><icon src="../img/extrasmall-arrow.svg" class="footer_menu-list-item-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px" viewBox="0 0 10 10" version="1.1" class="injected-svg icon-svg">
+                        <li id="menu-item-3919" class="menu-item menu-item-type-post_type menu-item-object-page footer_menu-list-item"><a class="footer_menu-list-item-link" href="#">Contact</a><icon src="../img/extrasmall-arrow.svg" class="footer_menu-list-item-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px" viewBox="0 0 10 10" version="1.1" class="injected-svg icon-svg">
                                     <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
                                         <g id="Footer_Grey" transform="translate(-1195.000000, -128.000000)" stroke="#FFFFFF">
                                             <g id="Links-/-Columns">
@@ -546,29 +498,8 @@
                             </svg></icon>
                     </div>
 
-                    <ul id="menu-account-menu" class="footer_menu-list"><li id="menu-item-3426" class="menu-item menu-item-type-post_type menu-item-object-page footer_menu-list-item"><a class="footer_menu-list-item-link" href="https://us.camposcoffee.com/my-account/">My Account</a><icon src="../img/extrasmall-arrow.svg" class="footer_menu-list-item-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px" viewBox="0 0 10 10" version="1.1" class="injected-svg icon-svg">
-                                    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-                                        <g id="Footer_Grey" transform="translate(-1195.000000, -128.000000)" stroke="#FFFFFF">
-                                            <g id="Links-/-Columns">
-                                                <g transform="translate(96.000000, 65.000000)">
-                                                    <g id="Group-9" transform="translate(470.000000, 1.000000)">
-                                                        <g id="Column-2" transform="translate(513.000000, 0.000000)">
-                                                            <g id="extrasmall-arrow" transform="translate(117.000000, 63.000000)">
-                                                                <g id="small-arrow">
-                                                                    <g>
-                                                                        <polyline id="arrow" transform="translate(6.545455, 4.000000) rotate(-90.000000) translate(-6.545455, -4.000000) " points="10.1818182 2.18181818 6.54545455 5.81818182 2.90909091 2.18181818"></polyline>
-                                                                        <path d="M8.03857416,4 L0.229673548,4" id="Line"></path>
-                                                                    </g>
-                                                                </g>
-                                                            </g>
-                                                        </g>
-                                                    </g>
-                                                </g>
-                                            </g>
-                                        </g>
-                                    </g>
-                                </svg></icon></li>
-                        <li id="menu-item-3425" class="menu-item menu-item-type-post_type menu-item-object-page footer_menu-list-item"><a class="footer_menu-list-item-link" href="https://us.camposcoffee.com/cart/">Cart</a><icon src="../img/extrasmall-arrow.svg" class="footer_menu-list-item-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px" viewBox="0 0 10 10" version="1.1" class="injected-svg icon-svg">
+                    <ul id="menu-account-menu" class="footer_menu-list">
+                        <li id="menu-item-3425" class="menu-item menu-item-type-post_type menu-item-object-page footer_menu-list-item"><a class="footer_menu-list-item-link" href="<?php echo Configure::read('Settings.DOMAIN'); ?>/shop/cart/">Cart</a><icon src="../img/extrasmall-arrow.svg" class="footer_menu-list-item-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px" viewBox="0 0 10 10" version="1.1" class="injected-svg icon-svg">
                                     <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
                                         <g id="Footer_Grey" transform="translate(-1195.000000, -128.000000)" stroke="#FFFFFF">
                                             <g id="Links-/-Columns">

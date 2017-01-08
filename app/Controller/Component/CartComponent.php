@@ -28,7 +28,7 @@ class CartComponent extends Component {
 
 //////////////////////////////////////////////////
 
-    public function add($id, $quantity = 1, $productmodId = null) {
+    public function add($id, $quantity = 1, $productmodId = null, $voucher = 0 , $code = '') {
 
         if($productmodId) {
             $productmod = ClassRegistry::init('Productmod')->find('first', array(
@@ -97,6 +97,8 @@ class CartComponent extends Component {
         $data['Product'] = $product['Product'];
         $this->Session->write('Shop.OrderItem.' . $id . '_' . $productmodId, $data);
         $this->Session->write('Shop.Order.shop', 1);
+        $this->Session->write('Shop.Order.voucher', $voucher);
+        $this->Session->write('Shop.Order.code', $code);
 
         $this->cart();
 
@@ -137,7 +139,11 @@ class CartComponent extends Component {
             $d['quantity'] = $quantity;
             $d['weight'] = sprintf('%01.2f', $weight);
             $d['subtotal'] = sprintf('%01.2f', $subtotal);
-            $d['total'] = sprintf('%01.2f', $total);
+            //var_dump($shop['Order']);
+            $d['voucher'] = $shop['Order']['voucher'];
+            $d['code'] = $shop['Order']['code'];
+            $d['discount'] = $total * $d['voucher'] / 100;
+            $d['total'] = sprintf('%01.2f', $total - $total * $d['voucher'] / 100);
             $this->Session->write('Shop.Order', $d + $shop['Order']);
             return true;
         }

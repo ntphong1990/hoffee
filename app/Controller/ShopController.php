@@ -97,10 +97,22 @@ class ShopController extends AppController {
 
     public function cartupdate() {
         if ($this->request->is('post')) {
+            $this->loadModel('Voucher');
+            $voucher = $this->Voucher->find('first',array(
+                'conditions' => array(
+                    'code' => $this->request->data['coupon_code'],
+
+                )));
+           // var_dump($voucher);die();
             foreach($this->request->data['Product'] as $key => $value) {
                 $p = explode('-', $key);
                 $p = explode('_', $p[1]);
-                $this->Cart->add($p[0], $value, $p[1]);
+                if($voucher) {
+                    $this->Cart->add($p[0], $value, $p[1],$voucher['Voucher']['value'],$voucher['Voucher']['code']);
+                } else {
+                    $this->Cart->add($p[0], $value, $p[1]);
+                }
+
             }
             // $this->Flash->success('Shopping Cart is updated.');
         }
@@ -120,6 +132,7 @@ class ShopController extends AppController {
     public function address() {
 
         $shop = $this->Session->read('Shop');
+        $this->set(compact('shop'));
         if(!$shop['Order']['total']) {
             return $this->redirect('/');
         }
@@ -128,15 +141,57 @@ class ShopController extends AppController {
             $this->loadModel('Order');
             $this->Order->set($this->request->data);
 			
-			// var_dump( $this->Order);die();
-            // if($this->Order->validates()) {
+
+             if($this->Order->validates()) {
+                 $this->request->data['Order']['shipping_address'] = $this->request->data['Order']['billing_address'];
+                 $this->request->data['Order']['shipping_city'] = $this->request->data['Order']['billing_city'];
                 $order = $this->request->data['Order'];
-                $order['order_type'] = 'creditcard';
+                $order['order_type'] = '';
+
+                 if(isset($this->request->data['Order']['direct'])){
+                     $order['order_type'] = $order['order_type'].'direct';
+                 }
+                 if(isset($this->request->data['Order']['transfer'])){
+                     $order['order_type'] = $order['order_type'].'transfer';
+                 }
                 $this->Session->write('Shop.Order', $order + $shop['Order']);
-                return $this->redirect(array('action' => 'review'));
-            // } else {
-                // $this->Flash->danger('The form could not be saved. Please, try again.');
-            // }
+
+                // var_dump($order);die();
+
+                 $this->Order->set($this->request->data);
+                // var_dump($this->request->data);die();
+                 if($this->Order->validates()) {
+                     $shop = $this->Session->read('Shop');
+                     $order = $shop;
+                     $order['Order']['status'] = 1;
+                   //  var_dump($order);die();
+                     $save = $this->Order->saveAll($order);
+
+                     if($save) {
+
+                         $this->set(compact('shop'));
+
+                         App::uses('CakeEmail', 'Network/Email');
+                         $email = new CakeEmail('gmail');
+                         $email->from(array(Configure::read('Settings.ADMIN_EMAIL') => 'Hoffee'))
+                             ->cc(Configure::read('Settings.ADMIN_EMAIL'))
+                             ->to($shop['Order']['email'])
+                             ->subject('Shop Order')
+                             ->template('default')
+                             ->emailFormat('html')
+                             ->viewVars(array('shop' => $shop))
+                             ->send();
+                         return $this->redirect(array('action' => 'success'));
+                     } else {
+                         $errors = $this->Order->invalidFields();
+                         $this->set(compact('errors'));
+                     }
+                 }
+
+                //return $this->redirect(array('action' => 'review'));
+             } else {
+                 $this->Flash->danger('Please input required field.');
+             }
         }
         if(!empty($shop['Order'])) {
             $this->request->data['Order'] = $shop['Order'];
@@ -199,7 +254,7 @@ class ShopController extends AppController {
             if($this->Order->validates()) {
                 $order = $shop;
                 $order['Order']['status'] = 1;
-				
+
                /* if($shop['Order']['order_type'] == 'paypal') {
                     $paypal = $this->Paypal->ConfirmPayment($order['Order']['total']);
                     //debug($resArray);

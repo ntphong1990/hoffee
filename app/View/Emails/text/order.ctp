@@ -16,16 +16,6 @@ Billing Address 2: <?php echo $shop['Order']['billing_address2'];?>
 Billing City: <?php echo $shop['Order']['billing_city'];?>
 
 
-
-
-Shipping Address: <?php echo $shop['Order']['shipping_address'];?>
-
-Shipping Address 2: <?php echo $shop['Order']['shipping_address2'];?>
-
-Shipping City: <?php echo $shop['Order']['shipping_city'];?>
-
-
-
 Description			Item Price			Quantity			Extended Price
 <?php foreach ($shop['OrderItem'] as $orderitem): ?>
 <?php echo $orderitem['Product']['name']; ?>			$<?php echo $orderitem['Product']['price']; ?>				<?php echo $orderitem['quantity']; ?>				$<?php echo $orderitem['subtotal']; ?>

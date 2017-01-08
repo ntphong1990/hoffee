@@ -71,7 +71,7 @@
 
     <div class="featured_content-column featured_content-column--first featured_content-column--card ng-scope scroll_active" scroll-item="" scroll-key="featuredleft" id="scrollItem3" style="transform: matrix(1, 0, 0, 1, 0, 64);">
 
-        <a href="https://us.camposcoffee.com/find-us/" class="featured_content-column-link">
+        <a href="#" class="featured_content-column-link">
 
             <figure class="featured_content-column-image_container">
 
@@ -85,7 +85,7 @@
                 <h6 class="featured_content-column-content-suptitle">Find us</h6>
 
 
-                <h3 class="featured_content-column-content-title"><span>FIND CAMPOS COFFEE<br>
+                <h3 class="featured_content-column-content-title"><span>FIND HOFFEE<br>
 NEAR YOU</span></h3>
 
                 <icon src="https://us.camposcoffee.com/wp-content/themes/campos-wp-theme/assets/images/icons/big-arrow.svg" class="featured_content-column-content-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21px" height="17px" viewBox="0 0 21 17" version="1.1" class="injected-svg icon-svg">
@@ -127,7 +127,7 @@ NEAR YOU</span></h3>
 
 
 
-        <a href="https://us.camposcoffee.com/shop" class="featured_products-link">
+        <a href="<?php echo Configure::read('Settings.DOMAIN'); ?>/products" class="featured_products-link">
 
             <h2 class="featured_products-title">
 				<span>READY TO Make Coffee<br>
@@ -159,7 +159,7 @@ at home and work?</span>
 
         <li class="featured_products-list-item">
 
-            <a href="https://us.camposcoffee.com/product/campos-dark-city/" class="product-link">
+            <a href="<?php echo Configure::read('Settings.DOMAIN'); ?>/products/view/mot-la" class="product-link">
 
                 <figure class="product-figure">
 
@@ -211,7 +211,7 @@ at home and work?</span>
 
         <li class="featured_products-list-item">
 
-            <a href="https://us.camposcoffee.com/product/campos-superior-blend/" class="product-link">
+            <a href="<?php echo Configure::read('Settings.DOMAIN'); ?>/products/view/hai-la" class="product-link">
 
                 <figure class="product-figure">
 
@@ -274,7 +274,7 @@ at home and work?</span>
 
     <div class="featured_content-column featured_content-column--first featured_content-column--card ng-scope" scroll-item="" scroll-key="featuredright" id="scrollItem6" style="transform: matrix(1, 0, 0, 1, 0, 128);">
 
-        <a href="https://us.camposcoffee.com/our-story/history/" class="featured_content-column-link">
+        <a href="#" class="featured_content-column-link">
 
             <figure class="featured_content-column-image_container">
 
@@ -331,7 +331,7 @@ PHILOSOPHY &amp; MORE</span></h3>
 
         <!-- Link to Articles Page -->
 
-        <a href="https://us.camposcoffee.com/articles/" class="featured_articles-link">
+        <a href="#" class="featured_articles-link">
 
             <h2 class="featured_articles-title">
                 <span>BREW GUIDES AND MORE</span>
@@ -359,7 +359,7 @@ PHILOSOPHY &amp; MORE</span></h3>
 
         <li class="featured_articles-list-item">
 
-            <a href="https://us.camposcoffee.com/how-to-brew-plunger-french-press/" class="card-link">
+            <a href="#" class="card-link">
 
                 <figure class="card-figure">
 
@@ -401,7 +401,7 @@ PHILOSOPHY &amp; MORE</span></h3>
 
         <li class="featured_articles-list-item">
 
-            <a href="https://us.camposcoffee.com/welcome-new-camposcoffee-com/" class="card-link">
+            <a href="#" class="card-link">
 
                 <figure class="card-figure">
 
@@ -443,7 +443,7 @@ PHILOSOPHY &amp; MORE</span></h3>
 
         <li class="featured_articles-list-item">
 
-            <a href="https://us.camposcoffee.com/how-to-brew-aeropress/" class="card-link">
+            <a href="#" class="card-link">
 
                 <figure class="card-figure">
 
