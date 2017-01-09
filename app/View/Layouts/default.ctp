@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<!-- saved from url=(0028)https://us.camposcoffee.com/ -->
+<!-- saved from url=(0028)http://hoffee.vn/ -->
 <html lang="en-US" prefix="og: http://ogp.me/ns#" class="js no-touchevents svg inputsearchevent ng-scope" ng-app="camposApp"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
 
 
     <title>Hoffee - Quality Coffee Cultivated by Good</title>
 
-    <!-- <link href="https://us.camposcoffee.com/wp-content/themes/campos-wp-theme/favicon.ico" rel="shortcut icon"> -->
+    <!-- <link href="http://hoffee.vn/wp-content/themes/campos-wp-theme/favicon.ico" rel="shortcut icon"> -->
     <meta name="description" content="Premium Coffee, Specialty Coffee, Buy Hoffee Online">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
@@ -14,12 +14,12 @@
     <!-- This site is optimized with the Yoast SEO plugin v3.8 - https://yoast.com/wordpress/plugins/seo/ -->
     <meta name="description" content="Hoffee&#39;s love for speciality and quality coffee is never ending. Find the closest Hoffee outlet to you or buy our coffees online.">
     <meta name="robots" content="noodp">
-    <link rel="canonical" href="https://us.camposcoffee.com/">
+    <link rel="canonical" href="https://hoffee.vn/">
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Hoffee - Quality Coffee Cultivated by Good">
     <meta property="og:description" content="Hoffee&#39;s love for speciality and quality coffee is never ending. Find the closest Hoffee outlet to you or buy our coffees online.">
-    <meta property="og:url" content="https://us.camposcoffee.com/">
+    <meta property="og:url" content="http://hoffee.vn/">
     <meta property="og:site_name" content="Hoffee USA">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:description" content="Hoffee&#39;s love for speciality and quality coffee is never ending. Find the closest Hoffee outlet to you or buy our coffees online.">
@@ -49,20 +49,20 @@
         __gaTracker( 'require', 'ec' );
     </script>
     <!-- end WooCommerce Google Analytics Pro -->
-    <link rel="https://api.w.org/" href="https://us.camposcoffee.com/wp-json/">
-    <link rel="alternate" type="application/json+oembed" href="https://us.camposcoffee.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fus.camposcoffee.com%2F">
-    <link rel="alternate" type="text/xml+oembed" href="https://us.camposcoffee.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fus.camposcoffee.com%2F&amp;format=xml">
-    <link rel="icon" href="https://us.camposcoffee.com/wp-content/uploads/2016/11/cropped-campos-favicon-32x32.png" sizes="32x32">
-    <link rel="icon" href="https://us.camposcoffee.com/wp-content/uploads/2016/11/cropped-campos-favicon-192x192.png" sizes="192x192">
-    <link rel="apple-touch-icon-precomposed" href="https://us.camposcoffee.com/wp-content/uploads/2016/11/cropped-campos-favicon-180x180.png">
-    <meta name="msapplication-TileImage" content="https://us.camposcoffee.com/wp-content/uploads/2016/11/cropped-campos-favicon-270x270.png">
+    <link rel="https://api.w.org/" href="http://hoffee.vn/wp-json/">
+    <link rel="alternate" type="application/json+oembed" href="http://hoffee.vn/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fus.camposcoffee.com%2F">
+    <link rel="alternate" type="text/xml+oembed" href="http://hoffee.vn/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fus.camposcoffee.com%2F&amp;format=xml">
+    <link rel="icon" href="http://hoffee.vn/wp-content/uploads/2016/11/cropped-campos-favicon-32x32.png" sizes="32x32">
+    <link rel="icon" href="http://hoffee.vn/wp-content/uploads/2016/11/cropped-campos-favicon-192x192.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="http://hoffee.vn/wp-content/uploads/2016/11/cropped-campos-favicon-180x180.png">
+    <meta name="msapplication-TileImage" content="http://hoffee.vn/wp-content/uploads/2016/11/cropped-campos-favicon-270x270.png">
 
     <link rel="alternate" hreflang="en-au" href="https://camposcoffee.com/">
-    <link rel="alternate" hreflang="en-us" href="https://us.camposcoffee.com/">
+    <link rel="alternate" hreflang="en-us" href="http://hoffee.vn/">
 
 
-    <link rel="alternate" hreflang="en-ca" href="https://us.camposcoffee.com/">
-    <link rel="alternate" hreflang="en-bm" href="https://us.camposcoffee.com/">
+    <link rel="alternate" hreflang="en-ca" href="http://hoffee.vn/">
+    <link rel="alternate" hreflang="en-bm" href="http://hoffee.vn/">
     <link rel="alternate" hreflang="x-default" href="https://camposcoffee.com/">
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -127,7 +127,7 @@
     <nav class="menu">
 
         <ul id="menu-main-menu" class="menu-ul"><li id="menu-item-3419" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-137 current_page_item menu-ul-li"><a class="menu-ul-li-a" href="/">Home</a></li>
-<!--            <li id="menu-item-3421" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="https://us.camposcoffee.com/find-us/">Find Us</a></li>-->
+<!--            <li id="menu-item-3421" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="http://hoffee.vn/find-us/">Find Us</a></li>-->
             <li id="menu-item-3437" class="menu-item menu-item-type-custom menu-item-object-custom menu-ul-li"><a class="menu-ul-li-a" href="<?php echo Configure::read('Settings.DOMAIN'); ?>/products">Shop</a></li>
             <li id="menu-item-3424" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-ul-li"><a class="menu-ul-li-a" href="#">Our Story<icon src="../img/arrow-dropdown.svg" class="menu-ul-li-a-icon" sub-menu=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="6px" viewBox="0 0 10 6" version="1.1" class="injected-svg icon-svg">
                             <polyline stroke-width="1" points="8 -4.9736156e-14 4 4 -2.03004718e-15 -4.9736156e-14" fill="none"></polyline>
@@ -139,7 +139,7 @@
                     <li id="menu-item-3967" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="#">History</a></li>
                 </ul>
             </li>
-<!--            <li id="menu-item-3422" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="https://us.camposcoffee.com/partnership/">Wholesale</a></li>-->
+<!--            <li id="menu-item-3422" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="http://hoffee.vn/partnership/">Wholesale</a></li>-->
             <li id="menu-item-3420" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="#">Articles</a></li>
             <li class="menu-ul-li menu-ul-li--footer"><h3 class="menu-ul-li-site_title">Hoffee</h3><span class="menu-ul-li-date">© 2017</span></li></ul>
     </nav>
@@ -153,7 +153,7 @@
 <!---->
 <!---->
 <!---->
-<!--                <a tooltip="Log In or Register" class="user_controls-ul-li-a tooltip-wrapper" href="https://us.camposcoffee.com/my-account/">-->
+<!--                <a tooltip="Log In or Register" class="user_controls-ul-li-a tooltip-wrapper" href="http://hoffee.vn/my-account/">-->
 <!---->
 <!---->
 <!--                    <icon src="--><?php //echo Configure::read('Settings.DOMAIN'); ?><!--/img/login.svg" class="user_controls-ul-li-a-icon"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" viewBox="0 0 17 18" class="injected-svg icon-svg"><path d="M8.237 1.029a3.883 3.883 0 0 0-3.88 3.878c0 2.14 1.741 3.88 3.88 3.88s3.879-1.74 3.879-3.88a3.883 3.883 0 0 0-3.88-3.878m0 8.786A4.913 4.913 0 0 1 3.33 4.907 4.913 4.913 0 0 1 8.237 0a4.913 4.913 0 0 1 4.907 4.907 4.913 4.913 0 0 1-4.907 4.908"></path><path d="M1.047 16.509h14.38c-.265-3.735-3.388-6.694-7.19-6.694-3.802 0-6.925 2.959-7.19 6.694m14.912 1.028H.514A.514.514 0 0 1 0 17.023c0-4.541 3.695-8.237 8.236-8.237 4.543 0 8.238 3.696 8.238 8.237 0 .284-.23.514-.515.514"></path></svg></icon>-->
@@ -205,7 +205,7 @@
 
                             <div role="form" class="wpcf7" id="wpcf7-f153-o1" lang="en-US" dir="ltr">
                                 <div class="screen-reader-response"></div>
-                                <form action="https://us.camposcoffee.com/#wpcf7-f153-o1" method="post" class="wpcf7-form mailchimp-ext-0.4.32 ng-pristine ng-valid" novalidate="novalidate">
+                                <form action="http://hoffee.vn/#wpcf7-f153-o1" method="post" class="wpcf7-form mailchimp-ext-0.4.32 ng-pristine ng-valid" novalidate="novalidate">
                                     <div style="display: none;">
                                         <input type="hidden" name="_wpcf7" value="153">
                                         <input type="hidden" name="_wpcf7_version" value="4.5">
@@ -245,7 +245,7 @@
 
 
         <search class="search">
-            <form id="searchForm" class="search-form ng-pristine ng-invalid ng-invalid-required" action="https://us.camposcoffee.com/" method="get" novalidate="" autocomplete="off">
+            <form id="searchForm" class="search-form ng-pristine ng-invalid ng-invalid-required" action="http://hoffee.vn/" method="get" novalidate="" autocomplete="off">
                 <input name="s" ng-model="searchTerm" id="searchInput" class="search-form-input ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" type="text" placeholder="search" required="">
                 <button class="search-form-button tooltip-wrapper" type="submit" ng-click="searchToggle($event)" tooltip="search">
                     <icon src="../img/search.svg" class="search-form-button-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" class="injected-svg icon-svg"><path fill="none" d="M-2-1h22v20H-2z"></path><path d="M7.096 1.56a5.794 5.794 0 0 0-4.11 1.701 5.82 5.82 0 0 0 0 8.222 5.776 5.776 0 0 0 4.11 1.703 5.777 5.777 0 0 0 4.111-1.703 5.82 5.82 0 0 0 0-8.222 5.795 5.795 0 0 0-4.11-1.7m0 12.91a7.052 7.052 0 0 1-5.02-2.08c-2.769-2.767-2.769-7.271 0-10.039 2.767-2.769 7.271-2.768 10.039 0s2.768 7.272 0 10.04a7.053 7.053 0 0 1-5.02 2.08" mask="url(#mask-2)" transform="translate(0 .153)"></path><g><path d="M5.51 6.429a.64.64 0 0 1-.455-.189L.277 1.462a.643.643 0 1 1 .909-.91l4.779 4.779a.644.644 0 0 1-.455 1.098" mask="url(#mask-4)" transform="translate(11.143 11.296)"></path></g></svg></icon>
@@ -273,7 +273,7 @@
 
 
 
-    <div class="breakout_image breakout_image--size--cover breakout_image--footer" style="background-image: url(&#39;https://us.camposcoffee.com/wp-content/uploads/2016/08/contact_background.jpg&#39;)"></div>
+    <div class="breakout_image breakout_image--size--cover breakout_image--footer" style="background-image: url(&#39;http://hoffee.vn/wp-content/uploads/2016/08/contact_background.jpg&#39;)"></div>
 
 
 
@@ -557,8 +557,8 @@
 
         <div class="footer-information-column footer-information-column--end">
 
-            <ul id="menu-legal-menu" class="footer-legal-menu"><li id="menu-item-3427" class="menu-item menu-item-type-post_type menu-item-object-page footer-legal-menu-item"><a class="footer-legal-menu-item-link" href="https://us.camposcoffee.com/privacy/">Privacy</a></li>
-                <li id="menu-item-3428" class="menu-item menu-item-type-post_type menu-item-object-page footer-legal-menu-item"><a class="footer-legal-menu-item-link" href="https://us.camposcoffee.com/terms-conditions/">Terms &amp; Conditions</a></li>
+            <ul id="menu-legal-menu" class="footer-legal-menu"><li id="menu-item-3427" class="menu-item menu-item-type-post_type menu-item-object-page footer-legal-menu-item"><a class="footer-legal-menu-item-link" href="http://hoffee.vn/privacy/">Privacy</a></li>
+                <li id="menu-item-3428" class="menu-item menu-item-type-post_type menu-item-object-page footer-legal-menu-item"><a class="footer-legal-menu-item-link" href="http://hoffee.vn/terms-conditions/">Terms &amp; Conditions</a></li>
             </ul>
         </div>
 
