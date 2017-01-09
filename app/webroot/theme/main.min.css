@@ -2077,10 +2077,10 @@ div.wpcf7-response-output {
 .header-logo_container-logo {
     display: block;
     position: absolute;
-    top: 1.25rem;
+    top: 0rem;
     left: .625rem;
-    width: 5.1875rem;
-    height: 4.375rem;
+    width: 3rem;
+    height: 3rem;
     -webkit-transform: translate3d(0, -35px, 0);
     transform: translate3d(0, -35px, 0);
     will-change: transform;
@@ -2246,8 +2246,8 @@ div.wpcf7-response-output {
         position: relative;
         top: 0;
         left: auto;
-        width: 3.875rem;
-        height: 3.875rem;
+        width: 3rem;
+        height: 3rem;
         margin: -.6875rem auto 0 .375rem;
         -webkit-transform: translateZ(0);
         transform: translateZ(0)
