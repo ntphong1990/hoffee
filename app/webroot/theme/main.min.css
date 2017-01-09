@@ -2081,9 +2081,9 @@ div.wpcf7-response-output {
     left: .625rem;
     width: 3rem;
     height: 3rem;
-    -webkit-transform: translate3d(0, -35px, 0);
-    transform: translate3d(0, -35px, 0);
-    will-change: transform;
+    /*-webkit-transform: translate3d(0, -35px, 0);*/
+    /*transform: translate3d(0, -35px, 0);*/
+    /*will-change: transform;*/
     overflow: hidden;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out
