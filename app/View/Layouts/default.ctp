@@ -140,7 +140,7 @@
                 </ul>
             </li>
 <!--            <li id="menu-item-3422" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="http://hoffee.vn/partnership/">Wholesale</a></li>-->
-            <li id="menu-item-3420" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="#">Articles</a></li>
+            <li id="menu-item-3420" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="<?php echo Configure::read('Settings.DOMAIN'); ?>/blogposts">Articles</a></li>
             <li class="menu-ul-li menu-ul-li--footer"><h3 class="menu-ul-li-site_title">Hoffee</h3><span class="menu-ul-li-date">© 2017</span></li></ul>
     </nav>
 
