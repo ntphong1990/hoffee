@@ -27,7 +27,7 @@
 		<td><?php echo h($blogPost['BlogPost']['title']); ?>&nbsp;</td>
 		<td><?php echo h($blogPost['BlogPost']['slug']); ?>&nbsp;</td>
 		<td><?php echo h($blogPost['BlogPost']['summary']); ?>&nbsp;</td>
-		<td><?php echo h($blogPost['BlogPost']['body']); ?>&nbsp;</td>
+		<td><?php echo ''; ?>&nbsp;</td>
 		<td><?php echo h($blogPost['BlogPost']['published']); ?>&nbsp;</td>
 		<td><?php echo h($blogPost['BlogPost']['sticky']); ?>&nbsp;</td>
 		<td><?php echo h($blogPost['BlogPost']['in_rss']); ?>&nbsp;</td>

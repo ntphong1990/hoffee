@@ -105,11 +105,11 @@ $cakeDescription = 'Hoffee';
 <!--                    <use xlink:href="#stroked-table"></use>-->
 <!--                </svg>-->
 <!--                Categories</a></li>-->
-<!--        <li><a href="--><?php //echo Configure::read('Settings.DOMAIN');?><!--/admin/tags/index">-->
-<!--                <svg class="glyph stroked notepad">-->
-<!--                    <use xlink:href="#stroked-notepad"></use>-->
-<!--                </svg>-->
-<!--                Tags</a></li>-->
+        <li><a href="<?php echo Configure::read('Settings.DOMAIN');?>/admin/BlogPosts/index">
+                <svg class="glyph stroked notepad">
+                    <use xlink:href="#stroked-notepad"></use>
+                </svg>
+                Articles</a></li>
         <li><a href="<?php echo Configure::read('Settings.DOMAIN');?>/admin/products/index">
                 <svg class="glyph stroked star">
                     <use xlink:href="#stroked-star"></use>
