@@ -38,7 +38,7 @@
 		<?php foreach ($blogPosts as $blogPost): ?>
 		<li class="featured_articles-list-item">
 
-			<a href="<?php echo Configure::read('Settings.DOMAIN').'/blogposts/view/'.$blogPost['BlogPost']['slug'] ;?>" class="card-link">
+			<a href="<?php echo Configure::read('Settings.DOMAIN').'/BlogPosts/view/'.$blogPost['BlogPost']['slug'] ;?>" class="card-link">
 
 				<figure class="card-figure">
 
