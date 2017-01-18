@@ -21,7 +21,9 @@ class ProductsController extends AppController {
 
 
     public function home2(){
-
+        $this->loadModel('BlogPost');
+        $this->BlogPost->recursive = 0;
+        $this->set('blogPosts', $this->BlogPost->find('all'));
     }
 
     public function admin_chart(){

@@ -357,129 +357,47 @@ PHILOSOPHY &amp; MORE</span></h3>
 
 
 
-        <li class="featured_articles-list-item">
+        <?php foreach ($blogPosts as $blogPost): ?>
+            <li class="featured_articles-list-item">
 
-            <a href="#" class="card-link">
+                <a href="<?php echo Configure::read('Settings.DOMAIN').'/BlogPosts/view/'.$blogPost['BlogPost']['slug'] ;?>" class="card-link">
 
-                <figure class="card-figure">
+                    <figure class="card-figure">
 
-                    <div style="background-image: url(&#39;https://us.camposcoffee.com/wp-content/uploads/2016/09/plunger-335x200.jpg&#39;);" class="card-figure-image"></div>
+                        <div style="background-image: url(&#39;<?php echo Configure::read('Settings.DOMAIN').$blogPost['BlogPost']['image']; ?>&#39;);" class="card-figure-image"></div>
 
-                </figure>
+                    </figure>
 
-                <div class="content card-content">
+                    <div class="content card-content">
 
-                    <icon src="https://us.camposcoffee.com/wp-content/themes/campos-wp-theme/assets/images/icons/big-arrow.svg" class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21px" height="17px" viewBox="0 0 21 17" version="1.1" class="injected-svg icon-svg">
+                        <icon src="" class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21px" height="17px" viewBox="0 0 21 17" version="1.1" class="injected-svg icon-svg">
 
-                            <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-                                <g id="BigArrow_Beige" transform="translate(1.000000, 1.000000)" stroke-width="2">
-                                    <g>
-                                        <polyline class="arrow-points" id="arrow" transform="translate(15.000000, 7.500000) rotate(-90.000000) translate(-15.000000, -7.500000) " points="22 4 15 11 8 4"></polyline>
-                                        <path d="M17.5,7 L0.5,7" id="Line"></path>
+                                <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                                    <g id="BigArrow_Beige" transform="translate(1.000000, 1.000000)" stroke-width="2">
+                                        <g>
+                                            <polyline class="arrow-points" id="arrow" transform="translate(15.000000, 7.500000) rotate(-90.000000) translate(-15.000000, -7.500000) " points="22 4 15 11 8 4"></polyline>
+                                            <path d="M17.5,7 L0.5,7" id="Line"></path>
+                                        </g>
                                     </g>
                                 </g>
-                            </g>
-                        </svg></icon>
+                            </svg></icon>
 
-                    <h4 class="card-title"><span>How To Brew: Plunger</span></h4>
+                        <h4 class="card-title"><span><?php echo h($blogPost['BlogPost']['title']); ?></span></h4>
 
-                    <h6 class="card-subtitle">
-
-
-
-                        Brew Guides
-
-                    </h6>
-
-                </div>
-
-            </a>
-
-        </li>
+                        <h6 class="card-subtitle">
 
 
 
-        <li class="featured_articles-list-item">
+                            <?php echo h($blogPost['BlogPost']['summary']); ?>
 
-            <a href="#" class="card-link">
+                        </h6>
 
-                <figure class="card-figure">
+                    </div>
 
-                    <div style="background-image: url(&#39;https://us.camposcoffee.com/wp-content/uploads/2016/09/will-young-campos-335x200.jpg&#39;);" class="card-figure-image"></div>
+                </a>
 
-                </figure>
-
-                <div class="content card-content">
-
-                    <icon src="https://us.camposcoffee.com/wp-content/themes/campos-wp-theme/assets/images/icons/big-arrow.svg" class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21px" height="17px" viewBox="0 0 21 17" version="1.1" class="injected-svg icon-svg">
-
-                            <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-                                <g id="BigArrow_Beige" transform="translate(1.000000, 1.000000)" stroke-width="2">
-                                    <g>
-                                        <polyline class="arrow-points" id="arrow" transform="translate(15.000000, 7.500000) rotate(-90.000000) translate(-15.000000, -7.500000) " points="22 4 15 11 8 4"></polyline>
-                                        <path d="M17.5,7 L0.5,7" id="Line"></path>
-                                    </g>
-                                </g>
-                            </g>
-                        </svg></icon>
-
-                    <h4 class="card-title"><span>Welcome to the new camposcoffee.com</span></h4>
-
-                    <h6 class="card-subtitle">
-
-
-
-                        News
-
-                    </h6>
-
-                </div>
-
-            </a>
-
-        </li>
-
-
-
-        <li class="featured_articles-list-item">
-
-            <a href="#" class="card-link">
-
-                <figure class="card-figure">
-
-                    <div style="background-image: url(&#39;https://us.camposcoffee.com/wp-content/uploads/2016/09/aeropress-335x200.jpg&#39;);" class="card-figure-image"></div>
-
-                </figure>
-
-                <div class="content card-content">
-
-                    <icon src="https://us.camposcoffee.com/wp-content/themes/campos-wp-theme/assets/images/icons/big-arrow.svg" class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21px" height="17px" viewBox="0 0 21 17" version="1.1" class="injected-svg icon-svg">
-
-                            <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-                                <g id="BigArrow_Beige" transform="translate(1.000000, 1.000000)" stroke-width="2">
-                                    <g>
-                                        <polyline class="arrow-points" id="arrow" transform="translate(15.000000, 7.500000) rotate(-90.000000) translate(-15.000000, -7.500000) " points="22 4 15 11 8 4"></polyline>
-                                        <path d="M17.5,7 L0.5,7" id="Line"></path>
-                                    </g>
-                                </g>
-                            </g>
-                        </svg></icon>
-
-                    <h4 class="card-title"><span>How To Brew: Aeropress</span></h4>
-
-                    <h6 class="card-subtitle">
-
-
-
-                        Brew Guides
-
-                    </h6>
-
-                </div>
-
-            </a>
-
-        </li>
+            </li>
+        <?php endforeach; ?>
 
 
     </ul>
