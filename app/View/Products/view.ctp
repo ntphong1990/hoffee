@@ -80,7 +80,7 @@ $(document).ready(function() {
 
                         <div class="pill pill--center">
 
-                            <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>12.00</span>
+                            <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"><?php echo $product['Product']['price']; ?></span> VND</span>
                         </div>
 
 
