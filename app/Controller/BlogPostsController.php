@@ -156,7 +156,8 @@ class BlogPostsController extends AppController {
 
 
 		if ($this->request->is(array('post', 'put'))) {
-            if($this->request->data['BlogPost']['image']){
+          //  var_dump($this->request->data['BlogPost']['image']);die();
+            if($this->request->data['BlogPost']['image']['name'] != ''){
                 $this->Img = $this->Components->load('Img');
                 var_dump($this->request->data);
                 $newName = $this->request->data['BlogPost']['slug'];
@@ -170,6 +171,8 @@ class BlogPostsController extends AppController {
                 $dst = '/images/original/'.$origFile;
                 $upload = $this->Img->upload($this->request->data['BlogPost']['image']['tmp_name'], $targetdir, $origFile);
                 $this->request->data['BlogPost']['image'] = $dst;
+            } else {
+                unset($this->request->data['BlogPost']['image']);
             }
 
 			if ($this->BlogPost->save($this->request->data)) {

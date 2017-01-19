@@ -1,4 +1,6 @@
+<script src="//cdn.ckeditor.com/4.5.7/full-all/ckeditor.js"></script>
 <div class="blogPosts form">
+
 <?php echo $this->Form->create('BlogPost', array('type' => 'file')); ?>
 	<fieldset>
 		<legend><?php echo __('Admin Edit Blog Post'); ?></legend>
@@ -7,7 +9,9 @@
 		echo $this->Form->input('title');
 		echo $this->Form->input('slug');
 		echo $this->Form->input('summary');
-		echo $this->Form->input('body');
+
+		echo $this->Form->input('body', array('class' => 'form-control ckeditor'));
+
 		echo $this->Form->input('published');
 		echo $this->Form->input('sticky');
 		echo $this->Form->input('in_rss');

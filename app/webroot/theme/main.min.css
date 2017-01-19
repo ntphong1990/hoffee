@@ -955,10 +955,10 @@ div.wpcf7-response-output {
     margin-right: 1.25rem
 }
 
-.article-inner-content > p:first-of-type {
-    font-family: Conv_AvenirLTStd-BookOblique;
-    font-size: 1.125rem
-}
+/*.article-inner-content > p:first-of-type {*/
+    /*font-family: Conv_AvenirLTStd-BookOblique;*/
+    /*font-size: 1.125rem*/
+/*}*/
 
 .article-inner-content img {
     display: block;
