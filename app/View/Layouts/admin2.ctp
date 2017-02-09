@@ -87,11 +87,11 @@ $cakeDescription = 'Hoffee';
 <!--                </svg>-->
 <!--                Kho</a></li>-->
 
-        <li><a href="<?php echo Configure::read('Settings.DOMAIN');?>/admin/products/chart">
-                <svg class="glyph stroked line-graph">
-                    <use xlink:href="#stroked-line-graph"></use>
-                </svg>
-                Doanh Thu</a></li>
+<!--        <li><a href="--><?php //echo Configure::read('Settings.DOMAIN');?><!--/admin/products/chart">-->
+<!--                <svg class="glyph stroked line-graph">-->
+<!--                    <use xlink:href="#stroked-line-graph"></use>-->
+<!--                </svg>-->
+<!--                Doanh Thu</a></li>-->
         <li><a href="<?php echo Configure::read('Settings.DOMAIN');?>/admin/financials/index">
                 <svg class="glyph stroked notepad">
                     <use xlink:href="#stroked-notepad"></use>
