@@ -1,15 +1,21 @@
 
-<div class="paging">
-
-    <?php echo $this->Paginator->first('<< first', array(), null, array('class' => 'first disabled')); ?>
-
-    <?php echo $this->Paginator->prev('< previous', array(), null, array('class' => 'prev disabled')); ?>
-
+<div class="paginate">
+    <ul class="pagination">
+        <li>
+    <?php echo $this->Paginator->first('<<', array(), null, array('class' => 'first disabled')); ?>
+        </li>
+        <li>
+    <?php echo $this->Paginator->prev('<', array(), null, array('class' => 'prev disabled')); ?>
+        </li>
+        <li>
     <?php echo $this->Paginator->numbers(array('separator' => ' ')); ?>
-
-    <?php echo $this->Paginator->next('next >', array(), null, array('class' => 'next disabled')); ?>
-
-    <?php echo $this->Paginator->last('last >>', array(), null, array('class' => 'last disabled')); ?>
-
+        </li>
+        <li>
+    <?php echo $this->Paginator->next('>', array(), null, array('class' => 'next disabled')); ?>
+        </li>
+        <li>
+    <?php echo $this->Paginator->last('>>', array(), null, array('class' => 'last disabled')); ?>
+        </li>
+    </ul>
 </div>
 

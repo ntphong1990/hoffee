@@ -163,12 +163,26 @@ class ShopController extends AppController {
                  if($this->Order->validates()) {
                      $shop = $this->Session->read('Shop');
                      $order = $shop;
-                     $order['Order']['status'] = 1;
-                   //  var_dump($order);die();
+                     $order['Order']['status'] = 2;
+                     //var_dump($order);die();
                      $save = $this->Order->saveAll($order);
 
                      if($save) {
+                         $this->loadModel('Customer');
+                         if(!$this->Customer->find('first',array('conditions' => array(
+                             'phone' => $order['Order']['phone']
+                         )))){
+                             $customer = $this->Customer->create();
+                             $customer['Customer']['name'] = $order['Order']['first_name'];
+                             $customer['Customer']['lastname'] = $order['Order']['last_name'];
+                             $customer['Customer']['address'] = $order['Order']['billing_address'];
+                             $customer['Customer']['email'] = $order['Order']['email'];
+                             $customer['Customer']['phone'] = $order['Order']['phone'];
+                             $customer['Customer']['birthday'] = date('Y-m-d');
 
+                             $this->Customer->save($customer);
+
+                         }
                          $this->set(compact('shop'));
 
                          App::uses('CakeEmail', 'Network/Email');

@@ -14,6 +14,7 @@ class OrdersController extends AppController {
                 'contain' => array(
                 ),
                 'conditions' => array(
+                    'status <> 3'
                 ),
                 'order' => array(
                     'Order.created' => 'DESC'
@@ -25,6 +26,165 @@ class OrdersController extends AppController {
         $orders = $this->Paginator->paginate();
 
         $this->set(compact('orders'));
+    }
+
+    public function admin_temp() {
+        $this->Paginator = $this->Components->load('Paginator');
+
+        $this->Paginator->settings = array(
+            'Order' => array(
+                'recursive' => -1,
+                'contain' => array(
+                ),
+                'conditions' => array(
+                    'status' => 3
+                ),
+                'order' => array(
+                    'Order.created' => 'DESC'
+                ),
+                'limit' => 20,
+                'paramType' => 'querystring',
+            )
+        );
+        $orders = $this->Paginator->paginate();
+
+        $this->set(compact('orders'));
+    }
+
+
+    public function admin_create(){
+        $this->loadModel('Product');
+        $this->loadModel('Brand');
+        $this->loadModel('Customer');
+        $products = $this->Product->find('all', array(
+            'order'=>array('brand_id DESC')
+        ));
+        $reproduct = [];
+        $brand = -1;
+        foreach ($products as $key => $value){
+            if($brand != $value['Product']['brand_id']){
+
+                $brand = $value['Product']['brand_id'];
+                $reproduct[$brand]['brand_name'] = $this->Brand->find('first',array(
+                    'conditions' => array('id' => $brand)
+                ))['Brand']['name'];
+                $reproduct[$brand]['data'] = [];
+                array_push($reproduct[$brand]['data'],$value);
+            } else {
+                array_push($reproduct[$brand]['data'],$value);
+            }
+
+        }
+
+        $this->set('products',$reproduct);
+
+        $customer = $this->Customer->find('all');
+        $this->set('customers',$customer);
+
+        if ($this->request->is('post') || $this->request->is('put')) {
+            return json_encode('asd');
+                die();
+
+
+        } else {
+
+        }
+        //var_dump($reproduct);die();
+    }
+
+    public function admin_submit(){
+        $this->autoRender = false;
+        $this->loadModel('Customer');
+        $this->loadModel('OrderItem');
+        $customer = $this->Customer->find('first',array('conditions' => array(
+            'id' => $this->request->data['customerid']
+        )));
+
+        $order = $this->Order->create();
+        $order['Order']['first_name'] = $customer['Customer']['name'];
+        $order['Order']['customerid'] = $customer['Customer']['id'];
+      $order['Order']['last_name'] = $customer['Customer']['lastname'];
+      $order['Order']['email'] = $customer['Customer']['email'];
+      $order['Order']['phone'] = $customer['Customer']['phone'];
+      $order['Order']['billing_address'] = $customer['Customer']['address'];
+      $order['Order']['billing_address2'] = '';
+      $order['Order']['billing_city'] = '';
+      $order['Order']['note'] = '';
+      $order['Order']['direct'] = '1';
+      $order['Order']['shipping_address'] = '';
+      $order['Order']['shipping_city'] = '';
+      $order['Order']['order_type'] = 'direct';
+      $order['Order']['order_item_count'] = 1;
+      $order['Order']['quantity'] = 1;
+      $order['Order']['weight'] = '0';
+      $order['Order']['subtotal'] = $this->request->data['subtotal'];
+      $order['Order']['voucher'] = 0;
+      $order['Order']['code'] = '';
+      $order['Order']['discount'] = 0;
+        $order['Order']['shipping'] = $this->request->data['shipping'];
+      $order['Order']['total'] = $this->request->data['total'];
+      $order['Order']['status'] = $this->request->data['status'];
+        $orderItems = json_decode($this->request->data['orderitem']);
+        $order['OrderItem'] = array();
+        foreach ($orderItems as $key => $value){
+            $orderItem = array();
+
+            $orderItem['product_id'] = $value->id;
+          $orderItem['name'] = $value->name;
+          $orderItem['weight'] = '0.50';
+          $orderItem['price'] = $value->price;
+          $orderItem['quantity'] = $value->quanlity;
+          $orderItem['subtotal'] = $value->quanlity * $value->price;
+            array_push($order['OrderItem'],$orderItem);
+        }
+
+       $a = $this->Order->saveAll($order);
+        $this->Order->set($order);
+       // var_dump($this->Order->validates());die();
+        return json_encode('');
+        //return $this->redirect(array('action' => 'index'));
+    }
+
+    public function admin_correct(){
+        $this->autoRender = false;
+        $this->loadModel('Customer');
+        $orders = $this->Order->find('all');
+        foreach ($orders as $key => $value){
+            if(!$this->Customer->find('first',array('conditions' => array(
+                'phone' => $value['Order']['phone']
+            )))){
+                $customer = $this->Customer->create();
+                $customer['Customer']['name'] = $value['Order']['first_name'];
+                $customer['Customer']['lastname'] = $value['Order']['last_name'];
+                $customer['Customer']['address'] = $value['Order']['billing_address'];
+                $customer['Customer']['email'] = $value['Order']['email'];
+                $customer['Customer']['phone'] = $value['Order']['phone'];
+                $customer['Customer']['birthday'] = date('Y-m-d');
+
+                $this->Customer->save($customer);
+
+            }
+        }
+    }
+
+    public function admin_thu(){
+        $this->autoRender = false;
+        $this->loadModel('Financial');
+        $orders = $this->Order->find('all');
+        foreach ($orders as $key => $value){
+
+                $customer = $this->Financial->create();
+                $customer['Financial']['type'] = 1;
+                $customer['Financial']['value'] = $value['Order']['total'];
+                $customer['Financial']['note'] = 'Đơn đặt hàng từ '.$value['Order']['first_name'];
+                $customer['Financial']['kind'] = 1;
+                $customer['Financial']['detail'] = $value['Order']['id'];
+
+
+                $this->Financial->save($customer);
+
+
+        }
     }
 
 ////////////////////////////////////////////////////////////
