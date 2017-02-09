@@ -205,7 +205,7 @@
                                                                     data-bind="click: function(data, event){$parents[1].SelectedItem(data,event);}">
 
                                                                     <a class="color_green pull-left" style="margin-right: 5px">
-                                                                        <div class="wrap-img"><img class="thumb-image" src="/hoffee4/images/small/<?php echo $value1['Product']['image']; ?>" title="image"> </div>
+                                                                        <div class="wrap-img"><img class="thumb-image" src="<?php echo Configure::read('Settings.DOMAIN');?>/images/small/<?php echo $value1['Product']['image']; ?>" title="image"> </div>
                                                                     </a>
                                                                     <a class="color_green pull-left">
 
