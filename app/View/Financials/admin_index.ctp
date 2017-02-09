@@ -19,7 +19,7 @@
 					<svg class="glyph stroked bag"><use xlink:href="#stroked-bag"></use></svg>
 				</div>
 				<div class="col-sm-9 col-lg-7 widget-right">
-					<div class="large"><?php echo number_format($doanhthu);?></div>
+					<div class="large"><?php echo number_format($doanhthu);?> ₫</div>
 					<div class="text-muted">Doanh Thu</div>
 				</div>
 			</div>
@@ -32,7 +32,7 @@
 					<svg class="glyph stroked empty-message"><use xlink:href="#stroked-empty-message"></use></svg>
 				</div>
 				<div class="col-sm-9 col-lg-7 widget-right">
-					<div class="large"><?php echo number_format($chi);?></div>
+					<div class="large"><?php echo number_format($chi);?> ₫</div>
 					<div class="text-muted">Chi</div>
 				</div>
 			</div>
@@ -45,7 +45,7 @@
 					<svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg>
 				</div>
 				<div class="col-sm-9 col-lg-7 widget-right">
-					<div class="large"><?php echo number_format($tong);?></div>
+					<div class="large"><?php echo number_format($tong);?> ₫</div>
 					<div class="text-muted">Tổng thu</div>
 				</div>
 			</div>
@@ -58,7 +58,7 @@
 					<svg class="glyph stroked app-window-with-content"><use xlink:href="#stroked-app-window-with-content"></use></svg>
 				</div>
 				<div class="col-sm-9 col-lg-7 widget-right">
-					<div class="large"><?php echo number_format($tong - $chi);?></div>
+					<div class="large"><?php echo number_format($tong - $chi);?> ₫</div>
 					<div class="text-muted">Tiền mặt</div>
 				</div>
 			</div>
