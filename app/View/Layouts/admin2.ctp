@@ -129,12 +129,12 @@ $cakeDescription = 'Hoffee';
             <ul class="children collapse in" id="sub-item-1">
                 <li>
                     <a class="" href="<?php echo Configure::read('Settings.DOMAIN');?>/admin/orders/index">
-                        <svg class="glyph stroked chevron-right"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#stroked-chevron-right"></use></svg> Đơn Hàng
+                        <svg class="glyph stroked bacon burger"><use xlink:href="#stroked-bacon-burger"/></svg> Đơn Hàng
                     </a>
                 </li>
                 <li>
                     <a class="" href="<?php echo Configure::read('Settings.DOMAIN');?>/admin/orders/temp">
-                        <svg class="glyph stroked chevron-right"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#stroked-chevron-right"></use></svg> Nháp
+                        <svg class="glyph stroked pen tip"><use xlink:href="#stroked-pen-tip"/></svg> Nháp
                     </a>
                 </li>
 
@@ -147,12 +147,12 @@ $cakeDescription = 'Hoffee';
             <ul class="children collapse in" id="sub-item-1">
                 <li>
                     <a class="" href="<?php echo Configure::read('Settings.DOMAIN');?>/admin/products/index">
-                        <svg class="glyph stroked chevron-right"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#stroked-chevron-right"></use></svg> Sản phẩm
+                        <svg class="glyph stroked table"><use xlink:href="#stroked-table"/></svg> Sản phẩm
                     </a>
                 </li>
                 <li>
                     <a class="" href="<?php echo Configure::read('Settings.DOMAIN');?>/admin/brands/index">
-                        <svg class="glyph stroked chevron-right"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#stroked-chevron-right"></use></svg> Nhóm sản phẩm
+                        <svg class="glyph stroked film"><use xlink:href="#stroked-film"/></svg> Nhóm sản phẩm
                     </a>
                 </li>
 

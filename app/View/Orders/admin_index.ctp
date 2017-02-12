@@ -37,7 +37,7 @@
     </tr>
     <?php foreach ($orders as $order): ?>
     <tr>
-        <td><?php echo h($order['Order']['id']); ?></td>
+        <td class="text-underline hover-underline">#<?php echo h($order['Order']['id']); ?></td>
         <td><?php echo h($order['Order']['first_name']); ?></td>
 
 

@@ -74,10 +74,11 @@
 	<thead>
 	<tr>
 <!--			<th>--><?php //echo $this->Paginator->sort('id'); ?><!--</th>-->
-			<th><?php echo $this->Paginator->sort('type'); ?></th>
-			<th><?php echo $this->Paginator->sort('value'); ?></th>
-			<th><?php echo $this->Paginator->sort('note'); ?></th>
-			<th><?php echo $this->Paginator->sort('created'); ?></th>
+			<th><?php echo $this->Paginator->sort('type','Thu/Chi'); ?></th>
+			<th><?php echo $this->Paginator->sort('value','Tiền'); ?></th>
+			<th><?php echo $this->Paginator->sort('note','Chi tiết'); ?></th>
+			<th><?php echo $this->Paginator->sort('detail','Mã'); ?></th>
+			<th><?php echo $this->Paginator->sort('created','Ngày tạo'); ?></th>
 
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
@@ -96,6 +97,7 @@
 			?></td>
 		<td><?php echo h(number_format($financial['Financial']['value'])); ?>&nbsp;₫</td>
 		<td><?php echo h($financial['Financial']['note']); ?>&nbsp;</td>
+		<td class="text-underline hover-underline"><?php if($financial['Financial']['kind'] != 0 )echo $this->Html->link(__('#'.$financial['Financial']['detail']), array('controller' => 'orders','action' => 'view', $financial['Financial']['detail'])); ?></td>
 		<td><?php echo h($financial['Financial']['created']); ?>&nbsp;</td>
 
 		<td class="actions">

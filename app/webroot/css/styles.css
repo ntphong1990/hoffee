@@ -634,6 +634,10 @@ a.bg-danger:hover {
 	color: #30a5ff!important;
 }
 
+.sidebar ul.nav ul.children li.active a {
+    background-color: lightblue;
+}
+
 .sidebar ul.nav li.current a {
 	background-color: #30a5ff;
 	color: #fff!important;
