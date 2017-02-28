@@ -121,26 +121,41 @@ class OrdersController extends AppController {
       $order['Order']['voucher'] = 0;
       $order['Order']['code'] = '';
       $order['Order']['discount'] = 0;
+        $order['Order']['note'] = $this->request->data['note'];
         $order['Order']['shipping'] = $this->request->data['shipping'];
       $order['Order']['total'] = $this->request->data['total'];
       $order['Order']['status'] = $this->request->data['status'];
+
         $orderItems = json_decode($this->request->data['orderitem']);
         $order['OrderItem'] = array();
+        $weight = 0;
         foreach ($orderItems as $key => $value){
             $orderItem = array();
 
             $orderItem['product_id'] = $value->id;
           $orderItem['name'] = $value->name;
-          $orderItem['weight'] = '0.50';
+          $orderItem['weight'] = $value->weight * $value->quanlity;
           $orderItem['price'] = $value->price;
           $orderItem['quantity'] = $value->quanlity;
           $orderItem['subtotal'] = $value->quanlity * $value->price;
+            $weight = $weight + $orderItem['weight'];
             array_push($order['OrderItem'],$orderItem);
         }
-
+        if($order['Order']['status'] == 1) {
+            $order['Financial'] = array();
+            $fee = array();
+            $fee['type'] = 1;
+            $fee['value'] = $order['Order']['total'];
+            $fee['note'] = 'Đơn đặt hàng từ ' . $customer['Customer']['name'];
+            $fee['kind'] = 1;
+            array_push($order['Financial'], $fee);
+        }
+        $order['Order']['weight'] = $weight;
+       // var_dump($order);die();
        $a = $this->Order->saveAll($order);
+
         $this->Order->set($order);
-       // var_dump($this->Order->validates());die();
+
         return json_encode('');
         //return $this->redirect(array('action' => 'index'));
     }
@@ -196,10 +211,44 @@ class OrdersController extends AppController {
                 'Order.id' => $id
             )
         ));
+        $this->loadModel('Financial');
+       $fees = $this->Financial->find('all',array('conditions' => array(
+            'detail' => $id
+        )));
+        $fee = 0;
+        foreach ($fees as $key => $value){
+            $fee = $fee + $value['Financial']['value'];
+        }
+       // var_dump($fee);die();
         if (empty($order)) {
             return $this->redirect(array('action'=>'index'));
         }
         $this->set(compact('order'));
+        $this->set('fee',$fee);
+        if ($this->request->is('post') || $this->request->is('put')) {
+           // var_dump( $this->request->data);
+            if($this->request->data['Order']['money'] != ''){
+                $customer = $this->Financial->create();
+                $customer['Financial']['type'] = 1;
+                $customer['Financial']['value'] = intval($this->request->data['Order']['money']);
+                $customer['Financial']['note'] = 'Đơn đặt hàng từ '.$order['Order']['first_name'];
+                $customer['Financial']['kind'] = 1;
+                $customer['Financial']['detail'] = $id;
+                $this->Financial->save($customer);
+            }
+
+            if($fee + intval($this->request->data['Order']['money']) >= $order['Order']['total']){
+                $order['Order']['status'] = 1;
+            }
+
+            $order['Order']['note'] = $this->request->data['Order']['note'];
+            if($this->Order->save($order)){
+                return $this->redirect(array('action' => 'index'));
+            } else {
+                $this->Flash->flash('The order could not be saved. Please, try again.');
+            }
+
+        }
     }
 
 ////////////////////////////////////////////////////////////

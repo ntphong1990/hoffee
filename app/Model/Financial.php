@@ -20,4 +20,16 @@ class Financial extends AppModel {
  */
 	public $displayField = 'id';
 
+    public $belongsTo = array(
+        'Order' => array(
+            'className' => 'Order',
+            'foreignKey' => 'detail',
+            'conditions' => '',
+            'fields' => '',
+            'order' => '',
+            'counterCache' => true,
+            'counterScope' => array(),
+        )
+    );
+
 }

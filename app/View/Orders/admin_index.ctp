@@ -32,7 +32,9 @@
         <th><?php echo $this->Paginator->sort('shipping','Phí giao hàng'); ?></th>
         <th><?php echo $this->Paginator->sort('total','Tổng tiền'); ?></th>
         <th><?php echo $this->Paginator->sort('status','Thanh Toán'); ?></th>
+        <th><?php echo $this->Paginator->sort('shipping_status','Giao Hàng'); ?></th>
         <th><?php echo $this->Paginator->sort('created','Ngày đặt'); ?></th>
+
         <th>Actions</th>
     </tr>
     <?php foreach ($orders as $order): ?>
@@ -57,6 +59,17 @@
             }
             if($order['Order']['status'] == 3) {
                 echo '<span class="label payment_5">Nháp</span>';
+            }
+            ?></td>
+
+        <td><?php if($order['Order']['shipping_status'] == 1) {
+                echo '<span class="label payment_3">Đang giao hàng</span>';
+            }
+            if($order['Order']['shipping_status'] == 2) {
+                echo '<span class="label payment_2">Đã giao</span>';
+            }
+            if($order['Order']['shipping_status'] == 0) {
+                echo '<span class="label payment_6">Chưa giao</span>';
             }
             ?></td>
         <td><?php echo h($order['Order']['created']); ?></td>

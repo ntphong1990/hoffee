@@ -1,3 +1,14 @@
+<script>
+    function addMoney() {
+
+        $('#totalOwe').html(<?php echo $order['Order']['total'] - $fee;?> - $('#money').val());
+    }
+    
+    function checkOut() {
+        $('#money').val(<?php echo $order['Order']['total'] - $fee;?>);
+        addMoney();
+    }
+</script>
 <div class="outer">
     <div class="inner" id="viewareaid" style="margin-top: 100px">
 
@@ -21,9 +32,9 @@
                     <div class="header__primary-actions">
                         <!-- ko if:Order().IsArchived()--><!-- /ko -->
                         <!-- ko if:!Order().IsArchived()-->
-                        <button type="button" <?php if($order['Order']['status'] != 3) echo 'disabled';?> class="btn btn-primary" data-bind="click:ArchiveOrder">
-                            <span>Lưu</span>
-                        </button>
+<!--                        <button type="button" --><?php //if($order['Order']['status'] != 3) echo 'disabled';?><!-- class="btn btn-primary" data-bind="click:ArchiveOrder">-->
+<!--                            <span>Lưu</span>-->
+<!--                        </button>-->
                         <!-- /ko -->
                     </div>
                     <div class="header__secondary-actions">
@@ -34,6 +45,7 @@
                     </div>
                 </div>
             </div>
+            <?php echo $this->Form->create('Order'); ?>
             <div class="one-row-actions hide-print">
                 <div class="flexbox-grid no-pd-none">
                     <div class="flexbox-content">
@@ -156,18 +168,18 @@
                                                     Số tiền đã thanh toán:
                                                 </td>
                                                 <td class="text-right p-sm-r bold-light">
-                                                    <span data-bind="textMoneyWithSymbol: Order().AmountPaid"><?php if($order['Order']['status'] == 1) echo h(number_format($order['Order']['total'])); else echo 0; ?> ₫</span>
+                                                    <span data-bind="textMoneyWithSymbol: Order().AmountPaid"><?php echo h(number_format($fee));?> ₫</span>
                                                 </td>
                                             </tr>
-                                            <?php if($order['Order']['status'] != 1) { ?>
+                                            <?php if($fee < $order['Order']['total']) { ?>
                                             <tr>
                                                 <td colspan="3" class="text-right p-sm-r">
-                                                    <a data-bind="click:OpenShippingPopup" class="hover-underline"><i
+                                                    <a onclick="checkOut()" class="hover-underline"><i
                                                             class="fa fa-plus-circle"></i> Thanh Toán Hết</a>
                                                 </td>
                                                 <td class="p-xs">
 
-                                                    <input class="form-control p-none-r" placeholder="Thanh toán 1 phần" type="number" id="shipFee" min="1" onchange="addShipFee(this)">
+                                                    <input class="form-control p-none-r" name="data[Order][money]" placeholder="Thanh toán 1 phần" type="number" id="money" min="1" onchange="addMoney()">
 
                                                 </td>
                                                 <!--/ko-->
@@ -175,7 +187,7 @@
                                             </tr>
                                             <tr class="bold-light">
                                                 <td  colspan="3" class="text-right p-sm-r">Còn nợ</td>
-                                                <td class="text-right p-sm-r bold-light" id="totalSumProduct">0 </td>
+                                                <td class="text-right p-sm-r bold-light" id="totalOwe"><?php echo number_format($order['Order']['total'] - $fee);?> </td>
                                                 <td> ₫</td>
                                             </tr>
                                             <?php } ?>
@@ -201,14 +213,14 @@
                                 <div class="panel panel-default">
                                     <div class="panel-body">
                                         <p>Ghi chú đơn hàng</p>
-                                        <textarea data-bind="value: Order().OrderNotes,attr:{placeholder:ph}" style="resize: none" class="form-control mt15 textarea-auto-height" rows="4" placeholder="Thêm ghi chú cho đơn hàng…"></textarea>
+                                        <textarea name="data[Order][note]" style="resize: none" class="form-control mt15 textarea-auto-height" rows="4" placeholder="Thêm ghi chú cho đơn hàng…"><?php echo $order['Order']['note'];?></textarea>
                                     </div>
                                     <div data-bind="foreach:NoteAttributes"></div>
                                     <div class="panel-footer text-right p-sm-r">
-                                        <button type="button" class="btn btn-default" data-bind="click:SaveNote">Lưu</button>
+                                        <button type="submit" class="btn btn-default">Lưu đơn hàng</button>
                                     </div>
                                 </div>
-
+                                <?php echo $this->Form->end();?>
 
 
 

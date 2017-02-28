@@ -21,7 +21,7 @@
     var shipFee = 0;
     var totalSum = 0;
     var customer = 0;
-    function addProduct(id,brand,name,price,image) {
+    function addProduct(id,brand,name,price,image,weight) {
 
 
         var product = Object();
@@ -31,6 +31,7 @@
         product.quanlity = 1;
         product.price = price;
         product.image = image;
+        product.weight = weight;
         products.push(product);
         updateView();
     }
@@ -49,7 +50,8 @@
                     subtotal: sum,
                     shipping: shipFee,
                     total: totalSum,
-                    status: flag
+                    status: flag,
+                    note : $('#note').val()
                 }, function (result) {
                     window.location.href = '<?php echo Configure::read('Settings.DOMAIN');?>/admin/orders/index';
                 });
@@ -201,7 +203,7 @@
                                                         <div class="clear"></div>
                                                         <ul data-bind="foreach: Model">
                                                             <?php foreach ($value['data'] as $key => $value1) { ?>
-                                                                <li class="clearfix product-variant" onclick="addProduct(<?php echo $value1['Product']['id'];?>,'<?php echo $value['brand_name'];?>','<?php echo $value1['Product']['name'];?>',<?php echo $value1['Product']['price'];?>,'<?php echo $value1['Product']['image'];?>')"
+                                                                <li class="clearfix product-variant" onclick="addProduct(<?php echo $value1['Product']['id'];?>,'<?php echo $value['brand_name'];?>','<?php echo $value1['Product']['name'];?>',<?php echo $value1['Product']['price'];?>,'<?php echo $value1['Product']['image'];?>',<?php echo $value1['Product']['weight'];?>)"
                                                                     data-bind="click: function(data, event){$parents[1].SelectedItem(data,event);}">
 
                                                                     <a class="color_green pull-left" style="margin-right: 5px">
@@ -315,7 +317,9 @@
                                 <div class="form-group">
                                     <label>Ghi chú</label>
                                     <textarea class="form-control textarea-auto-height" rows="2"
-                                              placeholder="Ghi chú đơn hàng" data-bind="value:DraftNotes"></textarea>
+                                              placeholder="Ghi chú đơn hàng" id="note">
+
+                                    </textarea>
                                 </div>
                                 <div class="form-group">
 <!--                                    <a class="mb10 inline_block" role="button" data-toggle="collapse"-->

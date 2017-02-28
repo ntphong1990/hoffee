@@ -24,7 +24,21 @@ class Order extends AppModel {
             'exclusive' => '',
             'finderQuery' => '',
             'counterQuery' => '',
+        ),
+        'Financial' => array(
+            'className' => 'Financial',
+            'foreignKey' => 'detail',
+            'dependent' => true,
+            'conditions' => '',
+            'fields' => '',
+            'order' => '',
+            'limit' => '',
+            'offset' => '',
+            'exclusive' => '',
+            'finderQuery' => '',
+            'counterQuery' => '',
         )
+
     );
 
 //////////////////////////////////////////////////
