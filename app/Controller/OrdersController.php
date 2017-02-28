@@ -102,7 +102,7 @@ class OrdersController extends AppController {
 
         $order = $this->Order->create();
         $order['Order']['first_name'] = $customer['Customer']['name'];
-        $order['Order']['customerid'] = $customer['Customer']['id'];
+        $order['Order']['customer_id'] = $customer['Customer']['id'];
       $order['Order']['last_name'] = $customer['Customer']['lastname'];
       $order['Order']['email'] = $customer['Customer']['email'];
       $order['Order']['phone'] = $customer['Customer']['phone'];

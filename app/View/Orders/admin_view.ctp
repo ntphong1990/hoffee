@@ -159,11 +159,31 @@
                                                     <span data-bind="textMoneyWithSymbol: Order().AmountPaid"><?php if($order['Order']['status'] == 1) echo h(number_format($order['Order']['total'])); else echo 0; ?> ₫</span>
                                                 </td>
                                             </tr>
+                                            <?php if($order['Order']['status'] != 1) { ?>
+                                            <tr>
+                                                <td colspan="3" class="text-right p-sm-r">
+                                                    <a data-bind="click:OpenShippingPopup" class="hover-underline"><i
+                                                            class="fa fa-plus-circle"></i> Thanh Toán Hết</a>
+                                                </td>
+                                                <td class="p-xs">
 
+                                                    <input class="form-control p-none-r" placeholder="Thanh toán 1 phần" type="number" id="shipFee" min="1" onchange="addShipFee(this)">
 
+                                                </td>
+                                                <!--/ko-->
+
+                                            </tr>
+                                            <tr class="bold-light">
+                                                <td  colspan="3" class="text-right p-sm-r">Còn nợ</td>
+                                                <td class="text-right p-sm-r bold-light" id="totalSumProduct">0 </td>
+                                                <td> ₫</td>
+                                            </tr>
+                                            <?php } ?>
                                             </tbody>
 
+
                                         </table>
+
 
                                         <table>
                                             <!-- ko if:Order().TotalTransactions()  < 2 --><!-- /ko -->
@@ -174,6 +194,7 @@
                                             <!-- /ko -->
                                         </table>
                                     </div>
+
                                 </div>
 
 
