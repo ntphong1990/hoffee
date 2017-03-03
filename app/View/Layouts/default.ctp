@@ -20,7 +20,8 @@
     <meta property="og:title" content="Hoffee - Quality Coffee Cultivated by Good">
     <meta property="og:description" content="Hoffee&#39;s love for speciality and quality coffee is never ending. Find the closest Hoffee outlet to you or buy our coffees online.">
     <meta property="og:url" content="http://hoffee.vn/">
-    <meta property="og:site_name" content="Hoffee USA">
+    <meta property="og:site_name" content="Hoffee">
+    <meta property="og:image" content="http://hoffee.vn/img/cafe-phin-1-la.png"/>
     <meta name="twitter:card" content="summary">
     <meta name="twitter:description" content="Hoffee&#39;s love for speciality and quality coffee is never ending. Find the closest Hoffee outlet to you or buy our coffees online.">
     <meta name="twitter:title" content="Hoffee - Quality Coffee Cultivated by Good">
