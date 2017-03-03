@@ -4,7 +4,7 @@
 
 
     <title>Hoffee - Quality Coffee Cultivated by Good</title>
-    <link rel="shortcut icon" type="image/png" href="http://hoffee.vn/img/fav.png"/>
+    <link rel="shortcut icon" type="image/png" href="<?php echo Configure::read('Settings.DOMAIN'); ?>/img/logo.png"/>
     <!-- <link href="http://hoffee.vn/wp-content/themes/campos-wp-theme/favicon.ico" rel="shortcut icon"> -->
     <meta name="description" content="Premium Coffee, Specialty Coffee, Buy Hoffee Online">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -24,7 +24,7 @@
     <meta property="og:image" content="http://hoffee.vn/img/cafe-phin-1-la.png"/>
 
     <script async="" src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/fbevents.js"></script><script type="text/javascript" async="" src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/hotjar-302606.js"></script><script type="text/javascript" async="" src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/uwt.js"></script><script type="text/javascript" async="" src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/ec.js"></script><script async="" src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/gtm.js"></script><script async="" src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/analytics.js"></script><script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/us.camposcoffee.com\/","name":"Hoffee USA","potentialAction":{"@type":"SearchAction","target":"https:\/\/us.camposcoffee.com\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
-  
+
     <!-- / Yoast SEO plugin. -->
 
     <link rel="dns-prefetch" href="https://s.w.org/">
