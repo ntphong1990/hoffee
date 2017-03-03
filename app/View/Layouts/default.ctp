@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- saved from url=(0028)http://hoffee.vn/ -->
-<html lang="en-US" prefix="og: http://ogp.me/ns#" class="js no-touchevents svg inputsearchevent ng-scope" ng-app="camposApp"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
 
 
     <title>Hoffee - Quality Coffee Cultivated by Good</title>
@@ -22,16 +22,11 @@
     <meta property="og:url" content="http://hoffee.vn/">
     <meta property="og:site_name" content="Hoffee">
     <meta property="og:image" content="http://hoffee.vn/img/cafe-phin-1-la.png"/>
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:description" content="Hoffee&#39;s love for speciality and quality coffee is never ending. Find the closest Hoffee outlet to you or buy our coffees online.">
-    <meta name="twitter:title" content="Hoffee - Quality Coffee Cultivated by Good">
-    <meta name="twitter:site" content="@camposcoffee">
-    <meta name="twitter:creator" content="@camposcoffee">
-    <script async="" src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/fbevents.js"></script><script type="text/javascript" async="" src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/hotjar-302606.js"></script><script type="text/javascript" async="" src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/uwt.js"></script><script type="text/javascript" async="" src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/ec.js"></script><script async="" src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/gtm.js"></script><script async="" src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/analytics.js"></script><script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/us.camposcoffee.com\/","name":"Hoffee USA","potentialAction":{"@type":"SearchAction","target":"https:\/\/us.camposcoffee.com\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
-    <script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"Organization","url":"https:\/\/us.camposcoffee.com\/","sameAs":["https:\/\/www.facebook.com\/CamposCoffee\/","https:\/\/www.instagram.com\/camposcoffee\/","https:\/\/www.linkedin.com\/company\/campos-coffee","https:\/\/www.youtube.com\/camposcoffee","https:\/\/twitter.com\/camposcoffee"],"@id":"#organization","name":"Hoffee","logo":"http:\/\/us.camposcoffee.com\/wp-content\/uploads\/2016\/11\/campos-favicon.png"}</script>
-    <!-- / Yoast SEO plugin. -->
 
-    <link rel="dns-prefetch" href="https://s.w.org/">
+    <script async="" src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/fbevents.js"></script><script type="text/javascript" async="" src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/hotjar-302606.js"></script><script type="text/javascript" async="" src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/uwt.js"></script><script type="text/javascript" async="" src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/ec.js"></script><script async="" src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/gtm.js"></script><script async="" src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/analytics.js"></script><script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/us.camposcoffee.com\/","name":"Hoffee USA","potentialAction":{"@type":"SearchAction","target":"https:\/\/us.camposcoffee.com\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+
+
+  
     <link rel="stylesheet" id="contact-form-7-css" href="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/styles.css" media="all">
     <link rel="stylesheet" id="woocommerce-layout-css" href="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/woocommerce-layout.css" media="all">
     <link rel="stylesheet" id="woocommerce-smallscreen-css" href="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/woocommerce-smallscreen.css" media="only screen and (max-width: 768px)">
