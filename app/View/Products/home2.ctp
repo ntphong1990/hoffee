@@ -17,7 +17,7 @@
         <h1 class="video_hero-inner-title">READY TO MAKE COFFEE<br>
             AT HOME AND WORK?</h1><br>
             <br>
-        </p><center><a href="/find-us/"><img src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/directions-button.jpg"></a></center><p></p>
+        </p><center><a href="<?php echo Configure::read('Settings.DOMAIN'); ?>/products/"><img src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/button-shopnow.jpg"></a></center><p></p>
 
 
 
