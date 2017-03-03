@@ -75,7 +75,11 @@
 
             <figure class="featured_content-column-image_container">
 
-                <div class="featured_content-column-image_container-image" style="background-image: url(&#39;https://us.camposcoffee.com/wp-content/uploads/2016/09/campos-green-cup.jpg&#39;);"></div>
+                <div class="featured_content-column-image_container-image" >
+                    <video playsinline autoplay muted loop poster="polina.jpg" id="bgvid" width="600">
+                        <source src="./img/video.mp4" type="video/mp4">
+                    </video>
+                </div>
 
             </figure>
 
@@ -278,7 +282,7 @@ at home and work?</span>
 
             <figure class="featured_content-column-image_container">
 
-                <div class="featured_content-column-image_container-image" style="background-image: url(&#39;https://us.camposcoffee.com/wp-content/uploads/2016/09/el-salvador.jpg&#39;);"></div>
+                <div class="featured_content-column-image_container-image" style="background-image: url('./img/banner-3-e.jpg');"></div>
 
             </figure>
 
