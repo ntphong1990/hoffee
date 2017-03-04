@@ -112,7 +112,7 @@ NEAR YOU</span></h3>
 
     <figure class="featured_content-column featured_content-column--second featured_content-column--section_image">
 
-        <div id="featuredContentFigure" class="featured_content-column--section_image-image" style="background-image: url(&#39;https://us.camposcoffee.com/wp-content/uploads/2016/09/coffee-roaster-close-up.jpg&#39;);"></div>
+        <div id="featuredContentFigure" class="featured_content-column--section_image-image" style="background-image: url('./img/banner-3-e.jpg');"></div>
 
     </figure>
 
@@ -282,7 +282,7 @@ at home and work?</span>
 
             <figure class="featured_content-column-image_container">
 
-                <div class="featured_content-column-image_container-image" style="background-image: url('./img/banner-3-e.jpg');"></div>
+                <div class="featured_content-column-image_container-image" style="background-image: url('./img/banner-5.jpg');"></div>
 
             </figure>
 
@@ -315,7 +315,7 @@ PHILOSOPHY &amp; MORE</span></h3>
 
     <figure class="featured_content-column featured_content-column--second featured_content-column--section_image">
 
-        <div id="featuredContentFigure" class="featured_content-column--section_image-image" style="background-image: url(&#39;https://us.camposcoffee.com/wp-content/uploads/2016/09/latte-art.jpg&#39;);"></div>
+        <div id="featuredContentFigure" class="featured_content-column--section_image-image" style="background-image: url('./img/banner-4.jpg');"></div>
 
     </figure>
 
