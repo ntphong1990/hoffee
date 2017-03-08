@@ -63,7 +63,7 @@ Shopping Cart is empty
                                     </td>
 
                                     <td class="product-price" data-title="Price">
-                                        <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"><span id="price-<?php echo $key; ?>"><?php echo $item['Product']['price']; ?></span>VND</span>								</td>
+                                        <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"><span id="price-<?php echo $key; ?>"><?php echo number_format($item['Product']['price']); ?></span> VND</span>								</td>
 
                                     <td class="product-quantity" data-title="Qty">
                                         <div class="quantity">
@@ -78,7 +78,7 @@ Shopping Cart is empty
                                     </td>
 
                                     <td class="product-subtotal" data-title="Subtotal">
-                                        <span class="woocommerce-Price-amount amount"> <span id="subtotal_<?php echo $key; ?>"><?php echo $item['subtotal']; ?></span> VND</span>								</td>
+                                        <span class="woocommerce-Price-amount amount"> <span id="subtotal_<?php echo $key; ?>"><?php echo number_format($item['subtotal']); ?></span> VND</span>								</td>
 
                                     <td class="product-remove">
                                         <a href="https://us.camposcoffee.com/cart/?remove_item=02e8f2e4364042907ef9df3764b3546b&amp;_wpnonce=c60eaf3f9c" class="remove" title="Remove this item" data-product_id="2024" data-product_sku=""><icon src="https://us.camposcoffee.com/wp-content/themes/campos-wp-theme/assets/images/icons/rubbish.svg" class="product-remove-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22px" height="21px" viewBox="0 0 22 21" version="1.1" class="injected-svg icon-svg">
@@ -143,7 +143,7 @@ Shopping Cart is empty
 
                                     <span class="cart-order_total-heading">Total (VND)</span>
 
-                                    <span class="cart-order_total-amount"><strong><span class="woocommerce-Price-amount amount"><?php echo $shop['Order']['total']; ?> VND</span></strong> </span>
+                                    <span class="cart-order_total-amount"><strong><span class="woocommerce-Price-amount amount"><?php echo number_format($shop['Order']['total']); ?> VND</span></strong> </span>
 
                                 </div>
 
@@ -203,7 +203,7 @@ Shopping Cart is empty
 
                                     <tr class="order-total">
                                         <th>Discount (VND)</th>
-                                        <td data-title="Total"><strong><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"><?php echo $shop['Order']['discount']; ?> VND</span></strong> </td>
+                                        <td data-title="Total"><strong><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"><?php echo number_format($shop['Order']['discount']); ?> VND</span></strong> </td>
                                     </tr>
 
 

@@ -133,7 +133,7 @@
                                 </td>
 
                                 <td class="product-total">
-                                    <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"><?php echo $item['subtotal']; ?></span> VND</span>						</td>
+                                    <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"><?php echo number_format($item['subtotal']); ?></span> VND</span>						</td>
 
                             </tr>
                             <?php endforeach;?>
@@ -142,7 +142,7 @@
 
                             <tr class="cart-subtotal">
                                 <th>Subtotal</th>
-                                <td><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"><?php echo $shop['Order']['subtotal']; ?> VND</span></td>
+                                <td><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"><?php echo number_format($shop['Order']['subtotal']); ?> VND</span></td>
                             </tr>
 
 
@@ -172,7 +172,7 @@
 
                             <tr class="order-total">
                                 <th>Total</th>
-                                <td><strong><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"><?php echo $shop['Order']['total']; ?> VND</span></strong> </td>
+                                <td><strong><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"><?php echo number_format($shop['Order']['total']); ?> VND</span></strong> </td>
                             </tr>
 
 
