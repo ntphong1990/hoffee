@@ -119,6 +119,25 @@ class ShopController extends AppController {
         return $this->redirect(array('action' => 'cart'));
     }
 
+    public function shipupdate($id,$firstname = '',$lastname = '',$email = '',$phone ='',$address = '') {
+       // if ($this->request->is('post')) {
+
+            $ship = 0;
+            if ($id) {
+                if ($id == 190) {
+                    $ship = 20000;
+                } else {
+                    $ship = 40000;
+                }
+            }
+            //var_dump($ship);die();
+            // var_dump($voucher);die();
+            $this->Cart->shipping($ship,$id,$firstname,$lastname,$email,$phone,$address);
+            // $this->Flash->success('Shopping Cart is updated.');
+       // }
+        return $this->redirect(array('action' => 'address'));
+    }
+
 //////////////////////////////////////////////////
 
     public function cart() {
@@ -136,6 +155,13 @@ class ShopController extends AppController {
         if(!$shop['Order']['total']) {
             return $this->redirect('/');
         }
+
+
+        $this->loadModel('ListLocation');
+
+        $locations = $this->ListLocation->find('all');
+        $this->set('locations',$locations);
+       // var_dump($locations);die();
 
         if ($this->request->is('post')) {
             $this->loadModel('Order');

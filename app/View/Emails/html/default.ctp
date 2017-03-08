@@ -51,6 +51,7 @@
                                             </td>
                                             <td style="font-family:Helvetica,Arial,sans-serif;font-size:14px;color:#c6d4df;padding-right:15px;text-align:right;padding-top:10px;padding-bottom:10px">
                                                 <?php echo $item['subtotal']; ?></span> VND											</td>
+
                                         </tr>
                                         <?php endforeach;?>
                                         <tr><td style="padding-top:10px" colspan="3"></td></tr>
@@ -60,7 +61,10 @@
                                                 <table style="width:100%" align="center" cellpadding="0" cellspacing="0" border="0">
                                                     <tbody><tr>
                                                         <td style="font-family:Helvetica,Arial,sans-serif;font-size:12px;color:#61696d;width:250px">
-                                                            Address: <?php echo $shop['Order']['billing_address'];?>																											</td>
+                                                            Address: <?php echo $shop['Order']['billing_address'];?>
+                                                        </td>
+                                                        <td style="font-family:Helvetica,Arial,sans-serif;font-size:12px;color:#66c0f4;width:120px;text-align:right;padding-right:5px">Shipping:</td>
+                                                        <td style="font-family:Helvetica,Arial,sans-serif;font-size:12px;color:#66c0f4;padding-right:15px;text-align:right"><?php echo $shop['Order']['shipping'];?> VND</td>
                                                         <td style="font-family:Helvetica,Arial,sans-serif;font-size:12px;color:#66c0f4;width:120px;text-align:right;padding-right:5px">Total:</td>
                                                         <td style="font-family:Helvetica,Arial,sans-serif;font-size:12px;color:#66c0f4;padding-right:15px;text-align:right"><?php echo $shop['Order']['total'];?> VND</td>
                                                     </tr>

@@ -1,3 +1,14 @@
+<script>
+    function shipping(e) {
+
+        window.location.href = "<?php echo Configure::read('Settings.DOMAIN');?>/shop/shipupdate/" + e.options[e.selectedIndex].value
+            +"/" + $('#billing_first_name').val()
+            +"/" + $('#billing_last_name').val()
+            +"/" + $('#billing_email').val()
+            +"/" + $('#billing_phone').val()
+            +"/" + $('#billing_address_1').val();
+    }
+</script>
 <div class="woocommerce">
 
     <div class="woocommerce-message_wrapper">
@@ -29,20 +40,29 @@
 
 
 
-                            <p class="form-row form-row form-row-first validate-required" id="billing_first_name_field"><label for="billing_first_name" class="">First Name <abbr class="required" title="required">*</abbr></label><input type="text" class="input-text " name="data[Order][first_name]" id="billing_first_name" placeholder="" autocomplete="given-name" required value=""></p>
+                            <p class="form-row form-row form-row-first validate-required" id="billing_first_name_field"><label for="billing_first_name" class="">First Name <abbr class="required" title="required">*</abbr></label><input type="text" class="input-text " name="data[Order][first_name]" id="billing_first_name" placeholder="" autocomplete="given-name" required value="<?php echo $shop['Order']['firstname'];?>"></p>
 
-                            <p class="form-row form-row form-row-last validate-required" id="billing_last_name_field"><label for="billing_last_name" class="">Last Name <abbr class="required" title="required">*</abbr></label><input type="text" class="input-text " name="data[Order][last_name]" id="billing_last_name" placeholder="" autocomplete="family-name" required value=""></p><div class="clear"></div>
+                            <p class="form-row form-row form-row-last validate-required" id="billing_last_name_field"><label for="billing_last_name" class="">Last Name <abbr class="required" title="required">*</abbr></label><input type="text" class="input-text " name="data[Order][last_name]" id="billing_last_name" placeholder="" autocomplete="family-name" required value="<?php echo $shop['Order']['lastname'];?>"></p><div class="clear"></div>
 
 
 
-                            <p class="form-row form-row form-row-first validate-required validate-email" id="billing_email_field"><label for="billing_email" class="">Email Address <abbr class="required" title="required">*</abbr></label><input type="email" class="input-text " name="data[Order][email]" id="billing_email" placeholder="" autocomplete="email" required value=""></p>
+                            <p class="form-row form-row form-row-first validate-required validate-email" id="billing_email_field"><label for="billing_email" class="">Email Address <abbr class="required" title="required">*</abbr></label><input type="email" class="input-text " name="data[Order][email]" id="billing_email" placeholder="" autocomplete="email" required value="<?php echo $shop['Order']['email'];?>"></p>
 
-                            <p class="form-row form-row form-row-last validate-required validate-phone" id="billing_phone_field"><label for="billing_phone" class="">Phone <abbr class="required" title="required">*</abbr></label><input type="tel" class="input-text " name="data[Order][phone]" id="billing_phone" placeholder="" autocomplete="tel" required value=""></p><div class="clear"></div>
+                            <p class="form-row form-row form-row-last validate-required validate-phone" id="billing_phone_field"><label for="billing_phone" class="">Phone <abbr class="required" title="required">*</abbr></label><input type="tel" class="input-text " name="data[Order][phone]" id="billing_phone" placeholder="" autocomplete="tel" required value="<?php echo $shop['Order']['phone'];?>"></p><div class="clear"></div>
 
-                            <p class="form-row form-row form-row-wide address-field validate-required" id="billing_address_1_field"><label for="billing_address_1" class="">Address <abbr class="required" title="required">*</abbr></label><input type="text" class="input-text " name="data[Order][billing_address]" id="billing_address_1" required placeholder="Street address" autocomplete="address-line1" value=""></p>
+                            <p class="form-row form-row form-row-wide address-field validate-required" id="billing_address_1_field"><label for="billing_address_1" class="">Address <abbr class="required" title="required">*</abbr></label><input type="text" class="input-text " name="data[Order][billing_address]" id="billing_address_1" required placeholder="Street address" autocomplete="address-line1" value="<?php echo $shop['Order']['address'];?>"></p>
 
-                            <p class="form-row form-row form-row-wide address-field" id="billing_address_2_field"><input type="text" class="input-text " name="data[Order][billing_address2]" id="billing_address_2" placeholder="Address 2 (optional)" autocomplete="address-line2" value=""></p>
-                            <p class="form-row form-row form-row-wide address-field validate-required" id="billing_city_field" data-o_class="form-row form-row form-row-wide address-field validate-required"><label for="billing_city" class="">Town / City <abbr class="required" title="required">*</abbr></label><input type="text" class="input-text " required name="data[Order][billing_city]" id="billing_city" placeholder="" autocomplete="address-level2" value=""></p>
+
+                            <p class="form-row form-row form-row-wide address-field validate-required" id="billing_city_field" data-o_class="form-row form-row form-row-wide address-field validate-required"><label for="billing_city" class="">Town / City <abbr class="required" title="required">*</abbr></label>
+
+                                <select name="data[Order][billing_city]"  id="billing_city" style="max-width: none" onchange="shipping(this)">
+
+                                    <option value="" disabled <?php if ($shop['Order']['city'] == 0) echo 'selected';?>>Chọn tỉnh/thành phố</option>
+                                   <?php foreach ($locations as $key => $value){ ?>
+                                      <option value="<?php echo $value['ListLocation']['id'];?>" <?php if ($shop['Order']['city'] == $value['ListLocation']['id']) echo 'selected';?>><?php echo $value['ListLocation']['name'];?></option>
+                                   <?php } ?>
+                                </select>
+                            </p>
 
                             <div class="clear"></div>
 
@@ -127,12 +147,19 @@
 
 
 
+                            <tr class="shipping">
+                                <th>Shipping</th>
+                                <td data-title="Shipping">
+                                    <p> <?php echo number_format($shop['Order']['shipping']); ?> VND</p>
 
+
+                                </td>
+                            </tr>
 
                             <tr class="shipping">
                                 <th>Discount</th>
                                 <td data-title="Shipping">
-                                    <p>- <?php echo $shop['Order']['discount']; ?> VND</p>
+                                    <p>- <?php echo number_format($shop['Order']['discount']); ?> VND</p>
 
 
                                 </td>
@@ -202,32 +229,6 @@
 
 <?php echo $this->Html->script(array('shop_address.js'), array('inline' => false)); ?>
 
-<h3 >Address</h3>
 
-<?php echo $this->Form->create('Order'); ?>
-
-<hr>
-
-<div class="uk-grid">
-
-
-        <?php echo $this->Form->input('sameaddress', array('type' => 'checkbox', 'label' => 'Copy Billing Address to Shipping')); ?>
-
-
-    <div class="uk-width-1-3">
-
-        <?php echo $this->Form->input('shipping_address', array('class' => 'uk-form-width-large')); ?>
-        <br />
-        <?php echo $this->Form->input('shipping_address2', array('class' => 'uk-form-width-large')); ?>
-        <br />
-        <?php echo $this->Form->input('shipping_city', array('class' => 'uk-form-width-large')); ?>
-        <br />
-        
-        <br />
-
-    </div>
-</div>
-
-<br />
 
 

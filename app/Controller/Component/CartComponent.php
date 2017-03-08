@@ -105,6 +105,17 @@ class CartComponent extends Component {
         return $product;
     }
 
+    public function shipping($ship,$city,$firstname,$lastname,$email,$phone,$address){
+        $this->Session->write('Shop.Order.shipping', $ship);
+        $this->Session->write('Shop.Order.city', $city);
+        $this->Session->write('Shop.Order.firstname', $firstname);
+        $this->Session->write('Shop.Order.lastname', $lastname);
+        $this->Session->write('Shop.Order.email', $email);
+        $this->Session->write('Shop.Order.phone', $phone);
+        $this->Session->write('Shop.Order.address', $address);
+
+        $this->cart();
+    }
 //////////////////////////////////////////////////
 
     public function remove($id) {
@@ -126,7 +137,7 @@ class CartComponent extends Component {
         $subtotal = 0;
         $total = 0;
         $order_item_count = 0;
-
+        $ship = 0;
         if (count($shop['OrderItem']) > 0) {
             foreach ($shop['OrderItem'] as $item) {
                 $quantity += $item['quantity'];
@@ -142,8 +153,27 @@ class CartComponent extends Component {
             //var_dump($shop['Order']);
             $d['voucher'] = $shop['Order']['voucher'];
             $d['code'] = $shop['Order']['code'];
+            //var_dump($shop['Order']['shipping']);die();
+            if(isset($shop['Order']['firstname'])) {
+                //var_dump($shop['Order']['shipping']);die();
+                $d['shipping'] = $shop['Order']['shipping'];
+                $d['city'] = $shop['Order']['city'];
+                $d['firstname'] = $shop['Order']['firstname'];
+                $d['lastname'] = $shop['Order']['lastname'];
+                $d['email'] = $shop['Order']['email'];
+                $d['phone'] = $shop['Order']['phone'];
+                $d['address'] = $shop['Order']['address'];
+            } else {
+                $d['city'] = 0;
+                $d['shipping'] = 0;
+                $d['firstname'] = '';
+                $d['lastname'] = '';
+                $d['email'] = '';
+                $d['phone'] = '';
+                $d['address'] = '';
+            }
             $d['discount'] = $total * $d['voucher'] / 100;
-            $d['total'] = sprintf('%01.2f', $total - $total * $d['voucher'] / 100);
+            $d['total'] = sprintf('%01.2f', $total - $total * $d['voucher'] / 100 + $d['shipping']);
             $this->Session->write('Shop.Order', $d + $shop['Order']);
             return true;
         }
@@ -152,6 +182,13 @@ class CartComponent extends Component {
             $d['weight'] = 0;
             $d['subtotal'] = 0;
             $d['total'] = 0;
+            $d['city'] = 0;
+            $d['shipping'] = 0;
+            $d['firstname'] = '';
+            $d['lastname'] = '';
+            $d['email'] = '';
+            $d['phone'] = '';
+            $d['address'] = '';
             $this->Session->write('Shop.Order', $d + $shop['Order']);
             return false;
         }
