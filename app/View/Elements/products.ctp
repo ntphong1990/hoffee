@@ -46,7 +46,7 @@
 
                     <div class="pill pill--center">
 
-                        <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"><span><?php echo $product['Product']['price']; ?> </span><span>VND</span></span>
+                        <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"><span><?php echo number_format($product['Product']['price']); ?> </span><span> VND</span></span>
                     </div>
 
                 </div>
