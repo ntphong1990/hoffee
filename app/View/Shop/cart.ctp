@@ -27,13 +27,13 @@ Shopping Cart is empty
 
             <div class="store-two_col">
 
-                <h2 class="store-heading">Your Cart</h2>
+                <h2 class="store-heading">chi tiết đặt hàng</h2>
 
                 <div class="store-two_col_wrapper">
 
                     <div class="store-two_col_wrapper-col store-two_col_wrapper-col--large cart">
 
-                        <h4 class="product-table_heading">Products</h4>
+                        <h4 class="product-table_heading">sản phẩm</h4>
 
 
 
@@ -44,8 +44,8 @@ Shopping Cart is empty
                                     <th class="product-heading product-thumbnail">&nbsp;</th>
                                     <th class="product-heading product-name">&nbsp;</th>
                                     <th class="product-heading product-price">&nbsp;</th>
-                                    <th class="product-heading product-quantity">Qty</th>
-                                    <th class="product-heading product-subtotal">Subtotal</th>
+                                    <th class="product-heading product-quantity">số.lg</th>
+                                    <th class="product-heading product-subtotal">tiền</th>
                                     <th class="product-heading product-remove">&nbsp;</th>
                                 </tr>
                                 </thead>
@@ -65,7 +65,7 @@ Shopping Cart is empty
                                     <td class="product-price" data-title="Price">
                                         <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"><span id="price-<?php echo $key; ?>"><?php echo number_format($item['Product']['price']); ?></span> VND</span>								</td>
 
-                                    <td class="product-quantity" data-title="Qty">
+                                    <td class="product-quantity" data-title="số.lg">
                                         <div class="quantity">
                                     <?php
                                     $mods = 0;
@@ -119,14 +119,14 @@ Shopping Cart is empty
                                 <?php endforeach; ?>
                                 <tr>
                                     <td>
-                                        <?php echo $this->Html->link('<i class="fa fa-ban"></i> &nbsp; Clear ', array('controller' => 'shop', 'action' => 'clear'), array('class' => 'button woocommerce-update_button', 'escape' => false)); ?>
+                                        <?php echo $this->Html->link('<i class="fa fa-ban"></i> &nbsp; Xoá ', array('controller' => 'shop', 'action' => 'clear'), array('class' => 'button woocommerce-update_button', 'escape' => false)); ?>
                                     </td>
                                     <td colspan="6" class="actions coupon-td">
 
 
 
 
-                                        <?php echo $this->Form->button('<i class="fa fa-calculator"></i> &nbsp; Update', array('class' => 'button woocommerce-update_button', 'escape' => false));?>
+                                        <?php echo $this->Form->button('<i class="fa fa-calculator"></i> &nbsp; cập nhật', array('class' => 'button woocommerce-update_button', 'escape' => false));?>
                                         <?php echo $this->Form->end(); ?>
 
                                     </td>
@@ -141,7 +141,7 @@ Shopping Cart is empty
 
                                 <div class="cart-order_total-column">
 
-                                    <span class="cart-order_total-heading">Total (VND)</span>
+                                    <span class="cart-order_total-heading">Tổng (VND)</span>
 
                                     <span class="cart-order_total-amount"><strong><span class="woocommerce-Price-amount amount"><?php echo number_format($shop['Order']['total']); ?> VND</span></strong> </span>
 
@@ -151,14 +151,14 @@ Shopping Cart is empty
 
 
 
-                                    <?php echo $this->Html->link('<i class="fa fa-check"></i> &nbsp; Checkout', array('controller' => 'shop', 'action' => 'address'), array('class' => 'checkout-button button alt wc-forward', 'escape' => false)); ?>
+                                    <?php echo $this->Html->link('<i class="fa fa-check"></i> &nbsp; Thanh toán', array('controller' => 'shop', 'action' => 'address'), array('class' => 'checkout-button button alt wc-forward', 'escape' => false)); ?>
                                 </div>
 
                             </div>
 
                             <div class="cart-shop_link">
 
-                                <a href="../products" class="cart-shop_link-a">Continue Shopping</a>
+                                <a href="../products" class="cart-shop_link-a">mua tiếp</a>
 
                             </div>
 
@@ -174,12 +174,12 @@ Shopping Cart is empty
                             <div class="">
 
 
-                                <h4>Voucher</h4>
+                                <h4>khuyến mãi</h4>
 
                                 <table cellspacing="0" class="shop_table shop_table_responsive">
 
                                     <tbody><tr class="cart-subtotal">
-                                        <th>Discount</th>
+                                        <th>giảm (%)</th>
                                         <td data-title="Subtotal"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">- <?php echo $shop['Order']['voucher'];?>%</span></td>
                                     </tr>
 
@@ -190,7 +190,7 @@ Shopping Cart is empty
                                     <tr class="shipping">
                                         <div class="coupon">
 
-                                            <label for="coupon_code"></label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="<?php echo $shop['Order']['code'];?>" placeholder="Coupon code"> <input type="submit" class="button" name="clear" value="Redeem">
+                                            <label for="coupon_code"></label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="<?php echo $shop['Order']['code'];?>" placeholder="Mã khuyến mãi"> <input type="submit" class="button" name="clear" value="NHẬN">
 
                                         </div>
 
@@ -202,7 +202,7 @@ Shopping Cart is empty
 
 
                                     <tr class="order-total">
-                                        <th>Discount (VND)</th>
+                                        <th>giảm (VND)</th>
                                         <td data-title="Total"><strong><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"><?php echo number_format($shop['Order']['discount']); ?> VND</span></strong> </td>
                                     </tr>
 

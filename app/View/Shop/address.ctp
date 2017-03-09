@@ -20,7 +20,7 @@
 
     <div class="store-two_col">
 
-        <h2 class="store-heading">Checkout</h2>
+        <h2 class="store-heading">giao hàng</h2>
 
 
         <?php echo $this->Form->create('Order'); ?>
@@ -35,25 +35,25 @@
 
                         <div class="woocommerce-billing-fields">
 
-                            <h4>Billing Details</h4>
+                            <h4>thông tin khách hàng</h4>
 
 
 
 
-                            <p class="form-row form-row form-row-first validate-required" id="billing_first_name_field"><label for="billing_first_name" class="">First Name <abbr class="required" title="required">*</abbr></label><input type="text" class="input-text " name="data[Order][first_name]" id="billing_first_name" placeholder="" autocomplete="given-name" required value="<?php echo $shop['Order']['firstname'];?>"></p>
+                            <p class="form-row form-row form-row-first validate-required" id="billing_first_name_field"><label for="billing_first_name" class="">tên <abbr class="required" title="required">*</abbr></label><input type="text" class="input-text " name="data[Order][first_name]" id="billing_first_name" placeholder="" autocomplete="given-name" required value="<?php echo $shop['Order']['firstname'];?>"></p>
 
-                            <p class="form-row form-row form-row-last validate-required" id="billing_last_name_field"><label for="billing_last_name" class="">Last Name <abbr class="required" title="required">*</abbr></label><input type="text" class="input-text " name="data[Order][last_name]" id="billing_last_name" placeholder="" autocomplete="family-name" required value="<?php echo $shop['Order']['lastname'];?>"></p><div class="clear"></div>
-
-
-
-                            <p class="form-row form-row form-row-first validate-required validate-email" id="billing_email_field"><label for="billing_email" class="">Email Address <abbr class="required" title="required">*</abbr></label><input type="email" class="input-text " name="data[Order][email]" id="billing_email" placeholder="" autocomplete="email" required value="<?php echo $shop['Order']['email'];?>"></p>
-
-                            <p class="form-row form-row form-row-last validate-required validate-phone" id="billing_phone_field"><label for="billing_phone" class="">Phone <abbr class="required" title="required">*</abbr></label><input type="tel" class="input-text " name="data[Order][phone]" id="billing_phone" placeholder="" autocomplete="tel" required value="<?php echo $shop['Order']['phone'];?>"></p><div class="clear"></div>
-
-                            <p class="form-row form-row form-row-wide address-field validate-required" id="billing_address_1_field"><label for="billing_address_1" class="">Address <abbr class="required" title="required">*</abbr></label><input type="text" class="input-text " name="data[Order][billing_address]" id="billing_address_1" required placeholder="Street address" autocomplete="address-line1" value="<?php echo $shop['Order']['address'];?>"></p>
+                            <p class="form-row form-row form-row-last validate-required" id="billing_last_name_field"><label for="billing_last_name" class="">họ <abbr class="required" title="required">*</abbr></label><input type="text" class="input-text " name="data[Order][last_name]" id="billing_last_name" placeholder="" autocomplete="family-name" required value="<?php echo $shop['Order']['lastname'];?>"></p><div class="clear"></div>
 
 
-                            <p class="form-row form-row form-row-wide address-field validate-required" id="billing_city_field" data-o_class="form-row form-row form-row-wide address-field validate-required"><label for="billing_city" class="">Town / City <abbr class="required" title="required">*</abbr></label>
+
+                            <p class="form-row form-row form-row-first validate-required validate-email" id="billing_email_field"><label for="billing_email" class="">Email <abbr class="required" title="required">*</abbr></label><input type="email" class="input-text " name="data[Order][email]" id="billing_email" placeholder="" autocomplete="email" required value="<?php echo $shop['Order']['email'];?>"></p>
+
+                            <p class="form-row form-row form-row-last validate-required validate-phone" id="billing_phone_field"><label for="billing_phone" class="">Điện thoại <abbr class="required" title="required">*</abbr></label><input type="tel" class="input-text " name="data[Order][phone]" id="billing_phone" placeholder="" autocomplete="tel" required value="<?php echo $shop['Order']['phone'];?>"></p><div class="clear"></div>
+
+                            <p class="form-row form-row form-row-wide address-field validate-required" id="billing_address_1_field"><label for="billing_address_1" class="">Địa chỉ <abbr class="required" title="required">*</abbr></label><input type="text" class="input-text " name="data[Order][billing_address]" id="billing_address_1" required placeholder="Street address" autocomplete="address-line1" value="<?php echo $shop['Order']['address'];?>"></p>
+
+
+                            <p class="form-row form-row form-row-wide address-field validate-required" id="billing_city_field" data-o_class="form-row form-row form-row-wide address-field validate-required"><label for="billing_city" class="">tỉnh / thành  <abbr class="required" title="required">*</abbr></label>
 
                                 <select name="data[Order][billing_city]"  id="billing_city" style="max-width: none" onchange="shipping(this)">
 
@@ -84,7 +84,7 @@
 
 
 
-                            <p class="form-row form-row notes" id="order_comments_field"><label for="order_comments" class="">Order Notes</label><textarea name="data[Order][note]" class="input-text " id="order_comments" placeholder="Notes about your order, e.g. special notes for delivery." rows="2" cols="5"></textarea></p>
+                            <p class="form-row form-row notes" id="order_comments_field"><label for="order_comments" class="">ghi chú</label><textarea name="data[Order][note]" class="input-text " id="order_comments" placeholder="ghi chú về đơn hàng, đặc biệt là giao hàng v.v." rows="2" cols="5"></textarea></p>
 
 
                         </div>
@@ -99,7 +99,7 @@
 
                 <div class="store-two_col_wrapper-col store-two_col_wrapper-col--small">
 
-                    <h4 id="order_review_heading">Your order</h4>
+                    <h4 id="order_review_heading">đặt hàng</h4>
 
 
                     <div id="order_review" class="woocommerce-checkout-review-order">
@@ -109,8 +109,8 @@
                         <table class="shop_table woocommerce-checkout-review-order-table checkout">
                             <thead>
                             <tr>
-                                <th class="product-name product-name--heading">Product</th>
-                                <th class="product-total product-total--heading">Total</th>
+                                <th class="product-name product-name--heading">sản phẩm</th>
+                                <th class="product-total product-total--heading">tiền</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -141,14 +141,14 @@
                             <tfoot>
 
                             <tr class="cart-subtotal">
-                                <th>Subtotal</th>
+                                <th>thành tiền</th>
                                 <td><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"><?php echo number_format($shop['Order']['subtotal']); ?> VND</span></td>
                             </tr>
 
 
 
                             <tr class="shipping">
-                                <th>Shipping</th>
+                                <th>phí giao hàng</th>
                                 <td data-title="Shipping">
                                     <p> <?php echo number_format($shop['Order']['shipping']); ?> VND</p>
 
@@ -157,7 +157,7 @@
                             </tr>
 
                             <tr class="shipping">
-                                <th>Discount</th>
+                                <th>khuyến mãi</th>
                                 <td data-title="Shipping">
                                     <p>- <?php echo number_format($shop['Order']['discount']); ?> VND</p>
 
@@ -171,7 +171,7 @@
 
 
                             <tr class="order-total">
-                                <th>Total</th>
+                                <th>số tiền thanh toán</th>
                                 <td><strong><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"><?php echo number_format($shop['Order']['total']); ?> VND</span></strong> </td>
                             </tr>
 
@@ -187,15 +187,20 @@
 
 
                                     <label for="payment_method_paypal">
-                                        <h4 class="payment_method-title">Payment</h4>
+                                        <h4 class="payment_method-title">hình thức thanh toán</h4>
 
                                     </label>
                                     <div class="payment_box payment_method_paypal">
                                         <p class="form-row form-row-wide create-account woocommerce-validated">
-                                            <input class="input-checkbox" id="createaccount" type="checkbox" name="data[Order][direct]" value="1"> <label for="createaccount" class="checkbox">Direct</label>
+                                            <input class="input-checkbox" id="createaccount" type="checkbox" name="data[Order][direct]" value="1"> <label for="createaccount" class="checkbox">trực tiếp khi giao hàng</label>
                                         </p>
                                         <p class="form-row form-row-wide create-account woocommerce-validated">
-                                            <input class="input-checkbox" id="createaccount" type="checkbox" name="data[Order][transfer]" value="1"> <label for="createaccount" class="checkbox">Banking transfer</label>
+                                            <input class="input-checkbox" id="createaccount" type="checkbox" name="data[Order][transfer]" value="1"> <label for="createaccount" class="checkbox">chuyển khoản qua ngân hàng</label>
+                                            <label style="color : #0a4e9b">
+                                                Chủ TK : Lê Khánh Duy </br>
+                                                Vietcombank chi nhánh Hồ Chí Minh </br>
+                                                STK : 0071001150198
+                                            </label>
                                         </p>
                                     </div>
                                 </li>
@@ -208,7 +213,7 @@
 
 
 
-                                <?php echo $this->Form->button('<i class="fa fa-check"></i> &nbsp; Continue', array('class' => 'button woocommerce-update_button'));?>
+                                <?php echo $this->Form->button('<i class="fa fa-check"></i> &nbsp; Xong', array('class' => 'button woocommerce-update_button'));?>
                                 <?php echo $this->Form->end(); ?>
                             </div>
                         </div>
