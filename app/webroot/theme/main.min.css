@@ -2087,7 +2087,7 @@ div.wpcf7-response-output {
     overflow: hidden;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
-    content:url("/hoffee4/img/hoffee_web.svg");
+    content:url("/img/hoffee_web.svg");
 }
 
 .header--transparent--fixed .header-logo_container-logo {
@@ -2103,7 +2103,7 @@ div.wpcf7-response-output {
     overflow: hidden;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
-    content:url("/hoffee4/img/hoffee_text.svg");
+    content:url("/img/hoffee_text.svg");
 }
 
 .header-h1 {
