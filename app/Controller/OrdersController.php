@@ -215,6 +215,10 @@ class OrdersController extends AppController {
        $fees = $this->Financial->find('all',array('conditions' => array(
             'detail' => $id
         )));
+        $this->loadModel('ShippingStatus');
+        $status = $this->ShippingStatus->find('all');
+        $this->set('status',$status);
+
         $fee = 0;
         foreach ($fees as $key => $value){
             $fee = $fee + $value['Financial']['value'];
@@ -240,7 +244,7 @@ class OrdersController extends AppController {
             if($fee + intval($this->request->data['Order']['money']) >= $order['Order']['total']){
                 $order['Order']['status'] = 1;
             }
-
+            $order['Order']['shipping_status'] = $this->request->data['Order']['shipping_status'];
             $order['Order']['note'] = $this->request->data['Order']['note'];
             if($this->Order->save($order)){
                 return $this->redirect(array('action' => 'index'));

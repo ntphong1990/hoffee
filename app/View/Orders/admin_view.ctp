@@ -190,6 +190,22 @@
                                                 <td class="text-right p-sm-r bold-light" id="totalOwe"><?php echo number_format($order['Order']['total'] - $fee);?> </td>
                                                 <td> ₫</td>
                                             </tr>
+                                                <tr class="bold-light">
+                                                    <td  colspan="3" class="text-right p-sm-r"><a class="hover-underline"><i
+                                                                ></i> Trạng thái</a></td>
+                                                    <td class="text-right p-sm-r bold-light" id="totalOwe">
+                                                        <select class="form-control" name="data[Order][shipping_status]"   id="billing_city" style="max-width: none" onchange="shipping(this)">
+
+                                                            <?php foreach ($status as $key => $value){ ?>
+                                                                <option value="<?php echo $value['ShippingStatus']['id'];?>" <?php if ($value['ShippingStatus']['id'] == $order['Order']['shipping_status']) echo 'selected';?>><?php echo $value['ShippingStatus']['status'];?></option>
+                                                            <?php } ?>
+                                                        </select>
+
+                                                    </td>
+                                                    <td> ₫</td>
+                                                </tr>
+
+
                                             <?php } ?>
                                             </tbody>
 
