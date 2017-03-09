@@ -2086,7 +2086,24 @@ div.wpcf7-response-output {
     /*will-change: transform;*/
     overflow: hidden;
     -webkit-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out
+    transition: all .3s ease-in-out;
+    content:url("/hoffee4/img/hoffee_web.svg");
+}
+
+.header--transparent--fixed .header-logo_container-logo {
+    display: block;
+    position: absolute;
+    top: 0rem;
+    left: .625rem;
+    width: 6rem;
+    height: 3rem;
+    /*-webkit-transform: translate3d(0, -35px, 0);*/
+    /*transform: translate3d(0, -35px, 0);*/
+    /*will-change: transform;*/
+    overflow: hidden;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    content:url("/hoffee4/img/hoffee_text.svg");
 }
 
 .header-h1 {
