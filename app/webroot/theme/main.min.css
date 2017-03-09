@@ -2475,7 +2475,7 @@ div.wpcf7-response-output {
     font-family: AvenirLTStd-Heavy;
     text-transform: uppercase;
     width: 100%;
-    min-width: 39.375rem;
+    /*min-width: 39.375rem;*/
     height: 4.25rem
 }
 

@@ -80,7 +80,7 @@ $(document).ready(function() {
 
                         <div class="pill pill--center">
 
-                            <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"><?php echo $product['Product']['price']; ?></span> VND</span>
+                            <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"><?php echo number_format($product['Product']['price']); ?></span> VND</span>
                         </div>
 
 
@@ -103,7 +103,8 @@ $(document).ready(function() {
                                         <tr>
                                             <td class="label">
                                                 <label for="pa_weight">
-                                                    weight																	</label>
+                                                    khối lượng
+                                                </label>
                                             </td>
                                             <td class="value">
                                                 <select id="pa_weight" class="" name="attribute_pa_weight" data-attribute_name="attribute_pa_weight" "="" data-show_option_none="yes"><option value="">Choose an option</option><option value="8oz" selected="selected">500g</option></select>							</td>
@@ -111,13 +112,13 @@ $(document).ready(function() {
                                         <tr>
                                             <td class="label">
                                                 <label for="pa_grind">
-                                                    grind
+                                                    loại
                                                     <a href="/brew-coffee-grind-size" target="_blank" rel="noopener noreferrer" tooltip="Need help picking your grind?" class="product-single-tooltip"></a>
 
                                                 </label>
                                             </td>
                                             <td class="value">
-                                                <select id="pa_grind" class="" name="attribute_pa_grind" data-attribute_name="attribute_pa_grind" "="" data-show_option_none="yes"><option value="">Choose an option</option><option value="whole-beans" selected="selected">Whole Beans</option></select><a class="reset_variations" href="#">Clear</a>							</td>
+                                                <select id="pa_grind" class="" name="attribute_pa_grind" data-attribute_name="attribute_pa_grind" "="" data-show_option_none="yes"><option value="">Choose an option</option><option value="whole-beans" selected="selected">Bột</option></select><a class="reset_variations" href="#">Clear</a>							</td>
                                         </tr>
                                         </tbody>
                                     </table>

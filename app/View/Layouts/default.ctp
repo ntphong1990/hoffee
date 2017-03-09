@@ -113,9 +113,10 @@
 
         </a>
         <a href="<?php echo Configure::read('Settings.DOMAIN');?>/" class="header-logo_container-link" title="Hoffee">
-            <img src="<?php echo Configure::read('Settings.DOMAIN');?>/img/logo.png" class="header-logo_container-logo">
-
-            </img>
+<!--            <img src="--><?php //echo Configure::read('Settings.DOMAIN');?><!--/img/logo.png" class="header-logo_container-logo">-->
+<!---->
+<!--            </img>-->
+            <icon src="<?php echo Configure::read('Settings.DOMAIN');?>/img/hoffee_web.svg" class="header-logo_container-logo"></icon>
         </a>
 
     </div>
