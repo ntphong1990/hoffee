@@ -125,19 +125,19 @@
 
         <ul id="menu-main-menu" class="menu-ul"><li id="menu-item-3419" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-137 current_page_item menu-ul-li"><a class="menu-ul-li-a" href="/">Home</a></li>
 <!--            <li id="menu-item-3421" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="http://hoffee.vn/find-us/">Find Us</a></li>-->
-            <li id="menu-item-3437" class="menu-item menu-item-type-custom menu-item-object-custom menu-ul-li"><a class="menu-ul-li-a" href="<?php echo Configure::read('Settings.DOMAIN'); ?>/products">Shop</a></li>
-            <li id="menu-item-3424" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-ul-li"><a class="menu-ul-li-a" href="#">Our Story<icon src="../img/arrow-dropdown.svg" class="menu-ul-li-a-icon" sub-menu=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="6px" viewBox="0 0 10 6" version="1.1" class="injected-svg icon-svg">
-                            <polyline stroke-width="1" points="8 -4.9736156e-14 4 4 -2.03004718e-15 -4.9736156e-14" fill="none"></polyline>
-                        </svg></icon></a>
-                <ul class="sub-menu">
-                    <li id="menu-item-3964" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="#">Cultivated By Good</a></li>
-                    <li id="menu-item-3965" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="#">Social Good</a></li>
-                    <li id="menu-item-3966" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="#">Our Coffee</a></li>
-                    <li id="menu-item-3967" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="#">History</a></li>
-                </ul>
-            </li>
+            <li id="menu-item-3437" class="menu-item menu-item-type-custom menu-item-object-custom menu-ul-li"><a class="menu-ul-li-a" href="<?php echo Configure::read('Settings.DOMAIN'); ?>/products">Sản Phẩm</a></li>
+<!--            <li id="menu-item-3424" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-ul-li"><a class="menu-ul-li-a" href="#">Our Story<icon src="../img/arrow-dropdown.svg" class="menu-ul-li-a-icon" sub-menu=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="6px" viewBox="0 0 10 6" version="1.1" class="injected-svg icon-svg">-->
+<!--                            <polyline stroke-width="1" points="8 -4.9736156e-14 4 4 -2.03004718e-15 -4.9736156e-14" fill="none"></polyline>-->
+<!--                        </svg></icon></a>-->
+<!--                <ul class="sub-menu">-->
+<!--                    <li id="menu-item-3964" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="#">Cultivated By Good</a></li>-->
+<!--                    <li id="menu-item-3965" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="#">Social Good</a></li>-->
+<!--                    <li id="menu-item-3966" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="#">Our Coffee</a></li>-->
+<!--                    <li id="menu-item-3967" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="#">History</a></li>-->
+<!--                </ul>-->
+<!--            </li>-->
 <!--            <li id="menu-item-3422" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="http://hoffee.vn/partnership/">Wholesale</a></li>-->
-            <li id="menu-item-3420" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="<?php echo Configure::read('Settings.DOMAIN'); ?>/BlogPosts">Articles</a></li>
+            <li id="menu-item-3420" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="<?php echo Configure::read('Settings.DOMAIN'); ?>/BlogPosts">Chuyện Mình</a></li>
             <li class="menu-ul-li menu-ul-li--footer"><h3 class="menu-ul-li-site_title">Hoffee</h3><span class="menu-ul-li-date">© 2017</span></li></ul>
     </nav>
 

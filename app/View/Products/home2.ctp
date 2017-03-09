@@ -14,8 +14,8 @@
 
 
 
-        <h1 class="video_hero-inner-title">READY TO MAKE COFFEE<br>
-            AT HOME AND WORK?</h1><br>
+        <h1 class="video_hero-inner-title">Cà phê sạch<br>
+            sáng tạo cho mọi người</h1><br>
             <br>
         </p><center><a href="<?php echo Configure::read('Settings.DOMAIN'); ?>/products/"><img src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/button-shopnow.jpg"></a></center><p></p>
 
@@ -51,13 +51,14 @@
 
 
 
-        <h2 class="centered_content-inner-title">Specialty Coffee Lovers</h2>
+        <h2 class="centered_content-inner-title">HOFFEE là gì?</h2>
 
 
         <div class="centered_content-inner-content">
 
 
-            <p>Our love for specialty coffee is never-ending. With over 365 days a year at origin working with the best growers on the planet, only the best beans make the grade. Countless hours tasting and testing our roasts means consistently amazing coffee, so your morning starts right every time.</p>
+            <p>Xin chào, chúng tôi là những bạn trẻ - ghiền cà phê, luôn tìm kiếm cho mình một sản phẩm gu Việt, chất lượng và đảm bảo an toàn sức khỏe. Vậy tại sao không tự tạo ra một sản phẩm cà phê đích thực cho dân ghiền cà phê và chia sẻ nó?
+                Tada... Hoffee ra đời từ đó!</p>
 
 
         </div>
@@ -89,8 +90,8 @@
                 <h6 class="featured_content-column-content-suptitle">Find us</h6>
 
 
-                <h3 class="featured_content-column-content-title"><span>FIND HOFFEE<br>
-NEAR YOU</span></h3>
+                <h3 class="featured_content-column-content-title"><span>VƯỜN NGUYÊN <br>
+LIỆU HOFFEE</span></h3>
 
                 <icon src="https://us.camposcoffee.com/wp-content/themes/campos-wp-theme/assets/images/icons/big-arrow.svg" class="featured_content-column-content-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21px" height="17px" viewBox="0 0 21 17" version="1.1" class="injected-svg icon-svg">
 
@@ -134,8 +135,8 @@ NEAR YOU</span></h3>
         <a href="<?php echo Configure::read('Settings.DOMAIN'); ?>/products" class="featured_products-link">
 
             <h2 class="featured_products-title">
-				<span>READY TO Make Coffee<br>
-at home and work?</span>
+				<span>UỐNG CÀ PHÊ<br>
+VÀ LÀM VIỆC NÀO !!</span>
             </h2>
 
         </a>
@@ -289,13 +290,13 @@ at home and work?</span>
             <div class="featured_content-column-content">
 
 
-                <h6 class="featured_content-column-content-suptitle">Our Story</h6>
+                <h6 class="featured_content-column-content-suptitle">HOFFEERS</h6>
 
 
-                <h3 class="featured_content-column-content-title"><span>OUR HISTORY,<br>
-PHILOSOPHY &amp; MORE</span></h3>
+                <h3 class="featured_content-column-content-title"><span>Chuyện chúng mình<br>
+OUR STORY</span></h3>
 
-                <icon src="https://us.camposcoffee.com/wp-content/themes/campos-wp-theme/assets/images/icons/big-arrow.svg" class="featured_content-column-content-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21px" height="17px" viewBox="0 0 21 17" version="1.1" class="injected-svg icon-svg">
+                <icon  class="featured_content-column-content-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21px" height="17px" viewBox="0 0 21 17" version="1.1" class="injected-svg icon-svg">
 
                         <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
                             <g id="BigArrow_Beige" transform="translate(1.000000, 1.000000)" stroke-width="2">
@@ -338,7 +339,7 @@ PHILOSOPHY &amp; MORE</span></h3>
         <a href="#" class="featured_articles-link">
 
             <h2 class="featured_articles-title">
-                <span>BREW GUIDES AND MORE</span>
+                <span>PHA CHẾ VÀ PHONG CÁCH</span>
             </h2>
 
         </a>
@@ -361,47 +362,47 @@ PHILOSOPHY &amp; MORE</span></h3>
 
 
 
-        <?php foreach ($blogPosts as $blogPost): ?>
-            <li class="featured_articles-list-item">
-
-                <a href="<?php echo Configure::read('Settings.DOMAIN').'/BlogPosts/view/'.$blogPost['BlogPost']['slug'] ;?>" class="card-link">
-
-                    <figure class="card-figure">
-
-                        <div style="background-image: url(&#39;<?php echo Configure::read('Settings.DOMAIN').$blogPost['BlogPost']['image']; ?>&#39;);" class="card-figure-image"></div>
-
-                    </figure>
-
-                    <div class="content card-content">
-
-                        <icon src="" class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21px" height="17px" viewBox="0 0 21 17" version="1.1" class="injected-svg icon-svg">
-
-                                <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-                                    <g id="BigArrow_Beige" transform="translate(1.000000, 1.000000)" stroke-width="2">
-                                        <g>
-                                            <polyline class="arrow-points" id="arrow" transform="translate(15.000000, 7.500000) rotate(-90.000000) translate(-15.000000, -7.500000) " points="22 4 15 11 8 4"></polyline>
-                                            <path d="M17.5,7 L0.5,7" id="Line"></path>
-                                        </g>
-                                    </g>
-                                </g>
-                            </svg></icon>
-
-                        <h4 class="card-title"><span><?php echo h($blogPost['BlogPost']['title']); ?></span></h4>
-
-                        <h6 class="card-subtitle">
-
-
-
-                            <?php echo h($blogPost['BlogPost']['summary']); ?>
-
-                        </h6>
-
-                    </div>
-
-                </a>
-
-            </li>
-        <?php endforeach; ?>
+<!--        --><?php //foreach ($blogPosts as $blogPost): ?>
+<!--            <li class="featured_articles-list-item">-->
+<!---->
+<!--                <a href="--><?php //echo Configure::read('Settings.DOMAIN').'/BlogPosts/view/'.$blogPost['BlogPost']['slug'] ;?><!--" class="card-link">-->
+<!---->
+<!--                    <figure class="card-figure">-->
+<!---->
+<!--                        <div style="background-image: url(&#39;--><?php //echo Configure::read('Settings.DOMAIN').$blogPost['BlogPost']['image']; ?><!--&#39;);" class="card-figure-image"></div>-->
+<!---->
+<!--                    </figure>-->
+<!---->
+<!--                    <div class="content card-content">-->
+<!---->
+<!--                        <icon src="" class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21px" height="17px" viewBox="0 0 21 17" version="1.1" class="injected-svg icon-svg">-->
+<!---->
+<!--                                <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">-->
+<!--                                    <g id="BigArrow_Beige" transform="translate(1.000000, 1.000000)" stroke-width="2">-->
+<!--                                        <g>-->
+<!--                                            <polyline class="arrow-points" id="arrow" transform="translate(15.000000, 7.500000) rotate(-90.000000) translate(-15.000000, -7.500000) " points="22 4 15 11 8 4"></polyline>-->
+<!--                                            <path d="M17.5,7 L0.5,7" id="Line"></path>-->
+<!--                                        </g>-->
+<!--                                    </g>-->
+<!--                                </g>-->
+<!--                            </svg></icon>-->
+<!---->
+<!--                        <h4 class="card-title"><span>--><?php //echo h($blogPost['BlogPost']['title']); ?><!--</span></h4>-->
+<!---->
+<!--                        <h6 class="card-subtitle">-->
+<!---->
+<!---->
+<!---->
+<!--                            --><?php //echo h($blogPost['BlogPost']['summary']); ?>
+<!---->
+<!--                        </h6>-->
+<!---->
+<!--                    </div>-->
+<!---->
+<!--                </a>-->
+<!---->
+<!--            </li>-->
+<!--        --><?php //endforeach; ?>
 
 
     </ul>
