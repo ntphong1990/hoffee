@@ -533,7 +533,7 @@
         <div class="footer-information-column footer-information-column--start">
 
             <a class="uk-navbar-brand" href="/<?php echo Configure::read('Settings.SHOP_TITLE');?>/">
-                <icon src="<?php echo Configure::read('Settings.DOMAIN');?>/img/hoffee_text.svg" class="header-logo_container-logo"></icon>
+
 
             </a>
 <g>
