@@ -215,6 +215,7 @@ class ShopController extends AppController {
                          $email = new CakeEmail('gmail');
                          $email->from(array(Configure::read('Settings.ADMIN_EMAIL') => 'Hoffee'))
                              ->cc(Configure::read('Settings.ADMIN_EMAIL'))
+                             ->cc('duy.le@hoffee.vn')
                              ->to($shop['Order']['email'])
                              ->subject('Shop Order')
                              ->template('default')
