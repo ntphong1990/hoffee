@@ -77,7 +77,7 @@
             <figure class="featured_content-column-image_container">
 
                 <div class="featured_content-column-image_container-image" >
-                    <video playsinline autoplay muted loop poster="polina.jpg" id="bgvid" width="600">
+                    <video playsinline autoplay muted loop id="bgvid" width="600">
                         <source src="./img/video.mp4" type="video/mp4">
                     </video>
                 </div>

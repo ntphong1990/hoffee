@@ -271,7 +271,7 @@
 
 
 
-    <div class="breakout_image breakout_image--size--cover breakout_image--footer" style="background-image: url(&#39;http://hoffee.vn/wp-content/uploads/2016/08/contact_background.jpg&#39;)"></div>
+    <div class="breakout_image breakout_image--size--cover breakout_image--footer" style="background-image: url('')"></div>
 
 
 
