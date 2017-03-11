@@ -59,7 +59,7 @@
 
                                     <option value="" disabled <?php if ($shop['Order']['city'] == 0) echo 'selected';?>>Chọn tỉnh/thành phố</option>
                                    <?php foreach ($locations as $key => $value){ ?>
-                                      <option value="<?php echo $value['ListLocation']['id'];?>" <?php if ($shop['Order']['city'] == $value['ListLocation']['id']) echo 'selected';?>><?php echo $value['ListLocation']['name'];?></option>
+                                      <option value="<?php echo $value['DevvnTinhthanhpho']['matp'];?>" <?php if ($shop['Order']['city'] == $value['DevvnTinhthanhpho']['matp']) echo 'selected';?>><?php echo $value['DevvnTinhthanhpho']['name'];?></option>
                                    <?php } ?>
                                 </select>
                             </p>

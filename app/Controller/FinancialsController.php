@@ -118,7 +118,7 @@ class FinancialsController extends AppController {
 
                 ),
                 'order' => array(
-                    'Financial.kind' => 'ASC'
+                    'Financial.created' => 'DESC'
                 ),
                 'limit' => 20,
                 'paramType' => 'querystring',

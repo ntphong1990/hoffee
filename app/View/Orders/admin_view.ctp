@@ -331,7 +331,7 @@
                                                 </li>
                                                 <li>
                                                     <i class="fa fa-check-square-o"></i>
-                                                    <span id="customerAddress"><?php echo h($order['Order']['shipping_city']); ?></span>
+                                                    <span id="customerAddress"><?php echo h($order['Order']['shipping_address']); ?></span>
                                                 </li>
                                                 <li>
                                                     <span><a title="Click để gọi"><i class="fa fa-phone-square cursor-pointer mr10"></i></a></span>

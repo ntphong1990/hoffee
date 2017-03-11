@@ -157,9 +157,9 @@ class ShopController extends AppController {
         }
 
 
-        $this->loadModel('ListLocation');
+        $this->loadModel('DevvnTinhthanhpho');
 
-        $locations = $this->ListLocation->find('all');
+        $locations = $this->DevvnTinhthanhpho->find('all',array('order' => array('ind' => 'ASC')));
         $this->set('locations',$locations);
        // var_dump($locations);die();
 
@@ -169,9 +169,12 @@ class ShopController extends AppController {
 			
 
              if($this->Order->validates()) {
+                 $this->loadModel('DevvnTinhthanhpho');
                  $this->request->data['Order']['shipping_address'] = $this->request->data['Order']['billing_address'];
-                 $this->request->data['Order']['shipping_city'] = $this->request->data['Order']['billing_city'];
-                $order = $this->request->data['Order'];
+
+                 $this->request->data['Order']['shipping_city'] = $this->DevvnTinhthanhpho->find('first',array('conditions' => array('matp' => $this->request->data['Order']['billing_city'])))['DevvnTinhthanhpho']['name'];
+
+                 $order = $this->request->data['Order'];
                 $order['order_type'] = '';
 
                  if(isset($this->request->data['Order']['direct'])){
@@ -215,7 +218,7 @@ class ShopController extends AppController {
                          $email = new CakeEmail('gmail');
                          $email->from(array(Configure::read('Settings.ADMIN_EMAIL') => 'Hoffee'))
                              ->cc(Configure::read('Settings.ADMIN_EMAIL'))
-                             ->cc('duy.le@hoffee.vn')
+                             ->cc('order@hoffee.vn')
                              ->to($shop['Order']['email'])
                              ->subject('Shop Order')
                              ->template('default')

@@ -72,7 +72,7 @@
 
     <div class="featured_content-column featured_content-column--first featured_content-column--card ng-scope scroll_active" scroll-item="" scroll-key="featuredleft" id="scrollItem3" style="transform: matrix(1, 0, 0, 1, 0, 64);">
 
-        <a href="#" class="featured_content-column-link">
+        <a href="/BlogPosts/view/vuon-nguyen-lieu-hoffee" class="featured_content-column-link">
 
             <figure class="featured_content-column-image_container">
 
@@ -279,7 +279,7 @@ VÀ LÀM VIỆC NÀO !!</span>
 
     <div class="featured_content-column featured_content-column--first featured_content-column--card ng-scope" scroll-item="" scroll-key="featuredright" id="scrollItem6" style="transform: matrix(1, 0, 0, 1, 0, 128);">
 
-        <a href="#" class="featured_content-column-link">
+        <a href="/BlogPosts/view/chuyen-chung-minh" class="featured_content-column-link">
 
             <figure class="featured_content-column-image_container">
 

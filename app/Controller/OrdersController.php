@@ -14,7 +14,7 @@ class OrdersController extends AppController {
                 'contain' => array(
                 ),
                 'conditions' => array(
-                    'status <> 3'
+                    'Order.status <> 3'
                 ),
                 'order' => array(
                     'Order.created' => 'DESC'
