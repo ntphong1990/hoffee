@@ -65,9 +65,10 @@ class DATABASE_CONFIG {
 		'host' => 'localhost',
 		'login' => 'root',
 		'password' => '123456',
-		'database' => 'hoffee',
+		'database' => 'hoffee_2017',
 		'prefix' => '',
-		//'encoding' => 'utf8',
+        'port' => 3306,
+		'encoding' => 'utf8'
 	);
 
 	public $test = array(
