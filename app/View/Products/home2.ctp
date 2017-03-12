@@ -17,7 +17,7 @@
         <h1 class="video_hero-inner-title">Cà phê sạch<br>
             sáng tạo cho mọi người</h1><br>
             <br>
-        </p><center><a href="<?php echo Configure::read('Settings.DOMAIN'); ?>/products/"><img src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/button-shopnow.jpg"></a></center><p></p>
+        </p><center><a href="<?php echo Configure::read('Settings.DOMAIN'); ?>/products"><img src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/button-shopnow.jpg"></a></center><p></p>
 
 
 

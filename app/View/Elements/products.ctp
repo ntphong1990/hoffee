@@ -9,7 +9,7 @@
 
         <li class="featured_products-list-item ">
 
-            <a href="./products/view/<?php echo $product['Product']['slug'];?> " class="product-link">
+            <a href="<?php echo Configure::read('Settings.DOMAIN'); ?>/products/view/<?php echo $product['Product']['slug'];?> " class="product-link">
 
                 <figure class="product-figure">
 
