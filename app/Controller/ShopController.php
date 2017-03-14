@@ -201,6 +201,9 @@ class ShopController extends AppController {
                      $save = $this->Order->saveAll($order);
 
                      if($save) {
+
+                         $this->loadModel('Log');
+                         $this->Log->newOrder($this->Order->inserted_ids[0]);
                          $this->loadModel('Customer');
                          if(!$this->Customer->find('first',array('conditions' => array(
                              'phone' => $order['Order']['phone']

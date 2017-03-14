@@ -106,6 +106,7 @@ class CartComponent extends Component {
     }
 
     public function shipping($ship,$city,$firstname,$lastname,$email,$phone,$address){
+
         $this->Session->write('Shop.Order.shipping', $ship);
         $this->Session->write('Shop.Order.city', $city);
         $this->Session->write('Shop.Order.firstname', $firstname);
@@ -156,7 +157,12 @@ class CartComponent extends Component {
             //var_dump($shop['Order']['shipping']);die();
             if(isset($shop['Order']['firstname'])) {
                 //var_dump($shop['Order']['shipping']);die();
-                $d['shipping'] = $shop['Order']['shipping'];
+                if($d['weight'] >= 2) {
+                    $d['shipping'] = 0;
+                } else {
+                    $d['shipping'] = $shop['Order']['shipping'];
+                }
+
                 $d['city'] = $shop['Order']['city'];
                 $d['firstname'] = $shop['Order']['firstname'];
                 $d['lastname'] = $shop['Order']['lastname'];

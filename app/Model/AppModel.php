@@ -33,6 +33,16 @@ class AppModel extends Model {
 
 ////////////////////////////////////////////////////////////
 
+    var $inserted_ids = array();
+
+    function afterSave($created, $options = []) {
+        if($created) {
+            $this->inserted_ids[] = $this->getInsertID();
+        }
+        return true;
+    }
+
+
     public function states($id = null) {
         $states = array(
             'AL' => 'Alabama',
