@@ -65,7 +65,7 @@
                             </p>
                             <p class="form-row form-row form-row-last address-field validate-required" id="billing_city_field" data-o_class="form-row form-row form-row-wide address-field validate-required"><label for="billing_city" class="">Quận / huyện  <abbr class="required" title="required">*</abbr></label>
 
-                                <select name="data[Order][state]"  id="state" style="max-width: none" onchange="shipping(this)">
+                                <select name="data[Order][state]"  id="state" style="max-width: none">
 
                                     <option value="" disabled selected>Chọn quận/huyện</option>
                                     <?php foreach ($states as $key => $value){ ?>
