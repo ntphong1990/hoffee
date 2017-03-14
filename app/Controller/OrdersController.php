@@ -154,7 +154,7 @@ class OrdersController extends AppController {
        // var_dump($order);die();
         $a = $this->Order->saveAll($order);
         $this->loadModel('Log');
-        $this->Log->saveOrder($order['Order']['id']);
+        $this->Log->saveOrder($this->Order->inserted_ids[0]);
         $this->Order->set($order);
 
         return json_encode('');
