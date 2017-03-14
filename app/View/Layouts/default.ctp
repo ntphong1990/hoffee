@@ -362,28 +362,28 @@
                                         </g>
                                     </g>
                                 </svg></icon></li>
-                        <li id="menu-item-3432" class="menu-item menu-item-type-custom menu-item-object-custom footer_menu-list-item"><a class="footer_menu-list-item-link" target="_blank" href="#">Twitter</a><icon src="../img/extrasmall-arrow.svg" class="footer_menu-list-item-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px" viewBox="0 0 10 10" version="1.1" class="injected-svg icon-svg">
-                                    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-                                        <g id="Footer_Grey" transform="translate(-1195.000000, -128.000000)" stroke="#FFFFFF">
-                                            <g id="Links-/-Columns">
-                                                <g transform="translate(96.000000, 65.000000)">
-                                                    <g id="Group-9" transform="translate(470.000000, 1.000000)">
-                                                        <g id="Column-2" transform="translate(513.000000, 0.000000)">
-                                                            <g id="extrasmall-arrow" transform="translate(117.000000, 63.000000)">
-                                                                <g id="small-arrow">
-                                                                    <g>
-                                                                        <polyline id="arrow" transform="translate(6.545455, 4.000000) rotate(-90.000000) translate(-6.545455, -4.000000) " points="10.1818182 2.18181818 6.54545455 5.81818182 2.90909091 2.18181818"></polyline>
-                                                                        <path d="M8.03857416,4 L0.229673548,4" id="Line"></path>
-                                                                    </g>
-                                                                </g>
-                                                            </g>
-                                                        </g>
-                                                    </g>
-                                                </g>
-                                            </g>
-                                        </g>
-                                    </g>
-                                </svg></icon></li>
+<!--                        <li id="menu-item-3432" class="menu-item menu-item-type-custom menu-item-object-custom footer_menu-list-item"><a class="footer_menu-list-item-link" target="_blank" href="#">Twitter</a><icon src="../img/extrasmall-arrow.svg" class="footer_menu-list-item-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px" viewBox="0 0 10 10" version="1.1" class="injected-svg icon-svg">-->
+<!--                                    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">-->
+<!--                                        <g id="Footer_Grey" transform="translate(-1195.000000, -128.000000)" stroke="#FFFFFF">-->
+<!--                                            <g id="Links-/-Columns">-->
+<!--                                                <g transform="translate(96.000000, 65.000000)">-->
+<!--                                                    <g id="Group-9" transform="translate(470.000000, 1.000000)">-->
+<!--                                                        <g id="Column-2" transform="translate(513.000000, 0.000000)">-->
+<!--                                                            <g id="extrasmall-arrow" transform="translate(117.000000, 63.000000)">-->
+<!--                                                                <g id="small-arrow">-->
+<!--                                                                    <g>-->
+<!--                                                                        <polyline id="arrow" transform="translate(6.545455, 4.000000) rotate(-90.000000) translate(-6.545455, -4.000000) " points="10.1818182 2.18181818 6.54545455 5.81818182 2.90909091 2.18181818"></polyline>-->
+<!--                                                                        <path d="M8.03857416,4 L0.229673548,4" id="Line"></path>-->
+<!--                                                                    </g>-->
+<!--                                                                </g>-->
+<!--                                                            </g>-->
+<!--                                                        </g>-->
+<!--                                                    </g>-->
+<!--                                                </g>-->
+<!--                                            </g>-->
+<!--                                        </g>-->
+<!--                                    </g>-->
+<!--                                </svg></icon></li>-->
                     </ul>
                 </accordion>
 
@@ -396,94 +396,95 @@
                             </svg></icon>
                     </div>
 
-                    <ul id="menu-useful-menu" class="footer_menu-list"><li id="menu-item-3435" class="menu-item menu-item-type-post_type menu-item-object-page footer_menu-list-item"><a class="footer_menu-list-item-link" href="#">FAQ</a><icon src="../img/extrasmall-arrow.svg" class="footer_menu-list-item-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px" viewBox="0 0 10 10" version="1.1" class="injected-svg icon-svg">
-                                    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-                                        <g id="Footer_Grey" transform="translate(-1195.000000, -128.000000)" stroke="#FFFFFF">
-                                            <g id="Links-/-Columns">
-                                                <g transform="translate(96.000000, 65.000000)">
-                                                    <g id="Group-9" transform="translate(470.000000, 1.000000)">
-                                                        <g id="Column-2" transform="translate(513.000000, 0.000000)">
-                                                            <g id="extrasmall-arrow" transform="translate(117.000000, 63.000000)">
-                                                                <g id="small-arrow">
-                                                                    <g>
-                                                                        <polyline id="arrow" transform="translate(6.545455, 4.000000) rotate(-90.000000) translate(-6.545455, -4.000000) " points="10.1818182 2.18181818 6.54545455 5.81818182 2.90909091 2.18181818"></polyline>
-                                                                        <path d="M8.03857416,4 L0.229673548,4" id="Line"></path>
-                                                                    </g>
-                                                                </g>
-                                                            </g>
-                                                        </g>
-                                                    </g>
-                                                </g>
-                                            </g>
-                                        </g>
-                                    </g>
-                                </svg></icon></li>
-                        <li id="menu-item-3436" class="menu-item menu-item-type-post_type menu-item-object-page footer_menu-list-item"><a class="footer_menu-list-item-link" href="#">Wholesale</a><icon src="../img/extrasmall-arrow.svg" class="footer_menu-list-item-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px" viewBox="0 0 10 10" version="1.1" class="injected-svg icon-svg">
-                                    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-                                        <g id="Footer_Grey" transform="translate(-1195.000000, -128.000000)" stroke="#FFFFFF">
-                                            <g id="Links-/-Columns">
-                                                <g transform="translate(96.000000, 65.000000)">
-                                                    <g id="Group-9" transform="translate(470.000000, 1.000000)">
-                                                        <g id="Column-2" transform="translate(513.000000, 0.000000)">
-                                                            <g id="extrasmall-arrow" transform="translate(117.000000, 63.000000)">
-                                                                <g id="small-arrow">
-                                                                    <g>
-                                                                        <polyline id="arrow" transform="translate(6.545455, 4.000000) rotate(-90.000000) translate(-6.545455, -4.000000) " points="10.1818182 2.18181818 6.54545455 5.81818182 2.90909091 2.18181818"></polyline>
-                                                                        <path d="M8.03857416,4 L0.229673548,4" id="Line"></path>
-                                                                    </g>
-                                                                </g>
-                                                            </g>
-                                                        </g>
-                                                    </g>
-                                                </g>
-                                            </g>
-                                        </g>
-                                    </g>
-                                </svg></icon></li>
-                        <li id="menu-item-3433" class="menu-item menu-item-type-post_type menu-item-object-page footer_menu-list-item"><a class="footer_menu-list-item-link" href="#">Careers</a><icon src="../img/extrasmall-arrow.svg" class="footer_menu-list-item-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px" viewBox="0 0 10 10" version="1.1" class="injected-svg icon-svg">
-                                    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-                                        <g id="Footer_Grey" transform="translate(-1195.000000, -128.000000)" stroke="#FFFFFF">
-                                            <g id="Links-/-Columns">
-                                                <g transform="translate(96.000000, 65.000000)">
-                                                    <g id="Group-9" transform="translate(470.000000, 1.000000)">
-                                                        <g id="Column-2" transform="translate(513.000000, 0.000000)">
-                                                            <g id="extrasmall-arrow" transform="translate(117.000000, 63.000000)">
-                                                                <g id="small-arrow">
-                                                                    <g>
-                                                                        <polyline id="arrow" transform="translate(6.545455, 4.000000) rotate(-90.000000) translate(-6.545455, -4.000000) " points="10.1818182 2.18181818 6.54545455 5.81818182 2.90909091 2.18181818"></polyline>
-                                                                        <path d="M8.03857416,4 L0.229673548,4" id="Line"></path>
-                                                                    </g>
-                                                                </g>
-                                                            </g>
-                                                        </g>
-                                                    </g>
-                                                </g>
-                                            </g>
-                                        </g>
-                                    </g>
-                                </svg></icon></li>
-                        <li id="menu-item-3919" class="menu-item menu-item-type-post_type menu-item-object-page footer_menu-list-item"><a class="footer_menu-list-item-link" href="#">Contact</a><icon src="../img/extrasmall-arrow.svg" class="footer_menu-list-item-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px" viewBox="0 0 10 10" version="1.1" class="injected-svg icon-svg">
-                                    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-                                        <g id="Footer_Grey" transform="translate(-1195.000000, -128.000000)" stroke="#FFFFFF">
-                                            <g id="Links-/-Columns">
-                                                <g transform="translate(96.000000, 65.000000)">
-                                                    <g id="Group-9" transform="translate(470.000000, 1.000000)">
-                                                        <g id="Column-2" transform="translate(513.000000, 0.000000)">
-                                                            <g id="extrasmall-arrow" transform="translate(117.000000, 63.000000)">
-                                                                <g id="small-arrow">
-                                                                    <g>
-                                                                        <polyline id="arrow" transform="translate(6.545455, 4.000000) rotate(-90.000000) translate(-6.545455, -4.000000) " points="10.1818182 2.18181818 6.54545455 5.81818182 2.90909091 2.18181818"></polyline>
-                                                                        <path d="M8.03857416,4 L0.229673548,4" id="Line"></path>
-                                                                    </g>
-                                                                </g>
-                                                            </g>
-                                                        </g>
-                                                    </g>
-                                                </g>
-                                            </g>
-                                        </g>
-                                    </g>
-                                </svg></icon></li>
+                    <ul id="menu-useful-menu" class="footer_menu-list">
+<!--                        <li id="menu-item-3435" class="menu-item menu-item-type-post_type menu-item-object-page footer_menu-list-item"><a class="footer_menu-list-item-link" href="#">FAQ</a><icon src="../img/extrasmall-arrow.svg" class="footer_menu-list-item-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px" viewBox="0 0 10 10" version="1.1" class="injected-svg icon-svg">-->
+<!--                                    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">-->
+<!--                                        <g id="Footer_Grey" transform="translate(-1195.000000, -128.000000)" stroke="#FFFFFF">-->
+<!--                                            <g id="Links-/-Columns">-->
+<!--                                                <g transform="translate(96.000000, 65.000000)">-->
+<!--                                                    <g id="Group-9" transform="translate(470.000000, 1.000000)">-->
+<!--                                                        <g id="Column-2" transform="translate(513.000000, 0.000000)">-->
+<!--                                                            <g id="extrasmall-arrow" transform="translate(117.000000, 63.000000)">-->
+<!--                                                                <g id="small-arrow">-->
+<!--                                                                    <g>-->
+<!--                                                                        <polyline id="arrow" transform="translate(6.545455, 4.000000) rotate(-90.000000) translate(-6.545455, -4.000000) " points="10.1818182 2.18181818 6.54545455 5.81818182 2.90909091 2.18181818"></polyline>-->
+<!--                                                                        <path d="M8.03857416,4 L0.229673548,4" id="Line"></path>-->
+<!--                                                                    </g>-->
+<!--                                                                </g>-->
+<!--                                                            </g>-->
+<!--                                                        </g>-->
+<!--                                                    </g>-->
+<!--                                                </g>-->
+<!--                                            </g>-->
+<!--                                        </g>-->
+<!--                                    </g>-->
+<!--                                </svg></icon></li>-->
+<!--                        <li id="menu-item-3436" class="menu-item menu-item-type-post_type menu-item-object-page footer_menu-list-item"><a class="footer_menu-list-item-link" href="#">Wholesale</a><icon src="../img/extrasmall-arrow.svg" class="footer_menu-list-item-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px" viewBox="0 0 10 10" version="1.1" class="injected-svg icon-svg">-->
+<!--                                    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">-->
+<!--                                        <g id="Footer_Grey" transform="translate(-1195.000000, -128.000000)" stroke="#FFFFFF">-->
+<!--                                            <g id="Links-/-Columns">-->
+<!--                                                <g transform="translate(96.000000, 65.000000)">-->
+<!--                                                    <g id="Group-9" transform="translate(470.000000, 1.000000)">-->
+<!--                                                        <g id="Column-2" transform="translate(513.000000, 0.000000)">-->
+<!--                                                            <g id="extrasmall-arrow" transform="translate(117.000000, 63.000000)">-->
+<!--                                                                <g id="small-arrow">-->
+<!--                                                                    <g>-->
+<!--                                                                        <polyline id="arrow" transform="translate(6.545455, 4.000000) rotate(-90.000000) translate(-6.545455, -4.000000) " points="10.1818182 2.18181818 6.54545455 5.81818182 2.90909091 2.18181818"></polyline>-->
+<!--                                                                        <path d="M8.03857416,4 L0.229673548,4" id="Line"></path>-->
+<!--                                                                    </g>-->
+<!--                                                                </g>-->
+<!--                                                            </g>-->
+<!--                                                        </g>-->
+<!--                                                    </g>-->
+<!--                                                </g>-->
+<!--                                            </g>-->
+<!--                                        </g>-->
+<!--                                    </g>-->
+<!--                                </svg></icon></li>-->
+<!--                        <li id="menu-item-3433" class="menu-item menu-item-type-post_type menu-item-object-page footer_menu-list-item"><a class="footer_menu-list-item-link" href="#">Careers</a><icon src="../img/extrasmall-arrow.svg" class="footer_menu-list-item-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px" viewBox="0 0 10 10" version="1.1" class="injected-svg icon-svg">-->
+<!--                                    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">-->
+<!--                                        <g id="Footer_Grey" transform="translate(-1195.000000, -128.000000)" stroke="#FFFFFF">-->
+<!--                                            <g id="Links-/-Columns">-->
+<!--                                                <g transform="translate(96.000000, 65.000000)">-->
+<!--                                                    <g id="Group-9" transform="translate(470.000000, 1.000000)">-->
+<!--                                                        <g id="Column-2" transform="translate(513.000000, 0.000000)">-->
+<!--                                                            <g id="extrasmall-arrow" transform="translate(117.000000, 63.000000)">-->
+<!--                                                                <g id="small-arrow">-->
+<!--                                                                    <g>-->
+<!--                                                                        <polyline id="arrow" transform="translate(6.545455, 4.000000) rotate(-90.000000) translate(-6.545455, -4.000000) " points="10.1818182 2.18181818 6.54545455 5.81818182 2.90909091 2.18181818"></polyline>-->
+<!--                                                                        <path d="M8.03857416,4 L0.229673548,4" id="Line"></path>-->
+<!--                                                                    </g>-->
+<!--                                                                </g>-->
+<!--                                                            </g>-->
+<!--                                                        </g>-->
+<!--                                                    </g>-->
+<!--                                                </g>-->
+<!--                                            </g>-->
+<!--                                        </g>-->
+<!--                                    </g>-->
+<!--                                </svg></icon></li>-->
+<!--                        <li id="menu-item-3919" class="menu-item menu-item-type-post_type menu-item-object-page footer_menu-list-item"><a class="footer_menu-list-item-link" href="#">Contact</a><icon src="../img/extrasmall-arrow.svg" class="footer_menu-list-item-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px" viewBox="0 0 10 10" version="1.1" class="injected-svg icon-svg">-->
+<!--                                    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">-->
+<!--                                        <g id="Footer_Grey" transform="translate(-1195.000000, -128.000000)" stroke="#FFFFFF">-->
+<!--                                            <g id="Links-/-Columns">-->
+<!--                                                <g transform="translate(96.000000, 65.000000)">-->
+<!--                                                    <g id="Group-9" transform="translate(470.000000, 1.000000)">-->
+<!--                                                        <g id="Column-2" transform="translate(513.000000, 0.000000)">-->
+<!--                                                            <g id="extrasmall-arrow" transform="translate(117.000000, 63.000000)">-->
+<!--                                                                <g id="small-arrow">-->
+<!--                                                                    <g>-->
+<!--                                                                        <polyline id="arrow" transform="translate(6.545455, 4.000000) rotate(-90.000000) translate(-6.545455, -4.000000) " points="10.1818182 2.18181818 6.54545455 5.81818182 2.90909091 2.18181818"></polyline>-->
+<!--                                                                        <path d="M8.03857416,4 L0.229673548,4" id="Line"></path>-->
+<!--                                                                    </g>-->
+<!--                                                                </g>-->
+<!--                                                            </g>-->
+<!--                                                        </g>-->
+<!--                                                    </g>-->
+<!--                                                </g>-->
+<!--                                            </g>-->
+<!--                                        </g>-->
+<!--                                    </g>-->
+<!--                                </svg></icon></li>-->
                     </ul>
                 </accordion>
 
