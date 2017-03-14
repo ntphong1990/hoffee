@@ -69,7 +69,7 @@
 
                                     <option value="" disabled selected>Chọn quận/huyện</option>
                                     <?php foreach ($states as $key => $value){ ?>
-                                        <option value="<?php echo $value['DevvnQuanhuyen']['matp'];?>" ><?php echo $value['DevvnQuanhuyen']['name'];?></option>
+                                        <option value="<?php echo $value['DevvnQuanhuyen']['maqh'];?>" ><?php echo $value['DevvnQuanhuyen']['name'];?></option>
                                     <?php } ?>
                                 </select>
                             </p>
