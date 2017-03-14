@@ -133,8 +133,17 @@ class CustomersController extends AppController {
  * @return void
  */
 	public function admin_add() {
+        $this->loadModel('DevvnTinhthanhpho');
+        $this->loadModel('DevvnQuanhuyen');
+        $locations = $this->DevvnTinhthanhpho->find('all',array('order' => array('ind' => 'ASC')));
+        $this->set('district',$locations);
+
+
+        $states =  $this->DevvnQuanhuyen->find('all',array('conditions' => array()));
+        $this->set('states',$states);
 		if ($this->request->is('post')) {
 			$this->Customer->create();
+
 			if ($this->Customer->save($this->request->data)) {
 				$this->Flash->success(__('The customer has been saved.'));
 				return $this->redirect(array('action' => 'index'));

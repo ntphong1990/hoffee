@@ -53,7 +53,7 @@
                             <p class="form-row form-row form-row-wide address-field validate-required" id="billing_address_1_field"><label for="billing_address_1" class="">Địa chỉ <abbr class="required" title="required">*</abbr></label><input type="text" class="input-text " name="data[Order][billing_address]" id="billing_address_1" required placeholder="Street address" autocomplete="address-line1" value="<?php echo $shop['Order']['address'];?>"></p>
 
 
-                            <p class="form-row form-row form-row-wide address-field validate-required" id="billing_city_field" data-o_class="form-row form-row form-row-wide address-field validate-required"><label for="billing_city" class="">tỉnh / thành  <abbr class="required" title="required">*</abbr></label>
+                            <p class="form-row form-row form-row-first address-field validate-required" id="billing_city_field" data-o_class="form-row form-row form-row-wide address-field validate-required"><label for="billing_city" class="">tỉnh / thành  <abbr class="required" title="required">*</abbr></label>
 
                                 <select name="data[Order][billing_city]"  id="billing_city" style="max-width: none" onchange="shipping(this)">
 
@@ -61,6 +61,16 @@
                                    <?php foreach ($locations as $key => $value){ ?>
                                       <option value="<?php echo $value['DevvnTinhthanhpho']['matp'];?>" <?php if ($shop['Order']['city'] == $value['DevvnTinhthanhpho']['matp']) echo 'selected';?>><?php echo $value['DevvnTinhthanhpho']['name'];?></option>
                                    <?php } ?>
+                                </select>
+                            </p>
+                            <p class="form-row form-row form-row-last address-field validate-required" id="billing_city_field" data-o_class="form-row form-row form-row-wide address-field validate-required"><label for="billing_city" class="">Quận / huyện  <abbr class="required" title="required">*</abbr></label>
+
+                                <select name="data[Order][state]"  id="state" style="max-width: none" onchange="shipping(this)">
+
+                                    <option value="" disabled selected>Chọn quận/huyện</option>
+                                    <?php foreach ($states as $key => $value){ ?>
+                                        <option value="<?php echo $value['DevvnQuanhuyen']['matp'];?>" ><?php echo $value['DevvnQuanhuyen']['name'];?></option>
+                                    <?php } ?>
                                 </select>
                             </p>
 

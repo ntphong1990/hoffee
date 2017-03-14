@@ -8,6 +8,10 @@
 		echo $this->Form->input('birthday');
 		echo $this->Form->input('address');
 		echo $this->Form->input('phone');
+		echo $this->Form->input('lastname');
+		echo $this->Form->input('email');
+		echo $this->Form->input('district');
+		echo $this->Form->input('state');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
@@ -18,5 +22,9 @@
 
 		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Customer.id')), array('confirm' => __('Are you sure you want to delete # %s?', $this->Form->value('Customer.id')))); ?></li>
 		<li><?php echo $this->Html->link(__('List Customers'), array('action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('List Devvn Tinhthanhphos'), array('controller' => 'devvn_tinhthanhphos', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Devvn Tinhthanhpho'), array('controller' => 'devvn_tinhthanhphos', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Devvn Quanhuyens'), array('controller' => 'devvn_quanhuyens', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Devvn Quanhuyen'), array('controller' => 'devvn_quanhuyens', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

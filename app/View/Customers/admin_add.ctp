@@ -16,6 +16,8 @@
 		echo $this->Form->input('phone', array('class' => 'form-control'));
 
 		echo $this->Form->input('email', array('class' => 'form-control'));
+		echo $this->Form->input('district', array('class' => 'form-control','type' => 'select', 'options' => $district, 'label' => false));
+	    echo $this->Form->input('state', array('class' => 'form-control', 'options' => $states,'text' => 'name', 'label' => 'Quan'));
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

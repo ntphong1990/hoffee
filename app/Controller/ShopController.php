@@ -124,7 +124,7 @@ class ShopController extends AppController {
 
             $ship = 0;
             if ($id) {
-                if ($id == 190) {
+                if ($id == 79) {
                     $ship = 20000;
                 } else {
                     $ship = 40000;
@@ -156,11 +156,15 @@ class ShopController extends AppController {
             return $this->redirect('/');
         }
 
-
+        $shop = $this->Session->read('Shop');
         $this->loadModel('DevvnTinhthanhpho');
-
+        $this->loadModel('DevvnQuanhuyen');
         $locations = $this->DevvnTinhthanhpho->find('all',array('order' => array('ind' => 'ASC')));
         $this->set('locations',$locations);
+
+
+        $states =  $this->DevvnQuanhuyen->find('all',array('conditions' => array('matp' => $shop['Order']['city'])));
+        $this->set('states',$states);
        // var_dump($locations);die();
 
         if ($this->request->is('post')) {
@@ -207,8 +211,9 @@ class ShopController extends AppController {
                              $customer['Customer']['address'] = $order['Order']['billing_address'];
                              $customer['Customer']['email'] = $order['Order']['email'];
                              $customer['Customer']['phone'] = $order['Order']['phone'];
-                             $customer['Customer']['birthday'] = date('Y-m-d');
-
+                             $customer['Customer']['birthday'] = $this->request->data['Order']['billing_city'];
+                             $customer['Customer']['district'] = $this->request->data['Order']['state'];
+                             $customer['Customer']['state'] = date('Y-m-d');
                              $this->Customer->save($customer);
 
                          }

@@ -20,4 +20,20 @@ class Customer extends AppModel {
  */
 	public $displayField = 'name';
 
+    public $belongsTo = array(
+        'DevvnTinhthanhpho' => array(
+            'className' => 'DevvnTinhthanhpho',
+            'foreignKey' => 'district',
+            'conditions' => '',
+            'fields' => '',
+            'order' => '',
+        ),
+        'DevvnQuanhuyen' => array(
+            'className' => 'DevvnQuanhuyen',
+            'foreignKey' => 'state',
+            'conditions' => '',
+            'fields' => '',
+            'order' => '',
+        ),
+    );
 }
