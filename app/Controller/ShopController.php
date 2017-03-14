@@ -211,9 +211,9 @@ class ShopController extends AppController {
                              $customer['Customer']['address'] = $order['Order']['billing_address'];
                              $customer['Customer']['email'] = $order['Order']['email'];
                              $customer['Customer']['phone'] = $order['Order']['phone'];
-                             $customer['Customer']['birthday'] = $this->request->data['Order']['billing_city'];
-                             $customer['Customer']['district'] = $this->request->data['Order']['state'];
-                             $customer['Customer']['state'] = date('Y-m-d');
+                             $customer['Customer']['birthday'] = date('Y-m-d');
+                             $customer['Customer']['district'] = $this->request->data['Order']['billing_city'];
+                             $customer['Customer']['state'] =  $this->request->data['Order']['state'];
                              $this->Customer->save($customer);
 
                          }
