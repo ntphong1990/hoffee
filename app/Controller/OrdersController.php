@@ -153,7 +153,8 @@ class OrdersController extends AppController {
         $order['Order']['weight'] = $weight;
        // var_dump($order);die();
        $a = $this->Order->saveAll($order);
-
+        $this->loadModel('Log');
+        $this->Log->saveOrder($order['Order']['id']);
         $this->Order->set($order);
 
         return json_encode('');
@@ -229,8 +230,15 @@ class OrdersController extends AppController {
         }
         $this->set(compact('order'));
         $this->set('fee',$fee);
+
+        $this->loadModel('Log');
+        $log = $this->Log->find('all',array('conditions' => array('item_id' => $id),'order' => array('created' => 'ASC')));
+        $this->set('logs',$log);
+
         if ($this->request->is('post') || $this->request->is('put')) {
            // var_dump( $this->request->data);
+            $mes = '';
+
             if($this->request->data['Order']['money'] != ''){
                 $customer = $this->Financial->create();
                 $customer['Financial']['type'] = 1;
@@ -239,12 +247,23 @@ class OrdersController extends AppController {
                 $customer['Financial']['kind'] = 1;
                 $customer['Financial']['detail'] = $id;
                 $this->Financial->save($customer);
+                $mes = "+".$this->request->data['Order']['money'].'VND';
+                $this->Log->editOrder( $order['Order']['id'],$mes);
             }
 
             if($fee + intval($this->request->data['Order']['money']) >= $order['Order']['total']){
                 $order['Order']['status'] = 1;
             }
+            if( $order['Order']['shipping_status'] !=  $this->request->data['Order']['shipping_status']) {
+
+                $mes = $this->ShippingStatus->find('first',array('conditions' => array('id' => $this->request->data['Order']['shipping_status'])))['ShippingStatus']['status'];
+                $this->Log->editOrder( $order['Order']['id'],$mes);
+            }
             $order['Order']['shipping_status'] = $this->request->data['Order']['shipping_status'];
+            if( $order['Order']['note'] !=  $this->request->data['Order']['note']) {
+                $mes = 'noted : '.$this->request->data['Order']['note'];
+                $this->Log->editOrder( $order['Order']['id'],$mes);
+            }
             $order['Order']['note'] = $this->request->data['Order']['note'];
             if($this->Order->save($order)){
                 return $this->redirect(array('action' => 'index'));

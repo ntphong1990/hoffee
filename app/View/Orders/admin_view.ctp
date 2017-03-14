@@ -241,73 +241,50 @@
 
 
 
-<!--                                <div class="mt20 mb20">-->
-<!--                                    <div data-bind="commentLog: CommentLog">-->
-<!--                                        <div class="comment-log ws-nm">-->
-<!--                                            <!-- ko if: !IsSmallVersion() -->-->
-<!--                                            <div class="comment-log-title">-->
-<!--                                                <label class="bold-light m-xs-b hide-print">Lịch sử</label>-->
-<!--                                            </div>-->
-<!--                                            <div class="comment-log-timeline">-->
-<!--                                                <div data-bind="css: { 'no-comment': Total() == 0 }" class="column-left-history ps-relative">-->
-<!---->
-<!---->
-<!--                                                    <div class="p-xs p-l15 pr15 item-card">-->
-<!--                                                        <div class="item-card-body clearfix">-->
-<!--                                                            <div class="item item-quantity" data-bind="template: { name: TemplateName, data: $data }">-->
-<!--                                                                <i class="glyphicon glyphicon-arrow-right border-cycle bg-green mr5 img-icon-history"></i>-->
-<!--                                                                <p class="detail-history-order">-->
-<!--                                                                    <a class="bold-light show-timeline-dropdown" data-bind="attr: {'data-target': '#dd_CapturePayment_' + Id() }" data-target="#dd_CapturePayment_53809345">Chúng tôi xác nhận thanh toán thành công <span data-bind="textMoneyWithSymbol:LogData().Amount">1,550,000 ₫</span></a>-->
-<!--                                                                </p>-->
-<!--                                                                <span class="pull-right text-gray" data-bind="timeshort:LogDate">3:49 CH</span>-->
-<!--                                                                -->
-<!--                                                            </div>-->
-<!--                                                        </div>-->
-<!--                                                    </div>-->
-<!---->
-<!---->
-<!---->
-<!---->
-<!--                                                    <div class="p-xs p-l15 pr15 item-card">-->
-<!--                                                        <div class="item-card-body clearfix">-->
-<!--                                                            <div class="item item-quantity" data-bind="template: { name: TemplateName, data: $data }">-->
-<!--                                                                <i class="fa fa-check border-cycle bg-slateGray mr5 img-icon-history"></i>-->
-<!--                                                                <p class="detail-history-order">-->
-<!--                                                                    Đơn hàng đã được xác thực bởi-->
-<!--                                                                    <span data-bind="text:LogData().ConfirmUser">Mr Duy (TheSkinna)</span>-->
-<!--                                                                </p>-->
-<!--                                                                <span class="pull-right text-gray" data-bind="timeshort:LogDate">3:49 CH</span>-->
-<!--                                                            </div>-->
-<!--                                                        </div>-->
-<!--                                                    </div>-->
-<!---->
-<!---->
-<!---->
-<!---->
-<!--                                                    <div class="p-xs p-l15 pr15 item-card">-->
-<!--                                                        <div class="item-card-body clearfix">-->
-<!--                                                            <div class="item item-quantity" data-bind="template: { name: TemplateName, data: $data }">-->
-<!--                                                                <i class="fa fa-star border-cycle bg-slateGray mr5 img-icon-history"></i>-->
-<!--                                                                <p class="detail-history-order">-->
-<!--                                                                    Đơn hàng được tạo bởi-->
-<!--                                                                    <span data-bind="text:LogData().UserCreatedFullName">Mr Duy (TheSkinna)</span>-->
-<!--                                                                </p>-->
-<!--                                                                <span class="pull-right text-gray" data-bind="timeshort:LogDate">3:49 CH</span>-->
-<!--                                                            </div>-->
-<!--                                                        </div>-->
-<!--                                                    </div>-->
-<!---->
-<!---->
-<!---->
-<!--                                                </div>-->
-<!--                                                <!-- ko if: Total() > PageSize() --><!-- /ko -->-->
-<!--                                            </div>-->
-<!--                                            <!-- /ko -->-->
-<!--                                            <!-- ko if: IsSmallVersion() --><!-- /ko -->-->
-<!--                                        </div>-->
-<!---->
-<!--                                    </div>-->
-<!--                                </div>-->
+                                <div class="mt20 mb20">
+                                    <div data-bind="commentLog: CommentLog">
+                                        <div class="comment-log ws-nm">
+                                            <!-- ko if: !IsSmallVersion() -->
+                                            <div class="comment-log-title">
+                                                <label class="bold-light m-xs-b hide-print">Lịch sử</label>
+                                            </div>
+                                            <div class="comment-log-timeline">
+                                                <div class="column-left-history ps-relative">
+
+                                                <?php foreach ($logs as $key =>$value) { ?>
+                                                    <div class="p-xs p-l15 pr15 item-card">
+                                                        <div class="item-card-body clearfix">
+                                                            <div class="item item-quantity">
+                                                                <?php if($value['Log']['action'] == 0){ ?>
+                                                                    <i class="fa fa-check border-cycle bg-slateGray mr5 img-icon-history"></i>
+                                                                <?php } else { ?>
+                                                                <i class="glyphicon glyphicon-arrow-right border-cycle bg-green mr5 img-icon-history"></i>
+                                                                <?php } ?>
+                                                                <p class="detail-history-order">
+                                                                    <a class="bold-light show-timeline-dropdown"><?php echo $value['Log']['detail'];?> </span></a>
+                                                                </p>
+                                                                <span class="pull-right text-gray" data-bind="timeshort:LogDate"><?php echo $value['Log']['created'];?></span>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                            <?php } ?>
+
+
+
+
+
+                                                </div>
+                                                <!-- ko if: Total() > PageSize() --><!-- /ko -->
+                                            </div>
+                                            <!-- /ko -->
+                                            <!-- ko if: IsSmallVersion() --><!-- /ko -->
+                                        </div>
+
+                                    </div>
+                                </div>
                                 <div class="form-group mt15">
 
                                     <?php echo $this->Form->postLink('Xóa đơn hàng', array('action' => 'delete', $order['Order']['id']), array('class' => 'btn btn-default btn-danger'), __('Are you sure you want to delete # %s?', $order['Order']['id'])); ?>

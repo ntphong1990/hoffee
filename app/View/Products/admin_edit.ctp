@@ -18,6 +18,8 @@
         <br />
         <?php echo $this->Form->input('slug', array('class' => 'form-control')); ?>
         <br />
+        <?php echo $this->Form->input('short_des', array('class' => 'form-control')); ?>
+        <br />
         <?php echo $this->Form->input('description', array('class' => 'form-control ckeditor')); ?>
         <br />
         <?php echo $this->Form->input('image', array('class' => 'form-control')); ?>

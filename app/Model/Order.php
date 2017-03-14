@@ -1,5 +1,5 @@
 <?php
-App::uses('AppModel', 'Model');
+App::uses('AppModel', 'Model','Log');
 class Order extends AppModel {
 
 //////////////////////////////////////////////////
@@ -40,6 +40,8 @@ class Order extends AppModel {
         )
 
     );
+
+
 
 //////////////////////////////////////////////////
 
