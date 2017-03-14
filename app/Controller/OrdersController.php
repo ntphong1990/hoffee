@@ -152,7 +152,7 @@ class OrdersController extends AppController {
         }
         $order['Order']['weight'] = $weight;
        // var_dump($order);die();
-       $a = $this->Order->saveAll($order);
+        $a = $this->Order->saveAll($order);
         $this->loadModel('Log');
         $this->Log->saveOrder($order['Order']['id']);
         $this->Order->set($order);
