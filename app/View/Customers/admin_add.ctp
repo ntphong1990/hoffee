@@ -1,3 +1,20 @@
+<script>
+	function selectDistrict(ele) {
+		var matp = ele.options[ele.selectedIndex].value
+
+		var e = document.getElementById("CustomerState");
+		var strUser = e.options	[e.selectedIndex].value;
+
+		for(var i = 0 ; i < e.options.length ;i++){
+			if(e[i].id == matp){
+				e.options[i].style.display = 'block';
+			} else {
+				e.options[i].style.display = 'none';
+			}
+		}
+
+	}
+</script>
 </br>
 </br>
 
@@ -16,9 +33,26 @@
 		echo $this->Form->input('phone', array('class' => 'form-control'));
 
 		echo $this->Form->input('email', array('class' => 'form-control'));
-		echo $this->Form->input('district', array('class' => 'form-control','type' => 'select', 'options' => $district, 'label' => false));
-	    echo $this->Form->input('state', array('class' => 'form-control', 'options' => $states,'text' => 'name', 'label' => 'Quan'));
+
+
 	?>
+		<div class="flexbox-grid-form-item select"><select name="data[Customer][district]" onchange="selectDistrict(this)" class="form-control" id="CustomerDistrict">
+				<?php foreach ($district as $key => $value){ ?>
+					<option value="<?php echo $value['DevvnTinhthanhpho']['matp'];?>"><?php echo $value['DevvnTinhthanhpho']['name'];?></option>
+				<?php } ?>
+
+			</select>
+		</div>
+
+		<div class="flexbox-grid-form-item select"><select name="data[Customer][district]" class="form-control" id="CustomerState">
+				<option value="" disabled selected>Chọn quận/huyện</option>
+				<?php foreach ($states as $key => $value){ ?>
+					<option style="display: none" value="<?php echo $value['DevvnQuanhuyen']['maqh'];?>" accessKey="asd" id="<?php echo $value['DevvnQuanhuyen']['matp'];?>"><?php echo $value['DevvnQuanhuyen']['name'];?></option>
+				<?php } ?>
+
+			</select>
+		</div>
+
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
 </div></div>

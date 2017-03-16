@@ -139,6 +139,8 @@ class CustomersController extends AppController {
         $this->set('district',$locations);
 
 
+
+
         $states =  $this->DevvnQuanhuyen->find('all',array('conditions' => array()));
         $this->set('states',$states);
 		if ($this->request->is('post')) {
