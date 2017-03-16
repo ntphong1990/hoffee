@@ -14,6 +14,24 @@
 		}
 
 	}
+
+	function autoHCM() {
+		var e = document.getElementById("CustomerState");
+		var strUser = e.options	[e.selectedIndex].value;
+
+		for(var i = 0 ; i < e.options.length ;i++){
+			if(e[i].id == "79"){
+				e.options[i].style.display = 'block';
+			} else {
+				e.options[i].style.display = 'none';
+			}
+		}
+	}
+
+	$( document ).ready(function() {
+		autoHCM();
+	});
+
 </script>
 </br>
 </br>
