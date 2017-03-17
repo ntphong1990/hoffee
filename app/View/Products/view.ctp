@@ -86,7 +86,7 @@ $(document).ready(function() {
 
                         <p class="product_detail-inner-details-description">
                         </p><div itemprop="description">
-                            
+
                         </div>
                         <p></p>
 
@@ -136,7 +136,7 @@ $(document).ready(function() {
 
                                             <div class="woocommerce-variation-availability">
                                                 <span class="woocommerce-variation-price"></span>
-                                                <p class="stock in-stock"><span class="woocommerce-stock_level woocommerce-stock_level--in_stock">In Stock</span></p>
+                                                <p class="stock in-stock"><span class="woocommerce-stock_level woocommerce-stock_level--in_stock">Còn hàng</span></p>
                                             </div>
                                         </div><div class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-enabled">
                                             <div class="quantity">
