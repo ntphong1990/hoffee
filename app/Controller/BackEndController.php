@@ -41,6 +41,7 @@ class BackEndController extends AppController {
         $this->loadModel('Order');
         $this->loadModel('Customer');
         $this->loadModel('OrderItem');
+        $this->loadModel('DevvnTinhthanhpho');
         $customer = $this->Customer->find('first',array('conditions' => array(
             'id' => $this->request->data['customerid']
         )));
@@ -52,7 +53,12 @@ class BackEndController extends AppController {
         $order['Order']['phone'] = $customer['Customer']['phone'];
         $order['Order']['billing_address'] = $customer['Customer']['address'];
         $order['Order']['billing_address2'] = '';
-        $order['Order']['billing_city'] = '';
+        $city = $this->DevvnTinhthanhpho->find('first',array('conditions' => array('matp' => $customer['Customer']['district'])));
+        if($city) {
+            $order['Order']['billing_city'] = ['DevvnTinhthanhpho']['name'];
+        } else {
+            $order['Order']['billing_city'] = '';
+        }
         $order['Order']['note'] = '';
         $order['Order']['direct'] = '1';
         $order['Order']['shipping_address'] = '';
