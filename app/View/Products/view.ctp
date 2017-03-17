@@ -96,7 +96,7 @@ $(document).ready(function() {
 
                             <div class="ng-non-bindable" ng-non-bindable="">
 
-                                <form class="variations_form cart" method="post" enctype="multipart/form-data" data-product_id="2024" data-product_variations="[{&quot;variation_id&quot;:3898,&quot;variation_is_visible&quot;:true,&quot;variation_is_active&quot;:true,&quot;is_purchasable&quot;:true,&quot;display_price&quot;:12,&quot;display_regular_price&quot;:12,&quot;attributes&quot;:{&quot;attribute_pa_weight&quot;:&quot;8oz&quot;,&quot;attribute_pa_grind&quot;:&quot;whole-beans&quot;},&quot;image_src&quot;:&quot;&quot;,&quot;image_link&quot;:&quot;&quot;,&quot;image_title&quot;:&quot;&quot;,&quot;image_alt&quot;:&quot;&quot;,&quot;image_caption&quot;:&quot;&quot;,&quot;image_srcset&quot;:&quot;&quot;,&quot;image_sizes&quot;:&quot;&quot;,&quot;price_html&quot;:&quot;&quot;,&quot;availability_html&quot;:&quot;<p class=\&quot;stock in-stock\&quot;><span class=\&quot;woocommerce-stock_level woocommerce-stock_level--in_stock\&quot;>In Stock<\/span><\/p>&quot;,&quot;sku&quot;:&quot;&quot;,&quot;weight&quot;:&quot;.252 kg&quot;,&quot;dimensions&quot;:&quot;&quot;,&quot;min_qty&quot;:1,&quot;max_qty&quot;:56,&quot;backorders_allowed&quot;:false,&quot;is_in_stock&quot;:true,&quot;is_downloadable&quot;:false,&quot;is_virtual&quot;:false,&quot;is_sold_individually&quot;:&quot;no&quot;,&quot;variation_description&quot;:&quot;&quot;}]">
+                                <form class="variations_form cart" method="post" enctype="multipart/form-data" data-product_id="2024" data-product_variations="[{&quot;variation_id&quot;:3898,&quot;variation_is_visible&quot;:true,&quot;variation_is_active&quot;:true,&quot;is_purchasable&quot;:true,&quot;display_price&quot;:12,&quot;display_regular_price&quot;:12,&quot;attributes&quot;:{&quot;attribute_pa_weight&quot;:&quot;8oz&quot;,&quot;attribute_pa_grind&quot;:&quot;whole-beans&quot;},&quot;image_src&quot;:&quot;&quot;,&quot;image_link&quot;:&quot;&quot;,&quot;image_title&quot;:&quot;&quot;,&quot;image_alt&quot;:&quot;&quot;,&quot;image_caption&quot;:&quot;&quot;,&quot;image_srcset&quot;:&quot;&quot;,&quot;image_sizes&quot;:&quot;&quot;,&quot;price_html&quot;:&quot;&quot;,&quot;availability_html&quot;:&quot;<p class=\&quot;stock in-stock\&quot;><span class=\&quot;woocommerce-stock_level woocommerce-stock_level--in_stock\&quot;>Còn hàng<\/span><\/p>&quot;,&quot;sku&quot;:&quot;&quot;,&quot;weight&quot;:&quot;.252 kg&quot;,&quot;dimensions&quot;:&quot;&quot;,&quot;min_qty&quot;:1,&quot;max_qty&quot;:56,&quot;backorders_allowed&quot;:false,&quot;is_in_stock&quot;:true,&quot;is_downloadable&quot;:false,&quot;is_virtual&quot;:false,&quot;is_sold_individually&quot;:&quot;no&quot;,&quot;variation_description&quot;:&quot;&quot;}]">
 
                                     <table class="variations" cellspacing="0">
                                         <tbody>
@@ -171,7 +171,7 @@ $(document).ready(function() {
 
                 <div class="product_information-inner-column-content">
 
-                    <div class="content"><h4>ABOUT THIS COFFEE</h4>
+                    <div class="content"><h4>THÔNG TIN</h4>
                         <p> <?php echo $product['Product']['description']; ?></p>
                     </div>
 
@@ -179,7 +179,7 @@ $(document).ready(function() {
                     <div class="product_info-heading">
 
 
-                        <h6 class="product_info-heading-title">INFORMATION</h6>
+                        <h6 class="product_info-heading-title">Đặc điểm</h6>
 
 
                         <hr class="product_info-heading-spacer">
@@ -192,7 +192,7 @@ $(document).ready(function() {
 
                         <li class="product_info-item">
 
-                            <div class="product_info-item-title">Country</div>
+                            <div class="product_info-item-title">Khu vực</div>
 
                             <div class="product_info-item-description">Lam Dong / Viet Nam</div>
 
@@ -201,9 +201,9 @@ $(document).ready(function() {
 
                         <li class="product_info-item">
 
-                            <div class="product_info-item-title">Cupping Notes</div>
+                            <div class="product_info-item-title">Công thức</div>
 
-                            <div class="product_info-item-description">Bright and juicy with citrus and floral notes mixed with berry sweetness</div>
+                            <div class="product_info-item-description"><?php echo $product['Product']['short_des']; ?></div>
 
                         </li>
 
