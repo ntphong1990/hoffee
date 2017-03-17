@@ -86,7 +86,7 @@ $(document).ready(function() {
 
                         <p class="product_detail-inner-details-description">
                         </p><div itemprop="description">
-                            <?php echo $product['Product']['short_des']; ?>
+                            
                         </div>
                         <p></p>
 
