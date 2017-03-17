@@ -31,6 +31,16 @@ class Log extends AppModel {
 
     }
 
+    public function newOrderApp($id,$message = null){
+        $log = $this->create();
+        $log['Log']['item_id'] = $id;
+        $log['Log']['user_id'] = 0;
+        $log['Log']['detail'] = 'New order from app' ;
+        $log['Log']['created'] = date('Y-m-d h:m:s');
+        $this->save($log);
+
+    }
+
     public function saveOrder($id,$message = null){
         $log = $this->create();
         $log['Log']['item_id'] = $id;
