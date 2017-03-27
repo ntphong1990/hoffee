@@ -107,7 +107,7 @@ $(document).ready(function() {
                                                 </label>
                                             </td>
                                             <td class="value">
-                                                <select id="pa_weight" class="" name="attribute_pa_weight" data-attribute_name="attribute_pa_weight" "="" data-show_option_none="yes"><option value="">Choose an option</option><option value="8oz" selected="selected">500g</option></select>							</td>
+                                                <select id="pa_weight" class="" name="attribute_pa_weight" data-attribute_name="attribute_pa_weight" "="" data-show_option_none="yes"><option value="">Choose an option</option><option value="8oz" selected="selected"><?php echo $product['Product']['weight'] * 1000; ?>g</option></select>							</td>
                                         </tr>
                                         <tr>
                                             <td class="label">
@@ -118,7 +118,7 @@ $(document).ready(function() {
                                                 </label>
                                             </td>
                                             <td class="value">
-                                                <select id="pa_grind" class="" name="attribute_pa_grind" data-attribute_name="attribute_pa_grind" "="" data-show_option_none="yes"><option value="">Choose an option</option><option value="whole-beans" selected="selected">Bột</option></select><a class="reset_variations" href="#">Clear</a>							</td>
+                                                <select id="pa_grind" class="" name="attribute_pa_grind" data-attribute_name="attribute_pa_grind" "="" data-show_option_none="yes"><option value="">Choose an option</option><option value="whole-beans" selected="selected"><?php echo $product['Brand']['kind']; ?></option></select>							</td>
                                         </tr>
                                         </tbody>
                                     </table>

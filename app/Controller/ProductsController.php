@@ -61,6 +61,7 @@ class ProductsController extends AppController {
             'limit' => 20,
             'conditions' => array(
                 'Product.active' => 1,
+                'Product.brand_id' => 1,
                 'Brand.active' => 1
             ),
             'order' => array(
@@ -73,6 +74,30 @@ class ProductsController extends AppController {
 
         $this->set('title_for_layout', Configure::read('Settings.SHOP_TITLE'));
     }
+
+    public function drink() {
+        $products = $this->Product->find('all', array(
+            'recursive' => -1,
+            'contain' => array(
+                'Brand'
+            ),
+            'limit' => 20,
+            'conditions' => array(
+                'Product.active' => 0,
+                'Product.brand_id' => 2,
+                'Brand.active' => 1
+            ),
+            'order' => array(
+                'Product.views' => 'ASC'
+            )
+        ));
+        $this->set(compact('products'));
+
+        $this->Product->updateViews($products);
+
+        $this->set('title_for_layout', Configure::read('Settings.SHOP_TITLE'));
+    }
+
 
 ////////////////////////////////////////////////////////////
 
@@ -108,6 +133,7 @@ class ProductsController extends AppController {
 
     public function view($id = null) {
 
+
         $product = $this->Product->find('first', array(
             'recursive' => -1,
             'contain' => array(
@@ -116,10 +142,10 @@ class ProductsController extends AppController {
             ),
             'conditions' => array(
                 'Brand.active' => 1,
-                'Product.active' => 1,
                 'Product.slug' => $id
             )
         ));
+      //  var_dump($product);die();
         if (empty($product)) {
             return $this->redirect(array('action' => 'index'), 301);
         }
@@ -134,6 +160,8 @@ class ProductsController extends AppController {
         $this->set('title_for_layout', $product['Product']['name'] . ' ' . Configure::read('Settings.SHOP_TITLE'));
 
     }
+
+
 
 ////////////////////////////////////////////////////////////
 
