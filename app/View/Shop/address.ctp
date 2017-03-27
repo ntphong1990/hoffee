@@ -1,7 +1,23 @@
 <script>
-    function shipping(e) {
+    function shipping() {
 
-        window.location.href = "<?php echo Configure::read('Settings.DOMAIN');?>/shop/shipupdate/" + e.options[e.selectedIndex].value
+        var ele = document.getElementById('billing_city');
+        var e = document.getElementById('state');
+        window.location.href = "<?php echo Configure::read('Settings.DOMAIN');?>/shop/shipupdate/" + ele.options[ele.selectedIndex].value
+            +"/" + e.options[e.selectedIndex].value
+            +"/" + $('#billing_first_name').val()
+            +"/" + $('#billing_last_name').val()
+            +"/" + $('#billing_email').val()
+            +"/" + $('#billing_phone').val()
+            +"/" + $('#billing_address_1').val();
+    }
+
+    function shippingState() {
+
+        var ele = document.getElementById('billing_city');
+        var e = document.getElementById('state');
+        window.location.href = "<?php echo Configure::read('Settings.DOMAIN');?>/shop/shipupdate/" + ele.options[ele.selectedIndex].value
+            +"/" + e.options[e.selectedIndex].value
             +"/" + $('#billing_first_name').val()
             +"/" + $('#billing_last_name').val()
             +"/" + $('#billing_email').val()
@@ -37,7 +53,9 @@
 
                             <h4>thông tin khách hàng</h4>
 
+                            <p class="form-row form-row form-row-last validate-required validate-email" id="billing_email_field"><label for="billing_email" class="">Email <abbr class="required" title="required">*</abbr></label><input type="email" class="input-text " name="data[Order][email]" id="billing_email" placeholder="" autocomplete="email" required value="<?php echo $shop['Order']['email'];?>"></p>
 
+                            <p class="form-row form-row form-row-first validate-required validate-phone" id="billing_phone_field"><label for="billing_phone" class="">Điện thoại <abbr class="required" title="required">*</abbr></label><input type="tel" class="input-text " name="data[Order][phone]" id="billing_phone" placeholder="" autocomplete="tel" required value="<?php echo $shop['Order']['phone'];?>"></p><div class="clear"></div>
 
 
                             <p class="form-row form-row form-row-first validate-required" id="billing_first_name_field"><label for="billing_first_name" class="">tên <abbr class="required" title="required">*</abbr></label><input type="text" class="input-text " name="data[Order][first_name]" id="billing_first_name" placeholder="" autocomplete="given-name" required value="<?php echo $shop['Order']['firstname'];?>"></p>
@@ -46,9 +64,7 @@
 
 
 
-                            <p class="form-row form-row form-row-first validate-required validate-email" id="billing_email_field"><label for="billing_email" class="">Email <abbr class="required" title="required">*</abbr></label><input type="email" class="input-text " name="data[Order][email]" id="billing_email" placeholder="" autocomplete="email" required value="<?php echo $shop['Order']['email'];?>"></p>
 
-                            <p class="form-row form-row form-row-last validate-required validate-phone" id="billing_phone_field"><label for="billing_phone" class="">Điện thoại <abbr class="required" title="required">*</abbr></label><input type="tel" class="input-text " name="data[Order][phone]" id="billing_phone" placeholder="" autocomplete="tel" required value="<?php echo $shop['Order']['phone'];?>"></p><div class="clear"></div>
 
                             <p class="form-row form-row form-row-wide address-field validate-required" id="billing_address_1_field"><label for="billing_address_1" class="">Địa chỉ <abbr class="required" title="required">*</abbr></label><input type="text" class="input-text " name="data[Order][billing_address]" id="billing_address_1" required placeholder="Street address" autocomplete="address-line1" value="<?php echo $shop['Order']['address'];?>"></p>
 
@@ -57,7 +73,7 @@
 
                                 <select name="data[Order][billing_city]"  id="billing_city" style="max-width: none" onchange="shipping(this)">
 
-                                    <option value="" disabled <?php if ($shop['Order']['city'] == 0) echo 'selected';?>>Chọn tỉnh/thành phố</option>
+                                    <option value="0" disabled <?php if ($shop['Order']['city'] == 0) echo 'selected';?>>Chọn tỉnh/thành phố</option>
                                    <?php foreach ($locations as $key => $value){ ?>
                                       <option value="<?php echo $value['DevvnTinhthanhpho']['matp'];?>" <?php if ($shop['Order']['city'] == $value['DevvnTinhthanhpho']['matp']) echo 'selected';?>><?php echo $value['DevvnTinhthanhpho']['name'];?></option>
                                    <?php } ?>
@@ -65,11 +81,11 @@
                             </p>
                             <p class="form-row form-row form-row-last address-field validate-required" id="billing_city_field" data-o_class="form-row form-row form-row-wide address-field validate-required"><label for="billing_city" class="">Quận / huyện  <abbr class="required" title="required">*</abbr></label>
 
-                                <select name="data[Order][state]"  id="state" style="max-width: none">
+                                <select name="data[Order][state]"  id="state" onchange="shippingState(this)"  style="max-width: none">
 
-                                    <option value="" disabled selected>Chọn quận/huyện</option>
+                                    <option value="0" disabled selected>Chọn quận/huyện</option>
                                     <?php foreach ($states as $key => $value){ ?>
-                                        <option value="<?php echo $value['DevvnQuanhuyen']['maqh'];?>" ><?php echo $value['DevvnQuanhuyen']['name'];?></option>
+                                        <option value="<?php echo $value['DevvnQuanhuyen']['maqh'];?>" <?php if ($shop['Order']['state'] == $value['DevvnQuanhuyen']['maqh']) echo 'selected';?>><?php echo $value['DevvnQuanhuyen']['name'];?></option>
                                     <?php } ?>
                                 </select>
                             </p>
@@ -158,7 +174,8 @@
 
 
                             <tr class="shipping">
-                                <th>phí giao hàng</th>
+                                <th>phí giao hàng</br>
+                                <span style="font-size: 8px">(Free ship quận 1,3,4 HCM)<span></span></th>
                                 <td data-title="Shipping">
                                     <p> <?php echo number_format($shop['Order']['shipping']); ?> VND</p>
 

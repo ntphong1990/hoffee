@@ -105,10 +105,12 @@ class CartComponent extends Component {
         return $product;
     }
 
-    public function shipping($ship,$city,$firstname,$lastname,$email,$phone,$address){
+    public function shipping($ship,$city,$firstname,$lastname,$email,$phone,$address,$state){
 
         $this->Session->write('Shop.Order.shipping', $ship);
+
         $this->Session->write('Shop.Order.city', $city);
+        $this->Session->write('Shop.Order.state', $state);
         $this->Session->write('Shop.Order.firstname', $firstname);
         $this->Session->write('Shop.Order.lastname', $lastname);
         $this->Session->write('Shop.Order.email', $email);
@@ -164,6 +166,7 @@ class CartComponent extends Component {
                 }
 
                 $d['city'] = $shop['Order']['city'];
+                $d['state'] = $shop['Order']['state'];
                 $d['firstname'] = $shop['Order']['firstname'];
                 $d['lastname'] = $shop['Order']['lastname'];
                 $d['email'] = $shop['Order']['email'];
@@ -171,6 +174,7 @@ class CartComponent extends Component {
                 $d['address'] = $shop['Order']['address'];
             } else {
                 $d['city'] = 0;
+                $d['state'] = 0;
                 $d['shipping'] = 0;
                 $d['firstname'] = '';
                 $d['lastname'] = '';
@@ -189,6 +193,7 @@ class CartComponent extends Component {
             $d['subtotal'] = 0;
             $d['total'] = 0;
             $d['city'] = 0;
+            $d['state'] = 0;
             $d['shipping'] = 0;
             $d['firstname'] = '';
             $d['lastname'] = '';

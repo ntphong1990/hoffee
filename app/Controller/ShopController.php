@@ -119,20 +119,29 @@ class ShopController extends AppController {
         return $this->redirect(array('action' => 'cart'));
     }
 
-    public function shipupdate($id,$firstname = '',$lastname = '',$email = '',$phone ='',$address = '') {
-       // if ($this->request->is('post')) {
+    public function shipupdate($id,$state = 0,$firstname = '',$lastname = '',$email = '',$phone ='',$address = '') {
+       // if ($this->request->is('post'))
 
-            $ship = 0;
+        //var_dump($state);die();
+        $ship = 0;
+        $this->loadModel('DevvnTinhthanhpho');
+        $this->loadModel('DevvnQuanhuyen');
+        if($state != 0){
+
+            $st = $this->DevvnQuanhuyen->find('first', array('conditions' => array('maqh' => $state)));
+            $ship = $st['DevvnQuanhuyen']['fee'];
+
+        } else {
             if ($id) {
-                if ($id == 79) {
-                    $ship = 20000;
-                } else {
-                    $ship = 40000;
-                }
+                $st = $this->DevvnTinhthanhpho->find('first', array('conditions' => array('matp' => $id)));
+                $ship = $st['DevvnTinhthanhpho']['fee'];
+
             }
+        }
+        //var_dump($ship);die();
             //var_dump($ship);die();
             // var_dump($voucher);die();
-            $this->Cart->shipping($ship,$id,$firstname,$lastname,$email,$phone,$address);
+            $this->Cart->shipping($ship,$id,$firstname,$lastname,$email,$phone,$address,$state);
             // $this->Flash->success('Shopping Cart is updated.');
        // }
         return $this->redirect(array('action' => 'address'));
