@@ -8,13 +8,13 @@
 
 
 
-        <h2 class="centered_content-inner-title">Thank you for recent purchase Hoffee</h2>
+        <h2 class="centered_content-inner-title">Cảm ơn bạn đã tin tưởng Hoffee</h2>
 
 
         <div class="centered_content-inner-content">
 
 
-            <p>We will contact you soon. You order will be delivered within 2 days.</p>
+            <p>Chúng tôi sẽ giao hàng trong thời sớm nhất !!</p>
 
 
         </div>
