@@ -24,6 +24,38 @@
             +"/" + $('#billing_phone').val()
             +"/" + $('#billing_address_1').val();
     }
+
+    function findCustomer(ele) {
+        $.getJSON('<?php echo 'http://' . $_SERVER['HTTP_HOST']?><?php echo Configure::read('Settings.DOMAIN');?>/backend/getUserInfo/'+ ele.value, function (result) {
+               if(result.Customer) {
+                   $('#billing_email').val(result.Customer.email);
+                   $('#billing_first_name').val(result.Customer.name);
+                   $('#billing_last_name').val(result.Customer.lastname);
+                   $('#billing_address_1').val(result.Customer.address);
+                   $('#billing_city').val(result.Customer.district);
+                   $('#state').val(result.Customer.state);
+                   selectDistrict(result.Customer.district);
+               }
+            });
+    }
+    function selectDistrict(district) {
+
+        var e = document.getElementById("state");
+
+        for(var i = 0 ; i < e.options.length ;i++){
+            if(e[i].id == district){
+                e.options[i].style.display = 'block';
+            } else {
+                e.options[i].style.display = 'none';
+            }
+        }
+
+    }
+
+    $( document ).ready(function() {
+        selectDistrict('<?php echo $shop['Order']['city'];?>');
+    });
+
 </script>
 <div class="woocommerce">
 
@@ -55,7 +87,7 @@
 
                             <p class="form-row form-row form-row-last validate-required validate-email" id="billing_email_field"><label for="billing_email" class="">Email <abbr class="required" title="required">*</abbr></label><input type="email" class="input-text " name="data[Order][email]" id="billing_email" placeholder="" autocomplete="email" required value="<?php echo $shop['Order']['email'];?>"></p>
 
-                            <p class="form-row form-row form-row-first validate-required validate-phone" id="billing_phone_field"><label for="billing_phone" class="">Điện thoại <abbr class="required" title="required">*</abbr></label><input type="tel" class="input-text " name="data[Order][phone]" id="billing_phone" placeholder="" autocomplete="tel" required value="<?php echo $shop['Order']['phone'];?>"></p><div class="clear"></div>
+                            <p class="form-row form-row form-row-first validate-required validate-phone" id="billing_phone_field"><label for="billing_phone" class="">Điện thoại <abbr class="required" title="required">*</abbr></label><input type="tel" onchange="findCustomer(this)" class="input-text " name="data[Order][phone]" id="billing_phone" placeholder="" autocomplete="tel" required value="<?php echo $shop['Order']['phone'];?>"></p><div class="clear"></div>
 
 
                             <p class="form-row form-row form-row-first validate-required" id="billing_first_name_field"><label for="billing_first_name" class="">tên <abbr class="required" title="required">*</abbr></label><input type="text" class="input-text " name="data[Order][first_name]" id="billing_first_name" placeholder="" autocomplete="given-name" required value="<?php echo $shop['Order']['firstname'];?>"></p>
@@ -71,7 +103,7 @@
 
                             <p class="form-row form-row form-row-first address-field validate-required" id="billing_city_field" data-o_class="form-row form-row form-row-wide address-field validate-required"><label for="billing_city" class="">tỉnh / thành  <abbr class="required" title="required">*</abbr></label>
 
-                                <select name="data[Order][billing_city]"  id="billing_city" style="max-width: none" onchange="shipping(this)">
+                                <select name="data[Order][billing_city]"  id="billing_city" style="max-width: none" onchange="shipping(this)" >
 
                                     <option value="0" disabled <?php if ($shop['Order']['city'] == 0) echo 'selected';?>>Chọn tỉnh/thành phố</option>
                                    <?php foreach ($locations as $key => $value){ ?>
@@ -85,7 +117,7 @@
 
                                     <option value="0" disabled selected>Chọn quận/huyện</option>
                                     <?php foreach ($states as $key => $value){ ?>
-                                        <option value="<?php echo $value['DevvnQuanhuyen']['maqh'];?>" <?php if ($shop['Order']['state'] == $value['DevvnQuanhuyen']['maqh']) echo 'selected';?>><?php echo $value['DevvnQuanhuyen']['name'];?></option>
+                                        <option value="<?php echo $value['DevvnQuanhuyen']['maqh'];?>" <?php if ($shop['Order']['state'] == $value['DevvnQuanhuyen']['maqh']) echo 'selected';?> id="<?php echo $value['DevvnQuanhuyen']['matp'];?>"><?php echo $value['DevvnQuanhuyen']['name'];?></option>
                                     <?php } ?>
                                 </select>
                             </p>

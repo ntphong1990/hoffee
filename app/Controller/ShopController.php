@@ -172,7 +172,7 @@ class ShopController extends AppController {
         $this->set('locations',$locations);
 
 
-        $states =  $this->DevvnQuanhuyen->find('all',array('conditions' => array('matp' => $shop['Order']['city'])));
+        $states =  $this->DevvnQuanhuyen->find('all');
         $this->set('states',$states);
        // var_dump($locations);die();
 
