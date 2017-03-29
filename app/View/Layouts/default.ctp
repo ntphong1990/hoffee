@@ -23,7 +23,7 @@
     <meta property="og:site_name" content="Hoffee">
     <meta property="og:image" content="http://hoffee.vn/img/cafe-phin-1-la.png"/>
 
-    <script async="" src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/fbevents.js"></script><script type="text/javascript" async="" src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/hotjar-302606.js"></script><script type="text/javascript" async="" src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/uwt.js"></script><script type="text/javascript" async="" src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/ec.js"></script><script async="" src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/gtm.js"></script><script async="" src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/analytics.js"></script><script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/us.camposcoffee.com\/","name":"Hoffee USA","potentialAction":{"@type":"SearchAction","target":"https:\/\/us.camposcoffee.com\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<!--    <script async="" src="--><?php //echo Configure::read('Settings.DOMAIN'); ?><!--/theme/fbevents.js"></script><script type="text/javascript" async="" src="--><?php //echo Configure::read('Settings.DOMAIN'); ?><!--/theme/hotjar-302606.js"></script><script type="text/javascript" async="" src="--><?php //echo Configure::read('Settings.DOMAIN'); ?><!--/theme/uwt.js"></script><script type="text/javascript" async="" src="--><?php //echo Configure::read('Settings.DOMAIN'); ?><!--/theme/ec.js"></script><script async="" src="--><?php //echo Configure::read('Settings.DOMAIN'); ?><!--/theme/gtm.js"></script><script async="" src="--><?php //echo Configure::read('Settings.DOMAIN'); ?><!--/theme/analytics.js"></script><script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/us.camposcoffee.com\/","name":"Hoffee USA","potentialAction":{"@type":"SearchAction","target":"https:\/\/us.camposcoffee.com\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>-->
 
     <!-- / Yoast SEO plugin. -->
 
@@ -46,21 +46,15 @@
         __gaTracker( 'require', 'ec' );
     </script>
     <!-- end WooCommerce Google Analytics Pro -->
-    <link rel="https://api.w.org/" href="http://hoffee.vn/wp-json/">
-    <link rel="alternate" type="application/json+oembed" href="http://hoffee.vn/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fus.camposcoffee.com%2F">
-    <link rel="alternate" type="text/xml+oembed" href="http://hoffee.vn/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fus.camposcoffee.com%2F&amp;format=xml">
-    <link rel="icon" href="http://hoffee.vn/wp-content/uploads/2016/11/cropped-campos-favicon-32x32.png" sizes="32x32">
-    <link rel="icon" href="http://hoffee.vn/wp-content/uploads/2016/11/cropped-campos-favicon-192x192.png" sizes="192x192">
-    <link rel="apple-touch-icon-precomposed" href="http://hoffee.vn/wp-content/uploads/2016/11/cropped-campos-favicon-180x180.png">
-    <meta name="msapplication-TileImage" content="http://hoffee.vn/wp-content/uploads/2016/11/cropped-campos-favicon-270x270.png">
 
-    <link rel="alternate" hreflang="en-au" href="https://camposcoffee.com/">
+
+    <link rel="alternate" hreflang="en-au" href="https://hoffee.vn/">
     <link rel="alternate" hreflang="en-us" href="http://hoffee.vn/">
 
 
     <link rel="alternate" hreflang="en-ca" href="http://hoffee.vn/">
     <link rel="alternate" hreflang="en-bm" href="http://hoffee.vn/">
-    <link rel="alternate" hreflang="x-default" href="https://camposcoffee.com/">
+    <link rel="alternate" hreflang="x-default" href="https://hoffee.vn/">
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
@@ -77,11 +71,11 @@
 <!-- Google Tag Manager -->
 <body id="body" class="body body--loaded"><noscript>&lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-M9S5P9"
     height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-M9S5P9');</script>
+<!--<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':-->
+<!--        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],-->
+<!--        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=-->
+<!--        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);-->
+<!--    })(window,document,'script','dataLayer','GTM-M9S5P9');</script>-->
 <!-- End Google Tag Manager -->
 
 

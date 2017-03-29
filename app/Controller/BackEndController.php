@@ -224,4 +224,13 @@ class BackEndController extends AppController {
             return json_encode(true);
 
     }
+
+
+    public function getUserInfo($phone){
+        //$phone = $this->request->data['phone'];
+        $this->loadModel('Customer');
+        $customer = $this->Customer->find('first', array('conditions' => array('phone' => $phone)));
+
+        return json_encode($customer);
+    }
 }

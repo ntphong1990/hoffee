@@ -25,15 +25,15 @@ class UsersController extends AppController {
 
                 if ($this->Auth->user('role') == 'customer') {
                     return $this->redirect(array(
-                        'controller' => 'users',
-                        'action' => 'dashboard',
+                        'controller' => 'financials',
+                        'action' => 'index',
                         'customer' => true,
                         'admin' => false
                     ));
                 } elseif ($this->Auth->user('role') == 'admin') {
                     return $this->redirect(array(
-                        'controller' => 'users',
-                        'action' => 'dashboard',
+                        'controller' => 'financials',
+                        'action' => 'index',
                         'manager' => false,
                         'admin' => true
                     ));
