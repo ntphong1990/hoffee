@@ -62,7 +62,7 @@ class DATABASE_CONFIG {
 	public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
-		'host' => 'localhost',
+		'host' => '52.77.217.50',
 		'login' => 'root',
 		'password' => '123456',
 		'database' => 'hoffee_2017',
