@@ -123,6 +123,35 @@ class CustomersController extends AppController {
 		if (!$this->Customer->exists($id)) {
 			throw new NotFoundException(__('Invalid customer'));
 		}
+
+
+
+
+		$this->loadModel('Order');
+
+        $this->Paginator->settings = array(
+            'conditions' => array('Order.customer_id' => $id),
+            'limit' => 10
+        );
+
+        $orders = $this->Paginator->paginate('Order');
+
+
+        if ($this->request->is('post')) {
+            $order = $this->Customer->find('first', array('conditions' => array('Customer.' . $this->Customer->primaryKey => $id)));
+
+            $order['Customer']['note'] = $this->request->data['note'];
+
+            if ($this->Customer->save($order)) {
+                $this->Flash->success(__('The customer has been saved.'));
+                return $this->redirect(array('action' => 'index'));
+            } else {
+                $this->Flash->error(__('The customer could not be saved. Please, try again.'));
+            }
+        }
+
+       // $orders = $this->Order->find('all',array('conditions' => array('customer_id' => $id)));
+        $this->set(compact('orders'));
 		$options = array('conditions' => array('Customer.' . $this->Customer->primaryKey => $id));
 		$this->set('customer', $this->Customer->find('first', $options));
 	}
@@ -163,6 +192,18 @@ class CustomersController extends AppController {
  * @return void
  */
 	public function admin_edit($id = null) {
+
+        $this->loadModel('DevvnTinhthanhpho');
+        $this->loadModel('DevvnQuanhuyen');
+        $locations = $this->DevvnTinhthanhpho->find('all',array('order' => array('ind' => 'ASC')));
+        $this->set('district',$locations);
+
+
+
+
+        $states =  $this->DevvnQuanhuyen->find('all',array('conditions' => array()));
+        $this->set('states',$states);
+
 		if (!$this->Customer->exists($id)) {
 			throw new NotFoundException(__('Invalid customer'));
 		}

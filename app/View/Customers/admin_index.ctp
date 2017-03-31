@@ -1,6 +1,6 @@
 <div class="customers index">
 	<h2><?php echo __('Customers'); ?></h2>
-	<table style="margin-top: 100px" data-toggle="table" data-url="tables/data1.json" data-show-refresh="true"
+	<table style="margin-top: 0px" data-toggle="table" data-url="tables/data1.json" data-show-refresh="true"
 		   data-show-toggle="true" data-show-columns="true" data-search="true"
 		   data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name"
 		   data-sort-order="desc" class="table table-hover">
