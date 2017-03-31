@@ -15,6 +15,12 @@ class CustomersController extends AppController {
  */
 	public $components = array('Paginator');
 
+    public $paginate = array(
+        'limit' => 25,
+        'order' => array(
+            'id' => 'desc'
+        )
+    );
 /**
  * index method
  *
@@ -108,6 +114,7 @@ class CustomersController extends AppController {
  * @return void
  */
 	public function admin_index() {
+        $this->Paginator->settings = $this->paginate;
 		$this->Customer->recursive = 0;
 		$this->set('customers', $this->Paginator->paginate());
 	}
