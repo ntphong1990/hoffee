@@ -607,3 +607,591 @@ Stack Trace:
 #3 /Library/WebServer/Documents/hoffee2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BlogController), Object(CakeRequest))
 #4 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2017-04-01 14:00:31 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null
+Request URL: /hoffee/backEnd/orderVer1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(68): Model->save(Array)
+#6 [internal function]: BackEndController->orderVer1()
+#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
+#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2017-04-01 14:00:56 Error: [MissingActionException] Action BackEndController::getProducts() could not be found.
+Exception Attributes: array (
+  'controller' => 'BackEndController',
+  'action' => 'getProducts',
+)
+Request URL: /hoffee/backEnd/getProducts
+Stack Trace:
+#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
+#2 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-04-01 14:01:22 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null
+Request URL: /hoffee/backEnd/orderVer1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(68): Model->save(Array)
+#6 [internal function]: BackEndController->orderVer1()
+#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
+#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2017-04-01 14:29:53 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null
+Request URL: /hoffee/backEnd/orderVer1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(68): Model->save(Array)
+#6 [internal function]: BackEndController->orderVer1()
+#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
+#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2017-04-01 14:30:38 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null
+Request URL: /hoffee/backEnd/orderVer1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(68): Model->save(Array)
+#6 [internal function]: BackEndController->orderVer1()
+#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
+#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2017-04-01 14:30:56 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null
+Request URL: /hoffee/backEnd/orderVer1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(68): Model->save(Array)
+#6 [internal function]: BackEndController->orderVer1()
+#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
+#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2017-04-01 14:31:52 Warning: Warning (4096): Object of class CakeRequest could not be converted to string in [/Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php, line 52]
+Trace:
+BackEndController::orderVer1() - APP/Controller/BackEndController.php, line 52
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 491
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 109
+
+2017-04-01 14:31:54 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null
+Request URL: /hoffee/backEnd/orderVer1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(68): Model->save(Array)
+#6 [internal function]: BackEndController->orderVer1()
+#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
+#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2017-04-01 14:32:54 Error: [Error] Call to undefined function is()
+Request URL: /hoffee/backEnd/orderVer1
+Stack Trace:
+#0 [internal function]: BackEndController->orderVer1()
+#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2017-04-01 14:35:51 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null
+Request URL: /hoffee/backEnd/orderVer1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(69): Model->save(Array)
+#6 [internal function]: BackEndController->orderVer1()
+#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
+#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2017-04-01 14:39:55 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null
+Request URL: /hoffee/backEnd/orderVer1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(68): Model->save(Array)
+#6 [internal function]: BackEndController->orderVer1()
+#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
+#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2017-04-01 14:40:14 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null
+Request URL: /hoffee/backEnd/orderVer1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(71): Model->save(Array)
+#6 [internal function]: BackEndController->orderVer1()
+#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
+#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2017-04-01 14:41:37 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null
+Request URL: /hoffee/backEnd/orderVer1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(71): Model->save(Array)
+#6 [internal function]: BackEndController->orderVer1()
+#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
+#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2017-04-01 14:42:13 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null
+Request URL: /hoffee/backEnd/orderVer1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(71): Model->save(Array)
+#6 [internal function]: BackEndController->orderVer1()
+#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
+#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2017-04-01 14:42:26 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null
+Request URL: /hoffee/backEnd/orderVer1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(71): Model->save(Array)
+#6 [internal function]: BackEndController->orderVer1()
+#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
+#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2017-04-01 14:42:37 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null
+Request URL: /hoffee/backEnd/orderVer1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(71): Model->save(Array)
+#6 [internal function]: BackEndController->orderVer1()
+#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
+#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2017-04-01 14:47:22 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null
+Request URL: /hoffee/backEnd/orderVer1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(71): Model->save(Array)
+#6 [internal function]: BackEndController->orderVer1()
+#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
+#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2017-04-01 18:26:33 Error: [ParseError] syntax error, unexpected 'if' (T_IF)
+Request URL: /hoffee/backEnd/orderVer1
+Stack Trace:
+#0 [internal function]: App::load('BackEndControll...')
+#1 [internal function]: spl_autoload_call('BackEndControll...')
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(266): class_exists('BackEndControll...')
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2017-04-01 18:26:49 Error: [ParseError] syntax error, unexpected 'if' (T_IF)
+Request URL: /hoffee/backEnd/orderVer1
+Stack Trace:
+#0 [internal function]: App::load('BackEndControll...')
+#1 [internal function]: spl_autoload_call('BackEndControll...')
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(266): class_exists('BackEndControll...')
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2017-04-01 18:27:07 Error: [ParseError] syntax error, unexpected 'if' (T_IF)
+Request URL: /hoffee/backEnd/orderVer1
+Stack Trace:
+#0 [internal function]: App::load('BackEndControll...')
+#1 [internal function]: spl_autoload_call('BackEndControll...')
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(266): class_exists('BackEndControll...')
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2017-04-01 18:27:10 Error: [ParseError] syntax error, unexpected 'if' (T_IF)
+Request URL: /hoffee/backEnd/orderVer1
+Stack Trace:
+#0 [internal function]: App::load('BackEndControll...')
+#1 [internal function]: spl_autoload_call('BackEndControll...')
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(266): class_exists('BackEndControll...')
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2017-04-01 18:27:31 Error: [ParseError] syntax error, unexpected 'if' (T_IF)
+Request URL: /hoffee/backEnd/orderVer1
+Stack Trace:
+#0 [internal function]: App::load('BackEndControll...')
+#1 [internal function]: spl_autoload_call('BackEndControll...')
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(266): class_exists('BackEndControll...')
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2017-04-01 18:27:47 Error: [ParseError] syntax error, unexpected 'if' (T_IF)
+Request URL: /hoffee/backEnd/getProduct
+Stack Trace:
+#0 [internal function]: App::load('BackEndControll...')
+#1 [internal function]: spl_autoload_call('BackEndControll...')
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(266): class_exists('BackEndControll...')
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2017-04-01 18:27:47 Error: [ParseError] syntax error, unexpected 'if' (T_IF)
+Request URL: /hoffee/backEnd/
+Stack Trace:
+#0 [internal function]: App::load('BackEndControll...')
+#1 [internal function]: spl_autoload_call('BackEndControll...')
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(266): class_exists('BackEndControll...')
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2017-04-01 18:27:50 Error: [ParseError] syntax error, unexpected 'if' (T_IF)
+Request URL: /hoffee/backEnd/getProduct
+Stack Trace:
+#0 [internal function]: App::load('BackEndControll...')
+#1 [internal function]: spl_autoload_call('BackEndControll...')
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(266): class_exists('BackEndControll...')
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2017-04-01 18:27:50 Error: [ParseError] syntax error, unexpected 'if' (T_IF)
+Request URL: /hoffee/backEnd/
+Stack Trace:
+#0 [internal function]: App::load('BackEndControll...')
+#1 [internal function]: spl_autoload_call('BackEndControll...')
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(266): class_exists('BackEndControll...')
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2017-04-01 18:28:04 Error: [ParseError] syntax error, unexpected 'if' (T_IF)
+Request URL: /hoffee/backEnd/getCities
+Stack Trace:
+#0 [internal function]: App::load('BackEndControll...')
+#1 [internal function]: spl_autoload_call('BackEndControll...')
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(266): class_exists('BackEndControll...')
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2017-04-01 18:28:35 Error: [ParseError] syntax error, unexpected 'if' (T_IF)
+Request URL: /hoffee/backEnd/getProduct
+Stack Trace:
+#0 [internal function]: App::load('BackEndControll...')
+#1 [internal function]: spl_autoload_call('BackEndControll...')
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(266): class_exists('BackEndControll...')
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2017-04-01 18:28:35 Error: [ParseError] syntax error, unexpected 'if' (T_IF)
+Request URL: /hoffee/backEnd/
+Stack Trace:
+#0 [internal function]: App::load('BackEndControll...')
+#1 [internal function]: spl_autoload_call('BackEndControll...')
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(266): class_exists('BackEndControll...')
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2017-04-01 18:28:52 Error: [ParseError] syntax error, unexpected 'if' (T_IF)
+Request URL: /hoffee/backEnd/getProduct
+Stack Trace:
+#0 [internal function]: App::load('BackEndControll...')
+#1 [internal function]: spl_autoload_call('BackEndControll...')
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(266): class_exists('BackEndControll...')
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2017-04-01 18:28:52 Error: [ParseError] syntax error, unexpected 'if' (T_IF)
+Request URL: /hoffee/backEnd/
+Stack Trace:
+#0 [internal function]: App::load('BackEndControll...')
+#1 [internal function]: spl_autoload_call('BackEndControll...')
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(266): class_exists('BackEndControll...')
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2017-04-01 18:32:58 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'note' doesn't have a default value
+Request URL: /hoffee/backEnd/orderVer1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(72): Model->save(Array)
+#6 [internal function]: BackEndController->orderVer1()
+#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
+#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2017-04-01 18:34:36 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'note' doesn't have a default value
+Request URL: /hoffee/backEnd/orderVer1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(72): Model->save(Array)
+#6 [internal function]: BackEndController->orderVer1()
+#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
+#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2017-04-01 18:35:48 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'note' doesn't have a default value
+Request URL: /hoffee/backEnd/orderVer1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(74): Model->save(Array)
+#6 [internal function]: BackEndController->orderVer1()
+#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
+#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2017-04-01 18:36:03 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'note' doesn't have a default value
+Request URL: /hoffee/backEnd/orderVer1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(74): Model->save(Array)
+#6 [internal function]: BackEndController->orderVer1()
+#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
+#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2017-04-01 18:36:14 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'note' doesn't have a default value
+Request URL: /hoffee/backEnd/orderVer1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(74): Model->save(Array)
+#6 [internal function]: BackEndController->orderVer1()
+#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
+#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2017-04-01 18:36:44 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'note' doesn't have a default value
+Request URL: /hoffee/backEnd/orderVer1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(75): Model->save(Array)
+#6 [internal function]: BackEndController->orderVer1()
+#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
+#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2017-04-01 18:38:07 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'note' doesn't have a default value
+Request URL: /hoffee/backEnd/orderVer1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(75): Model->save(Array)
+#6 [internal function]: BackEndController->orderVer1()
+#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
+#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2017-04-01 18:38:41 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'note' doesn't have a default value
+Request URL: /hoffee/backEnd/orderVer1
+Stack Trace:
+#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(75): Model->save(Array)
+#6 [internal function]: BackEndController->orderVer1()
+#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
+#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2017-04-01 19:11:35 Warning: Warning (2): Invalid argument supplied for foreach() in [/Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php, line 120]
+Trace:
+BackEndController::orderVer1() - APP/Controller/BackEndController.php, line 120
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 491
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 109
+
+2017-04-01 21:33:01 Error: [MissingTableException] Table back_ends for model BackEnd was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'back_ends',
+  'class' => 'BackEnd',
+  'ds' => 'default',
+)
+Request URL: /hoffee/backEnd/getProduct
+Stack Trace:
+#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(3653): Model->setSource('back_ends')
+#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1483): Model->schema()
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Component/PaginatorComponent.php(400): Model->hasField('name')
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Component/PaginatorComponent.php(142): PaginatorComponent->validateSort(Object(AppModel), Array, Array)
+#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(41): PaginatorComponent->paginate()
+#6 [internal function]: BackEndController->getProduct()
+#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
+#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2017-04-01 21:34:34 Error: [MissingTableException] Table back_ends for model BackEnd was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'back_ends',
+  'class' => 'BackEnd',
+  'ds' => 'default',
+)
+Request URL: /hoffee/backEnd/getProduct
+Stack Trace:
+#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(3653): Model->setSource('back_ends')
+#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1483): Model->schema()
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Component/PaginatorComponent.php(400): Model->hasField('name')
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Component/PaginatorComponent.php(142): PaginatorComponent->validateSort(Object(AppModel), Array, Array)
+#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(41): PaginatorComponent->paginate(Object(AppModel))
+#6 [internal function]: BackEndController->getProduct()
+#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
+#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2017-04-01 21:37:12 Error: [MissingTableException] Table back_ends for model BackEnd was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'back_ends',
+  'class' => 'BackEnd',
+  'ds' => 'default',
+)
+Request URL: /hoffee/backEnd/getProduct
+Stack Trace:
+#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(3653): Model->setSource('back_ends')
+#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1483): Model->schema()
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Component/PaginatorComponent.php(400): Model->hasField('name')
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Component/PaginatorComponent.php(142): PaginatorComponent->validateSort(Object(AppModel), Array, Array)
+#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(41): PaginatorComponent->paginate()
+#6 [internal function]: BackEndController->getProduct()
+#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
+#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2017-04-01 21:37:29 Error: [MissingModelException] q
+Request URL: /hoffee/backEnd/getProduct
+Stack Trace:
+#0 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(41): PaginatorComponent->paginate('q')
+#1 [internal function]: BackEndController->getProduct()
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
+#5 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2017-04-01 21:37:36 Error: [MissingModelException] q
+Request URL: /hoffee/backEnd/getProduct
+Stack Trace:
+#0 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(41): PaginatorComponent->paginate('q')
+#1 [internal function]: BackEndController->getProduct()
+#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
+#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
+#5 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}

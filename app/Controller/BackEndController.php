@@ -1,39 +1,51 @@
 <?php
 class BackEndController extends AppController {
 
-
     public function beforeFilter() {
         $this->Auth->allow();
         $this->autoRender = false;
     }
-
-
 
     public function getProduct(){
 
         $this->loadModel('Product');
 
         $this->Paginator = $this->Components->load('Paginator');
+        // $this->Paginator->settings = array(
+        //     'Product' => array(
+        //         'recursive' => -1,
+        //         'contain' => array(
+        //             'Brand'
+        //         ),
+        //         'limit' => 20,
+        //         'conditions' => array(
+        //             'Product.active' => 1,
+        //             'Brand.active' => 1
+        //         ),
+        //         'order' => array(
+        //             'Product.name' => 'ASC'
+        //         ),
+        //         'paramType' => 'querystring',
+        //     )
+        // );
+
         $this->Paginator->settings = array(
-            'Product' => array(
                 'recursive' => -1,
-                'contain' => array(
-                    'Brand'
-                ),
                 'limit' => 20,
-                'conditions' => array(
-                    'Product.active' => 1,
-                    'Brand.active' => 1
-                ),
                 'order' => array(
-                    'Product.name' => 'ASC'
+                    'name' => 'ASC'
                 ),
                 'paramType' => 'querystring',
-            )
         );
 
         $products = $this->Paginator->paginate('Product');
-        return json_encode($products);
+        $listProduct = array();
+
+        for ($i = 0; $i < count($products); $i++) { 
+            array_push($listProduct, $products[$i]['Product']);
+        }
+
+        return json_encode($listProduct);
     }
 
 
@@ -42,31 +54,47 @@ class BackEndController extends AppController {
         $this->loadModel('DevvnQuanhuyen');
 
         $cities = $this->DevvnTinhthanhpho->find('all');
+        $listCities = array();
+
         for ($i = 0 ; $i < count($cities) ; $i++) {
-            $cities[$i]['DevvnTinhthanhpho']['states'] = $this->DevvnQuanhuyen->find('all',array('conditions' => array('matp' => $cities[$i]['DevvnTinhthanhpho']['matp'])));
-           // var_dump($a);
+            $city = $cities[$i]['DevvnTinhthanhpho'];
+            $states = $this->DevvnQuanhuyen->find('all',array('conditions' => array('matp' => $cities[$i]['DevvnTinhthanhpho']['matp'])));
+            $listState = array();
+            for ($j = 0; $j < count($states); $j++) { 
+                $state = $states[$j]['DevvnQuanhuyen'];
+                array_push($listState, $state);
+            }
+            $city['states'] = $listState;
+            array_push($listCities, $city);
         }
-       // var_dump($cities);
-        return json_encode($cities);
+
+        return json_encode($listCities);
     }
 
     public function orderVer1(){
 
+        $jsonData=$this->request->input('json_decode', true );
+        
         $this->loadModel('Customer');
         $customer = null;
-        if(!$this->Customer->find('first',array('conditions' => array(
+
+        $isCustomerExisted = $this->Customer->find('first',array('conditions' => array(
             'phone' => $this->request->data['phone']
-        )))){
+        )));
+
+        if(!$isCustomerExisted){
             $customer = $this->Customer->create();
-            $customer['Customer']['name'] = $this->request->data['first_name'];
-            $customer['Customer']['lastname'] = $this->request->data['last_name'];
-            $customer['Customer']['address'] = $this->request->data['billing_address'];
-            $customer['Customer']['email'] = $this->request->data['email'];
-            $customer['Customer']['phone'] = $this->request->data['phone'];
+            $customer['Customer']['name'] = $jsonData['first_name'];
+            $customer['Customer']['lastname'] = $jsonData['last_name'];
+            $customer['Customer']['address'] = $jsonData['billing_address'];
+            $customer['Customer']['email'] = $jsonData['email'];
+            $customer['Customer']['phone'] = $jsonData['phone'];
             $customer['Customer']['birthday'] = date('Y-m-d');
-            $customer['Customer']['district'] = $this->request->data['billing_city'];
-            $customer['Customer']['state'] =  $this->request->data['state'];
+            $customer['Customer']['district'] = $jsonData['billing_city'];
+            $customer['Customer']['state'] =  $jsonData['state'];
+
             $this->Customer->save($customer);
+      
             $customer['Customer']['id'] = $this->Customer->inserted_ids[0];
 
         } else {
@@ -75,8 +103,8 @@ class BackEndController extends AppController {
             )));
         }
 
-        $this->loadModel('Order');
 
+        $this->loadModel('Order');
         $this->loadModel('OrderItem');
         $this->loadModel('DevvnTinhthanhpho');
         $order = $this->Order->create();
@@ -85,7 +113,7 @@ class BackEndController extends AppController {
         $order['Order']['last_name'] = $customer['Customer']['lastname'];
         $order['Order']['email'] = $customer['Customer']['email'];
         $order['Order']['phone'] = $customer['Customer']['phone'];
-        $order['Order']['billing_address'] = $this->request->data['billing_address'];
+        $order['Order']['billing_address'] = $jsonData['billing_address'];
         $order['Order']['billing_address2'] = '';
         $city = $this->DevvnTinhthanhpho->find('first',array('conditions' => array('matp' => $customer['Customer']['district'])));
         if($city) {
@@ -101,16 +129,16 @@ class BackEndController extends AppController {
         $order['Order']['order_item_count'] = 1;
         $order['Order']['quantity'] = 1;
         $order['Order']['weight'] = '0';
-        $order['Order']['subtotal'] = $this->request->data['subtotal'];
+        $order['Order']['subtotal'] = $jsonData['subtotal'];
         $order['Order']['voucher'] = 0;
         $order['Order']['code'] = '';
         $order['Order']['discount'] = 0;
-        $order['Order']['note'] = $this->request->data['note'];
-        $order['Order']['shipping'] = $this->request->data['shipping'];
-        $order['Order']['total'] = $this->request->data['total'];
-        $order['Order']['status'] = $this->request->data['status'];
+        $order['Order']['note'] = $jsonData['note'];
+        $order['Order']['shipping'] = $jsonData['shipping'];
+        $order['Order']['total'] = $jsonData['total'];
+        $order['Order']['status'] = $jsonData['status'];
 
-        $orderItems = json_decode($this->request->data['orderitem']);
+        $orderItems = json_decode($jsonData['orderitem']);
         $order['OrderItem'] = array();
         $weight = 0;
         foreach ($orderItems as $key => $value){
