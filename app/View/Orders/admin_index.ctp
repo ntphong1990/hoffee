@@ -52,7 +52,7 @@
         <td><?php echo h($order['Order']['shipping']); ?></td>
         <td><?php echo h(number_format($order['Order']['total'])); ?> ₫</td>
         <td><?php if($order['Order']['status'] == 1) {
-                echo '<span class="label payment_2">Đã thanh toán</span>';
+                echo '<span class="label fulfill_1">Đã thanh toán</span>';
             }
             if($order['Order']['status'] == 2) {
                 echo '<span class="label payment_6">Chưa thanh toán</span>';

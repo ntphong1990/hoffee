@@ -27482,7 +27482,8 @@ html,body {
 
 .inner {
 	position: relative;
-	min-height: 1px
+	min-height: 1px;
+    top: 40px;
 }
 
 .wrapper-content {

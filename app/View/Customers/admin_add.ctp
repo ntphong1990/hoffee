@@ -62,7 +62,7 @@
 			</select>
 		</div>
 
-		<div class="flexbox-grid-form-item select"><select name="data[Customer][district]" class="form-control" id="CustomerState">
+		<div class="flexbox-grid-form-item select"><select name="data[Customer][state]" class="form-control" id="CustomerState">
 				<option value="" disabled selected>Chọn quận/huyện</option>
 				<?php foreach ($states as $key => $value){ ?>
 					<option style="display: none" value="<?php echo $value['DevvnQuanhuyen']['maqh'];?>" accessKey="asd" id="<?php echo $value['DevvnQuanhuyen']['matp'];?>"><?php echo $value['DevvnQuanhuyen']['name'];?></option>
