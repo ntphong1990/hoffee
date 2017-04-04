@@ -42,7 +42,9 @@
 
             var data = JSON.stringify(products);
 
-
+            $('#done').attr("disabled", true);
+            $('#notdone').attr("disabled", true);
+            $('#draff').attr("disabled", true);
             $.post('<?php echo 'http://' . $_SERVER['HTTP_HOST']?><?php echo Configure::read('Settings.DOMAIN');?>/admin/orders/submit',
                 {
                     orderitem: data,
@@ -154,7 +156,7 @@
                     <span class="active">Tạo mới</span>
                 </div>
                 <div class="header__primary-actions">
-                    <a class="btn btn-primary" onclick="submit(3)">Lưu nháp</a>
+                    <a class="btn btn-primary" id="draff" onclick="submit(3)">Lưu nháp</a>
                 </div>
                 <div class="header__secondary-actions">
                     <a class="btn btn-default" data-bind="attr: { href: DraftOrderListLink }"
@@ -395,9 +397,9 @@
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-12 col-lg-6 text-right">
                                 <button class="btn btn-primary ml15"
-                                        data-bind="enable :IsPaid" onclick="submit(1)">Đã thanh toán
+                                        data-bind="enable :IsPaid" id="done" onclick="submit(1)">Đã thanh toán
                                 </button>
-                                <button class="btn btn-primary ml15" data-toggle="modal" onclick="submit(2)"
+                                <button class="btn btn-primary ml15" id="notdone" data-toggle="modal" onclick="submit(2)"
                                         >Thanh toán sau
                                 </button>
                             </div>
