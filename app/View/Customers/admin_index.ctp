@@ -33,7 +33,7 @@
 
 
 				<button type="submit" class="btn btn-default ml10" >Tìm kiếm</button>
-				<!--/ko-->
+                <a type="button" class="btn btn-default ml10" href="<?php echo Configure::read('Settings.DOMAIN'); ?>/admin/customers/add">Tạo mới</a>
 			</div>
 		</div>
 		<div class="clear"></div>
