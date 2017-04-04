@@ -126,7 +126,7 @@
 										<label class="bold-light m-xs-b">Ghi chú khách hàng</label>
 										<div class="panel panel-default">
 											<div class="panel-body">
-												<pre class="textareadiv common"><br class="lbr"></pre><textarea name="data[note]" style="resize: none; height: 59px;" class="form-control border-none textarea-auto-height p-none-l" placeholder="Nhập ghi chú về khách hàng..." rows="2" data-bind="value: Notes"></textarea>
+												<pre class="textareadiv common"><br class="lbr"></pre><textarea name="data[note]" style="resize: none; height: 59px;" class="form-control border-none textarea-auto-height p-none-l" placeholder="Nhập ghi chú về khách hàng..." rows="2" data-bind="value: Notes"><?php echo $customer['Customer']['note'];?></textarea>
 											</div>
 											<div class="panel-footer text-right p-sm-r">
 												<button type="submit" class="btn btn-default btn-small">Lưu ghi chú</button>

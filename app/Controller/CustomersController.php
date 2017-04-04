@@ -115,8 +115,23 @@ class CustomersController extends AppController {
  */
 	public function admin_index() {
         $this->Paginator->settings = $this->paginate;
+        $key = '';
+        if ($this->request->is('post')) {
+            $key = $this->request->data['key'];
+            //var_dump($key);die();
+            $this->Paginator->settings = array(
+                'limit' => 25,
+                'conditions' => array('phone like \'%'.$key.'%\' OR email like \'%'.$key.'%\' OR Customer.name like \'%'.$key.'%\''),
+                'order' => array(
+                    'id' => 'desc'
+                )
+            );
+
+        }
+        $this->set('key',$key);
 		$this->Customer->recursive = 0;
 		$this->set('customers', $this->Paginator->paginate());
+
 	}
 
 /**
@@ -150,8 +165,9 @@ class CustomersController extends AppController {
             $order['Customer']['note'] = $this->request->data['note'];
 
             if ($this->Customer->save($order)) {
+                //var_dump($order);die();
                 $this->Flash->success(__('The customer has been saved.'));
-                return $this->redirect(array('action' => 'index'));
+                return $this->redirect(array('action' => 'admin_view',$id));
             } else {
                 $this->Flash->error(__('The customer could not be saved. Please, try again.'));
             }

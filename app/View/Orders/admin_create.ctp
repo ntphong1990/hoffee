@@ -122,6 +122,19 @@
 
         updateView();
     }
+
+
+    function filterCustomer(key) {
+        $('.customeritem').each(function(i, obj) {
+            var temp = $(obj).attr('id');
+            if(temp.indexOf(key) > -1){
+                $(obj).css('display','block');
+            } else {
+                $(obj).css('display','none');
+            }
+        });
+    }
+
 </script>
 <div class="inner" id="viewareaid" style="margin-top: 150px">
 
@@ -403,7 +416,7 @@
 
                             <div class="box-search-advance customer" data-bind="css:ObjectType()">
                                 <div>
-                                    <input type="text" class="form-control textbox-advancesearch"
+                                    <input type="text" onkeyup="filterCustomer(this.value)" class="form-control textbox-advancesearch"
                                           onclick="openSearchCustomer()" onblur="closeSearchCustomer()"
                                            placeholder="Tìm hoặc tạo khách hàng mới">
                                 </div>
@@ -426,7 +439,7 @@
                                             <ul data-bind="foreach: Data">
 
                                                 <?php foreach ($customers as $key => $value) { ?>
-                                                <li class="row"
+                                                <li class="row customeritem" id ="<?php echo strtolower($value['Customer']['name']).$value['Customer']['phone'];?>"
                                                     onclick="changeCustomer(<?php echo $value['Customer']['id'];?>,'<?php echo $value['Customer']['name'];?>','<?php echo $value['Customer']['phone'];?>','<?php echo $value['Customer']['address'];?>')">
                                                     <!-- ko if:  Thumbnail() -->
                                                     <div class="wrap-img inline_block vertical-align-t radius-cycle ">

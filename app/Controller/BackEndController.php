@@ -261,4 +261,9 @@ class BackEndController extends AppController {
 
         return json_encode($customer);
     }
+
+
+    public function searchCustomer($key){
+        
+    }
 }

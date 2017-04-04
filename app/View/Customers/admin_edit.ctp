@@ -43,13 +43,13 @@ autoHCM();
 		echo $this->Form->input('id', array('class' => 'form-control'));
 		echo $this->Form->input('name', array('class' => 'form-control'));
 		echo $this->Form->input('lastname', array('class' => 'form-control'));
-		echo $this->Form->input('birthday', array('class' => 'form-control'));
+		echo $this->Form->input('birthday', array('class' => 'form-control','type' => 'date','minYear' => 1950));
 		echo $this->Form->input('address', array('class' => 'form-control'));
 		echo $this->Form->input('phone', array('class' => 'form-control'));
 
 		echo $this->Form->input('email', array('class' => 'form-control'));
 
-
+	    echo $this->Form->input('note', array('class' => 'form-control'));
 	?>
 		<div class="flexbox-grid-form-item select"><select name="data[Customer][district]" onchange="selectDistrict(this)" class="form-control" id="CustomerDistrict">
 				<?php foreach ($district as $key => $value){ ?>
