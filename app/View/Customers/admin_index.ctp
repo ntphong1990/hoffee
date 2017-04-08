@@ -70,7 +70,6 @@
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $customer['Customer']['id']),array('class' => 'btn btn-default btn-xs')); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $customer['Customer']['id']),array('class' => 'btn btn-default btn-xs')); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $customer['Customer']['id']),array('class' => 'btn btn-default btn-xs'),array('confirm' => __('Are you sure you want to delete # %s?', $customer['Customer']['id']))); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>

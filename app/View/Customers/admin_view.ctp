@@ -1,7 +1,7 @@
 <div class="outer">
 	<div class="inner" id="viewareaid">
 
-		<?php echo $this->Form->create('Customer'); ?>
+
 		<!-- ko if:ShowType() === 'List'--><!-- /ko -->
 		<!-- ko if:ShowType() === 'Detail' -->
 		<div data-bind="template: { name: 'CustomerDetailTmpl', data: mvdetail }">
@@ -18,12 +18,19 @@
 							<span class="active" data-bind="text: Fullname"><?php echo $customer['Customer']['name']; ?></span>
 							<!-- /ko -->
 						</div>
+                        <div class="header__secondary-actions">
+                            <!--ko if : $parent.IsVisible() == true-->
+                            <?php echo $this->Form->postLink('Xoá Khách', array('action' => 'delete', $customer['Customer']['id']), array('class' => 'btn btn-danger'), __('Are you sure you want to delete # %s?', $customer['Customer']['id'])); ?>
+                            <!--/ko-->
+                        </div>
+
 						<div class="header__secondary-actions">
 
-
+                            <?php echo $this->Form->create('Customer'); ?>
 							<a class="btn btn-default ml10" data-bind="attr: { href: LinkEditButton }" href="<?php echo Configure::read('Settings.DOMAIN'); ?>/admin/customers/edit/<?php echo $customer['Customer']['id']; ?>">Chỉnh sửa thông tin</a>
 							<!--/ko-->
 						</div>
+
 					</div>
 					<div class="clear"></div>
 				</div>

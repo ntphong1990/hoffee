@@ -62,11 +62,7 @@ $( document ).ready(function() {
 							<button type="submit" class="btn btn-primary">Cập nhật</button>
 							<!--/ko-->
 						</div>
-						<div class="header__secondary-actions">
-							<!--ko if : $parent.IsVisible() == true-->
-							<a class="btn btn-default" href="/admin/customer#/detail/1001601665">Xoá</a>
-							<!--/ko-->
-						</div>
+
 					</div>
 				</div>
 				<div class="one-row-actions">
