@@ -29,52 +29,173 @@ e.options[i].style.display = 'none';
 }
 
 $( document ).ready(function() {
-autoHCM();
+    autoHCM();
+    $('#inputbirthday').datepicker({format: 'yyyy-mm-dd'
+    });
 });
 </script>
 <br />
 
-<div class="row">
-	<div class="col-sm-5">
+
+
 <?php echo $this->Form->create('Customer'); ?>
-	<fieldset>
-		<legend><?php echo __('Admin Edit Customer'); ?></legend>
-	<?php
-		echo $this->Form->input('id', array('class' => 'form-control'));
-		echo $this->Form->input('name', array('class' => 'form-control'));
-		echo $this->Form->input('lastname', array('class' => 'form-control'));
-		echo $this->Form->input('birthday', array('class' => 'form-control','type' => 'date','minYear' => 1950));
-		echo $this->Form->input('address', array('class' => 'form-control'));
-		echo $this->Form->input('phone', array('class' => 'form-control'));
+<div class="outer">
+	<div class="inner" id="viewareaid">
 
-		echo $this->Form->input('email', array('class' => 'form-control'));
+		<div data-bind="template: { name: 'CustomerEditTmpl', data: mvedit }">
+			<div data-bind="with: CustomerEdit">
+				<div class="pageheader two-actions-header-mobile">
+					<div class="col-xs-12">
+						<div class="breadcrumb-new">
+							<svg class="svg-next-icon svg-next-icon-size-20 svg-next-icon-header hidden-xs">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#next-customers"></use>
+							</svg>
+							<span><a class="back-list hidden-xs" data-bind="attr: { href: LinkToList }" href="/admin/customer#/list">Quản lý khách hàng</a></span>
+							<span class="border-row hidden-xs">/ </span>
+							<span class="active" data-bind="text: Id() ? FullName : 'Thêm khách hàng'"><?php echo $this->request->data['Customer']['name'].' '.$this->request->data['Customer']['lastname'];?></span>
+							<div class="inline-vertical-top">
 
-	    echo $this->Form->input('note', array('class' => 'form-control'));
-	?>
-		<div class="flexbox-grid-form-item select"><select name="data[Customer][district]" onchange="selectDistrict(this)" class="form-control" id="CustomerDistrict">
-				<?php foreach ($district as $key => $value){ ?>
-					<option value="<?php echo $value['DevvnTinhthanhpho']['matp'];?>" <?php if ($this->request->data['Customer']['district'] == $value['DevvnTinhthanhpho']['matp']) echo 'selected';?>><?php echo $value['DevvnTinhthanhpho']['name'];?></option>
-				<?php } ?>
+							</div>
+						</div>
+						<div class="header__primary-actions">
+							<!--ko if : $parent.IsVisible() == true-->
+							<button type="submit" class="btn btn-primary">Cập nhật</button>
+							<!--/ko-->
+						</div>
+						<div class="header__secondary-actions">
+							<!--ko if : $parent.IsVisible() == true-->
+							<a class="btn btn-default" href="/admin/customer#/detail/1001601665">Xoá</a>
+							<!--/ko-->
+						</div>
+					</div>
+				</div>
+				<div class="one-row-actions">
+					<div class="max-width-1036">
+						<form class="form-horizontal" role="form">
+							<!-- ko if: $parent.HasError() && $parent.ErrorList().length > 0 --><!-- /ko -->
+							<div class="flexbox-grid no-pd-none">
+								<div class="flexbox-content flexbox-text-left">
+									<h4>Thông tin chung</h4>
+									<p class="note">Một số thông tin cơ bản của khách hàng .</p>
+								</div>
+								<div class="flexbox-content flexbox-right flexbox-text-right">
+									<div class="wrapper-content pd-all-20">
+										<div class="flexbox-grid-form flexbox-grid-form-no-outside-padding mb15">
 
-			</select>
+											<div class="flexbox-grid-form-item">
+												<label class="text-title-field" for="inputfirstname">Tên</label>
+												<input type="text" class="form-control" name="data[Customer][name]" id="inputfirstname" value="<?php echo $this->request->data['Customer']['name'];?>">
+											</div>
+											<div class="flexbox-grid-form-item">
+												<label class="text-title-field" for="inputlastname">Họ</label>
+												<input type="text" class="form-control" name="data[Customer][lastname]" id="inputlastname" value="<?php echo $this->request->data['Customer']['lastname'];?>">
+											</div>
+										</div>
+										<div class="flexbox-grid-form flexbox-grid-form-no-outside-padding mb15">
+											<div class="flexbox-grid-form-item">
+												<label class="text-title-field" for="inputemail">Địa chỉ Email</label>
+												<input type="text" class="form-control" id="inputemail" name="data[Customer][email]" value="<?php echo $this->request->data['Customer']['email'];?>">
+											</div>
+										</div>
+										<div class="flexbox-grid-form flexbox-grid-form-no-outside-padding mb15">
+											<div class="flexbox-grid-form-item">
+												<label class="text-title-field" for="inputbirthday">Ngày sinh</label>
+												<input id="inputbirthday" type="text" placeholder="Chọn ngày..." class="form-control" name="data[Customer][birthday]" value="<?php echo $this->request->data['Customer']['birthday'];?>">
+											</div>
+											<div class="flexbox-grid-form-item"></div>
+										</div>
+										<div class="flexbox-grid-form flexbox-grid-form-no-outside-padding mb15">
+											<div class="flexbox-grid-form-item">
+												<label class="text-title-field" for="inputgender">Giới tính</label>
+												<input type="radio" <?php if($this->request->data['Customer']['gender'] == 1) echo 'checked';?> class=" hrv-radio" value="1" name="IsMale" id="IsMale1">
+												Nam
+												<span class="ml10">
+    <input type="radio" class=" hrv-radio" value="0" <?php if($this->request->data['Customer']['gender'] == 0) echo 'checked';?> name="IsMale" id="IsMale2">
+ Nữ</span>
+											</div>
+										</div>
+										<div class="flexbox-grid-form flexbox-grid-form-no-outside-padding">
+											<div class="flexbox-grid-form-item">
+												<label class="text-title-field label-checkbox cursor-pointer mb0">
+
+													<input type="checkbox" class="hrv-checkbox" value="" name="">
+													Nhận email quảng cáo
+												</label>
+											</div>
+											<div class="flexbox-grid-form-item"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="flexbox-grid no-pd-none">
+								<div class="flexbox-content flexbox-text-left">
+									<h4>Địa chỉ</h4>
+									<p class="note">Địa chỉ chính của khách hàng này.</p>
+								</div>
+								<div class="flexbox-content flexbox-right flexbox-text-right">
+									<div class="wrapper-content pd-all-20">
+										<div data-bind="with: $parent.CustomerAddress()[0]">
+											<div class="flexbox-grid-form flexbox-grid-form-no-outside-padding mb15">
+												<div class="flexbox-grid-form-item">
+													<label class="text-title-field" for="inputaddress1">Địa chỉ</label>
+													<input type="text" class="form-control" id="inputaddress1" name="data[Customer][address]" value="<?php echo $this->request->data['Customer']['address'];?>">
+												</div>
+												<div class="flexbox-grid-form-item">
+													<label class="text-title-field" for="inputphone">Số điện thoại</label>
+													<input type="text" class="form-control" id="inputphone" name="data[Customer][phone]" value="<?php echo $this->request->data['Customer']['phone'];?>">
+													<span data-bind="validationMessage: Phone" class="field-validation-error" style="display: none;"></span>
+												</div>
+											</div>
+											<div class="flexbox-grid-form flexbox-grid-form-no-outside-padding">
+												<div class="flexbox-grid-form-item">
+													<label class="text-title-field">Tỉnh / Thành</label>
+                                                    <select name="data[Customer][district]" onchange="selectDistrict(this)" class="form-control" id="CustomerDistrict">
+                                                        <?php foreach ($district as $key => $value){ ?>
+                                                            <option value="<?php echo $value['DevvnTinhthanhpho']['matp'];?>" <?php if ($this->request->data['Customer']['district'] == $value['DevvnTinhthanhpho']['matp']) echo 'selected';?>><?php echo $value['DevvnTinhthanhpho']['name'];?></option>
+                                                        <?php } ?>
+
+                                                    </select>
+												</div>
+												<div class="flexbox-grid-form-item">
+													<label class="text-title-field">Quận / Huyện</label>
+                                                    <select name="data[Customer][state]" class="form-control" id="CustomerState">
+                                                        <option value="" disabled selected>Chọn quận/huyện</option>
+                                                        <?php foreach ($states as $key => $value){ ?>
+                                                            <option style="display: none" value="<?php echo $value['DevvnQuanhuyen']['maqh'];?>" id="<?php echo $value['DevvnQuanhuyen']['matp'];?>" <?php if ($this->request->data['Customer']['state'] == $value['DevvnQuanhuyen']['maqh']) echo 'selected';?>><?php echo $value['DevvnQuanhuyen']['name'];?></option>
+                                                        <?php } ?>
+
+                                                    </select>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="flexbox-grid no-pd-none">
+								<div class="flexbox-content flexbox-text-left">
+									<h4>Ghi chú</h4>
+									<p class="note">Nhập ghi chú về khách hàng.</p>
+								</div>
+								<div class="flexbox-content flexbox-right flexbox-text-right">
+									<div class="wrapper-content pd-all-20">
+										<label class="text-title-field">Ghi chú</label>
+										<pre class="textareadiv common"><br class="lbr"></pre><textarea style="resize: none; height: 59px;" class="form-control textarea-auto-height" placeholder="Nhập ghi chú về khách hàng..." rows="3" name="data[Customer][note]"><?php echo $this->request->data['Customer']['note'];?></textarea>
+									</div>
+								</div>
+							</div>
+
+
+						</form>
+					</div>
+				</div>
+			</div>
 		</div>
+		<!-- /ko -->
+		<!-- ko if:ShowType() === 'New' --><!-- /ko -->
 
-		<div class="flexbox-grid-form-item select"><select name="data[Customer][state]" class="form-control" id="CustomerState">
-				<option value="" disabled selected>Chọn quận/huyện</option>
-				<?php foreach ($states as $key => $value){ ?>
-					<option style="display: none" value="<?php echo $value['DevvnQuanhuyen']['maqh'];?>" id="<?php echo $value['DevvnQuanhuyen']['matp'];?>" <?php if ($this->request->data['Customer']['state'] == $value['DevvnQuanhuyen']['maqh']) echo 'selected';?>><?php echo $value['DevvnQuanhuyen']['name'];?></option>
-				<?php } ?>
 
-			</select>
-		</div>
-	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
-</div></div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
+	</div>
 
-		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Customer.id')), array('confirm' => __('Are you sure you want to delete # %s?', $this->Form->value('Customer.id')))); ?></li>
-		<li><?php echo $this->Html->link(__('List Customers'), array('action' => 'index')); ?></li>
-	</ul>
+	<!-- end .inner -->
 </div>
+<?php echo $this->Form->end(); ?>

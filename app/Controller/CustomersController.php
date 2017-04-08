@@ -231,6 +231,9 @@ class CustomersController extends AppController {
 			throw new NotFoundException(__('Invalid customer'));
 		}
 		if ($this->request->is(array('post', 'put'))) {
+            $this->request->data['Customer']['id'] = $id;
+            $this->request->data['Customer']['gender'] = $this->data['IsMale'];
+            //var_dump($this->request->data);die();
 			if ($this->Customer->save($this->request->data)) {
 				$this->Flash->success(__('The customer has been saved.'));
 				return $this->redirect(array('action' => 'index'));
@@ -241,6 +244,7 @@ class CustomersController extends AppController {
 			$options = array('conditions' => array('Customer.' . $this->Customer->primaryKey => $id));
 			$this->request->data = $this->Customer->find('first', $options);
 		}
+       // var_dump($this->request->data);die();
 	}
 
 /**
