@@ -393,8 +393,6 @@ class BackEndController extends AppController
             'token' => $token
         )));
         if ($customer) {
-            $customer['Customer']['token'] = $this->getToken();
-            $this->Customer->save($customer);
             $response['data'] = $customer;
         } else {
             $response['result'] = 0;
