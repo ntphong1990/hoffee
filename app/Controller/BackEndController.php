@@ -321,13 +321,12 @@ class BackEndController extends AppController
         $jsonData = $this->request->input('json_decode', true);
         $this->loadModel('Customer');
         $customer = null;
-
         $response = array();
         $response['result'] = 1;
         $response['code'] = "OK";
         $response['data'] = null;
         $isCustomerExisted = $this->Customer->find('first', array('conditions' => array(
-            'phone' => $this->request->data['phone']
+            'phone' => $jsonData['phone']
         )));
 
         if (!$isCustomerExisted) {
@@ -340,18 +339,21 @@ class BackEndController extends AppController
             $customer['Customer']['birthday'] = date('Y-m-d');
             $customer['Customer']['district'] = $jsonData['billing_city'];
             $customer['Customer']['state'] = $jsonData['state'];
+            $pass = AuthComponent::password($jsonData['password']);
+            $customer['Customer']['password'] = $pass;
 
             $this->Customer->save($customer);
 
             $customer['Customer']['id'] = $this->Customer->inserted_ids[0];
+            unset($customer['Customer']['password']); // not including password on response data
             $response['data'] = $customer;
         } else {
             $response['result'] = 0;
             $response['code'] = "EXISTED";
         }
+
         return json_encode($response);
     }
-
 
     public function login()
     {
@@ -362,7 +364,9 @@ class BackEndController extends AppController
         $response['result'] = 1;
         $response['code'] = "OK";
         $response['data'] = null;
+
         $this->loadModel('Customer');
+        
         $customer = $this->Customer->find('first', array('conditions' => array(
             'email' => $email,
             'password' => AuthComponent::password($pass)
@@ -371,14 +375,15 @@ class BackEndController extends AppController
         if ($customer) {
             $customer['Customer']['token'] = $this->getToken();
             $this->Customer->save($customer);
+            unset($customer['Customer']['password']);
             $response['data'] = $customer;
         } else {
             $response['result'] = 0;
             $response['code'] = "LOGIN_INVALID";
             $response['data'] = null;
         }
-        return json_encode($response);
 
+        return json_encode($response);
     }
 
     public function me(){
