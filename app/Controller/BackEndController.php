@@ -408,6 +408,34 @@ class BackEndController extends AppController
         return json_encode($response);
     }
 
+    function orderHistory() {
+        $jsonData = $this->request->input('json_decode', true);
+        $token = $jsonData['token'];
+
+        $response['result'] = 1;
+        $response['code'] = "OK";
+        $response['data'] = null;
+
+        $this->loadModel('Customer');
+        $customer = $this->Customer->find('first', array('conditions' => array(
+            'token' => $token
+        )));
+
+        if ($customer) {
+            $this->loadModel('Order');
+            $orders = $this->Order->find('all', array('conditions' => array(
+                'email' => $customer['Customer']["email"]
+            )));
+            $response['data'] = $orders;
+        } else {
+            $response['result'] = 0;
+            $response['code'] = "ORDER_HISTORY_INVALID";
+            $response['data'] = [];
+        }
+
+        return json_encode($response);
+    }
+
     function generateRandomString($length = 6)
     {
         $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -429,6 +457,9 @@ class BackEndController extends AppController
         }
         return $randomString;
     }
+
+    
+
 }
 
 
