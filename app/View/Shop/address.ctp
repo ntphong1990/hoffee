@@ -26,7 +26,7 @@
     }
 
     function findCustomer(ele) {
-        $.getJSON('<?php echo 'http://' . $_SERVER['HTTP_HOST']?><?php echo Configure::read('Settings.DOMAIN');?>/backend/getUserInfo/'+ ele.value, function (result) {
+        $.getJSON('<?php echo 'http://' . $_SERVER['HTTP_HOST']?><?php echo Configure::read('Settings.DOMAIN');?>/backEnd/getUserInfo/'+ ele.value, function (result) {
                if(result.Customer) {
                    $('#billing_email').val(result.Customer.email);
                    $('#billing_first_name').val(result.Customer.name);
