@@ -84,8 +84,10 @@ class BackEndController extends AppController
         $customer = null;
 
         $isCustomerExisted = $this->Customer->find('first', array('conditions' => array(
-            'phone' => $this->request->data['phone']
+            'email' => $jsonData['email']
         )));
+
+        
 
         if (!$isCustomerExisted) {
             $customer = $this->Customer->create();
@@ -103,9 +105,7 @@ class BackEndController extends AppController
             $customer['Customer']['id'] = $this->Customer->inserted_ids[0];
 
         } else {
-            $customer = $this->Customer->find('first', array('conditions' => array(
-                'phone' => $this->request->data['phone']
-            )));
+            $customer = $isCustomerExisted;
         }
 
 
@@ -143,21 +143,34 @@ class BackEndController extends AppController
         $order['Order']['total'] = $jsonData['total'];
         $order['Order']['status'] = $jsonData['status'];
 
-        $orderItems = json_decode($jsonData['orderitem']);
+        $orderItems = $jsonData['order_items'];
+        
         $order['OrderItem'] = array();
         $weight = 0;
-        foreach ($orderItems as $key => $value) {
+        $this->loadModel('Product');
+        foreach ($orderItems as $value) {
+
+            $productId = $value["id"];
+            $quantity = $value["quantity"];
+
+            $product = $this->Product->find('first', array('conditions' => array(
+                'id' => $productId
+            )))['Product'];
+
             $orderItem = array();
 
-            $orderItem['product_id'] = $value->id;
-            $orderItem['name'] = $value->name;
-            $orderItem['weight'] = $value->weight * $value->quanlity;
-            $orderItem['price'] = $value->price;
-            $orderItem['quantity'] = $value->quanlity;
-            $orderItem['subtotal'] = $value->quanlity * $value->price;
+            $orderItem['product_id'] = $productId;
+            $orderItem['name'] = $product['name'];
+            $orderItem['weight'] = $product['weight'] * $quanlity;
+            $orderItem['price'] = $product['price'];
+            $orderItem['quantity'] = $quantity;
+            $orderItem['subtotal'] = $quanlity * $product['price'];
+            
             $weight = $weight + $orderItem['weight'];
+
             array_push($order['OrderItem'], $orderItem);
         }
+
         if ($order['Order']['status'] == 1) {
             $order['Financial'] = array();
             $fee = array();
@@ -408,6 +421,34 @@ class BackEndController extends AppController
         return json_encode($response);
     }
 
+    function orderHistory() {
+        $jsonData = $this->request->input('json_decode', true);
+        $token = $jsonData['token'];
+
+        $response['result'] = 1;
+        $response['code'] = "OK";
+        $response['data'] = null;
+
+        $this->loadModel('Customer');
+        $customer = $this->Customer->find('first', array('conditions' => array(
+            'token' => $token
+        )));
+
+        if ($customer) {
+            $this->loadModel('Order');
+            $orders = $this->Order->find('all', array('conditions' => array(
+                'email' => $customer['Customer']["email"]
+            )));
+            $response['data'] = $orders;
+        } else {
+            $response['result'] = 0;
+            $response['code'] = "ORDER_HISTORY_INVALID";
+            $response['data'] = [];
+        }
+
+        return json_encode($response);
+    }
+
     function generateRandomString($length = 6)
     {
         $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -429,6 +470,9 @@ class BackEndController extends AppController
         }
         return $randomString;
     }
+
+    
+
 }
 
 
