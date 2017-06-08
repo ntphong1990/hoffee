@@ -332,9 +332,7 @@
                                 <div class="form-group">
                                     <label>Ghi chú</label>
                                     <textarea class="form-control textarea-auto-height" rows="2"
-                                              placeholder="Ghi chú đơn hàng" id="note">
-
-                                    </textarea>
+                                              placeholder="Ghi chú đơn hàng" id="note"></textarea>
                                 </div>
                                 <div class="form-group">
 <!--                                    <a class="mb10 inline_block" role="button" data-toggle="collapse"-->
@@ -409,8 +407,6 @@
             </div>
             <div class="flexbox-content flexbox-right">
                 <div class="panel panel-default wrapper-content">
-                    <!--ko if : CustomerId()--><!--/ko-->
-                    <!--ko if : !CustomerId()-->
                     <div class="panel-body pd-all-20">
                         <label class="title-product-main text-no-bold block-display mb15">Thông tin khách hàng</label>
                         <div class="findcustomer">
@@ -425,8 +421,6 @@
 
                                 <div id="searchCustomer" class="panel panel-default ">
                                     <div class="panel-body">
-                                        <!--ko if: ObjectType() == 'product'--><!--/ko-->
-                                        <!--ko if: ObjectType() == 'customer'-->
                                         <a href="<?php echo Configure::read('Settings.DOMAIN');?>/admin/customers/add">
                                         <div class="box-search-advance-head"
 

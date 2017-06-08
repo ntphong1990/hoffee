@@ -1,32 +1,28 @@
 <script>
-function selectDistrict(ele) {
-var matp = ele.options[ele.selectedIndex].value
+	function selectDistrict(ele) {
+		//var matp = ele.options[ele.selectedIndex].value
 
-var e = document.getElementById("CustomerState");
-var strUser = e.options	[e.selectedIndex].value;
+		matp = $('#CustomerDistrict').val();
+		addOption(matp);
 
-for(var i = 0 ; i < e.options.length ;i++){
-if(e[i].id == matp){
-e.options[i].style.display = 'block';
-} else {
-e.options[i].style.display = 'none';
-}
-}
+	}
 
-}
+	function autoHCM() {
+		var e = document.getElementById("CustomerState");
+		var strUser = e.options	[e.selectedIndex].value;
 
-function autoHCM() {
-var e = document.getElementById("CustomerState");
-var strUser = e.options	[e.selectedIndex].value;
+		addOption(79);
+	}
 
-for(var i = 0 ; i < e.options.length ;i++){
-if(e[i].id == "79"){
-e.options[i].style.display = 'block';
-} else {
-e.options[i].style.display = 'none';
-}
-}
-}
+
+	function  addOption(id) {
+		var e = document.getElementById("CustomerState");
+		e.innerHTML = '<option value="" disabled selected>Chọn quận/huyện</option>';
+		<?php foreach ($states as $key => $value){ ?>
+		if(id == <?php echo $value['DevvnQuanhuyen']['matp'];?>)
+			e.innerHTML += '<option value="<?php echo $value['DevvnQuanhuyen']['maqh'];?>" <?php if ($this->request->data['Customer']['state'] == $value['DevvnQuanhuyen']['maqh']) echo 'selected';?>><?php echo str_replace("'","",$value['DevvnQuanhuyen']['name']);?></option>';
+		<?php } ?>
+	}
 
 $( document ).ready(function() {
     autoHCM();
