@@ -5,7 +5,11 @@
     }
 
     function closeSearchProduct() {
+
+    setTimeout(function(){
+
         $("#productSearch").attr('class', 'panel panel-default');
+    }, 100);
     }
 
     function openSearchCustomer() {
@@ -13,7 +17,12 @@
     }
 
     function closeSearchCustomer() {
-        $("#searchCustomer").attr('class', 'panel panel-default');
+        setTimeout(function(){
+
+            setTimeout( $("#searchCustomer").attr('class', 'panel panel-default'),500);
+        }, 100);
+
+
     }
 
     var products = [];
@@ -136,9 +145,12 @@
             }
         });
     }
-
+    
+    function closeModal() {
+        event.stopPropagation();
+    }
 </script>
-<div class="inner" id="viewareaid" style="margin-top: 150px">
+<div class="inner" id="viewareaid" onclick="closeModal()" style="margin-top: 150px">
 
 
     <!-- ko if:ShowType() === 'List'--><!-- /ko -->
@@ -412,7 +424,7 @@
                         <div class="findcustomer">
 
 
-                            <div class="box-search-advance customer" data-bind="css:ObjectType()">
+                            <div class="box-search-advance customer">
                                 <div>
                                     <input type="text" onkeyup="filterCustomer(this.value)" class="form-control textbox-advancesearch"
                                           onclick="openSearchCustomer()" onblur="closeSearchCustomer()"
@@ -436,7 +448,7 @@
 
                                                 <?php foreach ($customers as $key => $value) { ?>
                                                 <li class="row customeritem" id ="<?php echo strtolower($value['Customer']['name']).$value['Customer']['phone'];?>"
-                                                    onclick="changeCustomer(<?php echo $value['Customer']['id'];?>,'<?php echo $value['Customer']['name'];?>','<?php echo $value['Customer']['phone'];?>','<?php echo $value['Customer']['address'];?>')">
+                                                    onClick="changeCustomer(<?php echo $value['Customer']['id'];?>,'<?php echo $value['Customer']['name'];?>','<?php echo $value['Customer']['phone'];?>','<?php echo $value['Customer']['address'];?>')">
                                                     <!-- ko if:  Thumbnail() -->
                                                     <div class="wrap-img inline_block vertical-align-t radius-cycle ">
                                                         <img class="thumb-image radius-cycle"
