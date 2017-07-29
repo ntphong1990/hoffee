@@ -1,21 +1,17 @@
 
-<div class="paginate">
-    <ul class="pagination">
-        <li>
-    <?php echo $this->Paginator->first('<<', array(), null, array('class' => 'first disabled')); ?>
+<div class="dataTables_paginate paging_bootstrap">
+ 
+    <ul class="pagination no-margin"> 
+    
+        <li class="prev disabled page-item">
+    <?php echo $this->Paginator->prev('Previous', array('class' => 'page-link'), null, array('class' => 'page-link')); ?>
         </li>
-        <li>
-    <?php echo $this->Paginator->prev('<', array(), null, array('class' => 'prev disabled')); ?>
+        <li class="page-item">
+    <?php echo $this->Paginator->numbers(array('separator' => ' ','class' => 'page-link')); ?>
         </li>
-        <li>
-    <?php echo $this->Paginator->numbers(array('separator' => ' ')); ?>
-        </li>
-        <li>
-    <?php echo $this->Paginator->next('>', array(), null, array('class' => 'next disabled')); ?>
-        </li>
-        <li>
-    <?php echo $this->Paginator->last('>>', array(), null, array('class' => 'last disabled')); ?>
-        </li>
+        <li class="next page-item">
+            <?php echo $this->Paginator->next('Next', array('class' => 'page-link'), null, array('class' => 'page-link')); ?>
+        </li>   
     </ul>
 </div>
 

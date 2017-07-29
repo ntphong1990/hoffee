@@ -1,23 +1,5 @@
-
-<div class="pageheader two-actions-header-mobile">
-    <div class="col-xs-12">
-        <div class="breadcrumb-new">
-            <svg class="svg-next-icon svg-next-icon-size-20 svg-next-icon-header hidden-xs">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#stroked-bag"></use>
-            </svg>
-
-            <span class="active" data-bind="text:ListTitle">Danh sách đơn hàng</span>
-        </div>
-        <div class="header__primary-actions">
-            <a class="btn btn-primary"  href="<?php echo Configure::read('Settings.DOMAIN');?>/admin/orders/create">Tạo đơn hàng</a>
-        </div>
-
-    </div>
-</div>
-<table style="margin-top: 100px" data-toggle="table" data-url="tables/data1.json" data-show-refresh="true"
-       data-show-toggle="true" data-show-columns="true" data-search="true"
-       data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name"
-       data-sort-order="desc" class="table table-hover">
+<div class="widget">
+<table class="table">
     <tr>
         <th><?php echo $this->Paginator->sort('first_name'); ?></th>
         <th><?php echo $this->Paginator->sort('last_name'); ?></th>
@@ -66,11 +48,10 @@
     <?php endforeach; ?>
 </table>
 
-<br />
+
 
 <?php echo $this->element('pagination-counter'); ?>
 
 <?php echo $this->element('pagination'); ?>
 
-<br />
-<br />
+</div>

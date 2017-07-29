@@ -157,11 +157,58 @@ class FinancialsController extends AppController {
             $tong = $tong + intval($value['Financial']['value']);
         }
         $this->set('tong',$tong);
+				$this->loadModel('Customer');
+				$count = count($this->Customer->find('all'));
+
+				$this->set('count',$count);
+
+				$data = $this->Financial->find('all',array('conditions' => array(
+            'type' => 1,
+						 'kind' => 1
+        ),
+				'fields' => array('sum(value) as sum', 'YEAR(Financial.created) as year','MONTH(Financial.created) as month'),
+				'group' => array('YEAR(Financial.created)','MONTH(Financial.created)')));
+				//var_dump($data);
+				$this->set('data',$data);
+
+				$fee = $this->Financial->find('all',array('conditions' => array(
+            'type' => 2,
+						 'kind' => 0
+        ),
+				'fields' => array('sum(value) as sum', 'YEAR(Financial.created) as year','MONTH(Financial.created) as month'),
+				'group' => array('YEAR(Financial.created)','MONTH(Financial.created)')));
+				$this->set('fee_data',$fee);
+
+				$this->loadModel('OrderItem');
+				$products = $this->OrderItem->find('all',array(
+				'fields' => array('sum(quantity) as sum','SUM(CASE WHEN product_id = 5 THEN quantity ELSE 0 END) as sum1','SUM(CASE WHEN product_id = 3 THEN quantity ELSE 0 END) as sum2','name','product_id','YEAR(created) as year','MONTH(created) as month'),
+				'group' => array('YEAR(created)','MONTH(created)')));
+				
+
+				// $this->loadModel('Product');
+				// $pro =  $this->Product->find('all',array('fields' => array('id','name'),'conditions' => array('active' => 1)));
+				// $chart = [];
+				// $chart['id'] = [];
+				// $chart['name'] = [];
+				// $chart['data'] = [];
+				// foreach($pro as $value){
+				// 	array_push($chart['id'],$value['Product']['id']);
+				// 	array_push($chart['name'],$value['Product']['name']);
+				// }
+				// $monthyear = '';
+				// foreach($products as $value){
+
+				// }
+			
+				// var_dump($products);
+				// foreach($products as $value){
+
+				// }
+				$this->set('product_data',$products);
 
 
 
-
-		$this->set('financials', $this->Paginator->paginate());
+			$this->set('financials', $this->Paginator->paginate());
 	}
 
 /**

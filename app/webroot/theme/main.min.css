@@ -2376,7 +2376,7 @@ div.wpcf7-response-output {
     right: 0;
     width: 1.125rem;
     height: 1.125rem;
-    background: #898f4b;
+    background: #f33d3d;
     color: #fff;
     border-radius: 50%;
     text-align: center;
@@ -2492,7 +2492,7 @@ div.wpcf7-response-output {
     font-family: AvenirLTStd-Heavy;
     text-transform: uppercase;
     width: 100%;
-    /*min-width: 39.375rem;*/
+    min-width: 39.375rem;
     height: 4.25rem
 }
 

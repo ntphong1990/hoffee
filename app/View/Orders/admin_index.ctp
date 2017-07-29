@@ -1,25 +1,28 @@
-
-<div class="pageheader two-actions-header-mobile">
-    <div class="col-xs-12">
-        <div class="breadcrumb-new">
-            <svg class="svg-next-icon svg-next-icon-size-20 svg-next-icon-header hidden-xs">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#stroked-bag"></use>
-            </svg>
-
-            <span class="active" data-bind="text:ListTitle">Danh sách đơn hàng</span>
-        </div>
-        <div class="header__primary-actions">
-            <a class="btn btn-primary"  href="<?php echo Configure::read('Settings.DOMAIN');?>/admin/orders/create">Tạo đơn hàng</a>
-        </div>
+<script>
+	function pageLoad(){
+    }
+    </script>
+<div class="widget">
+    <div class="col-xs-12" style="margin:5px">
+        
+       <a class="btn btn-primary click-action"  href="<?php echo Configure::read('Settings.DOMAIN');?>/admin/orders/create">Tạo đơn hàng</a>
 
     </div>
-</div>
-<table style="margin-top: 100px" data-toggle="table" data-url="tables/data1.json" data-show-refresh="true"
+    <header>
+                        <div class="widget-controls">
+                        
+                            <a href="#"><i class="glyphicon glyphicon-cog"></i></a>
+                            <a href="#"><i class="fa fa-refresh"></i></a>
+                            <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                        </div>
+    </header>
+<div class="widget-body">
+<table data-toggle="table" data-show-refresh="true"
        data-show-toggle="true" data-show-columns="true" data-search="true"
        data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name"
-       data-sort-order="desc" class="table table-hover">
+       data-sort-order="desc" class="table">
     <tr>
-        <th><?php echo $this->Paginator->sort('id','Mã'); ?></th>
+        <th class="hidden-sm-down"><?php echo $this->Paginator->sort('id','Mã'); ?></th>
         <th><?php echo $this->Paginator->sort('first_name','Khách Hàng'); ?></th>
 
 
@@ -52,10 +55,10 @@
         <td><?php echo h($order['Order']['shipping']); ?></td>
         <td><?php echo h(number_format($order['Order']['total'])); ?> ₫</td>
         <td><?php if($order['Order']['status'] == 1) {
-                echo '<span class="label fulfill_1">Đã thanh toán</span>';
+                echo '<span class="label label-success">Đã thanh toán</span>';
             }
             if($order['Order']['status'] == 2) {
-                echo '<span class="label payment_6">Chưa thanh toán</span>';
+                echo '<span class="label label-danger">Chưa thanh toán</span>';
             }
             if($order['Order']['status'] == 3) {
                 echo '<span class="label payment_5">Nháp</span>';
@@ -63,13 +66,13 @@
             ?></td>
 
         <td><?php if($order['Order']['shipping_status'] == 1) {
-                echo '<span class="label payment_3">Đang giao hàng</span>';
+                echo '<span class="label label-info">Đang giao hàng</span>';
             }
             if($order['Order']['shipping_status'] == 2) {
-                echo '<span class="label payment_2">Đã giao</span>';
+                echo '<span class="label label-success">Đã giao</span>';
             }
             if($order['Order']['shipping_status'] == 0) {
-                echo '<span class="label payment_6">Chưa giao</span>';
+                echo '<span class="label label-danger">Chưa giao</span>';
             }
             ?></td>
         <td><?php echo h($order['Order']['created']); ?></td>
@@ -80,7 +83,7 @@
     </tr>
     <?php endforeach; ?>
 </table>
-
+</div>
 <br />
 
 <?php echo $this->element('pagination-counter'); ?>
@@ -89,3 +92,4 @@
 
 <br />
 <br />
+</div>

@@ -1,8 +1,12 @@
+<script>
+	function pageLoad(){
+	}
+</script>
+
+<div class="widget">
 <h2>Users</h2>
-
-<table class="table-striped table-bordered table-condensed table-hover">
+<table class="table table-hover">
     <tr>
-
         <th><?php echo $this->Paginator->sort('role');?></th>
         <th><?php echo $this->Paginator->sort('name');?></th>
         <th><?php echo $this->Paginator->sort('username');?></th>
@@ -27,6 +31,7 @@
     </tr>
     <?php endforeach; ?>
 </table>
+</div>
 
 <br />
 

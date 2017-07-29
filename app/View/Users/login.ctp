@@ -6,9 +6,9 @@
     <div class="store-two_col">
 
         <?php echo $this->Form->create('User', ['url' => ['action' => 'login']]); ?>
-        <?php echo $this->Form->input('username', ['class' => 'form-control', 'autofocus' => 'autofocus']); ?>
+        <?php echo $this->Form->input('username', ['class' => 'form-control','style' => 'margin : 5px', 'autofocus' => 'autofocus']); ?>
         <br />
-        <?php echo $this->Form->input('password', ['class' => 'form-control']); ?>
+        <?php echo $this->Form->input('password', ['class' => 'form-control','style' =>'margin : 5px']); ?>
         <br />
 
 

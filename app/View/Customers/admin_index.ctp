@@ -1,24 +1,32 @@
-<?php echo $this->Form->create('Customer'); ?>
+<script>
+	function pageLoad(){
+	}
+</script>
+<?php echo $this->Form->create('Customer', array('id'=>'pjax-container','data-pjax','class'=>'form-horizontal','role' =>'form')); ?>
+<div class="row">
+
+			
+                
+			
+				<div class="input-group col-sm-12">
+                                                <input type="text" name="data[key]" value="<?php echo $key;?>"  class="form-control" id="search-input">
+                                                <span class="input-group-btn">
+                                                    <button type="submit" class="btn btn-secondary click-action">Search</button>
+                                                </span>
+                            </div>
+</div>
+<div class="widget">
+
+
 <div class="customers index">
 	<div class="pageheader two-actions-header-mobile">
 		<div class="col-xs-12">
 			<div class="breadcrumb-new">
 				<div class="ctrl-filter fluid-container col-xs-12" data-bind="with: SelectedTab, css: { 'not-has-freetext': !HasFreeText() }">
 					<div data-bind="css: { 'input-group-btn': !$parent.HasFreeText() }" class="btn-group filter-container dropdown">
-						<!-- ko if: $parent.IsDisplayFilter() -->
-						<!-- ko if: $parent.FieldsForSelect().length > 0 -->
-						<div class="fixed-container drop-control">
-							<button type="button" id="dropdownfilter" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Tên/Email/Sdt</button>
-							<div class="dropdown-menu mt10 pos-arrow-dropdown animate-scale-dropdown" role="menu" aria-labelledby="dropdownfilter">
-								<label><span data-bind="text: $parent.Title">Hiển thị tất cả khách hàng theo</span>:</label>
-							</div>
-						</div>
-						<!-- /ko -->
-						<!-- /ko -->
-						<!-- ko if: $parent.HasFreeText() -->
-						<div class="variable-container">
-							<input type="text" name="data[key]" value="<?php echo $key;?>" class="form-control form-large txtSearch border-radius4-right">
-						</div>
+					
+						
+				
 						<!-- /ko -->
 						<!-- ko if: $parent.CanSaveFilter() -->
 						<div class="input-group-btn saved-search-actions">
@@ -26,15 +34,10 @@
 						</div>
 						<!-- /ko -->
 					</div>
-					<div class="block list-tags" data-bind="foreach: Fields"></div>
+				
 				</div>
 			</div>
-			<div class="header__secondary-actions">
-
-
-				<button type="submit" class="btn btn-default ml10" >Tìm kiếm</button>
-                <a type="button" class="btn btn-default ml10" href="<?php echo Configure::read('Settings.DOMAIN'); ?>/admin/customers/add">Tạo mới</a>
-			</div>
+			
 		</div>
 		<div class="clear"></div>
 	</div>
@@ -82,11 +85,7 @@
 
 		<?php echo $this->element('pagination'); ?>
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('New Customer'), array('action' => 'add')); ?></li>
-	</ul>
-</div>
+
 
 <?php echo $this->Form->end(); ?>
+</div>
