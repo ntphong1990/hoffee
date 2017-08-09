@@ -242,6 +242,10 @@ class ShopController extends AppController {
                              ->emailFormat('html')
                              ->viewVars(array('shop' => $shop))
                              ->send();
+
+                        $client = new \GuzzleHttp\Client();     
+                         $text = "New order from ".$shop['Order']['email'];
+                        $client->get('https://api.telegram.org/bot382029828:AAEg0QZTfPgKX8yzJaLrOpgng55ZkgZUF6k/sendMessage?chat_id=-204330263&text='.$text);
                          return $this->redirect(array('action' => 'success'));
                      } else {
                          $errors = $this->Order->invalidFields();

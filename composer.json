@@ -1,0 +1,12 @@
+{
+    "name": "phong/hoffee4",
+    "authors": [
+        {
+            "name": "ntphong1990",
+            "email": "ntphong1990@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    }
+}
