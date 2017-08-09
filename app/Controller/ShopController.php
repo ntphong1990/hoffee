@@ -246,7 +246,7 @@ class ShopController extends AppController {
                              ->send();
 
                         $client = new HttpSocket();  
-                        $text = "New order from ".$shop['Order']['email'];
+                        $text = "New order from ".$shop['Order']['email'].' '.number_format($shop['Order']['total']).'đ';
                         $client->get('https://api.telegram.org/bot382029828:AAEg0QZTfPgKX8yzJaLrOpgng55ZkgZUF6k/sendMessage?chat_id=-204330263&text='.$text);
                          return $this->redirect(array('action' => 'success'));
                      } else {
