@@ -38,11 +38,11 @@
         <th class="hidden-sm-down"><?php echo $this->Paginator->sort('shipping_status','Giao Hàng'); ?></th>
         <th class="hidden-sm-down"><?php echo $this->Paginator->sort('created','Ngày đặt'); ?></th>
 
-        <th >Actions</th>
+        <th class="hidden-sm-down">Actions</th>
     </tr>
     <?php foreach ($orders as $order): ?>
     <tr>
-        <td class="text-underline hover-underline">#<?php echo h($order['Order']['id']); ?></td>
+        <td class="text-underline hover-underline"><?php echo $this->Html->link('#'.$order['Order']['id'], array('action' => 'view', $order['Order']['id']), array('class' => '')); ?></td>
         <td ><?php echo h($order['Order']['first_name']); ?></td>
 
 
@@ -76,7 +76,7 @@
             }
             ?></td>
         <td class="hidden-sm-down"><?php echo h($order['Order']['created']); ?></td>
-        <td class="actions">
+        <td class="actions hidden-sm-down">
             <?php echo $this->Html->link('View', array('action' => 'view', $order['Order']['id']), array('class' => 'btn btn-default btn-xs')); ?>
             <?php echo $this->Html->link('Edit', array('action' => 'edit', $order['Order']['id']), array('class' => 'btn btn-default btn-xs')); ?>
         </td>
