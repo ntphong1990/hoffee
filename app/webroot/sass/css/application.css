@@ -2556,10 +2556,9 @@ input[type="button"].btn-block {
   cursor: pointer; }
 
 .file input {
-  min-width: 14rem;
-  margin: 0;
-  filter: alpha(opacity=0);
-  opacity: 0; }
+ 
+  
+   }
 
 .file-custom {
   position: absolute;
@@ -9069,7 +9068,7 @@ a.bg-danger:focus, a.bg-danger:hover {
   width: auto !important; }
 
 .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
-  width: 220px; }
+  width: 100%; }
 
 .bootstrap-select .dropdown-toggle:focus {
   outline: thin dotted #333333 !important;
@@ -22863,7 +22862,7 @@ a {
 
 .content {
   min-height: 100%;
-  padding: 92px 40px 42px;
+  padding: 62px 40px 42px;
   background-color: #eee; }
   @media (max-width: 767px) {
     .content {
@@ -26036,4 +26035,12 @@ a.text-bg-sidebar:focus, a.text-bg-sidebar:hover {
 	.flexbox-grid-form-item.rps-no-pd-none-r {
 		padding-right: 0
 	}
+}
+
+.right {
+  float:right;
+}
+
+.head-action {
+  padding:10px;
 }
