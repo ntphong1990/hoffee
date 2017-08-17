@@ -315,7 +315,28 @@
 </script>
 <div class="row" id="viewareaid" onclick="closeModal()">
 
+    <div class="row head-action">
+						<div class="col-sm-12 col-lg-6">
+						
+							<span><a class="back-list hidden-xs" href="/admin/orders/index">Quản lý đơn hàng</a></span>
+							<span class="border-row hidden-xs">/ </span>
+							<span class="active">Tạo mới</span>
+						
+						</div>
+						<div class="col-sm-12 col-lg-6">
+						<div class="right">
+						<button class="btn btn-primary ml15"
+                                        data-bind="enable :IsPaid" id="done" onclick="submit(1)">Đã thanh toán
+                                </button>
+                                <button class="btn btn-primary ml15" id="notdone" data-toggle="modal" onclick="submit(2)"
+                                        >Thanh toán sau
+                                </button>
+                        <button class="btn btn-default ml10" id="draff" onclick="submit(3)">Lưu nháp</button>
+						</div>	
+                        
+						</div>
 
+	</div>
     <!-- ko if:ShowType() === 'List'--><!-- /ko -->
     <!-- ko if:ShowType() === 'New'-->
     <div class="col-lg-8 widget-container ui-sortable">
@@ -323,11 +344,11 @@
             <div class="col-xs-12">
               
                 <div class="header__primary-actions">
-                    <a class="btn btn-primary" id="draff" onclick="submit(3)">Lưu nháp</a>
+                    
                 </div>
                 <div class="header__secondary-actions">
                     <a class="btn btn-default" data-bind="attr: { href: DraftOrderListLink }"
-                       href="/admin/order/draft_orders#/list">Hủy</a>
+                       href="/admin/order/draft_orders/list">Hủy</a>
                 </div>
             </div>
         </div>
@@ -469,18 +490,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="pd-all-10-20 border-top-color">
-                        <div class="row">
-                            <div class="col-md-12 text-xs-center">
-                                <button class="btn btn-primary ml15"
-                                        data-bind="enable :IsPaid" id="done" onclick="submit(1)">Đã thanh toán
-                                </button>
-                                <button class="btn btn-primary ml15" id="notdone" data-toggle="modal" onclick="submit(2)"
-                                        >Thanh toán sau
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
             
@@ -508,47 +518,36 @@
                                 </div>
 
                                 <div id="searchCustomer" class="panel panel-default ">
-                                    <div class="panel-body">
-                                        <a href="<?php echo Configure::read('Settings.DOMAIN');?>/admin/customers/add">
-                                        <div class="box-search-advance-head"
-
-                                             data-bind="click: function(data, event){ShowCustomLineModal(data,event);}">
-
-                                            <img width="30"
-                                                 src="//hstatic.net/0/0/global/design/imgs/next-create-customer.svg">
-                                            <span class="ml10">Tạo mới khách hàng</span>
-                                        </div>
-                                        </a>
-                                        <div class="list-search-data">
-                                            <ul class="nav navbar-nav">
-
+                                    <div class="panel-body" style="padding:0px">
+                                       
+                                       
+                                            <div class="list-group list-group-lg ">
+                                                 <a class="list-group-item" href="<?php echo Configure::read('Settings.DOMAIN');?>/admin/customers/add">
+                                                    
+                                                    <span class="thumb-sm pull-xs-left mr">
+                                                        <img class="img-circle" src="//hstatic.net/0/0/global/design/imgs/next-create-customer.svg" alt="...">
+                                                    </span>
+                                                    <i class="fa fa-circle pull-xs-right text-danger mt-sm"></i>
+                                                    <h6 class="no-margin">Tạo mới khách hàng</h6>
+                                                    <small class="text-muted">Click here to create new customer</small>
+                                                    </a>
                                                 <?php foreach ($customers as $key => $value) { ?>
-                                                <li class="row customeritem" id ="<?php echo strtolower($value['Customer']['name']).$value['Customer']['phone'];?>"
+                                                <a class="list-group-item customeritem" id ="<?php echo strtolower($value['Customer']['name']).$value['Customer']['phone'];?>"
                                                     onClick="changeCustomer(<?php echo $value['Customer']['id'];?>,'<?php echo $value['Customer']['name'];?>','<?php echo $value['Customer']['phone'];?>','<?php echo $value['Customer']['address'];?>')">
                                                     <!-- ko if:  Thumbnail() -->
-                                                    <div class="wrap-img inline_block vertical-align-t radius-cycle ">
-                                                        <img class="thumb-image radius-cycle"
-                                                             data-bind="attr: { src: Thumbnail, title: Value }"
-                                                             src="https://secure.gravatar.com/avatar/2efd8534a82578a162535ce9abd0224c.jpg?s=40&amp;d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2F18f9f20ec1a7be8020924ce0048b6ef2.jpg%3Fs%3D40"
-                                                             title="189460628183005@facebook.com"></div>
-
-                                                    <div class="inline_block ml10">
-                                                        <a class="block-display" style="line-height:16px">
-                                                            <span data-bind="text: FullName"><?php echo $value['Customer']['name'];?></span>
-                                                        </a>
-                                                        <a>
-
-                                                            <a data-bind="attr: { href: href }">
-                                                                <span data-bind="text: email"><?php echo $value['Customer']['phone'];?></span>
-                                                            </a>
-
-                                                        </a>
-                                                    </div>
-                                                </li>
+                                                   
+                                                    <span class="thumb-sm pull-xs-left mr">
+                                                        <img class="img-circle" src="https://secure.gravatar.com/avatar/2efd8534a82578a162535ce9abd0224c.jpg?s=40&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2F18f9f20ec1a7be8020924ce0048b6ef2.jpg%3Fs%3D40" alt="...">
+                                                    </span>
+                                                    <i class="fa fa-circle pull-xs-right text-danger mt-sm"></i>
+                                                    <h6 class="no-margin"><?php echo $value['Customer']['name'];?></h6>
+                                                    <small class="text-muted"><?php echo $value['Customer']['phone'];?></small>
+                        
+                                                </a>
                                                 <?php } ?>
-                                            </ul>
+                                            </div>
                                             
-                                        </div>
+                                        
                                         <!--/ko-->
                                         <!--ko if: ObjectType() == 'supplier'--><!--/ko-->
                                     </div>
@@ -647,7 +646,7 @@
                         <label class="title-product-main text-no-bold block-display mb15">Kênh bán hàng</label>
                         <div class="form-group ws-nm">
                             <select class="form-control pl10"
-                                    data-bind="options: OrderSources, optionsText: 'Value', optionsValue: 'Key', value: SelectedSource">
+                                    name="channel">
                                 <option value="web">web</option>
                                 <option value="pos">pos</option>
                                 <option value="fb">fb</option>

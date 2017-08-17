@@ -38,4 +38,17 @@ class Stock extends AppModel {
 			'order' => ''
 		)
 	);
+
+	public function out($store_id,$product_id,$quantity,$order_id){
+		
+			$data = [];
+			$data['product_id'] = $product_id;
+			$data['store_id'] = $store_id;
+			$data['type'] = 0;
+			$data['quantity'] = -intval($quantity);
+			$data['order_id'] = $order_id;
+			//var_dump($data);die();
+			$this->save($data);
+
+	}
 }

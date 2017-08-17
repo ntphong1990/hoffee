@@ -75,64 +75,58 @@ $(document).ready(function() {
 
 });
 </script>
-<h2>Products</h2>
+
 
 <div class="row">
 
     <?php echo $this->Form->create('Product', array()); ?>
     <?php echo $this->Form->hidden('search', array('value' => 1)); ?>
 
-    <div class="col-lg-1">
-        <?php echo $this->Form->input('active', array('label' => false, 'class' => 'form-control', 'empty' => 'All Status', 'options' => array(1 => 'Active', 0 => 'Not Active'), 'selected' => $all['active'])); ?>
+    <div class="row col-lg-4">
+          <div class="col-lg-6 col-sm-12">
+        <?php echo $this->Form->input('active', array('label' => false, 'class' => 'selectpicker', 'empty' => 'Tất cả', 'options' => array(1 => 'Active', 0 => 'Not Active'), 'selected' => $all['active'])); ?>
     </div>
 
-    <div class="col-lg-1">
-        <?php echo $this->Form->input('brand_id', array('label' => false, 'class' => 'form-control', 'empty' => 'Brand', 'selected' => $all['brand_id'])); ?>
-    </div>
+      <div class="col-lg-6 col-sm-12">
+        <?php echo $this->Form->input('brand_id', array('label' => false, 'class' => 'selectpicker', 'empty' => 'Nhóm', 'selected' => $all['brand_id'])); ?>
+   </div>
 
-    <div class="col-lg-1">
-        <?php echo $this->Form->input('filter', array(
+    
+       
+
+   </div>
+
+    <div class="row col-lg-4 col-sm-12">
+        <div class="col-lg-6 col-sm-12">
+         <?php echo $this->Form->input('filter', array(
             'label' => false,
-            'class' => 'form-control',
+            'class' => 'selectpicker',
             'options' => array(
-                'name' => 'Name',
-                'description' => 'Description',
-                'price' => 'Price',
-                'created' => 'Created',
+                'name' => 'Tên',
+                'price' => 'Giá'
             ),
             'selected' => $all['filter']
-        )); ?>
-
+)); ?>
     </div>
-
-    <div class="col-lg-2">
-        <?php echo $this->Form->input('name', array('label' => false, 'id' => false, 'class' => 'form-control', 'value' => $all['name'])); ?>
-
+    <div class="col-lg-6">
+        <?php echo $this->Form->input('name', array('label' => false, 'id' => false, 'class' => 'form-control col-lg-6', 'value' => $all['name'])); ?>
+    </div>
     </div>
 
     <div class="col-lg-4">
-        <?php echo $this->Form->button('Search', array('class' => 'btn btn-default')); ?>
+        <?php echo $this->Form->button('Tìm kiếm', array('class' => 'btn btn-default')); ?>
         &nbsp; &nbsp;
-        <?php echo $this->Html->link('Reset Search', array('controller' => 'products', 'action' => 'reset', 'admin' => true), array('class' => 'btn btn-danger')); ?>
-
+        
+        <?php echo $this->Html->link('Thêm sản phẩm', array('action' => 'add'), array('class' => 'btn btn-default')); ?>
     </div>
 
     <?php echo $this->Form->end(); ?>
 
 </div>
 
-<br />
 
-<?php echo $this->element('pagination-counter'); ?>
 
-<?php echo $this->element('pagination'); ?>
-
-<br />
-
-<table data-toggle="table" data-url="tables/data1.json" data-show-refresh="true"
-       data-show-toggle="true" data-show-columns="true" data-search="true"
-       data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name"
-       data-sort-order="desc" class="table table-hover">
+<table class="table">
     <tr>
         <th><?php echo $this->Paginator->sort('image'); ?></th>
 <!--        <th>--><?php //echo $this->Paginator->sort('category_id'); ?><!--</th>-->
@@ -181,12 +175,3 @@ $(document).ready(function() {
 
 <?php echo $this->element('pagination'); ?>
 
-<br />
-<br />
-
-<h3>Actions</h3>
-
-<?php echo $this->Html->link('New Product', array('action' => 'add'), array('class' => 'btn btn-default')); ?>
-
-<br />
-<br />

@@ -7,13 +7,13 @@
                 resize: true,
                 data: [
                                 <?php foreach($data as $value){ ?>
-                                    { m: '<?php echo $value[0]['year'].'-'.$value[0]['month'];?>', a: <?php echo $value[0]['sum'];?>, b: 90 },
+                                    { m: '<?php echo $value[0]['year'].'-'.$value[0]['month'];?>', a: <?php echo $value[0]['sum'];?> },
                                 <?php } ?>	
                     
                 ],
                 xkey: 'm',
-                ykeys: ['a', 'b'],
-                labels: ['Income', ''],
+                ykeys: ['a'],
+                labels: ['Income'],
                 lineColors: ['#88C4EE', '#ccc']
             });
 		}

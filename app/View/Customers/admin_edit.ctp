@@ -24,13 +24,18 @@
 		<?php } ?>
 	}
 
-$( document ).ready(function() {
+	function pageLoad(){
     autoHCM();
-    $('#inputbirthday').datepicker({format: 'yyyy-mm-dd'
+    	$('#datetimepicker1').datetimepicker({
+            format: 'YYYY-MM-DD'
     });
-});
+		
+	}
+	window.onload = function(){
+			 pageLoad();
+	}
 </script>
-<br />
+
 
 
 
@@ -38,34 +43,30 @@ $( document ).ready(function() {
 <div class="outer">
 	<div class="inner" id="viewareaid">
 
-		<div data-bind="template: { name: 'CustomerEditTmpl', data: mvedit }">
-			<div data-bind="with: CustomerEdit">
-				<div class="pageheader two-actions-header-mobile">
-					<div class="col-xs-12">
-						<div class="breadcrumb-new">
-							<svg class="svg-next-icon svg-next-icon-size-20 svg-next-icon-header hidden-xs">
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#next-customers"></use>
-							</svg>
-							<span><a class="back-list hidden-xs" data-bind="attr: { href: LinkToList }" href="/admin/customer#/list">Quản lý khách hàng</a></span>
+		<div>
+			<div>
+			
+					<div class="row head-action">
+						<div class="col-sm-12 col-lg-6">
+						
+							<span><a class="back-list hidden-xs" href="/admin/customer/list">Quản lý khách hàng</a></span>
 							<span class="border-row hidden-xs">/ </span>
-							<span class="active" data-bind="text: Id() ? FullName : 'Thêm khách hàng'"><?php echo $this->request->data['Customer']['name'].' '.$this->request->data['Customer']['lastname'];?></span>
-							<div class="inline-vertical-top">
-
-							</div>
+							<span class="active"><?php echo $this->request->data['Customer']['name'].' '.$this->request->data['Customer']['lastname'];?></span>
+						
 						</div>
-						<div class="header__primary-actions">
+						<div class="col-sm-12 col-lg-6">
 							<!--ko if : $parent.IsVisible() == true-->
-							<button type="submit" class="btn btn-primary">Cập nhật</button>
+							<button type="submit" class="btn btn-primary right">Cập nhật</button>
 							<!--/ko-->
 						</div>
 
 					</div>
-				</div>
+			
 				<div class="one-row-actions">
 					<div class="max-width-1036">
 						<form class="form-horizontal" role="form">
 							<!-- ko if: $parent.HasError() && $parent.ErrorList().length > 0 --><!-- /ko -->
-							<div class="flexbox-grid no-pd-none">
+							<div class="widget">
 								<div class="flexbox-content flexbox-text-left">
 									<h4>Thông tin chung</h4>
 									<p class="note">Một số thông tin cơ bản của khách hàng .</p>
@@ -91,13 +92,13 @@ $( document ).ready(function() {
 										</div>
 										<div class="flexbox-grid-form flexbox-grid-form-no-outside-padding mb15">
 											<div class="flexbox-grid-form-item">
-												<label class="text-title-field" for="inputbirthday">Ngày sinh</label>
-												<input id="inputbirthday" type="text" placeholder="Chọn ngày..." class="form-control" name="data[Customer][birthday]" value="<?php echo $this->request->data['Customer']['birthday'];?>">
+												<label class="text-title-field" for="datetimepicker1">Ngày sinh</label>
+												<input id="datetimepicker1" type="text" placeholder="Chọn ngày..." class="form-control" name="data[Customer][birthday]" value="<?php echo $this->request->data['Customer']['birthday'];?>">
 											</div>
 											<div class="flexbox-grid-form-item"></div>
 										</div>
 										<div class="flexbox-grid-form flexbox-grid-form-no-outside-padding mb15">
-											<div class="flexbox-grid-form-item">
+											<div class="head-action">
 												<label class="text-title-field" for="inputgender">Giới tính</label>
 												<input type="radio" <?php if($this->request->data['Customer']['gender'] == 1) echo 'checked';?> class=" hrv-radio" value="1" name="IsMale" id="IsMale1">
 												Nam
@@ -106,20 +107,11 @@ $( document ).ready(function() {
  Nữ</span>
 											</div>
 										</div>
-										<div class="flexbox-grid-form flexbox-grid-form-no-outside-padding">
-											<div class="flexbox-grid-form-item">
-												<label class="text-title-field label-checkbox cursor-pointer mb0">
-
-													<input type="checkbox" class="hrv-checkbox" value="" name="">
-													Nhận email quảng cáo
-												</label>
-											</div>
-											<div class="flexbox-grid-form-item"></div>
-										</div>
+										
 									</div>
 								</div>
 							</div>
-							<div class="flexbox-grid no-pd-none">
+							<div class="widget">
 								<div class="flexbox-content flexbox-text-left">
 									<h4>Địa chỉ</h4>
 									<p class="note">Địa chỉ chính của khách hàng này.</p>
@@ -163,7 +155,7 @@ $( document ).ready(function() {
 									</div>
 								</div>
 							</div>
-							<div class="flexbox-grid no-pd-none">
+							<div class="widget">
 								<div class="flexbox-content flexbox-text-left">
 									<h4>Ghi chú</h4>
 									<p class="note">Nhập ghi chú về khách hàng.</p>
@@ -171,7 +163,7 @@ $( document ).ready(function() {
 								<div class="flexbox-content flexbox-right flexbox-text-right">
 									<div class="wrapper-content pd-all-20">
 										<label class="text-title-field">Ghi chú</label>
-										<pre class="textareadiv common"><br class="lbr"></pre><textarea style="resize: none; height: 59px;" class="form-control textarea-auto-height" placeholder="Nhập ghi chú về khách hàng..." rows="3" name="data[Customer][note]"><?php echo $this->request->data['Customer']['note'];?></textarea>
+										<textarea style="resize: none; height: 59px;" class="form-control textarea-auto-height" placeholder="Nhập ghi chú về khách hàng..." rows="3" name="data[Customer][note]"><?php echo $this->request->data['Customer']['note'];?></textarea>
 									</div>
 								</div>
 							</div>

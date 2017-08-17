@@ -20,7 +20,7 @@ class FinancialsController extends AppController {
  *
  * @return void
  */
-	public function index() {
+	public function admin_list() {
 		$this->Financial->recursive = 0;
 		$this->set('financials', $this->Paginator->paginate());
 	}

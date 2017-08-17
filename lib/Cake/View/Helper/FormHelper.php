@@ -1334,7 +1334,7 @@ class FormHelper extends AppHelper {
 			return array();
 		}
 
-		$divOptions = array('class' => 'flexbox-grid-form-item');
+		$divOptions = array('class' => 'form-group row');
 		$divOptions = $this->addClass($divOptions, $options['type']);
 		if (is_string($div)) {
 			$divOptions['class'] = $div;

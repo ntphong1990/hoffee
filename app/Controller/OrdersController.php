@@ -103,28 +103,28 @@ class OrdersController extends AppController {
         $order = $this->Order->create();
         $order['Order']['first_name'] = $customer['Customer']['name'];
         $order['Order']['customer_id'] = $customer['Customer']['id'];
-      $order['Order']['last_name'] = $customer['Customer']['lastname'];
-      $order['Order']['email'] = $customer['Customer']['email'];
-      $order['Order']['phone'] = $customer['Customer']['phone'];
-      $order['Order']['billing_address'] = $customer['Customer']['address'];
-      $order['Order']['billing_address2'] = '';
-      $order['Order']['billing_city'] = '';
-      $order['Order']['note'] = '';
-      $order['Order']['direct'] = '1';
-      $order['Order']['shipping_address'] = '';
-      $order['Order']['shipping_city'] = '';
-      $order['Order']['order_type'] = 'direct';
-      $order['Order']['order_item_count'] = 1;
-      $order['Order']['quantity'] = 1;
-      $order['Order']['weight'] = '0';
-      $order['Order']['subtotal'] = $this->request->data['subtotal'];
-      $order['Order']['voucher'] = 0;
-      $order['Order']['code'] = '';
-      $order['Order']['discount'] = 0;
+        $order['Order']['last_name'] = $customer['Customer']['lastname'];
+        $order['Order']['email'] = $customer['Customer']['email'];
+        $order['Order']['phone'] = $customer['Customer']['phone'];
+        $order['Order']['billing_address'] = $customer['Customer']['address'];
+        $order['Order']['billing_address2'] = '';
+        $order['Order']['billing_city'] = '';
+        $order['Order']['note'] = '';
+        $order['Order']['direct'] = '1';
+        $order['Order']['shipping_address'] = '';
+        $order['Order']['shipping_city'] = '';
+        $order['Order']['order_type'] = 'direct';
+        $order['Order']['order_item_count'] = 1;
+        $order['Order']['quantity'] = 1;
+        $order['Order']['weight'] = '0';
+        $order['Order']['subtotal'] = $this->request->data['subtotal'];
+        $order['Order']['voucher'] = 0;
+        $order['Order']['code'] = '';
+        $order['Order']['discount'] = 0;
         $order['Order']['note'] = $this->request->data['note'];
         $order['Order']['shipping'] = $this->request->data['shipping'];
-      $order['Order']['total'] = $this->request->data['total'];
-      $order['Order']['status'] = $this->request->data['status'];
+        $order['Order']['total'] = $this->request->data['total'];
+        $order['Order']['status'] = $this->request->data['status'];
 
         $orderItems = json_decode($this->request->data['orderitem']);
         $order['OrderItem'] = array();
@@ -235,6 +235,11 @@ class OrdersController extends AppController {
         $log = $this->Log->find('all',array('conditions' => array('item_id' => $id),'order' => array('created' => 'ASC')));
         $this->set('logs',$log);
 
+
+        $this->loadModel('Store');
+        $stores = $this->Store->find('all');
+        $this->set('stores',$stores);
+
         if ($this->request->is('post') || $this->request->is('put')) {
            // var_dump( $this->request->data);
             $mes = '';
@@ -246,6 +251,7 @@ class OrdersController extends AppController {
                 $customer['Financial']['note'] = 'Đơn đặt hàng từ '.$order['Order']['first_name'];
                 $customer['Financial']['kind'] = 1;
                 $customer['Financial']['detail'] = $id;
+                $customer['Financial']['user_id'] = $order['Order']['customer_id'];
                 $this->Financial->save($customer);
                 $mes = "+".$this->request->data['Order']['money'].'VND';
                 $this->Log->editOrder( $order['Order']['id'],$mes);
@@ -254,9 +260,18 @@ class OrdersController extends AppController {
             if($fee + intval($this->request->data['Order']['money']) >= $order['Order']['total']){
                 $order['Order']['status'] = 1;
             }
+            // var_dump($this->request->data['Order']['store_id']);die();
             if( $order['Order']['shipping_status'] !=  $this->request->data['Order']['shipping_status']) {
 
                 $mes = $this->ShippingStatus->find('first',array('conditions' => array('id' => $this->request->data['Order']['shipping_status'])))['ShippingStatus']['status'];
+                $this->loadModel('Stock');
+               
+                if($this->request->data['Order']['shipping_status'] == 2){
+                    foreach($order['OrderItem'] as $orderItem){
+                        $stock = new Stock();                   
+                        $stock->out($this->request->data['Order']['store_id'],$orderItem['product_id'],$orderItem['quantity'],$order['Order']['id']);
+                    }
+                }
                 $this->Log->editOrder( $order['Order']['id'],$mes);
             }
             $order['Order']['shipping_status'] = $this->request->data['Order']['shipping_status'];

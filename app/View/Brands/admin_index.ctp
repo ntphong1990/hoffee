@@ -1,6 +1,6 @@
 <h2>Brands</h2>
 
-<table class="table-striped table-bordered table-condensed table-hover">
+<table class="table">
     <tr>
         <th><?php echo $this->Paginator->sort('id'); ?></th>
         <th><?php echo $this->Paginator->sort('name'); ?></th>

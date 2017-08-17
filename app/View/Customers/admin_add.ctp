@@ -26,41 +26,45 @@
 	
 	
 	
-	$( document ).ready(function() {
-		autoHCM();
-		$('#inputbirthday').datepicker({format: 'yyyy-mm-dd'
-		});
-	});
 
+	window.onload = function(){
+		pageLoad();
+	}
+	function pageLoad(){
+		autoHCM();
+		$('#datetimepicker1').datetimepicker({
+            format: 'YYYY/MM/DD'
+    });
+	}
 </script>
 <?php echo $this->Form->create('Customer'); ?>
-<div class="outer">
+<div class="">
 	<div class="inner" id="viewareaid">
-
-		<div data-bind="template: { name: 'CustomerEditTmpl', data: mvedit }">
-			<div data-bind="with: CustomerEdit">
-				<div class="pageheader two-actions-header-mobile">
-					<div class="col-xs-12">
-						<div class="breadcrumb-new">
-							<svg class="svg-next-icon svg-next-icon-size-20 svg-next-icon-header hidden-xs">
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#next-customers"></use>
-							</svg>
-							<span><a class="back-list hidden-xs" data-bind="attr: { href: LinkToList }" href="/admin/customer#/list">Thêm khách hàng</a></span>
+				<div class="row head-action">
+						<div class="col-sm-12 col-lg-6">
+						
+							<span><a class="back-list hidden-xs" href="/admin/customer/list">Quản lý khách hàng</a></span>
 							<span class="border-row hidden-xs">/ </span>
-							<span class="active" data-bind="text: Id() ? FullName : 'Thêm khách hàng'"></span>
-							<div class="inline-vertical-top">
-
-							</div>
+							<span class="active">Tạo mới</span>
+						
 						</div>
-						<div class="header__primary-actions">
-							<!--ko if : $parent.IsVisible() == true-->
-							<button type="submit" class="btn btn-primary">Thêm mới</button>
-							<!--/ko-->
+						<div class="col-sm-12 col-lg-6">
+								<button type="submit" class="btn btn-primary right">Thêm mới</button>
 						</div>
-						<div class="header__secondary-actions">
-							<!--ko if : $parent.IsVisible() == true-->
 
-							<!--/ko-->
+					</div>
+				
+		<div data-bind="template: { name: 'CustomerEditTmpl', data: mvedit }">
+			<div class="widget">
+				<div class="pageheader two-actions-header-mobile">
+					<div class="row">
+				
+						<div class="col-sm-8">
+									<h4>Thông tin chung</h4>
+								
+						</div>
+						<div class="col-sm-4">
+							
 						</div>
 					</div>
 				</div>
@@ -69,10 +73,7 @@
 						<form class="form-horizontal" role="form">
 							<!-- ko if: $parent.HasError() && $parent.ErrorList().length > 0 --><!-- /ko -->
 							<div class="flexbox-grid no-pd-none">
-								<div class="flexbox-content flexbox-text-left">
-									<h4>Thông tin chung</h4>
-									<p class="note">Một số thông tin cơ bản của khách hàng .</p>
-								</div>
+								
 								<div class="flexbox-content flexbox-right flexbox-text-right">
 									<div class="wrapper-content pd-all-20">
 										<div class="flexbox-grid-form flexbox-grid-form-no-outside-padding mb15">
@@ -94,12 +95,12 @@
 										</div>
 										<div class="flexbox-grid-form flexbox-grid-form-no-outside-padding mb15">
 											<div class="flexbox-grid-form-item">
-												<label class="text-title-field" for="inputbirthday">Ngày sinh</label>
-												<input id="inputbirthday" type="text" placeholder="Chọn ngày..." class="form-control" name="data[Customer][birthday]">
+												<label class="text-title-field" for="datetimepicker1">Ngày sinh</label>
+												<input id="datetimepicker1" type="text" placeholder="Chọn ngày..." class="form-control" name="data[Customer][birthday]">
 											</div>
 											<div class="flexbox-grid-form-item"></div>
 										</div>
-										<div class="flexbox-grid-form flexbox-grid-form-no-outside-padding mb15">
+										<div class="flexbox-grid-form  mb15">
 											<div class="flexbox-grid-form-item">
 												<label class="text-title-field" for="inputgender">Giới tính</label>
 												<input type="radio" class=" hrv-radio" value="1" name="IsMale" id="IsMale1">
@@ -109,16 +110,7 @@
  Nữ</span>
 											</div>
 										</div>
-										<div class="flexbox-grid-form flexbox-grid-form-no-outside-padding">
-											<div class="flexbox-grid-form-item">
-												<label class="text-title-field label-checkbox cursor-pointer mb0">
-
-													<input type="checkbox" class="hrv-checkbox" value="" name="">
-													Nhận email quảng cáo
-												</label>
-											</div>
-											<div class="flexbox-grid-form-item"></div>
-										</div>
+										
 									</div>
 								</div>
 							</div>
@@ -173,8 +165,7 @@
 								</div>
 								<div class="flexbox-content flexbox-right flexbox-text-right">
 									<div class="wrapper-content pd-all-20">
-										<label class="text-title-field">Ghi chú</label>
-										<pre class="textareadiv common"><br class="lbr"></pre><textarea style="resize: none; height: 59px;" class="form-control textarea-auto-height" placeholder="Nhập ghi chú về khách hàng..." rows="3" name="data[Customer][note]"></textarea>
+										<textarea style="resize: none; height: 59px;" class="form-control textarea-auto-height" placeholder="Nhập ghi chú về khách hàng..." rows="3" name="data[Customer][note]"></textarea>
 									</div>
 								</div>
 							</div>

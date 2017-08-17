@@ -88,6 +88,11 @@ class AppController extends Controller {
 ////////////////////////////////////////////////////////////
 
     public function isAuthorized($user) {
+        if( $user['role'] == 'staff' && ($this->params['controller'] == 'orders' 
+        || $this->params['controller'] == 'customers'
+        || $this->params['controller'] == 'stocks')){
+            return true;
+        }
         if (($this->params['prefix'] === 'admin') && ($user['role'] != 'admin')) {
             echo '<a href="/users/logout">Logout</a><br />';
             die('Invalid request for '. $user['role'] . ' user.');

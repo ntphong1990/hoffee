@@ -13,9 +13,78 @@
     <meta name="author" content="">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <script>
-        
-    </script>
+   <script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/jquery/dist/jquery.min.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/jquery-pjax/jquery.pjax.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/tether/dist/js/tether.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/bootstrap/js/dist/util.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/bootstrap/js/dist/collapse.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/bootstrap/js/dist/dropdown.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/bootstrap/js/dist/button.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/bootstrap/js/dist/tooltip.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/bootstrap/js/dist/alert.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/slimScroll/jquery.slimscroll.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/widgster/widgster.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/pace.js/pace.js" data-pace-options='{ "target": ".content-wrap", "ghostTime": 1000 }'></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/jquery-touchswipe/jquery.touchSwipe.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/js/bootstrap-fix/button.js"></script>
+
+<!-- common app js -->
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/js/settings.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/js/app.js"></script>
+
+<!-- page specific libs -->
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/underscore/underscore.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/jquery.sparkline/index.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/jquery.sparkline/index.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/d3/d3.min.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/rickshaw/rickshaw.min.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/raphael/raphael-min.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/jQuery-Mapael/js/jquery.mapael.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/jQuery-Mapael/js/maps/usa_states.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/jQuery-Mapael/js/maps/world_countries.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/bootstrap/js/dist/popover.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/bootstrap_calendar/bootstrap_calendar/js/bootstrap_calendar.min.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/jquery-animateNumber/jquery.animateNumber.min.js"></script>
+
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/jquery.sparkline/index.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/d3/d3.min.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/rickshaw/rickshaw.min.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/raphael/raphael-min.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/flot.animator/jquery.flot.animator.min.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/flot/jquery.flot.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/flot-orderBars/js/jquery.flot.orderBars.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/flot/jquery.flot.selection.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/flot/jquery.flot.time.js"></script>
+
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/nvd3/build/nv.d3.min.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/morris.js/morris.min.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+
+<!-- page specific js -->
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/js/index.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/js/form-elements.js"></script>
+
+<!-- page specific libs -->
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/bootstrap/js/dist/modal.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/jquery-autosize/jquery.autosize.min.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/bootstrap3-wysihtml5/lib/js/wysihtml5-0.3.0.min.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/bootstrap3-wysihtml5/src/bootstrap3-wysihtml5.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/select2/select2.min.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/switchery/dist/switchery.min.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/moment/min/moment.min.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/jasny-bootstrap/js/inputmask.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/jasny-bootstrap/js/fileinput.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/holderjs/holder.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/dropzone/dist/min/dropzone.min.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/markdown/lib/markdown.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/bootstrap-markdown/js/bootstrap-markdown.js"></script>
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/seiyria-bootstrap-slider/dist/bootstrap-slider.min.js"></script>
+
+<!-- page specific js -->
+<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/js/form-elements.js"></script>
 </head>
 <body id="sidebar">
 
@@ -53,12 +122,12 @@
                     <span class="icon">
                         <i class="fa fa-desktop"></i>
                     </span>
-                    Dashboard
+                    Tổng quan
                     <i class="toggle fa fa-angle-down"></i>
                 </a>
                 <ul id="sidebar-dashboard" class="collapse in">
-                    <li class="active"><a href="<?php echo Configure::read('Settings.DOMAIN');?>/admin/financials/index">Dashboard</a></li>
-                    <!-- <li><a href="widgets.html">Widgets</a></li> -->
+                    <li class="active"><a href="<?php echo Configure::read('Settings.DOMAIN');?>/admin/financials">Thống kê</a></li>
+                    <li class="active"><a href="<?php echo Configure::read('Settings.DOMAIN');?>/admin/financials/list">Thu Chi</a></li>
                 </ul>
             </li>
             <li>
@@ -66,7 +135,7 @@
                     <span class="icon">
                         <i class="fa fa-user"></i>
                     </span>
-                    Staft
+                    Nhân viên
                 </a>
             </li>
             <li>
@@ -74,12 +143,12 @@
                     <span class="icon">
                         <i class="fa fa-users"></i>
                     </span>
-                    Customers
+                    Khách hàng
                     <i class="toggle fa fa-angle-down"></i>
                 </a>
                 <ul id="sidebar-customer" class="collapse in">
-                    <li><a href="<?php echo Configure::read('Settings.DOMAIN');?>/admin/customers/index">Customers</a></li>
-                    <li><a href="<?php echo Configure::read('Settings.DOMAIN');?>/admin/customers/add">Create Customer</a></li>
+                    <li><a href="<?php echo Configure::read('Settings.DOMAIN');?>/admin/customers/index">Danh sách</a></li>
+                    <li><a href="<?php echo Configure::read('Settings.DOMAIN');?>/admin/customers/add">Tạo mới</a></li>
                 </ul>
             </li>
             <li>
@@ -87,16 +156,16 @@
                     <span class="icon">
                         <i class="fa fa-money"></i>
                     </span>
-                    Sales
+                    Bán hàng
                     <sup class="text-warning fw-semi-bold">
                         new
                     </sup>
                     <i class="toggle fa fa-angle-down"></i>
                 </a>
                 <ul id="sidebar-order" class="collapse in">
-                    <li><a href="<?php echo Configure::read('Settings.DOMAIN');?>/admin/orders/index">Order</a></li>
-                     <li><a href="<?php echo Configure::read('Settings.DOMAIN');?>/admin/orders/create">Create Order</a></li>
-                    <li><a href="<?php echo Configure::read('Settings.DOMAIN');?>/admin/orders/temp">Draft</a></li>
+                    <li><a href="<?php echo Configure::read('Settings.DOMAIN');?>/admin/orders/index">Danh sách</a></li>
+                     <li><a href="<?php echo Configure::read('Settings.DOMAIN');?>/admin/orders/create">Tạo mới</a></li>
+                    <li><a href="<?php echo Configure::read('Settings.DOMAIN');?>/admin/orders/temp">Nháp</a></li>
                 </ul>
                
             </li>
@@ -106,12 +175,27 @@
                     <span class="icon">
                         <i class="fa fa-home"></i>
                     </span>
-                    Storage
+                    Kho
                     <i class="toggle fa fa-angle-down"></i>
                 </a>
                 <ul id="sidebar-storage" class="collapse in">
-                    <li><a href="<?php echo Configure::read('Settings.DOMAIN');?>/admin/stocks/index">Status</a></li>
-                    <li><a href="<?php echo Configure::read('Settings.DOMAIN');?>/admin/stocks/add">Input</a></li>
+                    <li><a href="<?php echo Configure::read('Settings.DOMAIN');?>/admin/stocks/index">Trạng thái</a></li>
+                    <li><a href="<?php echo Configure::read('Settings.DOMAIN');?>/admin/stocks/add">Nhập kho</a></li>
+                </ul>
+               
+            </li>
+
+            <li>
+                <a href="#sidebar-product" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fa fa-home"></i>
+                    </span>
+                    Sản phẩm
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-product" class="collapse in">
+                    <li><a href="<?php echo Configure::read('Settings.DOMAIN');?>/admin/brands/index">Nhóm sản phẩm</a></li>
+                    <li><a href="<?php echo Configure::read('Settings.DOMAIN');?>/admin/products/index">Sản phẩm</a></li>
                 </ul>
                
             </li>
@@ -630,55 +714,6 @@
 </div>
 
 <!-- common libraries. required for every page-->
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/jquery/dist/jquery.min.js"></script>
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/jquery-pjax/jquery.pjax.js"></script>
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/tether/dist/js/tether.js"></script>
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/bootstrap/js/dist/util.js"></script>
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/bootstrap/js/dist/collapse.js"></script>
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/bootstrap/js/dist/dropdown.js"></script>
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/bootstrap/js/dist/button.js"></script>
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/bootstrap/js/dist/tooltip.js"></script>
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/bootstrap/js/dist/alert.js"></script>
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/slimScroll/jquery.slimscroll.js"></script>
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/widgster/widgster.js"></script>
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/pace.js/pace.js" data-pace-options='{ "target": ".content-wrap", "ghostTime": 1000 }'></script>
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/jquery-touchswipe/jquery.touchSwipe.js"></script>
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/js/bootstrap-fix/button.js"></script>
 
-<!-- common app js -->
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/js/settings.js"></script>
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/js/app.js"></script>
-
-<!-- page specific libs -->
-<script id="test" src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/underscore/underscore.js"></script>
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/jquery.sparkline/index.js"></script>
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/jquery.sparkline/index.js"></script>
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/d3/d3.min.js"></script>
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/rickshaw/rickshaw.min.js"></script>
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/raphael/raphael-min.js"></script>
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/jQuery-Mapael/js/jquery.mapael.js"></script>
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/jQuery-Mapael/js/maps/usa_states.js"></script>
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/jQuery-Mapael/js/maps/world_countries.js"></script>
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/bootstrap/js/dist/popover.js"></script>
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/bootstrap_calendar/bootstrap_calendar/js/bootstrap_calendar.min.js"></script>
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/jquery-animateNumber/jquery.animateNumber.min.js"></script>
-
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/jquery.sparkline/index.js"></script>
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/d3/d3.min.js"></script>
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/rickshaw/rickshaw.min.js"></script>
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/raphael/raphael-min.js"></script>
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/flot.animator/jquery.flot.animator.min.js"></script>
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/flot/jquery.flot.js"></script>
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/flot-orderBars/js/jquery.flot.orderBars.js"></script>
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/flot/jquery.flot.selection.js"></script>
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/flot/jquery.flot.time.js"></script>
-
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/nvd3/build/nv.d3.min.js"></script>
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/morris.js/morris.min.js"></script>
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/vendor/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
-
-<!-- page specific js -->
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/js/index.js"></script>
-<script src="<?php echo Configure::read('Settings.DOMAIN');?>/sass/js/form-elements.js"></script>
 </body>
 </html>

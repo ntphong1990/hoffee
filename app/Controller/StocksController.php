@@ -34,7 +34,7 @@ class StocksController extends AppController {
                 'conditions' => array(
 
                 ),
-                'fields' => 'Stock.id, product_id, store_id, type, SUM(quanlity) as total,Stock.note,Product.name',
+                'fields' => 'Stock.id, product_id, store_id, type, SUM(quantity) as total,Stock.note,Product.name',
                 'group' => ['product_id']
             )
         );

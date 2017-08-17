@@ -37,6 +37,13 @@ class UsersController extends AppController {
                         'manager' => false,
                         'admin' => true
                     ));
+                }elseif ($this->Auth->user('role') == 'staff') {
+                    return $this->redirect(array(
+                        'controller' => 'orders',
+                        'action' => 'index',
+                        'manager' => false,
+                        'admin' => true
+                    ));
                 } else {
                     $this->Flash->danger('Login is incorrect');
                 }

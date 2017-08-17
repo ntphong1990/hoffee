@@ -11,7 +11,7 @@
 			<th><?php echo $this->Paginator->sort('product_id'); ?></th>
 
 <!--			<th>--><?php //echo $this->Paginator->sort('type'); ?><!--</th>-->
-			<th><?php echo $this->Paginator->sort('quanlity'); ?></th>
+			<th><?php echo $this->Paginator->sort('quantity'); ?></th>
 			<th><?php echo $this->Paginator->sort('note'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>

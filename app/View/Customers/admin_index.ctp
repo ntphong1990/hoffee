@@ -50,11 +50,11 @@
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('name'); ?></th>
-			<th><?php echo $this->Paginator->sort('lastname'); ?></th>
+			
 		<th><?php echo $this->Paginator->sort('phone'); ?></th>
 
 		<th><?php echo $this->Paginator->sort('email'); ?></th>
-			<th><?php echo $this->Paginator->sort('birthday'); ?></th>
+		
 			<th><?php echo $this->Paginator->sort('address'); ?></th>
 
 			<th class="actions"><?php echo __('Actions'); ?></th>
@@ -64,17 +64,17 @@
 	<?php foreach ($customers as $customer): ?>
 	<tr>
 		<td><?php echo h($customer['Customer']['id']); ?>&nbsp;</td>
-		<td><?php echo h($customer['Customer']['name']); ?>&nbsp;</td>
-		<td><?php echo h($customer['Customer']['lastname']); ?>&nbsp;</td>
+		<td><?php echo h($customer['Customer']['lastname'].' '.$customer['Customer']['name']); ?>&nbsp;</td>
+		
 		<td><?php echo h($customer['Customer']['phone']); ?>&nbsp;</td>
 
 		<td><?php echo h($customer['Customer']['email']); ?>&nbsp;</td>
-		<td><?php echo h($customer['Customer']['birthday']); ?>&nbsp;</td>
+	
 		<td><?php echo h($customer['Customer']['address']); ?>&nbsp;</td>
 
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $customer['Customer']['id']),array('class' => 'btn btn-default btn-xs')); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $customer['Customer']['id']),array('class' => 'btn btn-default btn-xs')); ?>
+			
 		</td>
 	</tr>
 <?php endforeach; ?>

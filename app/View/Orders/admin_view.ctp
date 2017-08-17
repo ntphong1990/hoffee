@@ -25,6 +25,9 @@
                         <span class="active">#<?php echo $order['Order']['id'];?></span>
                         <span class="border-row hidden-xs text-small inline-vertical-top">/ </span>
                         <span class="text-small inline-vertical-top hidden-xs"><?php echo $order['Order']['created'];?></span>
+                       
+                        <button type="submit" class="btn btn-primary" style="float:right;margin-left:5px" >Lưu đơn hàng</button>
+                       
                         <button type="button" class="btn btn-default ml10" style="float:right"><i class="fa fa-print"></i> In</button>
                    </div>
                 </div>
@@ -153,6 +156,22 @@
                                             <?php } ?>
                                             </tr>
                                             <tr class="bold-light">
+                                                 <td  colspan="3" class="text-right p-sm-r">Kho</td>
+                                                  <td class="text-right p-sm-r bold-light" id="totalOwe">
+                                                       <div class="">
+                                                    <select class="form-control" data-style="btn-secondary"
+                                                            data-width="auto"
+                                                            tabindex="-1" name="data[Order][store_id]" id="simple-select">
+                                                            <?php foreach($stores as $value){ ?>
+                                                                <option class="dropdown-item" value="<?php echo $value['Store']['id'];?>"><?php echo $value['Store']['name'];?></option>
+                                                            <?php } ?>
+                                                    </select>
+                                                    <span class="help-block">Chọn kho</span>
+                                                </div>
+                                                  </td>
+                                               
+                                            </tr>
+                                            <tr class="bold-light">
                                                 <td  colspan="3" class="text-right p-sm-r"><a class="hover-underline"><i
                                                         ></i> Trạng thái</a></td>
                                                 <td class="text-right p-sm-r bold-light" id="totalOwe">
@@ -164,7 +183,7 @@
                                                     </select>
 
                                                 </td>
-                                                <td> ₫</td>
+                                                
                                             </tr>
                                             </tbody>
 
@@ -191,16 +210,14 @@
                                         <textarea name="data[Order][note]" style="resize: none" class="form-control mt15 textarea-auto-height" rows="4" placeholder="Thêm ghi chú cho đơn hàng…"><?php echo $order['Order']['note'];?></textarea>
                                     </div>
                                     <div data-bind="foreach:NoteAttributes"></div>
-                                    <div class="panel-footer text-right p-sm-r">
-                                        <button type="submit" class="btn btn-default">Lưu đơn hàng</button>
-                                    </div>
+                                    
                                 </div>
                                 <?php echo $this->Form->end();?>
 
 
 
                                 <div class="mt20 mb20">
-                                    <div data-bind="commentLog: CommentLog">
+                                    <div>
                                         <div class="comment-log ws-nm">
                                             <!-- ko if: !IsSmallVersion() -->
                                             <div class="comment-log-title">
@@ -229,16 +246,10 @@
 
 
                                             <?php } ?>
-
-
-
-
-
                                                 </div>
-                                                <!-- ko if: Total() > PageSize() --><!-- /ko -->
+                                                
                                             </div>
-                                            <!-- /ko -->
-                                            <!-- ko if: IsSmallVersion() --><!-- /ko -->
+                            
                                         </div>
 
                                     </div>
@@ -262,30 +273,28 @@
                                                 <img class="thumb-image radius-cycle" src="https://secure.gravatar.com/avatar/2efd8534a82578a162535ce9abd0224c.jpg?s=40&amp;d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2F18f9f20ec1a7be8020924ce0048b6ef2.jpg%3Fs%3D40"></div>
                                             
                                                 <p>
-                                                    <span id="customerName" class="pre-line"><?php echo h($order['Order']['first_name']); ?></span>
+                                                    <strong id="customerName"><?php echo h($order['Order']['first_name'].' '.$order['Order']['last_name']); ?></strong>
                                                 </p>
                                                 <p>
                                                     <i class="fa fa-check-square-o"></i>
-                                                    <span id="customerAddress"><?php echo h($order['Order']['shipping_address']); ?></span>
+                                                    <span id="customerAddress"><?php echo h($order['Order']['billing_address']); ?></span>
                                                 </p>
                                                 <p>
                                                     <span><a title="Click để gọi"><i class="fa fa-phone-square cursor-pointer mr10"></i></a></span>
                                                     <span id="customerPhone"><?php echo h($order['Order']['phone']); ?></span>
                                                 </p>
 
-                                                <p class="overflow-ellipsis mt10 p-r15 ps-relative">
-                                                    <i class="glyphicon glyphicon-envelope color-gray-icons mr10"></i>
-
-                                                    <a>
+                                                <p>
+                                                   
+                                                        <span><a title="Click để gọi"><i class="fa fa-location-arrow"></i></a></span>
+                                                    
                                                         <span data-bind="text: email"><?php echo h($order['Order']['email']); ?></span>
-                                                    </a>
+                                                    
 
-                                                    <a class="hide-print ps-absolute-default" href="#" data-bind="click:openEditEmail">
-                                                        <span data-placement="left" title="Chỉnh sửa email" data-toggle="tooltip"><i class="fa fa-pencil-square-o color_gray "></i> </span>
-                                                    </a>
+                                                    
                                                 </p>
-                                                <p class="hide-print normal-line">
-                                                    <i class="glyphicon glyphicon-user color-gray-icons mr10 hide-print"></i>
+                                                <p>
+                                                    <i class="fa fa-briefcase"></i>
                                                     <a class="hide-print text-underline hover-tooltip hover-underline color-dark-link" id="customerDetail" href="<?php echo Configure::read('Settings.DOMAIN');?>/admin/customers/view/<?php echo $order['Order']['customer_id']; ?>">Xem thông tin khách hàng</a>
                                                 </p>
 
