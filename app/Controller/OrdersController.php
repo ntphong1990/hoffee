@@ -68,6 +68,9 @@ class OrdersController extends AppController {
                 $reproduct[$brand]['brand_name'] = $this->Brand->find('first',array(
                     'conditions' => array('id' => $brand)
                 ))['Brand']['name'];
+                 $reproduct[$brand]['brand_slug'] = $this->Brand->find('first',array(
+                    'conditions' => array('id' => $brand)
+                ))['Brand']['slug'];
                 $reproduct[$brand]['data'] = [];
                 array_push($reproduct[$brand]['data'],$value);
             } else {
@@ -75,7 +78,7 @@ class OrdersController extends AppController {
             }
 
         }
-
+       // var_dump($reproduct);die();
         $this->set('products',$reproduct);
 
         $customer = $this->Customer->find('all');

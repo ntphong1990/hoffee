@@ -308,6 +308,17 @@
             }
         });
     }
+
+    function filterProduct(key) {
+        $('.productvariant').each(function(i, obj) {
+            var temp = $(obj).attr('id');
+            if(temp.indexOf(key) > -1){
+                $(obj).css('display','block');
+            } else {
+                $(obj).css('display','none');
+            }
+        });
+    }
     
     function closeModal() {
         event.stopPropagation();
@@ -376,7 +387,7 @@
                             <div class="box-search-advance product">
                                 <div>
                                 
-                                    <input type="text" class="form-control textbox-advancesearch"
+                                    <input type="text" onkeyup="filterProduct(this.value)" class="form-control textbox-advancesearch"
                                            onclick="openSearchProduct()" onblur="closeSearchProduct()"
                                            placeholder="Tìm hoặc tạo mới 1 sản phẩm">
                                 </div>
@@ -397,32 +408,23 @@
                                             <ul class="nav navbar-nav">
                                                 <?php foreach ($products as $key => $value) { ?>
 
-                                                    <li class="row ">
-                                                        <!-- ko if:  ImageUrlDisplay() -->
-
-                                                        <!-- /ko -->
-                                                        <!-- ko if: !ImageUrlDisplay() --><!-- /ko -->
+                                                    <li class="productvariant" id="<?php echo strtolower($value['brand_name']).$value['brand_slug'];?>">
                                                         <label class="inline_block ml10"
                                                                data-bind="text:Value"><?php echo $value['brand_name']; ?></label>
                                                         <div class="clear"></div>
                                                         <ul data-bind="foreach: Model">
                                                             <?php foreach ($value['data'] as $key => $value1) { ?>
-                                                                <li class="clearfix product-variant" onclick="addProduct(<?php echo $value1['Product']['id'];?>,'<?php echo $value['brand_name'];?>','<?php echo $value1['Product']['name'];?>',<?php echo $value1['Product']['price'];?>,'<?php echo $value1['Product']['image'];?>',<?php echo $value1['Product']['weight'];?>)"
-                                                                    data-bind="click: function(data, event){$parents[1].SelectedItem(data,event);}">
+                                                                <li class=""  onclick="addProduct(<?php echo $value1['Product']['id'];?>,'<?php echo $value['brand_name'];?>','<?php echo $value1['Product']['name'];?>',<?php echo $value1['Product']['price'];?>,'<?php echo $value1['Product']['image'];?>',<?php echo $value1['Product']['weight'];?>)">
 
-                                                                    <a class="color_green pull-left" style="margin-right: 5px">
+                                                                    <!-- <a class="color_green pull-left" style="margin-right: 5px">
                                                                         <div class="wrap-img"><img class="thumb-image" src="<?php echo Configure::read('Settings.DOMAIN');?>/images/small/<?php echo $value1['Product']['image']; ?>" title="image"> </div>
-                                                                    </a>
+                                                                    </a> -->
                                                                     <a class="color_green pull-left">
-
-                                                                        <span
-                                                                            data-b    "text: VariantTitle"><?php echo $value1['Product']['name']; ?></span>
+                                                                        <span><?php echo $value1['Product']['name']; ?></span>
                                                                     </a>
                                                                     <div class="pull-right">
-                                                                        <!-- ko if: IsTrackingInventory() == true -->
-                                                                        <!--/ko-->
-                                                                        <span
-                                                                            data-bind="textMoneyWithSymbol: Price"><?php echo $value1['Product']['price']; ?>
+                                                                       
+                                                                        <span><?php echo $value1['Product']['price']; ?>
                                                                             ₫</span>
                                                                     </div>
                                                                 </li>
