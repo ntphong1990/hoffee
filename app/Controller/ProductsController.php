@@ -500,7 +500,7 @@ class ProductsController extends AppController {
         $brands = $this->Product->Brand->find('list');
         $this->set(compact('brands'));
 
-        $categories = $this->Product->Category->generateTreeList(null, null, null, '--');
+        $categories = $this->Product->Category->generateTreeList(null, null, null, '');
         $this->set(compact('categories'));
 
         $productmods = $this->Product->Productmod->find('all', array(
