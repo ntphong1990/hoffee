@@ -9,6 +9,7 @@
         addMoney();
     }
 </script>
+  <?php echo $this->Form->create('Order'); ?>
 <div class="outer">
     <div class="inner" id="viewareaid">
 
@@ -32,7 +33,7 @@
                    </div>
                 </div>
             </div>
-            <?php echo $this->Form->create('Order'); ?>
+          
             <div class="one-row-actions hide-print">
                 <div class="flexbox-grid no-pd-none">
                     <div class="flexbox-content">
