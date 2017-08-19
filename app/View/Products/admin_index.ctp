@@ -128,14 +128,15 @@ $(document).ready(function() {
 
 <table class="table">
     <tr>
-        <th><?php echo $this->Paginator->sort('image'); ?></th>
-        <th><?php echo $this->Paginator->sort('category_id'); ?>
+        <!-- <th><?php echo $this->Paginator->sort('image'); ?></th> -->
+        
         <th><?php echo $this->Paginator->sort('brand_id'); ?></th>
         <th><?php echo $this->Paginator->sort('name'); ?></th>
 <!--        <th>--><?php //echo $this->Paginator->sort('slug'); ?><!--</th>-->
 <!--        <th>--><?php //echo $this->Paginator->sort('description'); ?><!--</th>-->
 <!--        <th>--><?php //echo $this->Paginator->sort('image'); ?><!--</th>-->
         <th><?php echo $this->Paginator->sort('price'); ?></th>
+        <th><?php echo $this->Paginator->sort('category_id'); ?>
         <th><?php echo $this->Paginator->sort('weight'); ?></th>
         <th><?php echo $this->Paginator->sort('tags'); ?></th>
         <th><?php echo $this->Paginator->sort('views'); ?></th>
@@ -146,14 +147,15 @@ $(document).ready(function() {
     </tr>
     <?php foreach ($products as $product): ?>
     <tr>
-        <td><?php echo $this->Html->Image('/images/small/' . $product['Product']['image'], array('width' => 100, 'height' => 100, 'alt' => $product['Product']['image'], 'class' => 'image')); ?></td>
-        <td><span class="category" data-value="<?php echo $product['Category']['id']; ?><?php echo $product['Product']['id']; ?>"><?php echo $product['Category']['name']; ?></span></td>
+        <!-- <td><?php echo $this->Html->Image('/images/small/' . $product['Product']['image'], array('width' => 100, 'height' => 100, 'alt' => $product['Product']['image'], 'class' => 'image')); ?></td> -->
+        
         <td><span class="brand" data-value="<?php echo $product['Brand']['id']; ?>" data-pk="<?php echo $product['Product']['id']; ?>"><?php echo $product['Brand']['name']; ?></span></td>
         <td><span class="name" data-value="<?php echo $product['Product']['name']; ?>" data-pk="<?php echo $product['Product']['id']; ?>"><?php echo $product['Product']['name']; ?></span></td>
 <!--        <td>--><?php //echo h($product['Product']['slug']); ?><!--</td>-->
 <!--        <td><span class="description" data-value="--><?php //echo $product['Product']['description']; ?><!--" data-pk="--><?php //echo $product['Product']['id']; ?><!--">--><?php //echo $product['Product']['description']; ?><!--</span></td>-->
 <!--        <td>--><?php //echo h($product['Product']['image']); ?><!--</td>-->
         <td><span class="price" data-value="<?php echo $product['Product']['price']; ?>" data-pk="<?php echo $product['Product']['id']; ?>"><?php echo $product['Product']['price']; ?></span></td>
+        <td><span class="category" data-value="<?php echo $product['Category']['id']; ?><?php echo $product['Product']['id']; ?>"><?php echo $product['Category']['name']; ?></span></td>
         <td><span class="weight" data-value="<?php echo $product['Product']['weight']; ?>" data-pk="<?php echo $product['Product']['id']; ?>"><?php echo $product['Product']['weight']; ?></span></td>
         <td><span class="tags" data-value="<?php echo $product['Product']['tags']; ?>" data-pk="<?php echo $product['Product']['id']; ?>"><?php echo $product['Product']['tags']; ?></span></td>
         <td><?php echo h($product['Product']['views']); ?></td>
