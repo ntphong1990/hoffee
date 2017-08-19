@@ -1,4 +1,22 @@
-<h2>Brands</h2>
+<script>
+
+    function pageLoad(){
+
+    }
+</script>
+	<div class="row head-action">
+						<div class="col-sm-12 col-lg-6">
+						
+							<span><a class="back-list hidden-xs" href="<?php echo Configure::read('Settings.DOMAIN');?>/admin/brands/index">Quản lý nhóm sản phẩm</a></span>
+						
+						
+						</div>
+						<div class="col-sm-12 col-lg-6">
+								<?php echo $this->Html->link('New Brand', array('action' => 'add'), array('class' => 'btn btn-default right')); ?>
+						</div>
+
+</div>
+<div class="widget">
 
 <table class="table">
     <tr>
@@ -35,9 +53,7 @@
 <br />
 <br />
 
-<h3>Actions</h3>
 
-<?php echo $this->Html->link('New Brand', array('action' => 'add'), array('class' => 'btn btn-default')); ?>
 
-<br />
-<br />
+
+</div>

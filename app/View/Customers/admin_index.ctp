@@ -22,17 +22,14 @@
 	<div class="pageheader two-actions-header-mobile">
 		<div class="col-xs-12">
 			<div class="breadcrumb-new">
-				<div class="ctrl-filter fluid-container col-xs-12" data-bind="with: SelectedTab, css: { 'not-has-freetext': !HasFreeText() }">
-					<div data-bind="css: { 'input-group-btn': !$parent.HasFreeText() }" class="btn-group filter-container dropdown">
+				<div class="ctrl-filter fluid-container col-xs-12">
+					<div class="btn-group filter-container dropdown">
 					
-						
-				
-						<!-- /ko -->
-						<!-- ko if: $parent.CanSaveFilter() -->
+		
 						<div class="input-group-btn saved-search-actions">
-							<!--ko if: (($parent.Tabs()[0] != $data) && (!$data.IsNewTab())) || IsEdit() || IsNewTab() --><!-- /ko -->
+							
 						</div>
-						<!-- /ko -->
+					
 					</div>
 				
 				</div>

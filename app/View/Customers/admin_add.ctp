@@ -43,7 +43,7 @@
 				<div class="row head-action">
 						<div class="col-sm-12 col-lg-6">
 						
-							<span><a class="back-list hidden-xs" href="/admin/customer/list">Quản lý khách hàng</a></span>
+							<span><a class="back-list hidden-xs" href="<?php echo Configure::read('Settings.DOMAIN');?>/admin/customer/list">Quản lý khách hàng</a></span>
 							<span class="border-row hidden-xs">/ </span>
 							<span class="active">Tạo mới</span>
 						

@@ -109,7 +109,7 @@ $(document).ready(function() {
 )); ?>
     </div>
     <div class="col-lg-6">
-        <?php echo $this->Form->input('name', array('label' => false, 'id' => false, 'class' => 'form-control col-lg-6', 'value' => $all['name'])); ?>
+        <?php echo $this->Form->input('name', array('required' => false, 'label' => false,'id' => false, 'class' => 'form-control col-lg-6', 'value' => $all['name'])); ?>
     </div>
     </div>
 

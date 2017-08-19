@@ -19,26 +19,7 @@ class Product extends AppModel {
                 'required' => false,
             ),
         ),
-        'slug' => array(
-            'rule1' => array(
-                'rule' => array('lengthBetween', 3, 50),
-                'message' => 'Slug is required',
-                'allowEmpty' => false,
-                'required' => false,
-            ),
-            'rule2' => array(
-                'rule' => '/^[a-z\-]{3,50}$/',
-                'message' => 'Only lowercase letters and dashes, between 3-50 characters',
-                'allowEmpty' => false,
-                'required' => false,
-            ),
-            'rule3' => array(
-                'rule' => array('isUnique'),
-                'message' => 'Slug already exists',
-                'allowEmpty' => false,
-                'required' => false,
-            ),
-        ),
+
         'price' => array(
             'notempty' => array(
                 'rule' => array('decimal'),
