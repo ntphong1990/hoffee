@@ -1,4 +1,5 @@
 
+	 
 	 <?php echo $this->Form->create('Customer'); ?>
 		<div>
 			<div class="">
@@ -14,9 +15,71 @@
 						</div>
 						<div class="col-sm-12 col-lg-6">
 						<div class="right">
-							<?php echo $this->Form->postLink('Xoá Khách', array('action' => 'delete', $customer['Customer']['id']), array('class' => 'btn btn-danger'), __('Are you sure you want to delete # %s?', $customer['Customer']['id'])); ?>
-             
+						
+						<a class="btn btn-primary" data-toggle="modal" data-target="#myModal18">
+                            Thanh toán
+                        </a>
+                        <div class="modal fade" id="myModal18" tabindex="-1" role="dialog" aria-labelledby="myModalLabel18" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                        <h5 class="modal-title text-xl-center fw-bold mt" id="myModalLabel18">Thanh toán</h5>
+                                        
+                                    </div>
+                                    <div class="modal-body bg-gray-lighter">
+                                        <form>
+                                            <div class="row">
+                                                <div class="col-lg-8">
+                                                    <div class="form-group">
+														<label for="own">Còn nợ</label></br>
+                                                        <strong >100000 đ</strong>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <div class="form-group">
+														<label for="">Thanh toán</label>
+                                                        <input type="number" class="form-control input-no-border"
+                                                               placeholder="Nhập số tiền">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12">
+													
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control input-no-border"
+                                                               placeholder="Ghi chú">
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="col-lg-4">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control input-no-border"
+                                                               placeholder="City">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control input-no-border"
+                                                               placeholder="Country">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control input-no-border"
+                                                               placeholder="Zip">
+                                                    </div>
+                                                </div> -->
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-gray" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-success">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 							<a class="btn btn-default ml10" href="<?php echo Configure::read('Settings.DOMAIN'); ?>/admin/customers/edit/<?php echo $customer['Customer']['id']; ?>">Chỉnh sửa thông tin</a>
+							<?php echo $this->Form->postLink('Xoá Khách', array('action' => 'delete', $customer['Customer']['id']), array('class' => 'btn btn-danger'), __('Are you sure you want to delete # %s?', $customer['Customer']['id'])); ?>
 						</div>
 						</div>
 

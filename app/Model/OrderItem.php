@@ -48,6 +48,15 @@ class OrderItem extends AppModel {
             'order' => '',
             'counterCache' => true,
             'counterScope' => array(),
+        ),
+        'Product' => array(
+            'className' => 'Prodyct',
+            'foreignKey' => 'product_id',
+            'conditions' => '',
+            'fields' => '',
+            'order' => '',
+            'counterCache' => true,
+            'counterScope' => array(),
         )
     );
 

@@ -77,7 +77,7 @@
                                                 </td>
                                                 <td class="text-right order-border p-small p-sm-r">
                                                     <div class="inline_block" data-bind="css: { 'vertical-align-m': ShowOriginalPrice() == true}">
-                                                        <strong data-bind="text: Quantity" class="item-quantity"><?php echo $orderItem['quantity'];?></strong>
+                                                        <strong class="item-quantity"><?php echo $orderItem['quantity'];?>()</strong>
                                                         <span class="item-multiplier mr5">×</span>
                                                     </div>
                                                     <div class="inline_block vertical-align-m">

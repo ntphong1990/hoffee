@@ -1,10 +1,12 @@
 <?php
 App::uses('AppController', 'Controller');
-class OrdersController extends AppController {
+class OrdersController extends AppController
+{
 
 ////////////////////////////////////////////////////////////
 
-    public function admin_index() {
+    public function admin_index()
+    {
 
         $this->Paginator = $this->Components->load('Paginator');
 
@@ -28,7 +30,8 @@ class OrdersController extends AppController {
         $this->set(compact('orders'));
     }
 
-    public function admin_temp() {
+    public function admin_temp()
+    {
         $this->Paginator = $this->Components->load('Paginator');
 
         $this->Paginator->settings = array(
@@ -52,7 +55,8 @@ class OrdersController extends AppController {
     }
 
 
-    public function admin_create(){
+    public function admin_create()
+    {
         $this->loadModel('Product');
         $this->loadModel('Brand');
         $this->loadModel('Customer');
@@ -61,45 +65,41 @@ class OrdersController extends AppController {
         ));
         $reproduct = [];
         $brand = -1;
-        foreach ($products as $key => $value){
-            if($brand != $value['Product']['brand_id']){
-
+        foreach ($products as $key => $value) {
+            if ($brand != $value['Product']['brand_id']) {
                 $brand = $value['Product']['brand_id'];
-                $reproduct[$brand]['brand_name'] = $this->Brand->find('first',array(
+                $reproduct[$brand]['brand_name'] = $this->Brand->find('first', array(
                     'conditions' => array('id' => $brand)
                 ))['Brand']['name'];
-                 $reproduct[$brand]['brand_slug'] = $this->Brand->find('first',array(
+                 $reproduct[$brand]['brand_slug'] = $this->Brand->find('first', array(
                     'conditions' => array('id' => $brand)
-                ))['Brand']['slug'];
+                 ))['Brand']['slug'];
                 $reproduct[$brand]['data'] = [];
-                array_push($reproduct[$brand]['data'],$value);
+                array_push($reproduct[$brand]['data'], $value);
             } else {
-                array_push($reproduct[$brand]['data'],$value);
+                array_push($reproduct[$brand]['data'], $value);
             }
-
         }
        // var_dump($reproduct);die();
-        $this->set('products',$reproduct);
+        $this->set('products', $reproduct);
 
         $customer = $this->Customer->find('all');
-        $this->set('customers',$customer);
+        $this->set('customers', $customer);
 
         if ($this->request->is('post') || $this->request->is('put')) {
             return json_encode('asd');
                 die();
-
-
         } else {
-
         }
         //var_dump($reproduct);die();
     }
 
-    public function admin_submit(){
+    public function admin_submit()
+    {
         $this->autoRender = false;
         $this->loadModel('Customer');
         $this->loadModel('OrderItem');
-        $customer = $this->Customer->find('first',array('conditions' => array(
+        $customer = $this->Customer->find('first', array('conditions' => array(
             'id' => $this->request->data['customerid']
         )));
 
@@ -132,19 +132,19 @@ class OrdersController extends AppController {
         $orderItems = json_decode($this->request->data['orderitem']);
         $order['OrderItem'] = array();
         $weight = 0;
-        foreach ($orderItems as $key => $value){
+        foreach ($orderItems as $key => $value) {
             $orderItem = array();
 
             $orderItem['product_id'] = $value->id;
-          $orderItem['name'] = $value->name;
-          $orderItem['weight'] = $value->weight * $value->quanlity;
-          $orderItem['price'] = $value->price;
-          $orderItem['quantity'] = $value->quanlity;
-          $orderItem['subtotal'] = $value->quanlity * $value->price;
+            $orderItem['name'] = $value->name;
+            $orderItem['weight'] = $value->weight * $value->quanlity;
+            $orderItem['price'] = $value->price;
+            $orderItem['quantity'] = $value->quanlity;
+            $orderItem['subtotal'] = $value->quanlity * $value->price;
             $weight = $weight + $orderItem['weight'];
-            array_push($order['OrderItem'],$orderItem);
+            array_push($order['OrderItem'], $orderItem);
         }
-        if($order['Order']['status'] == 1) {
+        if ($order['Order']['status'] == 1) {
             $order['Financial'] = array();
             $fee = array();
             $fee['type'] = 1;
@@ -164,14 +164,15 @@ class OrdersController extends AppController {
         //return $this->redirect(array('action' => 'index'));
     }
 
-    public function admin_correct(){
+    public function admin_correct()
+    {
         $this->autoRender = false;
         $this->loadModel('Customer');
         $orders = $this->Order->find('all');
-        foreach ($orders as $key => $value){
-            if(!$this->Customer->find('first',array('conditions' => array(
+        foreach ($orders as $key => $value) {
+            if (!$this->Customer->find('first', array('conditions' => array(
                 'phone' => $value['Order']['phone']
-            )))){
+            )))) {
                 $customer = $this->Customer->create();
                 $customer['Customer']['name'] = $value['Order']['first_name'];
                 $customer['Customer']['lastname'] = $value['Order']['last_name'];
@@ -181,17 +182,16 @@ class OrdersController extends AppController {
                 $customer['Customer']['birthday'] = date('Y-m-d');
 
                 $this->Customer->save($customer);
-
             }
         }
     }
 
-    public function admin_thu(){
+    public function admin_thu()
+    {
         $this->autoRender = false;
         $this->loadModel('Financial');
         $orders = $this->Order->find('all');
-        foreach ($orders as $key => $value){
-
+        foreach ($orders as $key => $value) {
                 $customer = $this->Financial->create();
                 $customer['Financial']['type'] = 1;
                 $customer['Financial']['value'] = $value['Order']['total'];
@@ -201,30 +201,31 @@ class OrdersController extends AppController {
 
 
                 $this->Financial->save($customer);
-
-
         }
     }
 
 ////////////////////////////////////////////////////////////
 
-    public function admin_view($id = null) {
-        $order = $this->Order->find('first', array(
+    public function admin_view($id = null)
+    {
+        
+        $order = $this->Order->find('threaded', array(
             'recursive' => 1,
             'conditions' => array(
                 'Order.id' => $id
             )
-        ));
+        ))[0];
+     //   var_dump($order);die();
         $this->loadModel('Financial');
-       $fees = $this->Financial->find('all',array('conditions' => array(
+        $fees = $this->Financial->find('all', array('conditions' => array(
             'detail' => $id
         )));
         $this->loadModel('ShippingStatus');
         $status = $this->ShippingStatus->find('all');
-        $this->set('status',$status);
+        $this->set('status', $status);
 
         $fee = 0;
-        foreach ($fees as $key => $value){
+        foreach ($fees as $key => $value) {
             $fee = $fee + $value['Financial']['value'];
         }
        // var_dump($fee);die();
@@ -232,22 +233,22 @@ class OrdersController extends AppController {
             return $this->redirect(array('action'=>'index'));
         }
         $this->set(compact('order'));
-        $this->set('fee',$fee);
+        $this->set('fee', $fee);
 
         $this->loadModel('Log');
-        $log = $this->Log->find('all',array('conditions' => array('item_id' => $id),'order' => array('created' => 'ASC')));
-        $this->set('logs',$log);
+        $log = $this->Log->find('all', array('conditions' => array('item_id' => $id),'order' => array('created' => 'ASC')));
+        $this->set('logs', $log);
 
 
         $this->loadModel('Store');
         $stores = $this->Store->find('all');
-        $this->set('stores',$stores);
+        $this->set('stores', $stores);
 
         if ($this->request->is('post') || $this->request->is('put')) {
            // var_dump( $this->request->data);
             $mes = '';
 
-            if($this->request->data['Order']['money'] != ''){
+            if (isset($this->request->data['Order']['money']) && $this->request->data['Order']['money'] != '') {
                 $customer = $this->Financial->create();
                 $customer['Financial']['type'] = 1;
                 $customer['Financial']['value'] = intval($this->request->data['Order']['money']);
@@ -257,44 +258,43 @@ class OrdersController extends AppController {
                 $customer['Financial']['user_id'] = $order['Order']['customer_id'];
                 $this->Financial->save($customer);
                 $mes = "+".$this->request->data['Order']['money'].'VND';
-                $this->Log->editOrder( $order['Order']['id'],$mes);
+                $this->Log->editOrder( $order['Order']['id'], $mes);
             }
 
-            if($fee + intval($this->request->data['Order']['money']) >= $order['Order']['total']){
+            if (isset($this->request->data['Order']['money']) && $fee + intval($this->request->data['Order']['money']) >= $order['Order']['total']) {
                 $order['Order']['status'] = 1;
             }
             // var_dump($this->request->data['Order']['store_id']);die();
-            if( $order['Order']['shipping_status'] !=  $this->request->data['Order']['shipping_status']) {
-
-                $mes = $this->ShippingStatus->find('first',array('conditions' => array('id' => $this->request->data['Order']['shipping_status'])))['ShippingStatus']['status'];
+            if ($order['Order']['shipping_status'] !=  $this->request->data['Order']['shipping_status']) {
+                $mes = $this->ShippingStatus->find('first', array('conditions' => array('id' => $this->request->data['Order']['shipping_status'])))['ShippingStatus']['status'];
                 $this->loadModel('Stock');
                
-                if($this->request->data['Order']['shipping_status'] == 2){
-                    foreach($order['OrderItem'] as $orderItem){
-                        $stock = new Stock();                   
-                        $stock->out($this->request->data['Order']['store_id'],$orderItem['product_id'],$orderItem['quantity'],$order['Order']['id']);
+                if ($this->request->data['Order']['shipping_status'] == 2) {
+                    foreach ($order['OrderItem'] as $orderItem) {
+                        $stock = new Stock();
+                        $stock->out($this->request->data['Order']['store_id'], $orderItem['product_id'], $orderItem['quantity'], $order['Order']['id']);
                     }
                 }
-                $this->Log->editOrder( $order['Order']['id'],$mes);
+                $this->Log->editOrder( $order['Order']['id'], $mes);
             }
             $order['Order']['shipping_status'] = $this->request->data['Order']['shipping_status'];
-            if( $order['Order']['note'] !=  $this->request->data['Order']['note']) {
+            if ($order['Order']['note'] !=  $this->request->data['Order']['note']) {
                 $mes = 'noted : '.$this->request->data['Order']['note'];
-                $this->Log->editOrder( $order['Order']['id'],$mes);
+                $this->Log->editOrder( $order['Order']['id'], $mes);
             }
             $order['Order']['note'] = $this->request->data['Order']['note'];
-            if($this->Order->save($order)){
+            if ($this->Order->save($order)) {
                 return $this->redirect(array('action' => 'index'));
             } else {
                 $this->Flash->flash('The order could not be saved. Please, try again.');
             }
-
         }
     }
 
 ////////////////////////////////////////////////////////////
 
-    public function admin_edit($id = null) {
+    public function admin_edit($id = null)
+    {
         $this->Order->id = $id;
         if (!$this->Order->exists()) {
             throw new NotFoundException('Invalid order');
@@ -313,7 +313,8 @@ class OrdersController extends AppController {
 
 ////////////////////////////////////////////////////////////
 
-    public function admin_delete($id = null) {
+    public function admin_delete($id = null)
+    {
         if (!$this->request->is('post')) {
             throw new MethodNotAllowedException();
         }
@@ -330,5 +331,4 @@ class OrdersController extends AppController {
     }
 
 ////////////////////////////////////////////////////////////
-
 }
