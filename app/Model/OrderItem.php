@@ -1,6 +1,7 @@
 <?php
 App::uses('AppModel', 'Model');
-class OrderItem extends AppModel {
+class OrderItem extends AppModel
+{
 
 //////////////////////////////////////////////////
 
@@ -50,7 +51,7 @@ class OrderItem extends AppModel {
             'counterScope' => array(),
         ),
         'Product' => array(
-            'className' => 'Prodyct',
+            'className' => 'Product',
             'foreignKey' => 'product_id',
             'conditions' => '',
             'fields' => '',
@@ -64,5 +65,4 @@ class OrderItem extends AppModel {
 
 
 //////////////////////////////////////////////////
-
 }
