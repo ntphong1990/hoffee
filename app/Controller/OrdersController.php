@@ -160,7 +160,7 @@ class OrdersController extends AppController
         $this->Log->saveOrder($this->Order->inserted_ids[0]);
         $this->Order->set($order);
 
-        return json_encode('');
+        return json_encode($a);
         //return $this->redirect(array('action' => 'index'));
     }
 
