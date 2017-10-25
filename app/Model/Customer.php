@@ -4,32 +4,33 @@ App::uses('AppModel', 'Model');
  * Customer Model
  *
  */
-class Customer extends AppModel {
+class Customer extends AppModel
+{
 
 /**
  * Use table
  *
  * @var mixed False or table name
  */
-	public $useTable = 'customer';
+    public $useTable = 'customer';
 
 /**
  * Display field
  *
  * @var string
  */
-	public $displayField = 'name';
+    public $displayField = 'name';
 
     public $belongsTo = array(
-        'DevvnTinhthanhpho' => array(
-            'className' => 'DevvnTinhthanhpho',
+        'District' => array(
+            'className' => 'District',
             'foreignKey' => 'district',
             'conditions' => '',
             'fields' => '',
             'order' => '',
         ),
-        'DevvnQuanhuyen' => array(
-            'className' => 'DevvnQuanhuyen',
+        'Ward' => array(
+            'className' => 'Ward',
             'foreignKey' => 'state',
             'conditions' => '',
             'fields' => '',

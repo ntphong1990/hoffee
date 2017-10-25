@@ -31,7 +31,8 @@ App::uses('Controller', 'Controller');
 * @package       app.Controller
 * @link http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
 */
-class AppController extends Controller {
+class AppController extends Controller
+{
 
 ////////////////////////////////////////////////////////////
 
@@ -39,13 +40,13 @@ class AppController extends Controller {
         'Session',
         'Auth',
         'Flash',
-        'DebugKit.Toolbar',
         //'Security',
     );
 
 ////////////////////////////////////////////////////////////
 
-    public function beforeFilter() {
+    public function beforeFilter()
+    {
 
         $this->Auth->loginAction = array('controller' => 'users', 'action' => 'login', 'admin' => false);
         $this->Auth->loginRedirect = array('controller' => 'orders', 'action' => 'index', 'admin' => true);
@@ -65,15 +66,15 @@ class AppController extends Controller {
             )
         );
 
-        if(isset($this->request->params['admin']) && ($this->request->params['prefix'] == 'admin')) {
-            if($this->Session->check('Auth.User')) {
+        if (isset($this->request->params['admin']) && ($this->request->params['prefix'] == 'admin')) {
+            if ($this->Session->check('Auth.User')) {
                 $this->set('authUser', $this->Auth->user());
                 $loggedin = $this->Session->read('Auth.User');
                 $this->set(compact('loggedin'));
                 $this->layout = 'admin';
             }
-        } elseif(isset($this->request->params['customer']) && ($this->request->params['prefix'] == 'customer')) {
-            if($this->Session->check('Auth.User')) {
+        } elseif (isset($this->request->params['customer']) && ($this->request->params['prefix'] == 'customer')) {
+            if ($this->Session->check('Auth.User')) {
                 $this->set('authUser', $this->Auth->user());
                 $loggedin = $this->Session->read('Auth.User');
                 $this->set(compact('loggedin'));
@@ -82,15 +83,15 @@ class AppController extends Controller {
         } else {
             $this->Auth->allow();
         }
-
     }
 
 ////////////////////////////////////////////////////////////
 
-    public function isAuthorized($user) {
-        if( $user['role'] == 'staff' && ($this->params['controller'] == 'orders' 
+    public function isAuthorized($user)
+    {
+        if ($user['role'] == 'staff' && ($this->params['controller'] == 'orders'
         || $this->params['controller'] == 'customers'
-        || $this->params['controller'] == 'stocks')){
+        || $this->params['controller'] == 'stocks')) {
             return true;
         }
         if (($this->params['prefix'] === 'admin') && ($user['role'] != 'admin')) {
@@ -106,21 +107,23 @@ class AppController extends Controller {
 
 ////////////////////////////////////////////////////////////
 
-    public function admin_switch($field = null, $id = null) {
+    public function admin_switch($field = null, $id = null)
+    {
         $this->autoRender = false;
         $model = $this->modelClass;
         if ($this->$model && $field && $id) {
             $field = $this->$model->escapeField($field);
             return $this->$model->updateAll(array($field => '1 -' . $field), array($this->$model->escapeField() => $id));
         }
-        if(!$this->RequestHandler->isAjax()) {
+        if (!$this->RequestHandler->isAjax()) {
             return $this->redirect($this->referer());
         }
     }
 
 ////////////////////////////////////////////////////////////
 
-    public function admin_editable() {
+    public function admin_editable()
+    {
 
         $model = $this->modelClass;
 
@@ -133,12 +136,12 @@ class AppController extends Controller {
         $this->$model->save($data, false);
 
         $this->autoRender = false;
-
     }
 
 ////////////////////////////////////////////////////////////
 
-    public function admin_tagschanger() {
+    public function admin_tagschanger()
+    {
 
         $value = '';
 
@@ -156,9 +159,7 @@ class AppController extends Controller {
         $s = $this->Product->saveField('tags', $value, false);
 
         $this->autoRender = false;
-
     }
 
 ////////////////////////////////////////////////////////////
-
 }

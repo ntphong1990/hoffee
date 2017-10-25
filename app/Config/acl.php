@@ -122,6 +122,7 @@ $config['alias'] = array(
  */
 $config['roles'] = array(
 	'Role/admin' => null,
+	'Role/staff' => null,
 );
 
 /**
@@ -129,7 +130,8 @@ $config['roles'] = array(
  */
 $config['rules'] = array(
 	'allow' => array(
-		'*' => 'Role/admin',
-	),
+        	'*' => 'Role/admin',
+        	'controllers/orders/*' => 'Role/staff'
+  ),
 	'deny' => array(),
 );

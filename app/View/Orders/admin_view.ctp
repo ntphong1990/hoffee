@@ -9,7 +9,7 @@
         addMoney();
     }
 </script>
-  <?php echo $this->Form->create('Order'); ?>
+    <?php echo $this->Form->create('Order'); ?>
 <div class="outer">
     <div class="inner" id="viewareaid">
 
@@ -45,8 +45,8 @@
                                     <div class="widget">
                                         <table cellspacing="0" class="table borderless">
                                             <!-- line items -->
-                                            <tbody data-bind="foreach: OrderProduct">
-                                            <?php foreach ($order['OrderItem'] as $orderItem): ?>
+                                            <tbody ="foreach: OrderProduct">
+                                            <?php foreach ($order['OrderItem'] as $orderItem) : ?>
                                             <tr class="border-bottom ">
 
                                                 <td class="order-border text-center p-small width-40-px min-width-40-px">
@@ -56,36 +56,36 @@
                                                 <td class="order-border p-small ">
                                                     <div class="flexbox-grid-default pl5 p-r5">
                                                         <div class="flexbox-content">
-                                                            <p data-bind="text:ProductName" class="show-print"><?php echo $orderItem['name'];?></p>
+                                                            <p class="show-print"><?php echo $orderItem['name'];?></p>
 
 
                                                            
 
 
-                                                            <p data-bind="visible:VariantValue,text:VariantValue" style="display: none;"></p>
+                                                            <p style="display: none;"></p>
 
                                                             <div class="ws-nm">
 
-                                                                <label class="inline" data-bind="text:InventoryText">(còn trong kho chính)</label>
+                                                                <label class="inline" ="text:InventoryText">(còn trong kho chính)</label>
 
                                                             </div>
 
-                                                            <span data-bind="text:RestockQuantity"></span>
+                                                            <span></span>
 
                                                         </div>
                                                     </div>
                                                 </td>
                                                 <td class="text-right order-border p-small p-sm-r">
-                                                    <div class="inline_block" data-bind="css: { 'vertical-align-m': ShowOriginalPrice() == true}">
+                                                    <div class="inline_block" ="css: { 'vertical-align-m': ShowOriginalPrice() == true}">
                                                         <strong class="item-quantity"><?php echo $orderItem['quantity'];?>()</strong>
                                                         <span class="item-multiplier mr5">×</span>
                                                     </div>
                                                     <div class="inline_block vertical-align-m">
-                                                        <b class="block-display-no-i color-blue-line-through" data-bind="textMoneyWithSymbol: ProductPrice"><?php echo number_format($orderItem['price']);?> ₫</b>
+                                                        <b class="block-display-no-i color-blue-line-through" ="textMoneyWithSymbol: ProductPrice"><?php echo number_format($orderItem['price']);?> ₫</b>
                                                     </div>
                                                 </td>
                                                 <td class="text-right p-small p-sm-r order-border border-none-r">
-                                                    <span data-bind="textMoneyWithSymbol:TotalPrice"><?php echo number_format($orderItem['quantity'] * $orderItem['price']);?> ₫</span>
+                                                    <span><?php echo number_format($orderItem['quantity'] * $orderItem['price']);?> ₫</span>
                                                 </td>
                                             </tr>
                                             <?php endforeach;?>
@@ -105,7 +105,7 @@
                                                     Mã khuyến mãi<span class="bold-light" style="display: none;">()</span>:
                                                 </td>
                                                 <td class="text-right p-sm-r">
-                                                    <span data-bind="textMoneyWithSymbol: Order().DiscountAmountText">0 ₫</span>
+                                                    <span>0 ₫</span>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -113,7 +113,7 @@
                                                     Phí vận chuyển
                                                 </td>
                                                 <td class="text-right p-sm-r">
-                                                    <span data-bind="textMoneyWithSymbol: Order().OrderShippingFee"><?php echo h(number_format($order['Order']['shipping'])); ?> ₫</span>
+                                                    <span><?php echo h(number_format($order['Order']['shipping'])); ?> ₫</span>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -121,7 +121,7 @@
                                                     Số tiền phải thanh toán:
                                                 </td>
                                                 <td class="text-right p-sm-r bold-light">
-                                                    <span data-bind="textMoneyWithSymbol: Order().TotalPaid"><?php echo h(number_format($order['Order']['total'])); ?> ₫</span>
+                                                    <span><?php echo h(number_format($order['Order']['total'])); ?> ₫</span>
                                                 </td>
                                             </tr>
                                           
@@ -130,10 +130,10 @@
                                                     Số tiền đã thanh toán:
                                                 </td>
                                                 <td class="text-right p-sm-r bold-light">
-                                                    <span data-bind="textMoneyWithSymbol: Order().AmountPaid"><?php echo h(number_format($fee));?> ₫</span>
+                                                    <span><?php echo h(number_format($fee));?> ₫</span>
                                                 </td>
                                             </tr>
-                                            <?php if($fee < $order['Order']['total']) { ?>
+                                            <?php if ($fee < $order['Order']['total']) { ?>
                                             <tr>
                                                 <td colspan="3" class="text-right p-sm-r">
                                                     <a onclick="checkOut()" class="hover-underline"><i
@@ -163,7 +163,7 @@
                                                     <select class="form-control" data-style="btn-secondary"
                                                             data-width="auto"
                                                             tabindex="-1" name="data[Order][store_id]" id="simple-select">
-                                                            <?php foreach($stores as $value){ ?>
+                                                            <?php foreach ($stores as $value) { ?>
                                                                 <option class="dropdown-item" value="<?php echo $value['Store']['id'];?>"><?php echo $value['Store']['name'];?></option>
                                                             <?php } ?>
                                                     </select>
@@ -178,8 +178,10 @@
                                                 <td class="text-right p-sm-r bold-light" id="totalOwe">
                                                     <select class="form-control" name="data[Order][shipping_status]"   id="billing_city" style="max-width: none" onchange="shipping(this)">
 
-                                                        <?php foreach ($status as $key => $value){ ?>
-                                                            <option value="<?php echo $value['ShippingStatus']['id'];?>" <?php if ($value['ShippingStatus']['id'] == $order['Order']['shipping_status']) echo 'selected';?>><?php echo $value['ShippingStatus']['status'];?></option>
+                                                        <?php foreach ($status as $key => $value) { ?>
+                                                            <option value="<?php echo $value['ShippingStatus']['id'];?>" <?php if ($value['ShippingStatus']['id'] == $order['Order']['shipping_status']) {
+                                                                echo 'selected';
+}?>><?php echo $value['ShippingStatus']['status'];?></option>
                                                         <?php } ?>
                                                     </select>
 
@@ -210,7 +212,7 @@
                                         <p>Ghi chú đơn hàng</p>
                                         <textarea name="data[Order][note]" style="resize: none" class="form-control mt15 textarea-auto-height" rows="4" placeholder="Thêm ghi chú cho đơn hàng…"><?php echo $order['Order']['note'];?></textarea>
                                     </div>
-                                    <div data-bind="foreach:NoteAttributes"></div>
+                                    <div ="foreach:NoteAttributes"></div>
                                     
                                 </div>
                                 <?php echo $this->Form->end();?>
@@ -227,11 +229,11 @@
                                             <div class="comment-log-timeline">
                                                 <div class="column-left-history ps-relative">
 
-                                                <?php foreach ($logs as $key =>$value) { ?>
+                                                <?php foreach ($logs as $key => $value) { ?>
                                                     <div class="p-xs p-l15 pr15 item-card">
                                                         <div class="item-card-body clearfix">
                                                             <div class="item item-quantity">
-                                                                <?php if($value['Log']['action'] == 0){ ?>
+                                                                <?php if ($value['Log']['action'] == 0) { ?>
                                                                     <i class="fa fa-check border-cycle bg-slateGray mr5 img-icon-history"></i>
                                                                 <?php } else { ?>
                                                                 <i class="glyphicon glyphicon-arrow-right border-cycle bg-green mr5 img-icon-history"></i>
@@ -239,7 +241,7 @@
                                                                 <p class="detail-history-order">
                                                                     <a class="bold-light show-timeline-dropdown"><?php echo $value['Log']['detail'];?> </span></a>
                                                                 </p>
-                                                                <span class="pull-right text-gray" data-bind="timeshort:LogDate"><?php echo $value['Log']['created'];?></span>
+                                                                <span class="pull-right text-gray" ="timeshort:LogDate"><?php echo $value['Log']['created'];?></span>
 
                                                             </div>
                                                         </div>
@@ -289,7 +291,7 @@
                                                    
                                                         <span><a title="Click để gọi"><i class="fa fa-location-arrow"></i></a></span>
                                                     
-                                                        <span data-bind="text: email"><?php echo h($order['Order']['email']); ?></span>
+                                                        <span ="text: email"><?php echo h($order['Order']['email']); ?></span>
                                                     
 
                                                     
@@ -326,7 +328,7 @@
                                             <span>Nhân viên tạo</span>
                                             <ul class="p-sm-l p-sm-r">
                                                 <li class="overflow-ellipsis">
-                                                    <span class="ww-bw bold-light" data-bind="text:Order().UserName">admin</span>
+                                                    <span class="ww-bw bold-light" ="text:Order().UserName">admin</span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -336,7 +338,7 @@
                                             <span>Kho bán</span>
                                             <ul class="p-sm-l p-sm-r">
                                                 <li class="ws-nm">
-                                                    <span class="ww-bw bold-light" data-bind="text:Order().LocationName">Địa điểm mặc định</span>
+                                                    <span class="ww-bw bold-light" ="text:Order().LocationName">Địa điểm mặc định</span>
                                                 </li>
                                             </ul>
                                         </div>

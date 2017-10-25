@@ -32,11 +32,12 @@
  * In production mode, flash messages redirect after a time interval.
  * In development mode, you need to click the flash message to continue.
  */
-    Configure::write('debug', 0);
-
+    Configure::write('debug', 2);
+    ini_set('max_execution_time', 300);
+    ini_set('memory_limit', '512M');
 /**
  * Configure the Error handler used to handle errors for your application.  By default
- * ErrorHandler::handleError() is used.  It will display errors using Debugger, when debug > 0
+ * ErrorHandlser::handleError() is used.  It will display errors using Debugger, when debug > 0
  * and log errors with CakeLog when deug = 0.
  *
  * Options:
@@ -244,7 +245,7 @@
     $engine = 'File';
 
 // In development mode, caches should expire quickly.
-    $duration = '+999 days';
+    $duration = '+10 seconds';
     if (Configure::read('debug') >= 1) {
         $duration = '+10 seconds';
     }

@@ -105,10 +105,14 @@
 
                                 <select name="data[Order][billing_city]"  id="billing_city" style="max-width: none" onchange="shipping(this)" >
 
-                                    <option value="0" disabled <?php if ($shop['Order']['city'] == 0) echo 'selected';?>>Chọn tỉnh/thành phố</option>
-                                   <?php foreach ($locations as $key => $value){ ?>
-                                      <option value="<?php echo $value['DevvnTinhthanhpho']['matp'];?>" <?php if ($shop['Order']['city'] == $value['DevvnTinhthanhpho']['matp']) echo 'selected';?>><?php echo $value['DevvnTinhthanhpho']['name'];?></option>
-                                   <?php } ?>
+                                    <option value="0" disabled <?php if ($shop['Order']['city'] == 0) {
+                                        echo 'selected';
+}?>>Chọn tỉnh/thành phố</option>
+                                    <?php foreach ($locations as $key => $value) { ?>
+                                      <option value="<?php echo $value['District']['matp'];?>" <?php if ($shop['Order']['city'] == $value['District']['matp']) {
+                                            echo 'selected';
+}?>><?php echo $value['District']['name'];?></option>
+                                    <?php } ?>
                                 </select>
                             </p>
                             <p class="form-row form-row form-row-last address-field validate-required" id="billing_city_field" data-o_class="form-row form-row form-row-wide address-field validate-required"><label for="billing_city" class="">Quận / huyện  <abbr class="required" title="required">*</abbr></label>
@@ -116,8 +120,10 @@
                                 <select name="data[Order][state]"  id="state" onchange="shippingState(this)"  style="max-width: none">
 
                                     <option value="0" disabled selected>Chọn quận/huyện</option>
-                                    <?php foreach ($states as $key => $value){ ?>
-                                        <option value="<?php echo $value['DevvnQuanhuyen']['maqh'];?>" <?php if ($shop['Order']['state'] == $value['DevvnQuanhuyen']['maqh']) echo 'selected';?> id="<?php echo $value['DevvnQuanhuyen']['matp'];?>"><?php echo $value['DevvnQuanhuyen']['name'];?></option>
+                                    <?php foreach ($states as $key => $value) { ?>
+                                        <option value="<?php echo $value['Ward']['maqh'];?>" <?php if ($shop['Order']['state'] == $value['Ward']['maqh']) {
+                                            echo 'selected';
+}?> id="<?php echo $value['Ward']['matp'];?>"><?php echo $value['Ward']['name'];?></option>
                                     <?php } ?>
                                 </select>
                             </p>
@@ -172,7 +178,7 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <?php foreach ($shop['OrderItem'] as $key => $item): ?>
+                            <?php foreach ($shop['OrderItem'] as $key => $item) : ?>
                             <tr class="cart_item product">
 
                                 <td class="product-name">
@@ -180,7 +186,7 @@
                                     <div class="product-details_container">
 
                                         <div class="product-thumbnail">
-                                            <?php echo $this->Html->image('/images/small/' . $item['Product']['image'], array('class' => 'px20','width' => 100)); ?>									 <span class="product-quantity"><?php echo $item['quantity'];?></span>								</div>
+                                            <?php echo $this->Html->image('/images/small/' . $item['Product']['image'], array('class' => 'px20','width' => 100)); ?>                                     <span class="product-quantity"><?php echo $item['quantity'];?></span>                              </div>
 
                                         <div class="product-data">
                                             <strong><?php echo $item['Product']['name'];?></strong>
@@ -191,7 +197,7 @@
                                 </td>
 
                                 <td class="product-total">
-                                    <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"><?php echo number_format($item['subtotal']); ?></span> VND</span>						</td>
+                                    <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"><?php echo number_format($item['subtotal']); ?></span> VND</span>                      </td>
 
                             </tr>
                             <?php endforeach;?>
@@ -266,7 +272,7 @@
                             </ul>
                             <div class="form-row place-order">
                                 <noscript>
-                                    Since your browser does not support JavaScript, or it is disabled, please ensure you click the &lt;em&gt;Update Totals&lt;/em&gt; button before placing your order. You may be charged more than the amount stated above if you fail to do so.			&lt;br/&gt;&lt;input type="submit" class="button alt" name="woocommerce_checkout_update_totals" value="Update totals" /&gt;
+                                    Since your browser does not support JavaScript, or it is disabled, please ensure you click the &lt;em&gt;Update Totals&lt;/em&gt; button before placing your order. You may be charged more than the amount stated above if you fail to do so.          &lt;br/&gt;&lt;input type="submit" class="button alt" name="woocommerce_checkout_update_totals" value="Update totals" /&gt;
                                 </noscript>
 
 

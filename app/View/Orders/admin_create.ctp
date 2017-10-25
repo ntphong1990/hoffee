@@ -327,27 +327,27 @@
 <div class="row" id="viewareaid" onclick="closeModal()">
 
     <div class="row head-action">
-						<div class="col-sm-12 col-lg-6">
-						
-							<span><a class="back-list hidden-xs" href="/admin/orders/index">Quản lý đơn hàng</a></span>
-							<span class="border-row hidden-xs">/ </span>
-							<span class="active">Tạo mới</span>
-						
-						</div>
-						<div class="col-sm-12 col-lg-6">
-						<div class="right">
-						<button class="btn btn-primary ml15"
+                        <div class="col-sm-12 col-lg-6">
+                        
+                            <span><a class="back-list hidden-xs" href="/admin/orders/index">Quản lý đơn hàng</a></span>
+                            <span class="border-row hidden-xs">/ </span>
+                            <span class="active">Tạo mới</span>
+                        
+                        </div>
+                        <div class="col-sm-12 col-lg-6">
+                        <div class="right">
+                        <button class="btn btn-primary ml15"
                                         data-bind="enable :IsPaid" id="done" onclick="submit(1)">Đã thanh toán
                                 </button>
                                 <button class="btn btn-primary ml15" id="notdone" data-toggle="modal" onclick="submit(2)"
                                         >Thanh toán sau
                                 </button>
                         <button class="btn btn-default ml10" id="draff" onclick="submit(3)">Lưu nháp</button>
-						</div>	
+                        </div>  
                         
-						</div>
+                        </div>
 
-	</div>
+    </div>
     <!-- ko if:ShowType() === 'List'--><!-- /ko -->
     <!-- ko if:ShowType() === 'New'-->
     <div class="col-lg-8 widget-container ui-sortable">
@@ -536,12 +536,8 @@
                                                 <?php foreach ($customers as $key => $value) { ?>
                                                 <a class="list-group-item customeritem" id ="<?php echo strtolower($value['Customer']['name']).$value['Customer']['phone'];?>"
                                                     onClick="changeCustomer(<?php echo $value['Customer']['id'];?>,'<?php echo $value['Customer']['name'];?>','<?php echo $value['Customer']['phone'];?>','<?php echo $value['Customer']['address'];?>')">
-                                                    <!-- ko if:  Thumbnail() -->
                                                    
-                                                    <span class="thumb-sm pull-xs-left mr">
-                                                        <img class="img-circle" src="https://secure.gravatar.com/avatar/2efd8534a82578a162535ce9abd0224c.jpg?s=40&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2F18f9f20ec1a7be8020924ce0048b6ef2.jpg%3Fs%3D40" alt="...">
-                                                    </span>
-                                                    <i class="fa fa-circle pull-xs-right text-danger mt-sm"></i>
+                                                    
                                                     <h6 class="no-margin"><?php echo $value['Customer']['name'];?></h6>
                                                     <small class="text-muted"><?php echo $value['Customer']['phone'];?></small>
                         
@@ -550,8 +546,7 @@
                                             </div>
                                             
                                         
-                                        <!--/ko-->
-                                        <!--ko if: ObjectType() == 'supplier'--><!--/ko-->
+                                    
                                     </div>
 
                                    

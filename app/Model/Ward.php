@@ -1,30 +1,30 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * DevvnQuanhuyen Model
+ * Ward Model
  *
  */
-class DevvnQuanhuyen extends AppModel {
+class Ward extends AppModel
+{
 
 /**
  * Use table
  *
  * @var mixed False or table name
  */
-	public $useTable = 'devvn_quanhuyen';
+    public $useTable = 'district';
 
 /**
  * Primary key field
  *
  * @var string
  */
-	public $primaryKey = 'maqh';
+    public $primaryKey = 'id';
 
 /**
  * Display field
  *
  * @var string
  */
-	public $displayField = 'name';
-
+    public $displayField = 'name';
 }

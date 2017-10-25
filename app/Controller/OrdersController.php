@@ -16,7 +16,8 @@ class OrdersController extends AppController
                 'contain' => array(
                 ),
                 'conditions' => array(
-                    'Order.status <> 3'
+                    'Order.status <> 3',
+                    'Order.active = 1'
                 ),
                 'order' => array(
                     'Order.created' => 'DESC'
@@ -322,6 +323,7 @@ class OrdersController extends AppController
         if (!$this->Order->exists()) {
             throw new NotFoundException('Invalid order');
         }
+        
         if ($this->Order->delete()) {
             $this->Flash->flash('Order deleted');
             return $this->redirect(array('action'=>'index'));

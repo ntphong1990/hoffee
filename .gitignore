@@ -2,3 +2,5 @@
 *.log
 /app/tmp/
 app/tmp/cache/models/shopping_cake_model_default_hoffee_brands
+
+/vendor/

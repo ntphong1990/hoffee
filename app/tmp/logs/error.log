@@ -1,1197 +1,808 @@
-2016-05-26 06:38:58 Error: [ConfigureException] Could not load configuration file: /Library/WebServer/Documents/hoffee2/app/Config/settings.php
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/lib/Cake/Core/Configure.php(329): PhpReader->read('settings')
-#1 /Library/WebServer/Documents/hoffee2/app/Config/bootstrap.php(185): Configure::load('settings')
-#2 /Library/WebServer/Documents/hoffee2/lib/Cake/Core/Configure.php(98): include('/Library/WebSer...')
-#3 /Library/WebServer/Documents/hoffee2/lib/Cake/bootstrap.php(431): Configure::bootstrap(true)
-#4 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(92): include('/Library/WebSer...')
-#5 {main}
-2016-05-26 06:38:58 Error: [ConfigureException] Could not load configuration file: /Library/WebServer/Documents/hoffee2/app/Config/settings.php
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/lib/Cake/Core/Configure.php(329): PhpReader->read('settings')
-#1 /Library/WebServer/Documents/hoffee2/app/Config/bootstrap.php(185): Configure::load('settings')
-#2 /Library/WebServer/Documents/hoffee2/lib/Cake/Core/Configure.php(98): include('/Library/WebSer...')
-#3 /Library/WebServer/Documents/hoffee2/lib/Cake/bootstrap.php(431): Configure::bootstrap(true)
-#4 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(92): include('/Library/WebSer...')
-#5 {main}
-2016-05-26 06:45:04 Error: [ConfigureException] Could not load configuration file: /Library/WebServer/Documents/hoffee2/app/Config/settings.php
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/lib/Cake/Core/Configure.php(329): PhpReader->read('settings')
-#1 /Library/WebServer/Documents/hoffee2/app/Config/bootstrap.php(185): Configure::load('settings')
-#2 /Library/WebServer/Documents/hoffee2/lib/Cake/Core/Configure.php(98): include('/Library/WebSer...')
-#3 /Library/WebServer/Documents/hoffee2/lib/Cake/bootstrap.php(431): Configure::bootstrap(true)
-#4 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(92): include('/Library/WebSer...')
-#5 {main}
-2016-05-26 06:45:04 Error: [ConfigureException] Could not load configuration file: /Library/WebServer/Documents/hoffee2/app/Config/settings.php
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/lib/Cake/Core/Configure.php(329): PhpReader->read('settings')
-#1 /Library/WebServer/Documents/hoffee2/app/Config/bootstrap.php(185): Configure::load('settings')
-#2 /Library/WebServer/Documents/hoffee2/lib/Cake/Core/Configure.php(98): include('/Library/WebSer...')
-#3 /Library/WebServer/Documents/hoffee2/lib/Cake/bootstrap.php(431): Configure::bootstrap(true)
-#4 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(92): include('/Library/WebSer...')
-#5 {main}
-2016-05-26 06:45:04 Error: [ConfigureException] Could not load configuration file: /Library/WebServer/Documents/hoffee2/app/Config/settings.php
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/lib/Cake/Core/Configure.php(329): PhpReader->read('settings')
-#1 /Library/WebServer/Documents/hoffee2/app/Config/bootstrap.php(185): Configure::load('settings')
-#2 /Library/WebServer/Documents/hoffee2/lib/Cake/Core/Configure.php(98): include('/Library/WebSer...')
-#3 /Library/WebServer/Documents/hoffee2/lib/Cake/bootstrap.php(431): Configure::bootstrap(true)
-#4 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(92): include('/Library/WebSer...')
-#5 {main}
-2016-05-26 06:45:04 Error: [ConfigureException] Could not load configuration file: /Library/WebServer/Documents/hoffee2/app/Config/settings.php
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/lib/Cake/Core/Configure.php(329): PhpReader->read('settings')
-#1 /Library/WebServer/Documents/hoffee2/app/Config/bootstrap.php(185): Configure::load('settings')
-#2 /Library/WebServer/Documents/hoffee2/lib/Cake/Core/Configure.php(98): include('/Library/WebSer...')
-#3 /Library/WebServer/Documents/hoffee2/lib/Cake/bootstrap.php(431): Configure::bootstrap(true)
-#4 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(92): include('/Library/WebSer...')
-#5 {main}
-2016-05-26 06:57:41 Error: [MissingActionException] Action UsersController::add() could not be found.
+2017-10-25 14:46:20 Error: [MissingActionException] Action OrdersController::admin_demo() could not be found.
 Exception Attributes: array (
-  'controller' => 'UsersController',
-  'action' => 'add',
+  'controller' => 'OrdersController',
+  'action' => 'admin_demo',
 )
-Request URL: /hoffee2/users/add
+Request URL: /hoffee4/admin/orders/demo/img/people/a1.jpg
 Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Library/WebServer/Documents/hoffee2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
-#2 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2016-05-26 08:34:06 Error: [MissingActionException] Action UsersController::add() could not be found.
+2017-10-25 14:46:20 Error: [MissingActionException] Action OrdersController::admin_img() could not be found.
 Exception Attributes: array (
-  'controller' => 'UsersController',
-  'action' => 'add',
+  'controller' => 'OrdersController',
+  'action' => 'admin_img',
 )
-Request URL: /hoffee2/users/add
+Request URL: /hoffee4/admin/orders/img/avatar.png
 Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Library/WebServer/Documents/hoffee2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
-#2 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2016-05-26 09:14:37 Error: [MissingControllerException] Controller class HelloController could not be found.
+2017-10-25 14:46:20 Error: [MissingActionException] Action OrdersController::admin_demo() could not be found.
 Exception Attributes: array (
-  'class' => 'HelloController',
-  'plugin' => NULL,
+  'controller' => 'OrdersController',
+  'action' => 'admin_demo',
 )
-Request URL: /hoffee2/hello
+Request URL: /hoffee4/admin/orders/demo/img/people/a6.jpg
 Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-05-26 09:19:41 Error: [MissingControllerException] Controller class ProductController could not be found.
-Exception Attributes: array (
-  'class' => 'ProductController',
-  'plugin' => NULL,
-)
-Request URL: /hoffee2/product
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-05-26 09:19:52 Error: [MissingControllerException] Controller class ProductController could not be found.
-Exception Attributes: array (
-  'class' => 'ProductController',
-  'plugin' => NULL,
-)
-Request URL: /hoffee2/product
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-05-26 09:20:53 Error: [MissingControllerException] Controller class BlogController could not be found.
-Exception Attributes: array (
-  'class' => 'BlogController',
-  'plugin' => NULL,
-)
-Request URL: /hoffee2/blog
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-05-26 09:41:23 Error: [MissingControllerException] Controller class <aHref=Controller could not be found.
-Exception Attributes: array (
-  'class' => '<aHref=Controller',
-  'plugin' => NULL,
-)
-Request URL: /hoffee2/%3Ca%20href=
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-05-26 11:32:35 Error: [MissingControllerException] Controller class <aHref=Controller could not be found.
-Exception Attributes: array (
-  'class' => '<aHref=Controller',
-  'plugin' => NULL,
-)
-Request URL: /hoffee2/%3Ca%20href=
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-05-29 19:50:06 Error: [MissingActionException] Action ProductsController::admin_tag() could not be found.
-Exception Attributes: array (
-  'controller' => 'ProductsController',
-  'action' => 'admin_tag',
-)
-Request URL: /hoffee2/admin/products/tag/12
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Library/WebServer/Documents/hoffee2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest))
-#2 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2016-05-29 19:50:12 Error: [MissingActionException] Action ProductsController::admin_tag() could not be found.
+2017-10-25 14:46:20 Error: [MissingActionException] Action OrdersController::admin_demo() could not be found.
 Exception Attributes: array (
-  'controller' => 'ProductsController',
-  'action' => 'admin_tag',
+  'controller' => 'OrdersController',
+  'action' => 'admin_demo',
 )
-Request URL: /hoffee2/admin/products/tag/12
+Request URL: /hoffee4/admin/orders/demo/img/people/a3.jpg
 Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Library/WebServer/Documents/hoffee2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest))
-#2 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2016-05-29 20:56:20 Error: [MissingControllerException] Controller class HelloController could not be found.
+2017-10-25 14:46:20 Error: [MissingActionException] Action OrdersController::admin_demo() could not be found.
 Exception Attributes: array (
-  'class' => 'HelloController',
-  'plugin' => NULL,
+  'controller' => 'OrdersController',
+  'action' => 'admin_demo',
 )
-Request URL: /hoffee2/hello
+Request URL: /hoffee4/admin/orders/demo/img/people/a5.jpg
 Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-05-29 20:56:23 Error: [MissingControllerException] Controller class HelloController could not be found.
-Exception Attributes: array (
-  'class' => 'HelloController',
-  'plugin' => NULL,
-)
-Request URL: /hoffee2/hello
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-05-29 20:56:26 Error: [MissingControllerException] Controller class HelloController could not be found.
-Exception Attributes: array (
-  'class' => 'HelloController',
-  'plugin' => NULL,
-)
-Request URL: /hoffee2/hello
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-05-29 20:56:27 Error: [MissingControllerException] Controller class HelloController could not be found.
-Exception Attributes: array (
-  'class' => 'HelloController',
-  'plugin' => NULL,
-)
-Request URL: /hoffee2/hello
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-05-29 20:56:27 Error: [MissingControllerException] Controller class HelloController could not be found.
-Exception Attributes: array (
-  'class' => 'HelloController',
-  'plugin' => NULL,
-)
-Request URL: /hoffee2/hello
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-05-29 20:56:27 Error: [MissingControllerException] Controller class HelloController could not be found.
-Exception Attributes: array (
-  'class' => 'HelloController',
-  'plugin' => NULL,
-)
-Request URL: /hoffee2/hello
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-05-29 20:56:28 Error: [MissingControllerException] Controller class HelloController could not be found.
-Exception Attributes: array (
-  'class' => 'HelloController',
-  'plugin' => NULL,
-)
-Request URL: /hoffee2/hello
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-05-29 20:57:33 Error: [MissingControllerException] Controller class HelloController could not be found.
-Exception Attributes: array (
-  'class' => 'HelloController',
-  'plugin' => NULL,
-)
-Request URL: /hoffee2/hello
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-05-29 20:58:45 Error: [MissingControllerException] Controller class HelloController could not be found.
-Exception Attributes: array (
-  'class' => 'HelloController',
-  'plugin' => NULL,
-)
-Request URL: /hoffee2/hello
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-05-29 21:03:20 Error: [MissingControllerException] Controller class BlogController could not be found.
-Exception Attributes: array (
-  'class' => 'BlogController',
-  'plugin' => NULL,
-)
-Request URL: /hoffee2/blog
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-09-27 05:01:08 Error: [MissingControllerException] Controller class BlogController could not be found.
-Exception Attributes: array (
-  'class' => 'BlogController',
-  'plugin' => NULL,
-)
-Request URL: /hoffee2/blog
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-09-27 05:57:38 Error: [MissingControllerException] Controller class BlogController could not be found.
-Exception Attributes: array (
-  'class' => 'BlogController',
-  'plugin' => NULL,
-)
-Request URL: /hoffee2/blog
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-09-27 05:57:43 Error: [MissingControllerException] Controller class BlogController could not be found.
-Exception Attributes: array (
-  'class' => 'BlogController',
-  'plugin' => NULL,
-)
-Request URL: /hoffee2/blog
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-09-27 06:02:46 Error: [MissingControllerException] Controller class BlogController could not be found.
-Exception Attributes: array (
-  'class' => 'BlogController',
-  'plugin' => NULL,
-)
-Request URL: /hoffee2/blog
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-09-27 06:05:36 Error: [MissingControllerException] Controller class BlogController could not be found.
-Exception Attributes: array (
-  'class' => 'BlogController',
-  'plugin' => NULL,
-)
-Request URL: /hoffee2/blog
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-09-27 06:33:49 Error: [MissingControllerException] Controller class BlogController could not be found.
-Exception Attributes: array (
-  'class' => 'BlogController',
-  'plugin' => NULL,
-)
-Request URL: /hoffee2/blog
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-09-27 06:36:32 Error: [MissingActionException] Action ShopController::uikit.min.js() could not be found.
-Exception Attributes: array (
-  'controller' => 'ShopController',
-  'action' => 'uikit.min.js',
-)
-Request URL: /hoffee2/shop/uikit.min.js
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Library/WebServer/Documents/hoffee2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ShopController), Object(CakeRequest))
-#2 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2016-09-27 06:36:32 Error: [MissingActionException] Action ShopController::jquery.js() could not be found.
+2017-10-25 14:46:20 Error: [MissingActionException] Action OrdersController::admin_demo() could not be found.
 Exception Attributes: array (
-  'controller' => 'ShopController',
-  'action' => 'jquery.js',
+  'controller' => 'OrdersController',
+  'action' => 'admin_demo',
 )
-Request URL: /hoffee2/shop/jquery.js
+Request URL: /hoffee4/admin/orders/demo/img/people/a2.jpg
 Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Library/WebServer/Documents/hoffee2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ShopController), Object(CakeRequest))
-#2 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2016-09-27 06:36:32 Error: [MissingActionException] Action ShopController::uikit.min.js() could not be found.
+2017-10-25 14:46:20 Error: [MissingActionException] Action OrdersController::admin_demo() could not be found.
 Exception Attributes: array (
-  'controller' => 'ShopController',
-  'action' => 'uikit.min.js',
+  'controller' => 'OrdersController',
+  'action' => 'admin_demo',
 )
-Request URL: /hoffee2/shop/uikit.min.js
+Request URL: /hoffee4/admin/orders/demo/img/people/a4.jpg
 Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Library/WebServer/Documents/hoffee2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ShopController), Object(CakeRequest))
-#2 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2016-09-27 06:38:11 Error: [MissingControllerException] Controller class JsController could not be found.
+2017-10-25 14:46:22 Error: [MissingActionException] Action OrdersController::admin_demo() could not be found.
 Exception Attributes: array (
-  'class' => 'JsController',
+  'controller' => 'OrdersController',
+  'action' => 'admin_demo',
+)
+Request URL: /hoffee4/admin/orders/demo/img/people/a6.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-10-25 14:46:22 Error: [MissingActionException] Action OrdersController::admin_demo() could not be found.
+Exception Attributes: array (
+  'controller' => 'OrdersController',
+  'action' => 'admin_demo',
+)
+Request URL: /hoffee4/admin/orders/demo/img/people/a5.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-10-25 14:46:22 Error: [MissingActionException] Action OrdersController::admin_demo() could not be found.
+Exception Attributes: array (
+  'controller' => 'OrdersController',
+  'action' => 'admin_demo',
+)
+Request URL: /hoffee4/admin/orders/demo/img/people/a2.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-10-25 14:46:22 Error: [MissingActionException] Action OrdersController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'OrdersController',
+  'action' => 'admin_img',
+)
+Request URL: /hoffee4/admin/orders/img/avatar.png
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-10-25 14:46:22 Error: [MissingActionException] Action OrdersController::admin_demo() could not be found.
+Exception Attributes: array (
+  'controller' => 'OrdersController',
+  'action' => 'admin_demo',
+)
+Request URL: /hoffee4/admin/orders/demo/img/people/a3.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-10-25 14:46:22 Error: [MissingActionException] Action OrdersController::admin_demo() could not be found.
+Exception Attributes: array (
+  'controller' => 'OrdersController',
+  'action' => 'admin_demo',
+)
+Request URL: /hoffee4/admin/orders/demo/img/people/a1.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-10-25 14:46:22 Error: [MissingActionException] Action OrdersController::admin_demo() could not be found.
+Exception Attributes: array (
+  'controller' => 'OrdersController',
+  'action' => 'admin_demo',
+)
+Request URL: /hoffee4/admin/orders/demo/img/people/a4.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-10-25 14:46:28 Error: [MissingActionException] Action OrdersController::admin_demo() could not be found.
+Exception Attributes: array (
+  'controller' => 'OrdersController',
+  'action' => 'admin_demo',
+)
+Request URL: /hoffee4/admin/orders/demo/img/people/a5.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-10-25 14:46:28 Error: [MissingActionException] Action OrdersController::admin_demo() could not be found.
+Exception Attributes: array (
+  'controller' => 'OrdersController',
+  'action' => 'admin_demo',
+)
+Request URL: /hoffee4/admin/orders/demo/img/people/a3.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-10-25 14:46:28 Error: [MissingActionException] Action OrdersController::admin_demo() could not be found.
+Exception Attributes: array (
+  'controller' => 'OrdersController',
+  'action' => 'admin_demo',
+)
+Request URL: /hoffee4/admin/orders/demo/img/people/a6.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-10-25 14:46:28 Error: [MissingActionException] Action OrdersController::admin_demo() could not be found.
+Exception Attributes: array (
+  'controller' => 'OrdersController',
+  'action' => 'admin_demo',
+)
+Request URL: /hoffee4/admin/orders/demo/img/people/a2.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-10-25 14:46:28 Error: [MissingActionException] Action OrdersController::admin_demo() could not be found.
+Exception Attributes: array (
+  'controller' => 'OrdersController',
+  'action' => 'admin_demo',
+)
+Request URL: /hoffee4/admin/orders/demo/img/people/a1.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-10-25 14:46:28 Error: [MissingActionException] Action OrdersController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'OrdersController',
+  'action' => 'admin_img',
+)
+Request URL: /hoffee4/admin/orders/img/avatar.png
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-10-25 14:46:28 Error: [MissingActionException] Action OrdersController::admin_demo() could not be found.
+Exception Attributes: array (
+  'controller' => 'OrdersController',
+  'action' => 'admin_demo',
+)
+Request URL: /hoffee4/admin/orders/demo/img/people/a4.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-10-25 14:54:32 Error: [MissingActionException] Action OrdersController::admin_demo() could not be found.
+Exception Attributes: array (
+  'controller' => 'OrdersController',
+  'action' => 'admin_demo',
+)
+Request URL: /hoffee4/admin/orders/demo/img/people/a5.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-10-25 14:54:32 Error: [MissingActionException] Action OrdersController::admin_demo() could not be found.
+Exception Attributes: array (
+  'controller' => 'OrdersController',
+  'action' => 'admin_demo',
+)
+Request URL: /hoffee4/admin/orders/demo/img/people/a3.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-10-25 14:54:32 Error: [MissingActionException] Action OrdersController::admin_demo() could not be found.
+Exception Attributes: array (
+  'controller' => 'OrdersController',
+  'action' => 'admin_demo',
+)
+Request URL: /hoffee4/admin/orders/demo/img/people/a2.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-10-25 14:54:32 Error: [MissingActionException] Action OrdersController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'OrdersController',
+  'action' => 'admin_img',
+)
+Request URL: /hoffee4/admin/orders/img/avatar.png
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-10-25 14:54:32 Error: [MissingActionException] Action OrdersController::admin_demo() could not be found.
+Exception Attributes: array (
+  'controller' => 'OrdersController',
+  'action' => 'admin_demo',
+)
+Request URL: /hoffee4/admin/orders/demo/img/people/a6.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-10-25 14:54:32 Error: [MissingActionException] Action OrdersController::admin_demo() could not be found.
+Exception Attributes: array (
+  'controller' => 'OrdersController',
+  'action' => 'admin_demo',
+)
+Request URL: /hoffee4/admin/orders/demo/img/people/a1.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-10-25 14:54:32 Error: [MissingActionException] Action OrdersController::admin_demo() could not be found.
+Exception Attributes: array (
+  'controller' => 'OrdersController',
+  'action' => 'admin_demo',
+)
+Request URL: /hoffee4/admin/orders/demo/img/people/a4.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-10-25 14:54:40 Error: [MissingControllerException] Controller class DemoController could not be found.
+Exception Attributes: array (
+  'class' => 'DemoController',
   'plugin' => NULL,
 )
-Request URL: /hoffee2/js/jquery.js
+Request URL: /hoffee4/admin/demo/img/people/a5.jpg
 Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#0 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2016-09-27 06:38:39 Error: [MissingControllerException] Controller class JsController could not be found.
+2017-10-25 14:54:40 Error: [MissingControllerException] Controller class DemoController could not be found.
 Exception Attributes: array (
-  'class' => 'JsController',
+  'class' => 'DemoController',
   'plugin' => NULL,
 )
-Request URL: /hoffee2/js/jquery.js
+Request URL: /hoffee4/admin/demo/img/people/a3.jpg
 Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#0 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2016-09-27 09:31:44 Error: [MissingControllerException] Controller class ImgController could not be found.
+2017-10-25 14:54:40 Error: [MissingControllerException] Controller class DemoController could not be found.
+Exception Attributes: array (
+  'class' => 'DemoController',
+  'plugin' => NULL,
+)
+Request URL: /hoffee4/admin/demo/img/people/a2.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-25 14:54:40 Error: [MissingControllerException] Controller class ImgController could not be found.
 Exception Attributes: array (
   'class' => 'ImgController',
   'plugin' => NULL,
 )
-Request URL: /hoffee2/img/shop/catalog/01.jpg
+Request URL: /hoffee4/admin/img/avatar.png
 Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#0 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2016-09-27 10:24:36 Error: [MissingActionException] Action ShopController::card() could not be found.
+2017-10-25 14:54:40 Error: [MissingControllerException] Controller class DemoController could not be found.
 Exception Attributes: array (
-  'controller' => 'ShopController',
-  'action' => 'card',
+  'class' => 'DemoController',
+  'plugin' => NULL,
 )
-Request URL: /hoffee2/shop/card
+Request URL: /hoffee4/admin/demo/img/people/a6.jpg
 Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Library/WebServer/Documents/hoffee2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ShopController), Object(CakeRequest))
-#2 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#0 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-25 14:54:40 Error: [MissingControllerException] Controller class DemoController could not be found.
+Exception Attributes: array (
+  'class' => 'DemoController',
+  'plugin' => NULL,
+)
+Request URL: /hoffee4/admin/demo/img/people/a4.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-25 14:54:40 Error: [MissingControllerException] Controller class DemoController could not be found.
+Exception Attributes: array (
+  'class' => 'DemoController',
+  'plugin' => NULL,
+)
+Request URL: /hoffee4/admin/demo/img/people/a1.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-25 14:54:50 Error: [MissingControllerException] Controller class DemoController could not be found.
+Exception Attributes: array (
+  'class' => 'DemoController',
+  'plugin' => NULL,
+)
+Request URL: /hoffee4/admin/demo/img/people/a5.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-25 14:54:50 Error: [MissingControllerException] Controller class DemoController could not be found.
+Exception Attributes: array (
+  'class' => 'DemoController',
+  'plugin' => NULL,
+)
+Request URL: /hoffee4/admin/demo/img/people/a3.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-25 14:54:50 Error: [MissingControllerException] Controller class DemoController could not be found.
+Exception Attributes: array (
+  'class' => 'DemoController',
+  'plugin' => NULL,
+)
+Request URL: /hoffee4/admin/demo/img/people/a4.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-25 14:54:50 Error: [MissingControllerException] Controller class DemoController could not be found.
+Exception Attributes: array (
+  'class' => 'DemoController',
+  'plugin' => NULL,
+)
+Request URL: /hoffee4/admin/demo/img/people/a6.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-25 14:54:50 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /hoffee4/admin/img/avatar.png
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-25 14:54:50 Error: [MissingControllerException] Controller class DemoController could not be found.
+Exception Attributes: array (
+  'class' => 'DemoController',
+  'plugin' => NULL,
+)
+Request URL: /hoffee4/admin/demo/img/people/a1.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-25 14:54:50 Error: [MissingControllerException] Controller class DemoController could not be found.
+Exception Attributes: array (
+  'class' => 'DemoController',
+  'plugin' => NULL,
+)
+Request URL: /hoffee4/admin/demo/img/people/a2.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-25 14:58:31 Error: [MissingControllerException] Controller class DemoController could not be found.
+Exception Attributes: array (
+  'class' => 'DemoController',
+  'plugin' => NULL,
+)
+Request URL: /hoffee4/admin/demo/img/people/a5.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-25 14:58:32 Error: [MissingControllerException] Controller class DemoController could not be found.
+Exception Attributes: array (
+  'class' => 'DemoController',
+  'plugin' => NULL,
+)
+Request URL: /hoffee4/admin/demo/img/people/a3.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-25 14:58:32 Error: [MissingControllerException] Controller class DemoController could not be found.
+Exception Attributes: array (
+  'class' => 'DemoController',
+  'plugin' => NULL,
+)
+Request URL: /hoffee4/admin/demo/img/people/a1.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-25 14:58:32 Error: [MissingControllerException] Controller class DemoController could not be found.
+Exception Attributes: array (
+  'class' => 'DemoController',
+  'plugin' => NULL,
+)
+Request URL: /hoffee4/admin/demo/img/people/a4.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-25 14:58:32 Error: [MissingControllerException] Controller class DemoController could not be found.
+Exception Attributes: array (
+  'class' => 'DemoController',
+  'plugin' => NULL,
+)
+Request URL: /hoffee4/admin/demo/img/people/a2.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-25 14:58:32 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /hoffee4/admin/img/avatar.png
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-25 14:58:32 Error: [MissingControllerException] Controller class DemoController could not be found.
+Exception Attributes: array (
+  'class' => 'DemoController',
+  'plugin' => NULL,
+)
+Request URL: /hoffee4/admin/demo/img/people/a6.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-25 15:09:46 Error: [MissingControllerException] Controller class DemoController could not be found.
+Exception Attributes: array (
+  'class' => 'DemoController',
+  'plugin' => NULL,
+)
+Request URL: /hoffee4/admin/demo/img/people/a5.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-25 15:09:46 Error: [MissingControllerException] Controller class DemoController could not be found.
+Exception Attributes: array (
+  'class' => 'DemoController',
+  'plugin' => NULL,
+)
+Request URL: /hoffee4/admin/demo/img/people/a3.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-25 15:09:46 Error: [MissingControllerException] Controller class DemoController could not be found.
+Exception Attributes: array (
+  'class' => 'DemoController',
+  'plugin' => NULL,
+)
+Request URL: /hoffee4/admin/demo/img/people/a6.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-25 15:09:46 Error: [MissingControllerException] Controller class DemoController could not be found.
+Exception Attributes: array (
+  'class' => 'DemoController',
+  'plugin' => NULL,
+)
+Request URL: /hoffee4/admin/demo/img/people/a2.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-25 15:09:46 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /hoffee4/admin/img/avatar.png
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-25 15:09:46 Error: [MissingControllerException] Controller class DemoController could not be found.
+Exception Attributes: array (
+  'class' => 'DemoController',
+  'plugin' => NULL,
+)
+Request URL: /hoffee4/admin/demo/img/people/a4.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-25 15:09:46 Error: [MissingControllerException] Controller class DemoController could not be found.
+Exception Attributes: array (
+  'class' => 'DemoController',
+  'plugin' => NULL,
+)
+Request URL: /hoffee4/admin/demo/img/people/a1.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-25 15:09:46 Error: [MissingControllerException] Controller class DemoController could not be found.
+Exception Attributes: array (
+  'class' => 'DemoController',
+  'plugin' => NULL,
+)
+Request URL: /hoffee4/admin/demo/img/people/a5.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-25 15:10:14 Error: [MissingControllerException] Controller class DemoController could not be found.
+Exception Attributes: array (
+  'class' => 'DemoController',
+  'plugin' => NULL,
+)
+Request URL: /hoffee4/admin/demo/img/people/a2.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-25 15:10:14 Error: [MissingControllerException] Controller class DemoController could not be found.
+Exception Attributes: array (
+  'class' => 'DemoController',
+  'plugin' => NULL,
+)
+Request URL: /hoffee4/admin/demo/img/people/a1.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-25 15:10:14 Error: [MissingControllerException] Controller class DemoController could not be found.
+Exception Attributes: array (
+  'class' => 'DemoController',
+  'plugin' => NULL,
+)
+Request URL: /hoffee4/admin/demo/img/people/a5.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-25 15:10:14 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /hoffee4/admin/img/avatar.png
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-25 15:10:14 Error: [MissingControllerException] Controller class DemoController could not be found.
+Exception Attributes: array (
+  'class' => 'DemoController',
+  'plugin' => NULL,
+)
+Request URL: /hoffee4/admin/demo/img/people/a3.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-25 15:10:14 Error: [MissingControllerException] Controller class DemoController could not be found.
+Exception Attributes: array (
+  'class' => 'DemoController',
+  'plugin' => NULL,
+)
+Request URL: /hoffee4/admin/demo/img/people/a6.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-25 15:10:14 Error: [MissingControllerException] Controller class DemoController could not be found.
+Exception Attributes: array (
+  'class' => 'DemoController',
+  'plugin' => NULL,
+)
+Request URL: /hoffee4/admin/demo/img/people/a4.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-25 15:10:34 Error: [MissingActionException] Action FinancialsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'FinancialsController',
+  'action' => 'admin_img',
+)
+Request URL: /hoffee4/admin/financials/img/favicon.png
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(FinancialsController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2016-09-27 10:25:08 Error: [SocketException] stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
-error:14077410:SSL routines:SSL23_GET_SERVER_HELLO:sslv3 alert handshake failure
-stream_socket_client(): Failed to enable crypto
-stream_socket_client(): unable to connect to ssl://api-3t.sandbox.paypal.com:443 (Unknown error)
-Request URL: /hoffee2/shop/step1
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/lib/Cake/Network/CakeSocket.php(347): CakeSocket->connect()
-#1 /Library/WebServer/Documents/hoffee2/lib/Cake/Network/Http/HttpSocket.php(377): CakeSocket->write('POST /nvp HTTP/...')
-#2 /Library/WebServer/Documents/hoffee2/lib/Cake/Network/Http/HttpSocket.php(514): HttpSocket->request(Array)
-#3 /Library/WebServer/Documents/hoffee2/app/Controller/Component/PaypalComponent.php(124): HttpSocket->post('https://api-3t....', 'METHOD=SetExpre...')
-#4 /Library/WebServer/Documents/hoffee2/app/Controller/Component/PaypalComponent.php(76): PaypalComponent->hash_call('SetExpressCheck...', '&PAYMENTREQUEST...')
-#5 /Library/WebServer/Documents/hoffee2/app/Controller/Component/PaypalComponent.php(49): PaypalComponent->CallShortcutExpressCheckout(Array)
-#6 /Library/WebServer/Documents/hoffee2/app/Controller/ShopController.php(153): PaypalComponent->step1(Array)
-#7 [internal function]: ShopController->step1()
-#8 /Library/WebServer/Documents/hoffee2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ShopController), Array)
-#9 /Library/WebServer/Documents/hoffee2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#10 /Library/WebServer/Documents/hoffee2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ShopController), Object(CakeRequest))
-#11 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#12 {main}
-2016-09-28 05:29:59 Error: [MissingControllerException] Controller class CssController could not be found.
+2017-10-25 15:10:34 Error: [MissingActionException] Action FinancialsController::admin_demo() could not be found.
 Exception Attributes: array (
-  'class' => 'CssController',
-  'plugin' => NULL,
+  'controller' => 'FinancialsController',
+  'action' => 'admin_demo',
 )
-Request URL: /hoffee2/css/theme.css
+Request URL: /hoffee4/admin/financials/demo/img/people/a2.jpg
 Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-09-28 05:29:59 Error: [MissingControllerException] Controller class CssController could not be found.
-Exception Attributes: array (
-  'class' => 'CssController',
-  'plugin' => NULL,
-)
-Request URL: /hoffee2/css/theme.css
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-09-28 05:30:08 Error: [MissingControllerException] Controller class ImagesController could not be found.
-Exception Attributes: array (
-  'class' => 'ImagesController',
-  'plugin' => NULL,
-)
-Request URL: /hoffee2/images/caret-down.svg
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-09-28 05:30:40 Error: [MissingControllerException] Controller class ImagesController could not be found.
-Exception Attributes: array (
-  'class' => 'ImagesController',
-  'plugin' => NULL,
-)
-Request URL: /hoffee2/images/caret-down.svg
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-09-28 05:56:37 Error: [MissingControllerException] Controller class BlogController could not be found.
-Exception Attributes: array (
-  'class' => 'BlogController',
-  'plugin' => NULL,
-)
-Request URL: /hoffee2/blog
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-09-28 06:39:23 Error: [MissingControllerException] Controller class ImagesController could not be found.
-Exception Attributes: array (
-  'class' => 'ImagesController',
-  'plugin' => NULL,
-)
-Request URL: /hoffee2/images/checkbox-check.svg
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-09-28 06:44:39 Error: [MissingControllerException] Controller class ImagesController could not be found.
-Exception Attributes: array (
-  'class' => 'ImagesController',
-  'plugin' => NULL,
-)
-Request URL: /hoffee2/images/checkbox-check.svg
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-09-29 08:21:11 Error: [MissingControllerException] Controller class ImagesController could not be found.
-Exception Attributes: array (
-  'class' => 'ImagesController',
-  'plugin' => NULL,
-)
-Request URL: /hoffee2/images/checkbox-check.svg
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-09-30 04:55:57 Error: [MissingControllerException] Controller class ImagesController could not be found.
-Exception Attributes: array (
-  'class' => 'ImagesController',
-  'plugin' => NULL,
-)
-Request URL: /hoffee2/images/checkbox-check.svg
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-09-30 05:53:17 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
-Request URL: /hoffee2/shop/review
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
-#1 /Library/WebServer/Documents/hoffee2/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
-#2 /Library/WebServer/Documents/hoffee2/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
-#3 /Library/WebServer/Documents/hoffee2/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Order), Array, Array)
-#4 /Library/WebServer/Documents/hoffee2/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
-#5 /Library/WebServer/Documents/hoffee2/app/Controller/ShopController.php(234): Model->save(Array)
-#6 [internal function]: ShopController->review()
-#7 /Library/WebServer/Documents/hoffee2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ShopController), Array)
-#8 /Library/WebServer/Documents/hoffee2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#9 /Library/WebServer/Documents/hoffee2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ShopController), Object(CakeRequest))
-#10 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#11 {main}
-2016-09-30 06:04:07 Error: [SocketException] Invalid email: ""
-Request URL: /hoffee2/shop/review
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/lib/Cake/Network/Email/CakeEmail.php(592): CakeEmail->_validateEmail('')
-#1 /Library/WebServer/Documents/hoffee2/lib/Cake/Network/Email/CakeEmail.php(642): CakeEmail->_setEmail('_from', '', NULL)
-#2 /Library/WebServer/Documents/hoffee2/lib/Cake/Network/Email/CakeEmail.php(387): CakeEmail->_setEmailSingle('_from', '', NULL, 'From requires o...')
-#3 /Library/WebServer/Documents/hoffee2/app/Controller/ShopController.php(239): CakeEmail->from('')
-#4 [internal function]: ShopController->review()
-#5 /Library/WebServer/Documents/hoffee2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ShopController), Array)
-#6 /Library/WebServer/Documents/hoffee2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#7 /Library/WebServer/Documents/hoffee2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ShopController), Object(CakeRequest))
-#8 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#9 {main}
-2016-09-30 06:04:35 Error: [SocketException] Invalid email: ""
-Request URL: /hoffee2/shop/review
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/lib/Cake/Network/Email/CakeEmail.php(592): CakeEmail->_validateEmail('')
-#1 /Library/WebServer/Documents/hoffee2/lib/Cake/Network/Email/CakeEmail.php(642): CakeEmail->_setEmail('_from', '', NULL)
-#2 /Library/WebServer/Documents/hoffee2/lib/Cake/Network/Email/CakeEmail.php(387): CakeEmail->_setEmailSingle('_from', '', NULL, 'From requires o...')
-#3 /Library/WebServer/Documents/hoffee2/app/Controller/ShopController.php(239): CakeEmail->from('')
-#4 [internal function]: ShopController->review()
-#5 /Library/WebServer/Documents/hoffee2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ShopController), Array)
-#6 /Library/WebServer/Documents/hoffee2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#7 /Library/WebServer/Documents/hoffee2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ShopController), Object(CakeRequest))
-#8 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#9 {main}
-2016-09-30 06:12:38 Error: [MissingControllerException] Controller class ImagesController could not be found.
-Exception Attributes: array (
-  'class' => 'ImagesController',
-  'plugin' => NULL,
-)
-Request URL: /hoffee2/images/checkbox-check.svg
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-09-30 06:20:03 Error: [MissingControllerException] Controller class BlogController could not be found.
-Exception Attributes: array (
-  'class' => 'BlogController',
-  'plugin' => NULL,
-)
-Request URL: /hoffee2/blog
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-09-30 06:26:47 Error: [MissingControllerException] Controller class ImagesController could not be found.
-Exception Attributes: array (
-  'class' => 'ImagesController',
-  'plugin' => NULL,
-)
-Request URL: /hoffee2/images/checkbox-check.svg
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-09-30 06:26:55 Error: [SocketException] SMTP server did not accept the password.
-Request URL: /hoffee2/shop/review
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/lib/Cake/Network/Email/SmtpTransport.php(96): SmtpTransport->_auth()
-#1 /Library/WebServer/Documents/hoffee2/lib/Cake/Network/Email/CakeEmail.php(1173): SmtpTransport->send(Object(CakeEmail))
-#2 /Library/WebServer/Documents/hoffee2/app/Controller/ShopController.php(247): CakeEmail->send()
-#3 [internal function]: ShopController->review()
-#4 /Library/WebServer/Documents/hoffee2/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(ShopController), Array)
-#5 /Library/WebServer/Documents/hoffee2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#6 /Library/WebServer/Documents/hoffee2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ShopController), Object(CakeRequest))
-#7 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#8 {main}
-2016-09-30 06:32:26 Error: [MissingControllerException] Controller class ImagesController could not be found.
-Exception Attributes: array (
-  'class' => 'ImagesController',
-  'plugin' => NULL,
-)
-Request URL: /hoffee2/images/checkbox-check.svg
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-09-30 06:35:27 Error: [MissingControllerException] Controller class ImagesController could not be found.
-Exception Attributes: array (
-  'class' => 'ImagesController',
-  'plugin' => NULL,
-)
-Request URL: /hoffee2/images/checkbox-check.svg
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-09-30 06:43:16 Error: [MissingControllerException] Controller class ImagesController could not be found.
-Exception Attributes: array (
-  'class' => 'ImagesController',
-  'plugin' => NULL,
-)
-Request URL: /hoffee2/images/checkbox-check.svg
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-09-30 06:44:27 Error: [MissingControllerException] Controller class BlogController could not be found.
-Exception Attributes: array (
-  'class' => 'BlogController',
-  'plugin' => NULL,
-)
-Request URL: /hoffee2/blog
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-09-30 06:46:22 Error: [MissingControllerException] Controller class BlogController could not be found.
-Exception Attributes: array (
-  'class' => 'BlogController',
-  'plugin' => NULL,
-)
-Request URL: /hoffee2/blog
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2016-09-30 06:46:52 Error: [MissingActionException] Action BlogController::index() could not be found.
-Exception Attributes: array (
-  'controller' => 'BlogController',
-  'action' => 'index',
-)
-Request URL: /hoffee2/blog
-Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Library/WebServer/Documents/hoffee2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BlogController), Object(CakeRequest))
-#2 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(FinancialsController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2016-09-30 06:46:59 Error: [MissingViewException] View file "Blog/index.ctp" is missing.
+2017-10-25 15:10:34 Error: [MissingActionException] Action FinancialsController::admin_demo() could not be found.
 Exception Attributes: array (
-  'file' => 'Blog/index.ctp',
+  'controller' => 'FinancialsController',
+  'action' => 'admin_demo',
 )
-Request URL: /hoffee2/blog
+Request URL: /hoffee4/admin/financials/demo/img/people/a3.jpg
 Stack Trace:
-#0 /Library/WebServer/Documents/hoffee2/lib/Cake/View/View.php(470): View->_getViewFileName('Blog/index')
-#1 /Library/WebServer/Documents/hoffee2/lib/Cake/Controller/Controller.php(963): View->render(NULL, NULL)
-#2 /Library/WebServer/Documents/hoffee2/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
-#3 /Library/WebServer/Documents/hoffee2/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BlogController), Object(CakeRequest))
-#4 /Library/WebServer/Documents/hoffee2/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#5 {main}
-2017-04-01 14:00:31 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null
-Request URL: /hoffee/backEnd/orderVer1
-Stack Trace:
-#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
-#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
-#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(68): Model->save(Array)
-#6 [internal function]: BackEndController->orderVer1()
-#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
-#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
-#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#11 {main}
-2017-04-01 14:00:56 Error: [MissingActionException] Action BackEndController::getProducts() could not be found.
-Exception Attributes: array (
-  'controller' => 'BackEndController',
-  'action' => 'getProducts',
-)
-Request URL: /hoffee/backEnd/getProducts
-Stack Trace:
-#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
-#2 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(FinancialsController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
-2017-04-01 14:01:22 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null
-Request URL: /hoffee/backEnd/orderVer1
-Stack Trace:
-#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
-#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
-#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(68): Model->save(Array)
-#6 [internal function]: BackEndController->orderVer1()
-#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
-#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
-#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#11 {main}
-2017-04-01 14:29:53 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null
-Request URL: /hoffee/backEnd/orderVer1
-Stack Trace:
-#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
-#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
-#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(68): Model->save(Array)
-#6 [internal function]: BackEndController->orderVer1()
-#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
-#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
-#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#11 {main}
-2017-04-01 14:30:38 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null
-Request URL: /hoffee/backEnd/orderVer1
-Stack Trace:
-#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
-#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
-#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(68): Model->save(Array)
-#6 [internal function]: BackEndController->orderVer1()
-#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
-#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
-#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#11 {main}
-2017-04-01 14:30:56 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null
-Request URL: /hoffee/backEnd/orderVer1
-Stack Trace:
-#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
-#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
-#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(68): Model->save(Array)
-#6 [internal function]: BackEndController->orderVer1()
-#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
-#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
-#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#11 {main}
-2017-04-01 14:31:52 Warning: Warning (4096): Object of class CakeRequest could not be converted to string in [/Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php, line 52]
-Trace:
-BackEndController::orderVer1() - APP/Controller/BackEndController.php, line 52
-ReflectionMethod::invokeArgs() - [internal], line ??
-Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 491
-Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
-Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
-[main] - APP/webroot/index.php, line 109
-
-2017-04-01 14:31:54 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null
-Request URL: /hoffee/backEnd/orderVer1
-Stack Trace:
-#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
-#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
-#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(68): Model->save(Array)
-#6 [internal function]: BackEndController->orderVer1()
-#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
-#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
-#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#11 {main}
-2017-04-01 14:32:54 Error: [Error] Call to undefined function is()
-Request URL: /hoffee/backEnd/orderVer1
-Stack Trace:
-#0 [internal function]: BackEndController->orderVer1()
-#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
-#4 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#5 {main}
-2017-04-01 14:35:51 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null
-Request URL: /hoffee/backEnd/orderVer1
-Stack Trace:
-#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
-#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
-#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(69): Model->save(Array)
-#6 [internal function]: BackEndController->orderVer1()
-#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
-#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
-#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#11 {main}
-2017-04-01 14:39:55 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null
-Request URL: /hoffee/backEnd/orderVer1
-Stack Trace:
-#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
-#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
-#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(68): Model->save(Array)
-#6 [internal function]: BackEndController->orderVer1()
-#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
-#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
-#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#11 {main}
-2017-04-01 14:40:14 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null
-Request URL: /hoffee/backEnd/orderVer1
-Stack Trace:
-#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
-#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
-#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(71): Model->save(Array)
-#6 [internal function]: BackEndController->orderVer1()
-#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
-#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
-#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#11 {main}
-2017-04-01 14:41:37 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null
-Request URL: /hoffee/backEnd/orderVer1
-Stack Trace:
-#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
-#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
-#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(71): Model->save(Array)
-#6 [internal function]: BackEndController->orderVer1()
-#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
-#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
-#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#11 {main}
-2017-04-01 14:42:13 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null
-Request URL: /hoffee/backEnd/orderVer1
-Stack Trace:
-#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
-#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
-#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(71): Model->save(Array)
-#6 [internal function]: BackEndController->orderVer1()
-#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
-#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
-#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#11 {main}
-2017-04-01 14:42:26 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null
-Request URL: /hoffee/backEnd/orderVer1
-Stack Trace:
-#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
-#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
-#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(71): Model->save(Array)
-#6 [internal function]: BackEndController->orderVer1()
-#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
-#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
-#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#11 {main}
-2017-04-01 14:42:37 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null
-Request URL: /hoffee/backEnd/orderVer1
-Stack Trace:
-#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
-#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
-#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(71): Model->save(Array)
-#6 [internal function]: BackEndController->orderVer1()
-#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
-#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
-#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#11 {main}
-2017-04-01 14:47:22 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null
-Request URL: /hoffee/backEnd/orderVer1
-Stack Trace:
-#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
-#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
-#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(71): Model->save(Array)
-#6 [internal function]: BackEndController->orderVer1()
-#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
-#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
-#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#11 {main}
-2017-04-01 18:26:33 Error: [ParseError] syntax error, unexpected 'if' (T_IF)
-Request URL: /hoffee/backEnd/orderVer1
-Stack Trace:
-#0 [internal function]: App::load('BackEndControll...')
-#1 [internal function]: spl_autoload_call('BackEndControll...')
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(266): class_exists('BackEndControll...')
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
-#5 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#6 {main}
-2017-04-01 18:26:49 Error: [ParseError] syntax error, unexpected 'if' (T_IF)
-Request URL: /hoffee/backEnd/orderVer1
-Stack Trace:
-#0 [internal function]: App::load('BackEndControll...')
-#1 [internal function]: spl_autoload_call('BackEndControll...')
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(266): class_exists('BackEndControll...')
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
-#5 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#6 {main}
-2017-04-01 18:27:07 Error: [ParseError] syntax error, unexpected 'if' (T_IF)
-Request URL: /hoffee/backEnd/orderVer1
-Stack Trace:
-#0 [internal function]: App::load('BackEndControll...')
-#1 [internal function]: spl_autoload_call('BackEndControll...')
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(266): class_exists('BackEndControll...')
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
-#5 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#6 {main}
-2017-04-01 18:27:10 Error: [ParseError] syntax error, unexpected 'if' (T_IF)
-Request URL: /hoffee/backEnd/orderVer1
-Stack Trace:
-#0 [internal function]: App::load('BackEndControll...')
-#1 [internal function]: spl_autoload_call('BackEndControll...')
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(266): class_exists('BackEndControll...')
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
-#5 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#6 {main}
-2017-04-01 18:27:31 Error: [ParseError] syntax error, unexpected 'if' (T_IF)
-Request URL: /hoffee/backEnd/orderVer1
-Stack Trace:
-#0 [internal function]: App::load('BackEndControll...')
-#1 [internal function]: spl_autoload_call('BackEndControll...')
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(266): class_exists('BackEndControll...')
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
-#5 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#6 {main}
-2017-04-01 18:27:47 Error: [ParseError] syntax error, unexpected 'if' (T_IF)
-Request URL: /hoffee/backEnd/getProduct
-Stack Trace:
-#0 [internal function]: App::load('BackEndControll...')
-#1 [internal function]: spl_autoload_call('BackEndControll...')
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(266): class_exists('BackEndControll...')
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
-#5 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#6 {main}
-2017-04-01 18:27:47 Error: [ParseError] syntax error, unexpected 'if' (T_IF)
-Request URL: /hoffee/backEnd/
-Stack Trace:
-#0 [internal function]: App::load('BackEndControll...')
-#1 [internal function]: spl_autoload_call('BackEndControll...')
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(266): class_exists('BackEndControll...')
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
-#5 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#6 {main}
-2017-04-01 18:27:50 Error: [ParseError] syntax error, unexpected 'if' (T_IF)
-Request URL: /hoffee/backEnd/getProduct
-Stack Trace:
-#0 [internal function]: App::load('BackEndControll...')
-#1 [internal function]: spl_autoload_call('BackEndControll...')
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(266): class_exists('BackEndControll...')
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
-#5 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#6 {main}
-2017-04-01 18:27:50 Error: [ParseError] syntax error, unexpected 'if' (T_IF)
-Request URL: /hoffee/backEnd/
-Stack Trace:
-#0 [internal function]: App::load('BackEndControll...')
-#1 [internal function]: spl_autoload_call('BackEndControll...')
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(266): class_exists('BackEndControll...')
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
-#5 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#6 {main}
-2017-04-01 18:28:04 Error: [ParseError] syntax error, unexpected 'if' (T_IF)
-Request URL: /hoffee/backEnd/getCities
-Stack Trace:
-#0 [internal function]: App::load('BackEndControll...')
-#1 [internal function]: spl_autoload_call('BackEndControll...')
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(266): class_exists('BackEndControll...')
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
-#5 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#6 {main}
-2017-04-01 18:28:35 Error: [ParseError] syntax error, unexpected 'if' (T_IF)
-Request URL: /hoffee/backEnd/getProduct
-Stack Trace:
-#0 [internal function]: App::load('BackEndControll...')
-#1 [internal function]: spl_autoload_call('BackEndControll...')
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(266): class_exists('BackEndControll...')
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
-#5 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#6 {main}
-2017-04-01 18:28:35 Error: [ParseError] syntax error, unexpected 'if' (T_IF)
-Request URL: /hoffee/backEnd/
-Stack Trace:
-#0 [internal function]: App::load('BackEndControll...')
-#1 [internal function]: spl_autoload_call('BackEndControll...')
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(266): class_exists('BackEndControll...')
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
-#5 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#6 {main}
-2017-04-01 18:28:52 Error: [ParseError] syntax error, unexpected 'if' (T_IF)
-Request URL: /hoffee/backEnd/getProduct
-Stack Trace:
-#0 [internal function]: App::load('BackEndControll...')
-#1 [internal function]: spl_autoload_call('BackEndControll...')
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(266): class_exists('BackEndControll...')
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
-#5 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#6 {main}
-2017-04-01 18:28:52 Error: [ParseError] syntax error, unexpected 'if' (T_IF)
-Request URL: /hoffee/backEnd/
-Stack Trace:
-#0 [internal function]: App::load('BackEndControll...')
-#1 [internal function]: spl_autoload_call('BackEndControll...')
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(266): class_exists('BackEndControll...')
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
-#5 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#6 {main}
-2017-04-01 18:32:58 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'note' doesn't have a default value
-Request URL: /hoffee/backEnd/orderVer1
-Stack Trace:
-#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
-#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
-#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(72): Model->save(Array)
-#6 [internal function]: BackEndController->orderVer1()
-#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
-#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
-#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#11 {main}
-2017-04-01 18:34:36 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'note' doesn't have a default value
-Request URL: /hoffee/backEnd/orderVer1
-Stack Trace:
-#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
-#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
-#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(72): Model->save(Array)
-#6 [internal function]: BackEndController->orderVer1()
-#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
-#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
-#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#11 {main}
-2017-04-01 18:35:48 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'note' doesn't have a default value
-Request URL: /hoffee/backEnd/orderVer1
-Stack Trace:
-#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
-#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
-#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(74): Model->save(Array)
-#6 [internal function]: BackEndController->orderVer1()
-#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
-#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
-#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#11 {main}
-2017-04-01 18:36:03 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'note' doesn't have a default value
-Request URL: /hoffee/backEnd/orderVer1
-Stack Trace:
-#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
-#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
-#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(74): Model->save(Array)
-#6 [internal function]: BackEndController->orderVer1()
-#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
-#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
-#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#11 {main}
-2017-04-01 18:36:14 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'note' doesn't have a default value
-Request URL: /hoffee/backEnd/orderVer1
-Stack Trace:
-#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
-#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
-#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(74): Model->save(Array)
-#6 [internal function]: BackEndController->orderVer1()
-#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
-#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
-#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#11 {main}
-2017-04-01 18:36:44 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'note' doesn't have a default value
-Request URL: /hoffee/backEnd/orderVer1
-Stack Trace:
-#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
-#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
-#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(75): Model->save(Array)
-#6 [internal function]: BackEndController->orderVer1()
-#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
-#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
-#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#11 {main}
-2017-04-01 18:38:07 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'note' doesn't have a default value
-Request URL: /hoffee/backEnd/orderVer1
-Stack Trace:
-#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
-#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
-#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(75): Model->save(Array)
-#6 [internal function]: BackEndController->orderVer1()
-#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
-#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
-#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#11 {main}
-2017-04-01 18:38:41 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'note' doesn't have a default value
-Request URL: /hoffee/backEnd/orderVer1
-Stack Trace:
-#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
-#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `ho...', Array)
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Datasource/DboSource.php(1019): DboSource->execute('INSERT INTO `ho...')
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1933): DboSource->create(Object(Customer), Array, Array)
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
-#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(75): Model->save(Array)
-#6 [internal function]: BackEndController->orderVer1()
-#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
-#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
-#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#11 {main}
-2017-04-01 19:11:35 Warning: Warning (2): Invalid argument supplied for foreach() in [/Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php, line 120]
-Trace:
-BackEndController::orderVer1() - APP/Controller/BackEndController.php, line 120
-ReflectionMethod::invokeArgs() - [internal], line ??
-Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 491
-Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
-Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
-[main] - APP/webroot/index.php, line 109
-
-2017-04-01 21:33:01 Error: [MissingTableException] Table back_ends for model BackEnd was not found in datasource default.
+2017-10-25 15:10:34 Error: [MissingActionException] Action FinancialsController::admin_demo() could not be found.
 Exception Attributes: array (
-  'table' => 'back_ends',
-  'class' => 'BackEnd',
-  'ds' => 'default',
+  'controller' => 'FinancialsController',
+  'action' => 'admin_demo',
 )
-Request URL: /hoffee/backEnd/getProduct
+Request URL: /hoffee4/admin/financials/demo/img/people/a6.jpg
 Stack Trace:
-#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(3653): Model->setSource('back_ends')
-#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1387): Model->getDataSource()
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1483): Model->schema()
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Component/PaginatorComponent.php(400): Model->hasField('name')
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Component/PaginatorComponent.php(142): PaginatorComponent->validateSort(Object(AppModel), Array, Array)
-#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(41): PaginatorComponent->paginate()
-#6 [internal function]: BackEndController->getProduct()
-#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
-#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
-#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#11 {main}
-2017-04-01 21:34:34 Error: [MissingTableException] Table back_ends for model BackEnd was not found in datasource default.
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(FinancialsController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-10-25 15:10:34 Error: [MissingActionException] Action FinancialsController::admin_demo() could not be found.
 Exception Attributes: array (
-  'table' => 'back_ends',
-  'class' => 'BackEnd',
-  'ds' => 'default',
+  'controller' => 'FinancialsController',
+  'action' => 'admin_demo',
 )
-Request URL: /hoffee/backEnd/getProduct
+Request URL: /hoffee4/admin/financials/demo/img/people/a5.jpg
 Stack Trace:
-#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(3653): Model->setSource('back_ends')
-#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1387): Model->getDataSource()
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1483): Model->schema()
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Component/PaginatorComponent.php(400): Model->hasField('name')
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Component/PaginatorComponent.php(142): PaginatorComponent->validateSort(Object(AppModel), Array, Array)
-#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(41): PaginatorComponent->paginate(Object(AppModel))
-#6 [internal function]: BackEndController->getProduct()
-#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
-#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
-#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#11 {main}
-2017-04-01 21:37:12 Error: [MissingTableException] Table back_ends for model BackEnd was not found in datasource default.
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(FinancialsController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-10-25 15:10:34 Error: [MissingActionException] Action FinancialsController::admin_demo() could not be found.
 Exception Attributes: array (
-  'table' => 'back_ends',
-  'class' => 'BackEnd',
-  'ds' => 'default',
+  'controller' => 'FinancialsController',
+  'action' => 'admin_demo',
 )
-Request URL: /hoffee/backEnd/getProduct
+Request URL: /hoffee4/admin/financials/demo/img/people/a1.jpg
 Stack Trace:
-#0 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(3653): Model->setSource('back_ends')
-#1 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1387): Model->getDataSource()
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Model/Model.php(1483): Model->schema()
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Component/PaginatorComponent.php(400): Model->hasField('name')
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Component/PaginatorComponent.php(142): PaginatorComponent->validateSort(Object(AppModel), Array, Array)
-#5 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(41): PaginatorComponent->paginate()
-#6 [internal function]: BackEndController->getProduct()
-#7 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
-#8 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#9 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
-#10 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#11 {main}
-2017-04-01 21:37:29 Error: [MissingModelException] q
-Request URL: /hoffee/backEnd/getProduct
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(FinancialsController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-10-25 15:10:34 Error: [MissingActionException] Action FinancialsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'FinancialsController',
+  'action' => 'admin_img',
+)
+Request URL: /hoffee4/admin/financials/img/avatar.png
 Stack Trace:
-#0 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(41): PaginatorComponent->paginate('q')
-#1 [internal function]: BackEndController->getProduct()
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
-#5 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#6 {main}
-2017-04-01 21:37:36 Error: [MissingModelException] q
-Request URL: /hoffee/backEnd/getProduct
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(FinancialsController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-10-25 15:10:34 Error: [MissingActionException] Action FinancialsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'FinancialsController',
+  'action' => 'admin_img',
+)
+Request URL: /hoffee4/admin/financials/img/favicon.png
 Stack Trace:
-#0 /Applications/MAMP/htdocs/hoffee/app/Controller/BackEndController.php(41): PaginatorComponent->paginate('q')
-#1 [internal function]: BackEndController->getProduct()
-#2 /Applications/MAMP/htdocs/hoffee/lib/Cake/Controller/Controller.php(491): ReflectionMethod->invokeArgs(Object(BackEndController), Array)
-#3 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#4 /Applications/MAMP/htdocs/hoffee/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(BackEndController), Object(CakeRequest))
-#5 /Applications/MAMP/htdocs/hoffee/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#6 {main}
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(FinancialsController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-10-25 15:10:34 Error: [MissingActionException] Action FinancialsController::admin_demo() could not be found.
+Exception Attributes: array (
+  'controller' => 'FinancialsController',
+  'action' => 'admin_demo',
+)
+Request URL: /hoffee4/admin/financials/demo/img/people/a4.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(FinancialsController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-10-25 15:11:06 Error: [MissingActionException] Action FinancialsController::admin_demo() could not be found.
+Exception Attributes: array (
+  'controller' => 'FinancialsController',
+  'action' => 'admin_demo',
+)
+Request URL: /hoffee4/admin/financials/demo/img/people/a5.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(FinancialsController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-10-25 15:11:06 Error: [MissingActionException] Action FinancialsController::admin_demo() could not be found.
+Exception Attributes: array (
+  'controller' => 'FinancialsController',
+  'action' => 'admin_demo',
+)
+Request URL: /hoffee4/admin/financials/demo/img/people/a3.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(FinancialsController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-10-25 15:11:06 Error: [MissingActionException] Action FinancialsController::admin_demo() could not be found.
+Exception Attributes: array (
+  'controller' => 'FinancialsController',
+  'action' => 'admin_demo',
+)
+Request URL: /hoffee4/admin/financials/demo/img/people/a6.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(FinancialsController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-10-25 15:11:06 Error: [MissingActionException] Action FinancialsController::admin_demo() could not be found.
+Exception Attributes: array (
+  'controller' => 'FinancialsController',
+  'action' => 'admin_demo',
+)
+Request URL: /hoffee4/admin/financials/demo/img/people/a4.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(FinancialsController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-10-25 15:11:06 Error: [MissingActionException] Action FinancialsController::admin_demo() could not be found.
+Exception Attributes: array (
+  'controller' => 'FinancialsController',
+  'action' => 'admin_demo',
+)
+Request URL: /hoffee4/admin/financials/demo/img/people/a2.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(FinancialsController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-10-25 15:11:06 Error: [MissingActionException] Action FinancialsController::admin_demo() could not be found.
+Exception Attributes: array (
+  'controller' => 'FinancialsController',
+  'action' => 'admin_demo',
+)
+Request URL: /hoffee4/admin/financials/demo/img/people/a1.jpg
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(FinancialsController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-10-25 15:11:06 Error: [MissingActionException] Action FinancialsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'FinancialsController',
+  'action' => 'admin_img',
+)
+Request URL: /hoffee4/admin/financials/img/avatar.png
+Stack Trace:
+#0 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Library/WebServer/Documents/hoffee4/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(FinancialsController), Object(CakeRequest))
+#2 /Library/WebServer/Documents/hoffee4/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}

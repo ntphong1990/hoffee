@@ -54,18 +54,18 @@ class BackEndController extends AppController
 
     public function getCities()
     {
-        $this->loadModel('DevvnTinhthanhpho');
-        $this->loadModel('DevvnQuanhuyen');
+        $this->loadModel('District');
+        $this->loadModel('Ward');
 
-        $cities = $this->DevvnTinhthanhpho->find('all');
+        $cities = $this->District->find('all');
         $listCities = array();
 
         for ($i = 0; $i < count($cities); $i++) {
-            $city = $cities[$i]['DevvnTinhthanhpho'];
-            $states = $this->DevvnQuanhuyen->find('all', array('conditions' => array('matp' => $cities[$i]['DevvnTinhthanhpho']['matp'])));
+            $city = $cities[$i]['District'];
+            $states = $this->Ward->find('all', array('conditions' => array('matp' => $cities[$i]['District']['matp'])));
             $listState = array();
             for ($j = 0; $j < count($states); $j++) {
-                $state = $states[$j]['DevvnQuanhuyen'];
+                $state = $states[$j]['Ward'];
                 array_push($listState, $state);
             }
             $city['states'] = $listState;
@@ -103,7 +103,6 @@ class BackEndController extends AppController
             $this->Customer->save($customer);
 
             $customer['Customer']['id'] = $this->Customer->inserted_ids[0];
-
         } else {
             $customer = $isCustomerExisted;
         }
@@ -111,7 +110,7 @@ class BackEndController extends AppController
 
         $this->loadModel('Order');
         $this->loadModel('OrderItem');
-        $this->loadModel('DevvnTinhthanhpho');
+        $this->loadModel('District');
         $order = $this->Order->create();
         $order['Order']['first_name'] = $customer['Customer']['name'];
         $order['Order']['customer_id'] = $customer['Customer']['id'];
@@ -120,9 +119,9 @@ class BackEndController extends AppController
         $order['Order']['phone'] = $customer['Customer']['phone'];
         $order['Order']['billing_address'] = $jsonData['billing_address'];
         $order['Order']['billing_address2'] = '';
-        $city = $this->DevvnTinhthanhpho->find('first', array('conditions' => array('matp' => $customer['Customer']['district'])));
+        $city = $this->District->find('first', array('conditions' => array('matp' => $customer['Customer']['district'])));
         if ($city) {
-            $order['Order']['billing_city'] = $city['DevvnTinhthanhpho']['name'];
+            $order['Order']['billing_city'] = $city['District']['name'];
         } else {
             $order['Order']['billing_city'] = '';
         }
@@ -149,7 +148,6 @@ class BackEndController extends AppController
         $weight = 0;
         $this->loadModel('Product');
         foreach ($orderItems as $value) {
-
             $productId = $value["id"];
             $quantity = $value["quantity"];
 
@@ -190,7 +188,6 @@ class BackEndController extends AppController
         $this->Order->set($order);
 
         return json_encode(true);
-
     }
 
 
@@ -200,7 +197,7 @@ class BackEndController extends AppController
         $this->loadModel('Order');
         $this->loadModel('Customer');
         $this->loadModel('OrderItem');
-        $this->loadModel('DevvnTinhthanhpho');
+        $this->loadModel('District');
         $customer = $this->Customer->find('first', array('conditions' => array(
             'id' => $this->request->data['customerid']
         )));
@@ -212,9 +209,9 @@ class BackEndController extends AppController
         $order['Order']['phone'] = $customer['Customer']['phone'];
         $order['Order']['billing_address'] = $customer['Customer']['address'];
         $order['Order']['billing_address2'] = '';
-        $city = $this->DevvnTinhthanhpho->find('first', array('conditions' => array('matp' => $customer['Customer']['district'])));
+        $city = $this->District->find('first', array('conditions' => array('matp' => $customer['Customer']['district'])));
         if ($city) {
-            $order['Order']['billing_city'] = ['DevvnTinhthanhpho']['name'];
+            $order['Order']['billing_city'] = ['District']['name'];
         } else {
             $order['Order']['billing_city'] = '';
         }
@@ -269,7 +266,6 @@ class BackEndController extends AppController
         $this->Order->set($order);
 
         return json_encode(true);
-
     }
 
 
@@ -285,7 +281,6 @@ class BackEndController extends AppController
 
     public function searchCustomer($key)
     {
-
     }
 
 
@@ -399,7 +394,8 @@ class BackEndController extends AppController
         return json_encode($response);
     }
 
-    public function me(){
+    public function me()
+    {
 
         $response['result'] = 1;
         $response['code'] = "OK";
@@ -421,7 +417,8 @@ class BackEndController extends AppController
         return json_encode($response);
     }
 
-    function orderHistory() {
+    function orderHistory()
+    {
         $jsonData = $this->request->input('json_decode', true);
         $token = $jsonData['token'];
 
@@ -470,13 +467,4 @@ class BackEndController extends AppController
         }
         return $randomString;
     }
-
-    
-
 }
-
-
-
-
-
-
