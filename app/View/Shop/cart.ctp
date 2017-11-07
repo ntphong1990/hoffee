@@ -6,13 +6,13 @@
 
 
 
-<?php if(empty($shop['OrderItem'])) : ?>
+<?php if (empty($shop['OrderItem'])) : ?>
 
 Shopping Cart is empty
 
-<?php else: ?>
+<?php else : ?>
 
-<?php echo $this->Form->create(NULL, array('url' => array('controller' => 'shop', 'action' => 'cartupdate'))); ?>
+<?php echo $this->Form->create(null, array('url' => array('controller' => 'shop', 'action' => 'cartupdate'))); ?>
 
 
 
@@ -51,11 +51,11 @@ Shopping Cart is empty
                                 </thead>
                                 <tbody>
                                 <?php $tabindex = 1; ?>
-                                <?php foreach ($shop['OrderItem'] as $key => $item): ?>
+                                <?php foreach ($shop['OrderItem'] as $key => $item) : ?>
                                 <tr class="product">
 
                                     <td class="product-thumbnail">
-                                        <a href="https://us.camposcoffee.com/product/campos-blade-runner-blend/?attribute_pa_weight=8oz&amp;attribute_pa_grind=whole-beans"><?php echo $this->Html->image('/images/small/' . $item['Product']['image'], array('class' => 'px20','width' => 100)); ?></a>								</td>
+                                        <a href="https://us.camposcoffee.com/product/campos-blade-runner-blend/?attribute_pa_weight=8oz&amp;attribute_pa_grind=whole-beans"><?php echo $this->Html->image('/images/small/' . $item['Product']['image'], array('class' => 'px20','width' => 100)); ?></a>                                </td>
 
                                     <td class="product-name" data-title="Product">
                                         <?php echo $this->Html->link($item['Product']['name'], array('controller' => 'products', 'action' => 'view', 'slug' => $item['Product']['slug'])); ?>
@@ -63,22 +63,22 @@ Shopping Cart is empty
                                     </td>
 
                                     <td class="product-price" data-title="Price">
-                                        <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"><span id="price-<?php echo $key; ?>"><?php echo number_format($item['Product']['price']); ?></span> VND</span>								</td>
+                                        <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"><span id="price-<?php echo $key; ?>"><?php echo number_format($item['Product']['price']); ?></span> VND</span>                             </td>
 
                                     <td class="product-quantity" data-title="số.lg">
                                         <div class="quantity">
                                     <?php
                                     $mods = 0;
-                                    if(isset($item['Product']['productmod_name'])) {
+                                    if (isset($item['Product']['productmod_name'])) {
                                         $mods = $item['Product']['productmod_id'];
                                     }
-                                         ?>
+                                            ?>
                                             <?php echo $this->Form->input('quantity-' . $key, array('div' => false, 'class' => 'numeric form-control input-small', 'label' => false, 'size' => 2, 'maxlength' => 2, 'tabindex' => $tabindex++, 'data-id' => $item['Product']['id'], 'data-mods' => $mods, 'value' => $item['quantity'])); ?>
                                         </div>
                                     </td>
 
                                     <td class="product-subtotal" data-title="Subtotal">
-                                        <span class="woocommerce-Price-amount amount"> <span id="subtotal_<?php echo $key; ?>"><?php echo number_format($item['subtotal']); ?></span> VND</span>								</td>
+                                        <span class="woocommerce-Price-amount amount"> <span id="subtotal_<?php echo $key; ?>"><?php echo number_format($item['subtotal']); ?></span> VND</span>                                </td>
 
                                     <td class="product-remove">
                                         <a href="https://us.camposcoffee.com/cart/?remove_item=02e8f2e4364042907ef9df3764b3546b&amp;_wpnonce=c60eaf3f9c" class="remove" title="Remove this item" data-product_id="2024" data-product_sku=""><icon src="https://us.camposcoffee.com/wp-content/themes/campos-wp-theme/assets/images/icons/rubbish.svg" class="product-remove-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22px" height="21px" viewBox="0 0 22 21" version="1.1" class="injected-svg icon-svg">
@@ -113,7 +113,7 @@ Shopping Cart is empty
                                                             </g>
                                                         </g>
                                                     </g>
-                                                </svg></icon></a>								</td>
+                                                </svg></icon></a>                               </td>
 
                                 </tr>
                                 <?php endforeach; ?>
@@ -209,12 +209,7 @@ Shopping Cart is empty
 
                                     </tbody></table>
 
-                                <div class="wc-proceed-to-checkout">
-
-                                    <a href="https://us.camposcoffee.com/checkout/" class="checkout-button button alt wc-forward">
-                                        Proceed to Checkout</a>
-                                </div>
-
+                               
 
                             </div>
 

@@ -27,7 +27,6 @@
 
     <!-- / Yoast SEO plugin. -->
 
-    <link rel="dns-prefetch" href="https://s.w.org/">
     <link rel="stylesheet" id="contact-form-7-css" href="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/styles.css" media="all">
     <link rel="stylesheet" id="woocommerce-layout-css" href="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/woocommerce-layout.css" media="all">
     <link rel="stylesheet" id="woocommerce-smallscreen-css" href="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/woocommerce-smallscreen.css" media="only screen and (max-width: 768px)">
@@ -35,17 +34,7 @@
     <script type="text/javascript" src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/modernizr.min.js"></script>
     <script type="text/javascript" src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/jquery.js"></script>
     <script type="text/javascript" src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/jquery-migrate.min.js"></script>
-    <!-- Start WooCommerce Google Analytics Pro -->
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
-        __gaTracker( 'create', 'UA-35102443-1', 'auto' );
-        __gaTracker( 'set', 'forceSSL', true );
-        __gaTracker( 'require', 'ec' );
-    </script>
-    <!-- end WooCommerce Google Analytics Pro -->
+
 
 
     <link rel="alternate" hreflang="en-au" href="https://hoffee.vn/">

@@ -3,6 +3,13 @@
 
         var ele = document.getElementById('billing_city');
         var e = document.getElementById('state');
+        var url = "<?php echo Configure::read('Settings.DOMAIN');?>/shop/shipupdate/" + ele.options[ele.selectedIndex].value
+            +"/" + e.options[e.selectedIndex].value
+            +"/" + $('#billing_first_name').val()
+            +"/" + $('#billing_last_name').val()
+            +"/" + $('#billing_email').val()
+            +"/" + $('#billing_phone').val()
+            +"/" + $('#billing_address_1').val();
         window.location.href = "<?php echo Configure::read('Settings.DOMAIN');?>/shop/shipupdate/" + ele.options[ele.selectedIndex].value
             +"/" + e.options[e.selectedIndex].value
             +"/" + $('#billing_first_name').val()
@@ -10,6 +17,8 @@
             +"/" + $('#billing_email').val()
             +"/" + $('#billing_phone').val()
             +"/" + $('#billing_address_1').val();
+
+
     }
 
     function shippingState() {
@@ -32,8 +41,12 @@
                    $('#billing_first_name').val(result.Customer.name);
                    $('#billing_last_name').val(result.Customer.lastname);
                    $('#billing_address_1').val(result.Customer.address);
+                   if(result.Customer.district){
                    $('#billing_city').val(result.Customer.district);
+                   }
+                  if(result.Customer.state){
                    $('#state').val(result.Customer.state);
+                  }
                    selectDistrict(result.Customer.district);
                }
             });
@@ -105,11 +118,11 @@
 
                                 <select name="data[Order][billing_city]"  id="billing_city" style="max-width: none" onchange="shipping(this)" >
 
-                                    <option value="0" disabled <?php if ($shop['Order']['city'] == 0) {
+                                    <option value="0" disabled <?php if ($shop['Order']['id'] == 0) {
                                         echo 'selected';
 }?>>Chọn tỉnh/thành phố</option>
                                     <?php foreach ($locations as $key => $value) { ?>
-                                      <option value="<?php echo $value['District']['matp'];?>" <?php if ($shop['Order']['city'] == $value['District']['matp']) {
+                                      <option value="<?php echo $value['District']['id'];?>" <?php if ($shop['Order']['city'] == $value['District']['id']) {
                                             echo 'selected';
 }?>><?php echo $value['District']['name'];?></option>
                                     <?php } ?>
@@ -121,9 +134,9 @@
 
                                     <option value="0" disabled selected>Chọn quận/huyện</option>
                                     <?php foreach ($states as $key => $value) { ?>
-                                        <option value="<?php echo $value['Ward']['maqh'];?>" <?php if ($shop['Order']['state'] == $value['Ward']['maqh']) {
+                                        <option value="<?php echo $value['Ward']['id'];?>" <?php if ($shop['Order']['state'] == $value['Ward']['id']) {
                                             echo 'selected';
-}?> id="<?php echo $value['Ward']['matp'];?>"><?php echo $value['Ward']['name'];?></option>
+}?> id="<?php echo $value['Ward']['provinceid'];?>"><?php echo $value['Ward']['name'];?></option>
                                     <?php } ?>
                                 </select>
                             </p>
@@ -257,10 +270,10 @@
                                     </label>
                                     <div class="payment_box payment_method_paypal">
                                         <p class="form-row form-row-wide create-account woocommerce-validated">
-                                            <input class="input-checkbox" id="createaccount" type="checkbox" name="data[Order][direct]" value="1"> <label for="createaccount" class="checkbox">trực tiếp khi giao hàng</label>
+                                            <input style="display: inline-block;" class="input-checkbox" id="createaccount1" type="checkbox" name="data[Order][direct]" value="1"> <label for="createaccount1" class="checkbox">trực tiếp khi giao hàng</label>
                                         </p>
                                         <p class="form-row form-row-wide create-account woocommerce-validated">
-                                            <input class="input-checkbox" id="createaccount" type="checkbox" name="data[Order][transfer]" value="1"> <label for="createaccount" class="checkbox">chuyển khoản qua ngân hàng</label>
+                                            <input  style="display: inline-block;" class="input-checkbox" id="createaccount2" type="checkbox" name="data[Order][transfer]" value="1"> <label for="createaccount2" class="checkbox">chuyển khoản qua ngân hàng</label>
                                             <label style="color : #0a4e9b">
                                                 Chủ TK : Lê Khánh Duy </br>
                                                 Vietcombank chi nhánh Hồ Chí Minh </br>

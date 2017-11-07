@@ -23,6 +23,7 @@ class ShopController extends AppController
     {
         parent::beforeFilter();
         $this->disableCache();
+        $this->layout = 'default';
         //$this->Security->validatePost = false;
     }
 
@@ -134,11 +135,11 @@ class ShopController extends AppController
         $this->loadModel('District');
         $this->loadModel('Ward');
         if ($state != 0) {
-            $st = $this->Ward->find('first', array('conditions' => array('maqh' => $state)));
+            $st = $this->Ward->find('first', array('conditions' => array('id' => $state)));
             $ship = $st['Ward']['fee'];
         } else {
             if ($id) {
-                $st = $this->District->find('first', array('conditions' => array('matp' => $id)));
+                $st = $this->District->find('first', array('conditions' => array('id' => $id)));
                 $ship = $st['District']['fee'];
             }
         }
@@ -155,7 +156,7 @@ class ShopController extends AppController
 
     public function cart()
     {
-        $this->layout = 'default';
+        
         $shop = $this->Session->read('Shop');
         $this->set(compact('shop'));
     }
@@ -174,13 +175,15 @@ class ShopController extends AppController
         $shop = $this->Session->read('Shop');
         $this->loadModel('District');
         $this->loadModel('Ward');
-        $locations = $this->District->find('all', array('order' => array('ind' => 'ASC')));
+        $locations = $this->District->find('all', array('order' => array('name' => 'ASC')));
         $this->set('locations', $locations);
 
 
         $states =  $this->Ward->find('all');
         $this->set('states', $states);
-       // var_dump($locations);die();
+        // var_dump($shop['Order']['state']);
+        // // var_dump($states);
+        //  die();
 
         if ($this->request->is('post')) {
             $this->loadModel('Order');
@@ -191,7 +194,7 @@ class ShopController extends AppController
                 $this->loadModel('District');
                 $this->request->data['Order']['shipping_address'] = $this->request->data['Order']['billing_address'];
 
-                $this->request->data['Order']['shipping_city'] = $this->District->find('first', array('conditions' => array('matp' => $this->request->data['Order']['billing_city'])))['District']['name'];
+                $this->request->data['Order']['shipping_city'] = $this->District->find('first', array('conditions' => array('id' => $this->request->data['Order']['billing_city'])))['District']['name'];
 
                 $order = $this->request->data['Order'];
                 $order['order_type'] = '';
