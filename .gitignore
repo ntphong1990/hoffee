@@ -2,3 +2,5 @@
 *.log
 /app/tmp/*
 /vendor/*
+
+app/tmp/*
