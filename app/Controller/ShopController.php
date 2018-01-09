@@ -23,7 +23,7 @@ class ShopController extends AppController
     {
         parent::beforeFilter();
         $this->disableCache();
-        $this->layout = 'default';
+        //$this->layout = 'homelayout';
         //$this->Security->validatePost = false;
     }
 

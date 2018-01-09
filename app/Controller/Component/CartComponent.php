@@ -1,5 +1,6 @@
 <?php
-class CartComponent extends Component {
+class CartComponent extends Component
+{
 
 //////////////////////////////////////////////////
 
@@ -11,15 +12,16 @@ class CartComponent extends Component {
 
 //////////////////////////////////////////////////
 
-    public function __construct(ComponentCollection $collection, $settings = array()) {
+    public function __construct(ComponentCollection $collection, $settings = array())
+    {
         $this->controller = $collection->getController();
         parent::__construct($collection, array_merge($this->settings, (array)$settings));
     }
 
 //////////////////////////////////////////////////
 
-    public function startup(Controller $controller) {
-
+    public function startup(Controller $controller)
+    {
     }
 
 //////////////////////////////////////////////////
@@ -28,9 +30,10 @@ class CartComponent extends Component {
 
 //////////////////////////////////////////////////
 
-    public function add($id, $quantity = 1, $productmodId = null, $voucher = 0 , $code = '') {
+    public function add($id, $quantity = 1, $productmodId = null, $voucher = 0, $code = '')
+    {
 
-        if($productmodId) {
+        if ($productmodId) {
             $productmod = ClassRegistry::init('Productmod')->find('first', array(
                 'recursive' => -1,
                 'conditions' => array(
@@ -40,17 +43,17 @@ class CartComponent extends Component {
             ));
         }
 
-        if(!is_numeric($quantity)) {
+        if (!is_numeric($quantity)) {
             $quantity = 1;
         }
 
         $quantity = abs($quantity);
 
-        if($quantity > $this->maxQuantity) {
+        if ($quantity > $this->maxQuantity) {
             $quantity = $this->maxQuantity;
         }
 
-        if($quantity == 0) {
+        if ($quantity == 0) {
             $this->remove($id);
             return;
         }
@@ -61,18 +64,17 @@ class CartComponent extends Component {
                 'Product.id' => $id
             )
         ));
-        if(empty($product)) {
+        if (empty($product)) {
             return false;
         }
 
-        if($this->Session->check('Shop.OrderItem.' . $id . '.Product.productmod_name')) {
+        if ($this->Session->check('Shop.OrderItem.' . $id . '.Product.productmod_name')) {
             $productmod['Productmod']['id'] = $this->Session->read('Shop.OrderItem.' . $id . '.Product.productmod_id');
             $productmod['Productmod']['name'] = $this->Session->read('Shop.OrderItem.' . $id . '.Product.productmod_name');
             $productmod['Productmod']['price'] = $this->Session->read('Shop.OrderItem.' . $id . '.Product.price');
-
         }
 
-        if(isset($productmod)) {
+        if (isset($productmod)) {
             $product['Product']['productmod_id'] = $productmod['Productmod']['id'];
             $product['Product']['productmod_name'] = $productmod['Productmod']['name'];
             $product['Product']['price'] = $productmod['Productmod']['price'];
@@ -105,7 +107,8 @@ class CartComponent extends Component {
         return $product;
     }
 
-    public function shipping($ship,$city,$firstname,$lastname,$email,$phone,$address,$state){
+    public function shipping($ship, $city, $firstname, $lastname, $email, $phone, $address, $state)
+    {
 
         $this->Session->write('Shop.Order.shipping', $ship);
 
@@ -121,8 +124,9 @@ class CartComponent extends Component {
     }
 //////////////////////////////////////////////////
 
-    public function remove($id) {
-        if($this->Session->check('Shop.OrderItem.' . $id)) {
+    public function remove($id)
+    {
+        if ($this->Session->check('Shop.OrderItem.' . $id)) {
             $product = $this->Session->read('Shop.OrderItem.' . $id);
             $this->Session->delete('Shop.OrderItem.' . $id);
             $this->cart();
@@ -133,7 +137,8 @@ class CartComponent extends Component {
 
 //////////////////////////////////////////////////
 
-    public function cart() {
+    public function cart()
+    {
         $shop = $this->Session->read('Shop');
         $quantity = 0;
         $weight = 0;
@@ -157,9 +162,9 @@ class CartComponent extends Component {
             $d['voucher'] = $shop['Order']['voucher'];
             $d['code'] = $shop['Order']['code'];
             //var_dump($shop['Order']['shipping']);die();
-            if(isset($shop['Order']['firstname'])) {
+            if (isset($shop['Order']['firstname'])) {
                 //var_dump($shop['Order']['shipping']);die();
-                if($d['weight'] >= 2) {
+                if ($d['weight'] >= 2) {
                     $d['shipping'] = 0;
                 } else {
                     $d['shipping'] = $shop['Order']['shipping'];
@@ -186,8 +191,7 @@ class CartComponent extends Component {
             $d['total'] = sprintf('%01.2f', $total - $total * $d['voucher'] / 100 + $d['shipping']);
             $this->Session->write('Shop.Order', $d + $shop['Order']);
             return true;
-        }
-        else {
+        } else {
             $d['quantity'] = 0;
             $d['weight'] = 0;
             $d['subtotal'] = 0;
@@ -207,10 +211,10 @@ class CartComponent extends Component {
 
 //////////////////////////////////////////////////
 
-    public function clear() {
+    public function clear()
+    {
         $this->Session->delete('Shop');
     }
 
 //////////////////////////////////////////////////
-
 }

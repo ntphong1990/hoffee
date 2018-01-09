@@ -3,14 +3,14 @@
     }
     </script>
 <div class="widget-body">
-<?php echo $this->Form->create('Stock'); ?>
+<?php echo $this->Form->create('Stock',array('class'=>'form-horizontal','role'=>'form')); ?>
     <fieldset>
         <legend><?php echo __('Admin Add Stock'); ?></legend>
     <?php
         echo $this->Form->input('product_id');
         echo $this->Form->input('store_id');
-        echo $this->Form->input('type');
-        echo $this->Form->input('quanlity');
+        echo $this->Form->input('type_id');
+        echo $this->Form->input('quantity');
         echo $this->Form->input('note');
     ?>
     </fieldset>
@@ -25,3 +25,5 @@
         <li><?php echo $this->Html->link(__('New Product'), array('controller' => 'products', 'action' => 'add')); ?> </li>
     </ul>
 </div>
+
+

@@ -95,9 +95,7 @@
 
         </a>
         <a href="<?php echo Configure::read('Settings.DOMAIN');?>/" class="header-logo_container-link" title="Hoffee">
-<!--            <img src="--><?php //echo Configure::read('Settings.DOMAIN');?><!--/img/logo.png" class="header-logo_container-logo">-->
-<!---->
-<!--            </img>-->
+
             <icon src="" class="header-logo_container-logo"></icon>
         </a>
 
@@ -107,19 +105,9 @@
     <nav class="menu">
 
         <ul id="menu-main-menu" class="menu-ul"><li id="menu-item-3419" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-137 current_page_item menu-ul-li"><a class="menu-ul-li-a" href="/">Home</a></li>
-<!--            <li id="menu-item-3421" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="http://hoffee.vn/find-us/">Find Us</a></li>-->
+
             <li id="menu-item-3437" class="menu-item menu-item-type-custom menu-item-object-custom menu-ul-li"><a class="menu-ul-li-a" href="<?php echo Configure::read('Settings.DOMAIN'); ?>/products">Sản Phẩm</a></li>
-<!--            <li id="menu-item-3424" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-ul-li"><a class="menu-ul-li-a" href="#">Our Story<icon src="../img/arrow-dropdown.svg" class="menu-ul-li-a-icon" sub-menu=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="6px" viewBox="0 0 10 6" version="1.1" class="injected-svg icon-svg">-->
-<!--                            <polyline stroke-width="1" points="8 -4.9736156e-14 4 4 -2.03004718e-15 -4.9736156e-14" fill="none"></polyline>-->
-<!--                        </svg></icon></a>-->
-<!--                <ul class="sub-menu">-->
-<!--                    <li id="menu-item-3964" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="#">Cultivated By Good</a></li>-->
-<!--                    <li id="menu-item-3965" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="#">Social Good</a></li>-->
-<!--                    <li id="menu-item-3966" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="#">Our Coffee</a></li>-->
-<!--                    <li id="menu-item-3967" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="#">History</a></li>-->
-<!--                </ul>-->
-<!--            </li>-->
-<!--            <li id="menu-item-3422" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="http://hoffee.vn/partnership/">Wholesale</a></li>-->
+
             <li id="menu-item-3420" class="menu-item menu-item-type-post_type menu-item-object-page menu-ul-li"><a class="menu-ul-li-a" href="<?php echo Configure::read('Settings.DOMAIN'); ?>/BlogPosts">Chuyện Mình</a></li>
             
 
@@ -131,18 +119,7 @@
 
         <ul class="user_controls-ul">
 
-<!--            <li class="user_controls-ul-li user_controls-ul-li--account">-->
-<!---->
-<!---->
-<!---->
-<!--                <a tooltip="Log In or Register" class="user_controls-ul-li-a tooltip-wrapper" href="http://hoffee.vn/my-account/">-->
-<!---->
-<!---->
-<!--                    <icon src="--><?php //echo Configure::read('Settings.DOMAIN'); ?><!--/img/login.svg" class="user_controls-ul-li-a-icon"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" viewBox="0 0 17 18" class="injected-svg icon-svg"><path d="M8.237 1.029a3.883 3.883 0 0 0-3.88 3.878c0 2.14 1.741 3.88 3.88 3.88s3.879-1.74 3.879-3.88a3.883 3.883 0 0 0-3.88-3.878m0 8.786A4.913 4.913 0 0 1 3.33 4.907 4.913 4.913 0 0 1 8.237 0a4.913 4.913 0 0 1 4.907 4.907 4.913 4.913 0 0 1-4.907 4.908"></path><path d="M1.047 16.509h14.38c-.265-3.735-3.388-6.694-7.19-6.694-3.802 0-6.925 2.959-7.19 6.694m14.912 1.028H.514A.514.514 0 0 1 0 17.023c0-4.541 3.695-8.237 8.236-8.237 4.543 0 8.238 3.696 8.238 8.237 0 .284-.23.514-.515.514"></path></svg></icon>-->
-<!---->
-<!--                    <span class="tooltip">Log In or Register</span></a>-->
-<!---->
-<!--            </li>-->
+
 
             <li class="user_controls-ul-li user_controls-ul-li--cart">
 
@@ -156,72 +133,7 @@
                     <span class="tooltip">Shopping Cart</span></a>
 
             </li>
-<!--            <li class="user_controls-ul-li user_controls-ul-li--newsletter">
 
-                <newsletter class="newsletter">
-
-
-                    <button class="newsletter-button tooltip-wrapper" type="submit" name="button" ng-click="newsletterToggle()" tooltip="Newsletter">
-                        <icon src="<?php echo Configure::read('Settings.DOMAIN'); ?>/img/close.svg" class="user_controls-ul-li-a-icon newsletter_close-button-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14" class="injected-svg icon-svg"><title>05BA62C2-5978-4916-AFF7-6AE3CC99F41F</title><g stroke="#1E1E1E" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><path d="M14.75 0L1 13.75M14.75 13.75L1 0"></path></g></svg></icon>
-                        <icon src="<?php echo Configure::read('Settings.DOMAIN'); ?>/img/newsletter.svg" class="user_controls-ul-li-a-icon newsletter_open-button-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" class="injected-svg icon-svg"><path d="M16.115 7.992c-.251 0-.455-.224-.455-.499V.997H4.08v6.496c0 .275-.204.499-.455.499s-.455-.224-.455-.499V.5c0-.276.204-.499.455-.499h12.49c.25 0 .454.223.454.499v6.994c0 .275-.203.499-.454.499"></path><path d="M9.87 13.776a.446.446 0 0 1-.294-.111L.16 5.418a.48.48 0 0 1-.132-.52.456.456 0 0 1 .427-.307h3.17c.251 0 .455.21.455.47 0 .258-.204.469-.455.469H1.693L9.87 12.69l8.177-7.161h-1.932a.462.462 0 0 1-.455-.47c0-.26.204-.469.455-.469h3.17c.191 0 .361.122.427.307a.48.48 0 0 1-.132.52l-9.416 8.247a.446.446 0 0 1-.294.111"></path><path d="M.455 17.14A.447.447 0 0 1 0 16.702V5.029c0-.242.204-.438.455-.438h3.17c.251 0 .455.196.455.438a.446.446 0 0 1-.455.439H.909v10.795h17.922V5.468h-2.716a.447.447 0 0 1-.455-.439c0-.242.204-.438.455-.438h3.17c.251 0 .455.196.455.438v11.673a.447.447 0 0 1-.455.438H.455z"></path><path d="M13.073 4.7H6.667a.462.462 0 0 1-.454-.47c0-.258.203-.469.454-.469h6.406c.25 0 .454.21.454.47 0 .259-.203.469-.454.469M12.802 7.985H6.938c-.4 0-.725-.21-.725-.47 0-.258.324-.468.725-.468h5.864c.4 0 .725.21.725.469s-.324.47-.725.47"></path></svg></icon>
-                        <span class="tooltip">Newsletter</span></button>
-
-                    <aside class="newsletter-aside">
-
-                        <figure class="newsletter-aside-column newsletter-aside-column--left">
-
-                            <img src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/social-1.jpg" class="newsletter-aside-column-image">
-
-                        </figure>
-
-                        <div class="newsletter-aside-column newsletter-aside-column--right">
-
-                            <div class="newsletter-aside-column-content">
-
-                                <h3 class="newsletter-aside-column-title">Stay Updated</h3>
-
-                                <div class="newsletter-aside-column-text"><p>Join our newsletter to find out what's bean happening in the world of Hoffee!</p>
-                                </div>
-
-                            </div>
-
-                            <div role="form" class="wpcf7" id="wpcf7-f153-o1" lang="en-US" dir="ltr">
-                                <div class="screen-reader-response"></div>
-                                <form action="http://hoffee.vn/#wpcf7-f153-o1" method="post" class="wpcf7-form mailchimp-ext-0.4.32 ng-pristine ng-valid" novalidate="novalidate">
-                                    <div style="display: none;">
-                                        <input type="hidden" name="_wpcf7" value="153">
-                                        <input type="hidden" name="_wpcf7_version" value="4.5">
-                                        <input type="hidden" name="_wpcf7_locale" value="en_US">
-                                        <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f153-o1">
-                                        <input type="hidden" name="_wpnonce" value="6f50ce5344">
-                                    </div>
-                                    <div class="newsletter-aside-column-form">
-                                        <div input-wrap="" class="newsletter-aside-column-form-wrap">
-                                            <span class="wpcf7-form-control-wrap name"><input type="text" name="name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required newsletter-aside-column-form-input" aria-required="true" aria-invalid="false"></span><br>
-                                            <label for="name" class="newsletter-aside-column-form-label">First Name</label>
-                                        </div>
-                                        <div input-wrap="" class="newsletter-aside-column-form-wrap">
-                                            <span class="wpcf7-form-control-wrap lastname"><input type="text" name="lastname" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required newsletter-aside-column-form-input" aria-required="true" aria-invalid="false"></span><br>
-                                            <label for="lastname" class="newsletter-aside-column-form-label">Last Name</label>
-                                        </div>
-                                        <div input-wrap="" class="newsletter-aside-column-form-wrap">
-                                            <span class="wpcf7-form-control-wrap email"><input type="email" name="email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email newsletter-aside-column-form-input" aria-required="true" aria-invalid="false"></span><br>
-                                            <label for="email" class="newsletter-aside-column-form-label">Email</label>
-                                        </div>
-                                        <p><span class="wpcf7-form-control-wrap source"><input type="text" name="source" value="USA Website" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false"></span><br>
-                                            <button type="submit" name="submit" class="newsletter-aside-column-form-button">Subscribe</button>
-                                        </p></div>
-                                    <div class="wpcf7-response-output wpcf7-display-none"></div><p style="display: none !important"><span class="wpcf7-form-control-wrap referer-page"><input type="hidden" name="referer-page" value="direct visit" size="40" class="wpcf7-form-control wpcf7-text referer-page" aria-invalid="false"></span></p>
-                                    </form></div>
-                            <button class="newsletter-close_panel" type="button" name="button" ng-click="newsletterToggle()">No thanks, i’ll keep browsing</button>
-
-                        </div>
-
-                    </aside>
-
-                </newsletter>
-
-            </li>-->
 
         </ul>
 
@@ -346,28 +258,7 @@
                                         </g>
                                     </g>
                                 </svg></icon></li>
-<!--                        <li id="menu-item-3432" class="menu-item menu-item-type-custom menu-item-object-custom footer_menu-list-item"><a class="footer_menu-list-item-link" target="_blank" href="#">Twitter</a><icon src="../img/extrasmall-arrow.svg" class="footer_menu-list-item-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px" viewBox="0 0 10 10" version="1.1" class="injected-svg icon-svg">-->
-<!--                                    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">-->
-<!--                                        <g id="Footer_Grey" transform="translate(-1195.000000, -128.000000)" stroke="#FFFFFF">-->
-<!--                                            <g id="Links-/-Columns">-->
-<!--                                                <g transform="translate(96.000000, 65.000000)">-->
-<!--                                                    <g id="Group-9" transform="translate(470.000000, 1.000000)">-->
-<!--                                                        <g id="Column-2" transform="translate(513.000000, 0.000000)">-->
-<!--                                                            <g id="extrasmall-arrow" transform="translate(117.000000, 63.000000)">-->
-<!--                                                                <g id="small-arrow">-->
-<!--                                                                    <g>-->
-<!--                                                                        <polyline id="arrow" transform="translate(6.545455, 4.000000) rotate(-90.000000) translate(-6.545455, -4.000000) " points="10.1818182 2.18181818 6.54545455 5.81818182 2.90909091 2.18181818"></polyline>-->
-<!--                                                                        <path d="M8.03857416,4 L0.229673548,4" id="Line"></path>-->
-<!--                                                                    </g>-->
-<!--                                                                </g>-->
-<!--                                                            </g>-->
-<!--                                                        </g>-->
-<!--                                                    </g>-->
-<!--                                                </g>-->
-<!--                                            </g>-->
-<!--                                        </g>-->
-<!--                                    </g>-->
-<!--                                </svg></icon></li>-->
+
                     </ul>
                 </accordion>
 
@@ -381,94 +272,7 @@
                     </div>
 
                     <ul id="menu-useful-menu" class="footer_menu-list">
-<!--                        <li id="menu-item-3435" class="menu-item menu-item-type-post_type menu-item-object-page footer_menu-list-item"><a class="footer_menu-list-item-link" href="#">FAQ</a><icon src="../img/extrasmall-arrow.svg" class="footer_menu-list-item-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px" viewBox="0 0 10 10" version="1.1" class="injected-svg icon-svg">-->
-<!--                                    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">-->
-<!--                                        <g id="Footer_Grey" transform="translate(-1195.000000, -128.000000)" stroke="#FFFFFF">-->
-<!--                                            <g id="Links-/-Columns">-->
-<!--                                                <g transform="translate(96.000000, 65.000000)">-->
-<!--                                                    <g id="Group-9" transform="translate(470.000000, 1.000000)">-->
-<!--                                                        <g id="Column-2" transform="translate(513.000000, 0.000000)">-->
-<!--                                                            <g id="extrasmall-arrow" transform="translate(117.000000, 63.000000)">-->
-<!--                                                                <g id="small-arrow">-->
-<!--                                                                    <g>-->
-<!--                                                                        <polyline id="arrow" transform="translate(6.545455, 4.000000) rotate(-90.000000) translate(-6.545455, -4.000000) " points="10.1818182 2.18181818 6.54545455 5.81818182 2.90909091 2.18181818"></polyline>-->
-<!--                                                                        <path d="M8.03857416,4 L0.229673548,4" id="Line"></path>-->
-<!--                                                                    </g>-->
-<!--                                                                </g>-->
-<!--                                                            </g>-->
-<!--                                                        </g>-->
-<!--                                                    </g>-->
-<!--                                                </g>-->
-<!--                                            </g>-->
-<!--                                        </g>-->
-<!--                                    </g>-->
-<!--                                </svg></icon></li>-->
-<!--                        <li id="menu-item-3436" class="menu-item menu-item-type-post_type menu-item-object-page footer_menu-list-item"><a class="footer_menu-list-item-link" href="#">Wholesale</a><icon src="../img/extrasmall-arrow.svg" class="footer_menu-list-item-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px" viewBox="0 0 10 10" version="1.1" class="injected-svg icon-svg">-->
-<!--                                    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">-->
-<!--                                        <g id="Footer_Grey" transform="translate(-1195.000000, -128.000000)" stroke="#FFFFFF">-->
-<!--                                            <g id="Links-/-Columns">-->
-<!--                                                <g transform="translate(96.000000, 65.000000)">-->
-<!--                                                    <g id="Group-9" transform="translate(470.000000, 1.000000)">-->
-<!--                                                        <g id="Column-2" transform="translate(513.000000, 0.000000)">-->
-<!--                                                            <g id="extrasmall-arrow" transform="translate(117.000000, 63.000000)">-->
-<!--                                                                <g id="small-arrow">-->
-<!--                                                                    <g>-->
-<!--                                                                        <polyline id="arrow" transform="translate(6.545455, 4.000000) rotate(-90.000000) translate(-6.545455, -4.000000) " points="10.1818182 2.18181818 6.54545455 5.81818182 2.90909091 2.18181818"></polyline>-->
-<!--                                                                        <path d="M8.03857416,4 L0.229673548,4" id="Line"></path>-->
-<!--                                                                    </g>-->
-<!--                                                                </g>-->
-<!--                                                            </g>-->
-<!--                                                        </g>-->
-<!--                                                    </g>-->
-<!--                                                </g>-->
-<!--                                            </g>-->
-<!--                                        </g>-->
-<!--                                    </g>-->
-<!--                                </svg></icon></li>-->
-<!--                        <li id="menu-item-3433" class="menu-item menu-item-type-post_type menu-item-object-page footer_menu-list-item"><a class="footer_menu-list-item-link" href="#">Careers</a><icon src="../img/extrasmall-arrow.svg" class="footer_menu-list-item-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px" viewBox="0 0 10 10" version="1.1" class="injected-svg icon-svg">-->
-<!--                                    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">-->
-<!--                                        <g id="Footer_Grey" transform="translate(-1195.000000, -128.000000)" stroke="#FFFFFF">-->
-<!--                                            <g id="Links-/-Columns">-->
-<!--                                                <g transform="translate(96.000000, 65.000000)">-->
-<!--                                                    <g id="Group-9" transform="translate(470.000000, 1.000000)">-->
-<!--                                                        <g id="Column-2" transform="translate(513.000000, 0.000000)">-->
-<!--                                                            <g id="extrasmall-arrow" transform="translate(117.000000, 63.000000)">-->
-<!--                                                                <g id="small-arrow">-->
-<!--                                                                    <g>-->
-<!--                                                                        <polyline id="arrow" transform="translate(6.545455, 4.000000) rotate(-90.000000) translate(-6.545455, -4.000000) " points="10.1818182 2.18181818 6.54545455 5.81818182 2.90909091 2.18181818"></polyline>-->
-<!--                                                                        <path d="M8.03857416,4 L0.229673548,4" id="Line"></path>-->
-<!--                                                                    </g>-->
-<!--                                                                </g>-->
-<!--                                                            </g>-->
-<!--                                                        </g>-->
-<!--                                                    </g>-->
-<!--                                                </g>-->
-<!--                                            </g>-->
-<!--                                        </g>-->
-<!--                                    </g>-->
-<!--                                </svg></icon></li>-->
-<!--                        <li id="menu-item-3919" class="menu-item menu-item-type-post_type menu-item-object-page footer_menu-list-item"><a class="footer_menu-list-item-link" href="#">Contact</a><icon src="../img/extrasmall-arrow.svg" class="footer_menu-list-item-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="10px" viewBox="0 0 10 10" version="1.1" class="injected-svg icon-svg">-->
-<!--                                    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">-->
-<!--                                        <g id="Footer_Grey" transform="translate(-1195.000000, -128.000000)" stroke="#FFFFFF">-->
-<!--                                            <g id="Links-/-Columns">-->
-<!--                                                <g transform="translate(96.000000, 65.000000)">-->
-<!--                                                    <g id="Group-9" transform="translate(470.000000, 1.000000)">-->
-<!--                                                        <g id="Column-2" transform="translate(513.000000, 0.000000)">-->
-<!--                                                            <g id="extrasmall-arrow" transform="translate(117.000000, 63.000000)">-->
-<!--                                                                <g id="small-arrow">-->
-<!--                                                                    <g>-->
-<!--                                                                        <polyline id="arrow" transform="translate(6.545455, 4.000000) rotate(-90.000000) translate(-6.545455, -4.000000) " points="10.1818182 2.18181818 6.54545455 5.81818182 2.90909091 2.18181818"></polyline>-->
-<!--                                                                        <path d="M8.03857416,4 L0.229673548,4" id="Line"></path>-->
-<!--                                                                    </g>-->
-<!--                                                                </g>-->
-<!--                                                            </g>-->
-<!--                                                        </g>-->
-<!--                                                    </g>-->
-<!--                                                </g>-->
-<!--                                            </g>-->
-<!--                                        </g>-->
-<!--                                    </g>-->
-<!--                                </svg></icon></li>-->
+
                     </ul>
                 </accordion>
 
@@ -553,11 +357,6 @@
 
 
 
-<script>var om583f8d9aa2b6a,om583f8d9aa2b6a_poll=function(){var r=0;return function(n,l){clearInterval(r),r=setInterval(n,l)}}();!function(e,t,n){if(e.getElementById(n)){om583f8d9aa2b6a_poll(function(){if(window['om_loaded']){if(!om583f8d9aa2b6a){om583f8d9aa2b6a=new OptinMonsterApp();return om583f8d9aa2b6a.init({"s":"25290.583f8d9aa2b6a","staging":0,"dev":0,"beta":0});}}},25);return;}var d=false,o=e.createElement(t);o.id=n,o.src="//a.optnmnstr.com/app/js/api.min.js",o.async=true,o.onload=o.onreadystatechange=function(){if(!d){if(!this.readyState||this.readyState==="loaded"||this.readyState==="complete"){try{d=om_loaded=true;om583f8d9aa2b6a=newOptinMonsterApp();om583f8d9aa2b6a.init({"s":"25290.583f8d9aa2b6a","staging":0,"dev":0,"beta":0});o.onload=o.onreadystatechange=null;}catch(t){}}}};(document.getElementsByTagName("head")[0]||document.documentElement).appendChild(o)}(document,"script","omapi-script");</script>
-
-
-
-<script src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/createjs-2015.11.26.min.js"></script>
 
 <script>
 
@@ -1062,36 +861,15 @@
 
 
 <script type="text/javascript" src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/vendor.min.js"></script>
-<script type="text/javascript">
-    /* <![CDATA[ */
-    var wp = {"home_url":"https:\/\/us.camposcoffee.com","template_directory_uri":"https:\/\/us.camposcoffee.com\/wp-content\/themes\/campos-wp-theme","ajax_url":"https:\/\/us.camposcoffee.com\/wp-admin\/admin-ajax.php","aus_site":"https:\/\/camposcoffee.com","us_site":"https:\/\/us.camposcoffee.com"};
-    /* ]]> */
-</script>
+
 <script type="text/javascript" src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/main.min.js"></script>
 <script type="text/javascript" src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/jquery.form.min.js"></script>
-<script type="text/javascript">
-    /* <![CDATA[ */
-    var _wpcf7 = {"loaderUrl":"https:\/\/us.camposcoffee.com\/wp-content\/plugins\/contact-form-7-mailchimp-extension\/assets\/images\/fading-squares.gif","recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}},"sending":"Sending ..."};
-    /* ]]> */
-</script>
-<script type="text/javascript" src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/scripts.js"></script>
+
 <script type="text/javascript" src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/wp-embed.min.js"></script>
-<!-- WooCommerce JavaScript -->
-<script type="text/javascript">
-    jQuery(function($) {
-
-        __gaTracker( 'send', 'pageview' );
-
-        __gaTracker( 'send', {"hitType":"event","eventCategory":"Homepage","eventAction":"viewed homepage","eventLabel":null,"eventValue":null,"nonInteraction":true} );
-
-    });
-</script>
 
 
 
 
 
-<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","711430055660246");fbq("track","PageView");</script>
-<noscript>&lt;img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=711430055660246&amp;amp;ev=PageView&amp;amp;noscript=1"&gt;</noscript>
 
-<iframe id="_hjRemoteVarsFrame" src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/rcj-2e6153f931e5c8a79f89c0c503e3c25e.html" style="position: fixed !important; top: -100px !important; left: -100px !important; width: 1px !important; height: 1px !important;"></iframe><script src="<?php echo Configure::read('Settings.DOMAIN'); ?>/theme/adsct" type="text/javascript"></script><div id="ads"></div></body></html>
+</body></html>

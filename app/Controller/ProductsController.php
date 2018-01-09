@@ -1,6 +1,7 @@
 <?php
 App::uses('AppController', 'Controller');
-class ProductsController extends AppController {
+class ProductsController extends AppController
+{
 
 ////////////////////////////////////////////////////////////
 
@@ -10,23 +11,27 @@ class ProductsController extends AppController {
 
 ////////////////////////////////////////////////////////////
 
-    public function beforeFilter() {
+    public function beforeFilter()
+    {
+
         parent::beforeFilter();
     }
 
 ////////////////////////////////////////////////////////////
-	public function home(){
-		$this->layout = 'homelayout';
-	}
+    public function home()
+    {
+    }
 
 
-    public function home2(){
+    public function home2()
+    {
         $this->loadModel('BlogPost');
         $this->BlogPost->recursive = 0;
         $this->set('blogPosts', $this->BlogPost->find('all'));
     }
 
-    public function admin_chart(){
+    public function admin_chart()
+    {
 
         $this->loadModel('OrderItem');
         $this->Paginator = $this->Components->load('Paginator');
@@ -45,14 +50,16 @@ class ProductsController extends AppController {
                 'paramType' => 'querystring',
             )
         );
-        $orders = $this->OrderItem->find('all',array(
+        $orders = $this->OrderItem->find('all', array(
             'fields' => array('name AS Name','sum(quantity) AS `Sum`'),
             'group' => array('product_id','name')
         ));
 
-        $this->set('orders',$orders);
+        $this->set('orders', $orders);
     }
-    public function index() {
+    public function index()
+    {
+        
         $products = $this->Product->find('all', array(
             'recursive' => -1,
             'contain' => array(
@@ -75,7 +82,8 @@ class ProductsController extends AppController {
         $this->set('title_for_layout', Configure::read('Settings.SHOP_TITLE'));
     }
 
-    public function drink() {
+    public function drink()
+    {
         $products = $this->Product->find('all', array(
             'recursive' => -1,
             'contain' => array(
@@ -101,7 +109,8 @@ class ProductsController extends AppController {
 
 ////////////////////////////////////////////////////////////
 
-    public function products() {
+    public function products()
+    {
 
         $this->Paginator = $this->Components->load('Paginator');
 
@@ -126,7 +135,6 @@ class ProductsController extends AppController {
         $this->set(compact('products'));
 
         $this->set('title_for_layout', 'All Products - ' . Configure::read('Settings.SHOP_TITLE'));
-
     }
 
 
@@ -134,7 +142,8 @@ class ProductsController extends AppController {
 
 ////////////////////////////////////////////////////////////
 
-    public function view($id = null) {
+    public function view($id = null)
+    {
 
 
         $product = $this->Product->find('first', array(
@@ -161,17 +170,17 @@ class ProductsController extends AppController {
         $this->set('productmodshtml', $productmods['productmodshtml']);
 
         $this->set('title_for_layout', $product['Product']['name'] . ' ' . Configure::read('Settings.SHOP_TITLE'));
-
     }
 
 
 
 ////////////////////////////////////////////////////////////
 
-    public function search() {
+    public function search()
+    {
 
         $search = null;
-        if(!empty($this->request->query['search']) || !empty($this->request->data['name'])) {
+        if (!empty($this->request->query['search']) || !empty($this->request->data['name'])) {
             $search = empty($this->request->query['search']) ? $this->request->data['name'] : $this->request->query['search'];
             $search = preg_replace('/[^a-zA-Z0-9 ]/', '', $search);
             $terms = explode(' ', trim($search));
@@ -180,7 +189,7 @@ class ProductsController extends AppController {
                 'Brand.active' => 1,
                 'Product.active' => 1,
             );
-            foreach($terms as $term) {
+            foreach ($terms as $term) {
                 $terms1[] = preg_replace('/[^a-zA-Z0-9]/', '', $term);
                 $conditions[] = array('Product.name LIKE' => '%' . $term . '%');
             }
@@ -192,7 +201,7 @@ class ProductsController extends AppController {
                 'conditions' => $conditions,
                 'limit' => 200,
             ));
-            if(count($products) == 1) {
+            if (count($products) == 1) {
                 return $this->redirect(array('controller' => 'products', 'action' => 'view', 'slug' => $products[0]['Product']['slug']));
             }
             $terms1 = array_diff($terms1, array(''));
@@ -218,10 +227,11 @@ class ProductsController extends AppController {
 
 ////////////////////////////////////////////////////////////
 
-    public function searchjson() {
+    public function searchjson()
+    {
 
         $term = null;
-        if(!empty($this->request->query['term'])) {
+        if (!empty($this->request->query['term'])) {
             $term = $this->request->query['term'];
             $terms = explode(' ', trim($term));
             $terms = array_diff($terms, array(''));
@@ -229,7 +239,7 @@ class ProductsController extends AppController {
                 // 'Brand.active' => 1,
                 'Product.active' => 1
             );
-            foreach($terms as $term) {
+            foreach ($terms as $term) {
                 $conditions[] = array('Product.name LIKE' => '%' . $term . '%');
             }
             $products = $this->Product->find('all', array(
@@ -249,12 +259,12 @@ class ProductsController extends AppController {
         // $products = Hash::extract($products, '{n}.Product.name');
         echo json_encode($products);
         $this->autoRender = false;
-
     }
 
 ////////////////////////////////////////////////////////////
 
-    public function sitemap() {
+    public function sitemap()
+    {
         $products = $this->Product->find('all', array(
             'recursive' => -1,
             'contain' => array(
@@ -282,18 +292,19 @@ class ProductsController extends AppController {
 
 ////////////////////////////////////////////////////////////
 
-    public function admin_reset() {
+    public function admin_reset()
+    {
         $this->Session->delete('Product');
         return $this->redirect(array('action' => 'index'));
     }
 
 ////////////////////////////////////////////////////////////
 
-    public function admin_index() {
+    public function admin_index()
+    {
 
         if ($this->request->is('post')) {
-
-            if($this->request->data['Product']['active'] == '1' || $this->request->data['Product']['active'] == '0') {
+            if ($this->request->data['Product']['active'] == '1' || $this->request->data['Product']['active'] == '0') {
                 $conditions[] = array(
                     'Product.active' => $this->request->data['Product']['active']
                 );
@@ -302,7 +313,7 @@ class ProductsController extends AppController {
                 $this->Session->write('Product.active', '');
             }
 
-            if(!empty($this->request->data['Product']['brand_id'])) {
+            if (!empty($this->request->data['Product']['brand_id'])) {
                 $conditions[] = array(
                     'Product.brand_id' => $this->request->data['Product']['brand_id']
                 );
@@ -311,7 +322,7 @@ class ProductsController extends AppController {
                 $this->Session->write('Product.brand_id', '');
             }
 
-            if(!empty($this->request->data['Product']['name'])) {
+            if (!empty($this->request->data['Product']['name'])) {
                 $filter = $this->request->data['Product']['filter'];
                 $this->Session->write('Product.filter', $filter);
                 $name = $this->request->data['Product']['name'];
@@ -326,10 +337,9 @@ class ProductsController extends AppController {
 
             $this->Session->write('Product.conditions', $conditions);
             return $this->redirect(array('action' => 'index'));
-
         }
 
-        if($this->Session->check('Product')) {
+        if ($this->Session->check('Product')) {
             $all = $this->Session->read('Product');
         } else {
             $all = array(
@@ -388,15 +398,14 @@ class ProductsController extends AppController {
         ));
 
         $this->set(compact('products', 'brands', 'brandseditable', 'categorieseditable', 'tags'));
-
     }
 
 ////////////////////////////////////////////////////////////
 
-    public function admin_view($id = null) {
+    public function admin_view($id = null)
+    {
 
         if (($this->request->is('post') || $this->request->is('put')) && !empty($this->request->data['Product']['image']['name'])) {
-
             $this->Img = $this->Components->load('Img');
 
             $newName = $this->request->data['Product']['slug'];
@@ -410,7 +419,7 @@ class ProductsController extends AppController {
 
             $upload = $this->Img->upload($this->request->data['Product']['image']['tmp_name'], $targetdir, $origFile);
 
-            if($upload == 'Success') {
+            if ($upload == 'Success') {
                 $this->Img->resampleGD($targetdir . DS . $origFile, WWW_ROOT . 'images/large/', $dst, 800, 800, 1, 0);
                 $this->Img->resampleGD($targetdir . DS . $origFile, WWW_ROOT . 'images/small/', $dst, 180, 180, 1, 0);
                 $this->request->data['Product']['image'] = $dst;
@@ -444,7 +453,8 @@ class ProductsController extends AppController {
 
 ////////////////////////////////////////////////////////////
 
-    public function admin_add() {
+    public function admin_add()
+    {
         if ($this->request->is('post')) {
             $this->Product->create();
             if ($this->Product->save($this->request->data)) {
@@ -463,7 +473,8 @@ class ProductsController extends AppController {
 
 ////////////////////////////////////////////////////////////
 
-    public function admin_edit($id = null) {
+    public function admin_edit($id = null)
+    {
 
         $_SESSION['KCFINDER'] = array(
             'disabled' => false,
@@ -477,7 +488,6 @@ class ProductsController extends AppController {
             throw new NotFoundException('Invalid product');
         }
         if ($this->request->is('post') || $this->request->is('put')) {
-
             if ($this->Product->save($this->request->data)) {
                 $this->Flash->flash('The product has been saved');
                 return $this->redirect(array('action' => 'index'));
@@ -509,12 +519,12 @@ class ProductsController extends AppController {
             )
         ));
         $this->set(compact('productmods'));
-
     }
 
 ////////////////////////////////////////////////////////////
 
-    public function admin_tags($id = null) {
+    public function admin_tags($id = null)
+    {
 
         $tags = ClassRegistry::init('Tag')->find('all', array(
             'recursive' => -1,
@@ -529,10 +539,9 @@ class ProductsController extends AppController {
         $this->set(compact('tags'));
 
         if ($this->request->is('post') || $this->request->is('put')) {
-
             $tagstring = '';
 
-            foreach($this->request->data['Product']['tags'] as $tag) {
+            foreach ($this->request->data['Product']['tags'] as $tag) {
                 $tagstring .= $tag . ', ';
             }
 
@@ -544,7 +553,6 @@ class ProductsController extends AppController {
             $this->Product->save($this->request->data, false);
 
             return $this->redirect(array('action' => 'tags', $this->request->data['Product']['id']));
-
         }
 
         $product = $this->Product->find('first', array(
@@ -563,12 +571,12 @@ class ProductsController extends AppController {
 
         $neighbors = $this->Product->find('neighbors', array('field' => 'id', 'value' => $id));
         $this->set(compact('neighbors'));
-
     }
 
 ////////////////////////////////////////////////////////////
 
-    public function admin_csv() {
+    public function admin_csv()
+    {
         $products = $this->Product->find('all', array(
             'recursive' => -1,
         ));
@@ -578,7 +586,8 @@ class ProductsController extends AppController {
 
 ////////////////////////////////////////////////////////////
 
-    public function admin_delete($id = null) {
+    public function admin_delete($id = null)
+    {
         $this->Product->id = $id;
         if (!$this->Product->exists()) {
             throw new NotFoundException('Invalid product');
@@ -593,5 +602,4 @@ class ProductsController extends AppController {
     }
 
 ////////////////////////////////////////////////////////////
-
 }

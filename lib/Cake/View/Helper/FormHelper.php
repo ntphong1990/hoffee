@@ -561,6 +561,7 @@ class FormHelper extends AppHelper {
 
 		$this->_View->modelScope = false;
 		$this->requestType = null;
+		
 		return $out;
 	}
 
@@ -1017,6 +1018,7 @@ class FormHelper extends AppHelper {
  * @link http://book.cakephp.org/2.0/en/core-libraries/helpers/form.html#creating-form-elements
  */
 	public function input($fieldName, $options = array()) {
+		$options['class'] = 'form-control';
 		$this->setEntity($fieldName);
 		$options = $this->_parseOptions($options);
 
@@ -1069,7 +1071,7 @@ class FormHelper extends AppHelper {
 			$options['between'] = $out['between'];
 			$out['between'] = null;
 		}
-		$out['input'] = $this->_getInput(compact('type', 'fieldName', 'options', 'radioOptions', 'selected', 'dateFormat', 'timeFormat'));
+		$out['input'] = '<div class="col-md-7">'.$this->_getInput(compact('type', 'fieldName', 'options', 'radioOptions', 'selected', 'dateFormat', 'timeFormat')).'</div>';
 
 		$output = '';
 		foreach ($format as $element) {
@@ -1381,6 +1383,9 @@ class FormHelper extends AppHelper {
  */
 	protected function _inputLabel($fieldName, $label, $options) {
 		$labelAttributes = $this->domId(array(), 'for');
+		if(!isset($options['class'])){
+			$options['class']= 'col-md-4 form-control-label text-md-right';
+ 		}
 		$idKey = null;
 		if ($options['type'] === 'date' || $options['type'] === 'datetime') {
 			$firstInput = 'M';
@@ -1416,6 +1421,7 @@ class FormHelper extends AppHelper {
 		if (isset($idKey) && isset($options['id']) && isset($options['id'][$idKey])) {
 			$labelAttributes['for'] = $options['id'][$idKey];
 		}
+		$labelAttributes['class']='col-md-2 form-control-label text-md-right';
 
 		if (is_array($label)) {
 			$labelText = null;
@@ -1431,6 +1437,7 @@ class FormHelper extends AppHelper {
 		if (isset($options['id']) && is_string($options['id'])) {
 			$labelAttributes = array_merge($labelAttributes, array('for' => $options['id']));
 		}
+	//	var_dump($labelAttributes);die();
 		return $this->label($fieldName, $labelText, $labelAttributes);
 	}
 
@@ -1949,7 +1956,7 @@ class FormHelper extends AppHelper {
 		$divOptions = array('tag' => 'div');
 
 		if ($div === true) {
-			$divOptions['class'] = 'submit';
+			$divOptions['class'] = 'submit form-actions';
 		} elseif ($div === false) {
 			unset($divOptions);
 		} elseif (is_string($div)) {
@@ -1982,7 +1989,7 @@ class FormHelper extends AppHelper {
 				$this->unlockField($ignore);
 			}
 		}
-
+		$options['class'] = 'btn btn-primary';
 		if ($isUrl) {
 			unset($options['type']);
 			$tag = $this->Html->useTag('submitimage', $caption, $options);
@@ -2006,6 +2013,7 @@ class FormHelper extends AppHelper {
 			unset($divOptions['tag']);
 			$out = $this->Html->tag($tag, $out, $divOptions);
 		}
+		//var_dump($divOptions);die();
 		return $out;
 	}
 

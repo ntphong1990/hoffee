@@ -71,15 +71,4 @@ class DATABASE_CONFIG
         'port' => 3306,
         'encoding' => 'utf8'
     );
-
-    public $test = array(
-        'datasource' => 'Database/Mysql',
-        'persistent' => false,
-        'host' => '54.169.201.108',
-        'login' => 'user',
-        'password' => 'password',
-        'database' => 'test_database_name',
-        'prefix' => '',
-        //'encoding' => 'utf8',
-    );
 }

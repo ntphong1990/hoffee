@@ -2,8 +2,8 @@
 
 <br />
 
-<div class="woocommerce">
-    <div class="store-two_col">
+<div class="woocommerce" >
+    <div class="store-two_col" style="padding-top:150px">
 
         <?php echo $this->Form->create('User', ['url' => ['action' => 'login']]); ?>
         <?php echo $this->Form->input('username', ['class' => 'form-control','style' => 'margin : 5px', 'autofocus' => 'autofocus']); ?>

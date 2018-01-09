@@ -43,7 +43,7 @@ $(document).ready(function() {
 					Learn More
 
 					<icon src="https://us.camposcoffee.com/wp-content/themes/campos-wp-theme/assets/images/icons/arrow.svg" class="product_detail-scroll-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19px" height="10px" viewBox="0 0 19 10" version="1.1" class="injected-svg icon-svg">
-    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+
     <title>arrow</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
@@ -90,7 +90,7 @@ $(document).ready(function() {
                         </div>
                         <p></p>
 
-                        <!-- <a href="/brew-coffee-grind-size" target="_blank" rel="noopener noreferrer" class="product_detail-inner-details-link">Need help picking your grind?</a> -->
+                       
 
                         <div class="product_detail-inner-details-order waiting_list" ng-non-bindable="">
 
